@@ -46,93 +46,19 @@
 
 # virtual methods
 .method public onBootPhase(I)V
-    .locals 2
-    .param p1, "phase"    # I
+    .locals 0
 
-    .line 98
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "onBootPhase, phase: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "GameManager$Lifecycle"
-
-    invoke-static {v1, v0}, Lcom/samsung/android/game/GmsLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 99
-    iget-object v0, p0, Lcom/samsung/android/game/GameManagerService$Lifecycle;->mGameManagerService:Lcom/samsung/android/game/GameManagerService;
-
-    invoke-virtual {v0, p1}, Lcom/samsung/android/game/GameManagerService;->onBootPhase(I)V
-
-    .line 100
     return-void
 .end method
 
 .method public onStart()V
-    .locals 2
+    .locals 0
 
-    .line 92
-    const-string v0, "GameManager$Lifecycle"
-
-    const-string v1, "onStart"
-
-    invoke-static {v0, v1}, Lcom/samsung/android/game/GmsLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 93
-    const-string v0, "gamemanager"
-
-    iget-object v1, p0, Lcom/samsung/android/game/GameManagerService$Lifecycle;->mGameManagerService:Lcom/samsung/android/game/GameManagerService;
-
-    invoke-virtual {p0, v0, v1}, Lcom/samsung/android/game/GameManagerService$Lifecycle;->publishBinderService(Ljava/lang/String;Landroid/os/IBinder;)V
-
-    .line 94
     return-void
 .end method
 
 .method public onUserStopped(Lcom/android/server/SystemService$TargetUser;)V
-    .locals 2
-    .param p1, "user"    # Lcom/android/server/SystemService$TargetUser;
+    .locals 0
 
-    .line 104
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string v1, "onUserStopped, userHandle: "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {p1}, Lcom/android/server/SystemService$TargetUser;->getUserIdentifier()I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "GameManager$Lifecycle"
-
-    invoke-static {v1, v0}, Lcom/samsung/android/game/GmsLog;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 105
     return-void
 .end method
