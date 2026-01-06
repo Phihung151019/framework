@@ -48,7 +48,7 @@
 
     const/4 p0, 0x1
 
-    invoke-virtual {v0, p0}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     iget-object p0, v0, Lcom/android/server/am/CachedAppOptimizer;->mCachedAppOptimizerThread:Lcom/android/server/ServiceThread;
 
@@ -93,7 +93,7 @@
 
     const/4 p0, 0x0
 
-    invoke-virtual {v0, p0}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     return-void
 .end method

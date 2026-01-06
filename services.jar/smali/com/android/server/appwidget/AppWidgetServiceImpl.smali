@@ -6151,7 +6151,7 @@
     :try_start_0
     iget-object v7, v8, Lcom/android/server/am/MARsPolicyManager;->mMARsRestrictedPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v7, v6, v15}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v7
 
@@ -6180,7 +6180,7 @@
 
     const/4 v7, 0x0
 
-    invoke-virtual {v8, v6, v15, v7}, Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy(Ljava/lang/String;II)Z
+    nop
 
     :cond_3
     iget-object v6, v0, Lcom/android/server/appwidget/AppWidgetServiceImpl;->mLock:Ljava/lang/Object;

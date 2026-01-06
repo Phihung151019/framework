@@ -635,7 +635,7 @@
 
     if-ne p1, v0, :cond_2
 
-    invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer;->useCompaction()Z
+    nop
 
     move-result p1
 
@@ -669,7 +669,7 @@
 
     check-cast v1, Lcom/android/server/am/ProcessRecord;
 
-    invoke-virtual {p0, v1, p1}, Lcom/android/server/am/CachedAppOptimizer;->cancelCompactionForProcess(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/CachedAppOptimizer$CancelCompactReason;)V
+    nop
 
     goto :goto_0
 

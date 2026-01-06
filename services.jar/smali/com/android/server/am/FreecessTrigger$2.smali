@@ -100,7 +100,7 @@
 
     monitor-exit p0
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result p0
 
@@ -163,7 +163,7 @@
     :cond_5
     iput-boolean v0, p0, Lcom/android/server/am/FreecessController;->mIsSmartSwitchWorking:Z
 
-    invoke-virtual {p0, p2, v1}, Lcom/android/server/am/FreecessController;->setFreecessEnableForSpecificReason(IZ)V
+    nop
 
     goto :goto_3
 
@@ -184,7 +184,7 @@
 
     const-string/jumbo v1, "OFF by SmartSwitch-Ongoing"
 
-    invoke-virtual {p0, p1, v1}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     sget-boolean p0, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -233,7 +233,7 @@
     :goto_2
     iput-boolean v1, p0, Lcom/android/server/am/FreecessController;->mIsSmartSwitchWorking:Z
 
-    invoke-virtual {p0, p2, v0}, Lcom/android/server/am/FreecessController;->setFreecessEnableForSpecificReason(IZ)V
+    nop
 
     :cond_9
     :goto_3
@@ -293,7 +293,7 @@
 
     sget-object v1, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v1, p1}, Lcom/android/server/am/FreecessController;->getPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object v1
 

@@ -34,7 +34,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v1
 
@@ -44,7 +44,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1, p2}, Lcom/android/server/am/MARsPolicyManager;->isMARsTarget(ILjava/lang/String;)Z
+    nop
 
     move-result v0
 

@@ -202,7 +202,7 @@
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v6, v5, v10}, Lcom/android/server/am/Freezer;->freezeBinder(IIZ)I
+    nop
 
     move-result v2
 
@@ -268,7 +268,7 @@
 
     const/4 v8, -0x1
 
-    invoke-static {v6, v8, v3}, Lcom/android/server/am/CachedAppOptimizer;->traceAppFreeze(IILjava/lang/String;)V
+    nop
 
     iget-object v3, p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -350,7 +350,7 @@
 
     iget v1, v1, Lcom/android/server/am/UidRecord;->mUid:I
 
-    invoke-virtual {v2, v1, v10}, Lcom/android/server/am/CachedAppOptimizer;->postUidFrozenMessage(IZ)V
+    nop
 
     :cond_5
     monitor-exit v4
@@ -410,7 +410,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v6}, Lcom/android/server/am/Freezer;->getBinderFreezeInfo(I)I
+    nop
 
     move-result v0
 
@@ -545,17 +545,17 @@
 
     iget-object p2, p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p2, p1, v1, v2}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP(Lcom/android/server/am/ProcessRecord;IZ)V
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDebounceTimeout:J
 
-    invoke-static {p1, v0, v1}, Lcom/android/server/am/CachedAppOptimizer;->updateEarliestFreezableTime(Lcom/android/server/am/ProcessRecord;J)J
+    nop
 
     move-result-wide v0
 
-    invoke-virtual {p0, v0, v1, p1, v2}, Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP(JLcom/android/server/am/ProcessRecord;Z)V
+    nop
 
     return-void
 
@@ -715,11 +715,11 @@
 
     iget-object p2, p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p2, p1, v1, v2}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP(Lcom/android/server/am/ProcessRecord;IZ)V
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p0, v5, v6, p1, v2}, Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP(JLcom/android/server/am/ProcessRecord;Z)V
+    nop
 
     return-void
 .end method
@@ -850,7 +850,7 @@
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v3}, Lcom/android/server/am/Freezer;->getBinderFreezeInfo(I)I
+    nop
 
     move-result v4
 
@@ -1167,7 +1167,7 @@
 
     iget-object p1, v3, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p1, p0}, Lcom/android/server/am/CachedAppOptimizer;->onProcessFrozen(Lcom/android/server/am/ProcessRecord;)V
+    nop
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
@@ -1182,7 +1182,7 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p0}, Lcom/android/server/am/CachedAppOptimizer;->onProcessFrozenCancelled(Lcom/android/server/am/ProcessRecord;)V
+    nop
 
     return-void
 
@@ -1337,7 +1337,7 @@
 
     const/16 p1, 0x10
 
-    invoke-virtual {p0, v4, p1, v2}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP(Lcom/android/server/am/ProcessRecord;IZ)V
+    nop
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 

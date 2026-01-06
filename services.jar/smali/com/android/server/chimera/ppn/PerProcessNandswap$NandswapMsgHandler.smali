@@ -1390,7 +1390,7 @@
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v3, v2}, Lcom/android/server/am/FreecessController;->freezeTargetProcess(ILjava/lang/String;)Z
+    nop
 
     move-result v2
 

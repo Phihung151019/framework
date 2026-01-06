@@ -2161,7 +2161,7 @@
 
     const/4 v7, 0x0
 
-    invoke-virtual {v5, v7}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     invoke-virtual {v4, v0}, Lcom/android/server/am/ProviderMap;->getProvidersForName(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -2179,7 +2179,7 @@
 
     iget-object v2, v2, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v2, v15}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2268,7 +2268,7 @@
 
     iget-object v0, v0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v0, v15}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     :goto_24
     move-object/from16 v3, p2
@@ -2286,7 +2286,7 @@
 
     iget-object v1, v1, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v1, v15}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     throw v0
 
@@ -2933,7 +2933,7 @@
 
     sget-object v2, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v2, v3, v9}, Lcom/android/server/am/MARsPolicyManager;->dumpMARsCommand(Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    nop
 
     goto/16 :goto_2c
 
@@ -2950,7 +2950,7 @@
 
     sget-object v2, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v2, v3, v9}, Lcom/android/server/am/FreecessController;->dumpFreecessCommand(Ljava/io/PrintWriter;[Ljava/lang/String;)V
+    nop
 
     goto/16 :goto_2c
 
@@ -4773,7 +4773,7 @@
 
     invoke-direct {v13}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v5, v1, v3, v13}, Lcom/android/server/am/CachedAppOptimizer;-><init>(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/CachedAppOptimizer$PropertyChangedCallbackForTest;Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;)V
+    nop
 
     move-object v13, v6
 
@@ -7535,7 +7535,7 @@
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p2, v3, v1, v2}, Lcom/android/server/am/CachedAppOptimizer;-><init>(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/CachedAppOptimizer$PropertyChangedCallbackForTest;Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;)V
+    nop
 
     iput-object p2, p1, Lcom/android/server/am/ProcessStateController$Builder;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -16799,7 +16799,7 @@
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v6
 
@@ -16864,7 +16864,7 @@
     goto :goto_5
 
     :goto_6
-    invoke-virtual {v4, v3, v6, v2}, Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy(Ljava/lang/String;II)Z
+    nop
 
     goto :goto_8
 
@@ -17504,7 +17504,7 @@
 
     const-string/jumbo v0, "com.samsung.android.permission.SEM_APP_RESTRICTION"
 
-    invoke-static {v0}, Lcom/android/server/am/MARsPolicyManager;->hasPermission(Ljava/lang/String;)Z
+    nop
 
     move-result v0
 
@@ -17515,7 +17515,7 @@
     return p0
 
     :cond_0
-    invoke-virtual {p0, p1, p3, p2}, Lcom/android/server/am/MARsPolicyManager;->canRestrictBySEPWithoutPermissionCheck(IILjava/lang/String;)Z
+    nop
 
     move-result p0
 
@@ -17968,13 +17968,13 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager;->getMARsEnabled()Z
+    nop
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp(Ljava/lang/String;I)Z
+    nop
 
     move-result p0
 
@@ -18628,7 +18628,7 @@
 
     if-eqz v10, :cond_1
 
-    invoke-virtual {v5, v3, v4}, Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp(Ljava/lang/String;I)Z
+    nop
 
     move-result v5
 
@@ -18648,7 +18648,7 @@
     monitor-enter v5
 
     :try_start_0
-    invoke-virtual {v2, v4, v3}, Lcom/android/server/am/FreecessController;->getPackageStatus(ILjava/lang/String;)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object v2
 
@@ -18759,7 +18759,7 @@
 
     iget-object v3, v3, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v3, p1}, Lcom/android/server/am/CachedAppOptimizer;->onCleanupApplicationRecordLocked(Lcom/android/server/am/ProcessRecord;)V
+    nop
 
     monitor-exit v2
     :try_end_1
@@ -20008,13 +20008,13 @@
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v3
 
     if-eqz v3, :cond_10
 
-    invoke-virtual {v2, v7, v0}, Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp(Ljava/lang/String;I)Z
+    nop
 
     move-result v3
 
@@ -20024,7 +20024,7 @@
 
     const-string/jumbo v4, "UserClearData"
 
-    invoke-virtual {v2, v0, v7, v3, v4}, Lcom/android/server/am/MARsPolicyManager;->addRestrictListAvoidAssoicationLaunch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     goto :goto_7
 
@@ -20514,7 +20514,7 @@
 
     const-string/jumbo v0, "com.samsung.android.permission.SEM_APP_RESTRICTION"
 
-    invoke-static {v0}, Lcom/android/server/am/MARsPolicyManager;->hasPermission(Ljava/lang/String;)Z
+    nop
 
     move-result v0
 
@@ -20527,7 +20527,7 @@
     :cond_0
     const-string/jumbo v0, "default"
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/server/am/MARsPolicyManager;->removeRestrictedInfo(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object v0
 
@@ -20573,7 +20573,7 @@
 
     const-string/jumbo v2, "SEP"
 
-    invoke-virtual {p0, v2, v1}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -23098,13 +23098,13 @@
     const/4 v4, 0x1
 
     :try_start_3
-    invoke-virtual {v0, v15, v4}, Lcom/android/server/am/FreecessController;->setIsDoingGC(IZ)V
+    nop
 
     const-string v5, "DumpMemInfo"
 
     const-wide/16 v6, 0xbb8
 
-    invoke-virtual {v0, v15, v5, v6, v7}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;J)V
+    nop
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -23201,7 +23201,7 @@
     const/4 v4, 0x0
 
     :try_start_9
-    invoke-virtual {v0, v15, v4}, Lcom/android/server/am/FreecessController;->setIsDoingGC(IZ)V
+    nop
 
     goto/16 :goto_22
 
@@ -23273,7 +23273,7 @@
 
     sget-object v5, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v5, v15, v4}, Lcom/android/server/am/FreecessController;->setIsDoingGC(IZ)V
+    nop
 
     :cond_1e
     throw v0
@@ -27185,9 +27185,9 @@
     :cond_1a
     sget-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v0, p2}, Lcom/android/server/am/MARsPolicyManager;->dumpMARs(Ljava/io/PrintWriter;)V
+    nop
 
-    invoke-virtual {v0, p2}, Lcom/android/server/am/MARsPolicyManager;->dumpMARsHistory(Ljava/io/PrintWriter;)V
+    nop
 
     sget-boolean v0, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -27197,7 +27197,7 @@
 
     if-eqz v1, :cond_1b
 
-    invoke-virtual {v0, p2}, Lcom/android/server/am/FreecessController;->dumpFreecess(Ljava/io/PrintWriter;)V
+    nop
 
     :cond_1b
     sget-object v0, Lcom/android/server/am/PDSController;->PDSLock:Lcom/android/server/am/PDSController$Lock;
@@ -27654,7 +27654,7 @@
 
     const-wide/16 v3, 0x7530
 
-    invoke-virtual {p1, v0, v2, v3, v4}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;J)V
+    nop
 
     goto :goto_0
 
@@ -27677,7 +27677,7 @@
 
     const/4 p2, 0x0
 
-    invoke-virtual {p1, p2}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     new-instance v8, Landroid/os/RemoteCallback;
 
@@ -30378,7 +30378,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     move-result p0
 
@@ -33819,7 +33819,7 @@
 
     sget-object v5, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v5}, Lcom/android/server/am/MARsPolicyManager;->postInit()V
+    nop
 
     sget-boolean v5, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -33833,7 +33833,7 @@
 
     const/4 v14, 0x0
 
-    invoke-virtual {v5, v14}, Lcom/android/server/am/FreecessController;->setScreenOnFreecessEnabled(Z)V
+    nop
 
     iput-boolean v14, v5, Lcom/android/server/am/FreecessController;->FREECESS_ENHANCEMENT:Z
 
@@ -35478,13 +35478,13 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp(Ljava/lang/String;I)Z
+    nop
 
     move-result p1
 
@@ -35494,7 +35494,7 @@
 
     const-string/jumbo p2, "UserForceStop"
 
-    invoke-virtual {p0, v3, v2, p1, p2}, Lcom/android/server/am/MARsPolicyManager;->addRestrictListAvoidAssoicationLaunch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_1
     return-void
@@ -37213,7 +37213,7 @@
 
     const/16 v0, 0xa
 
-    invoke-static {p1, v0, p0}, Lcom/android/server/am/Freezer;->freezeBinder(IIZ)I
+    nop
 
     move-result p0
 
@@ -37477,7 +37477,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v1}, Lcom/android/server/am/MARsPolicyManager;->hasPermission(Ljava/lang/String;)Z
+    nop
 
     move-result v1
 
@@ -37541,7 +37541,7 @@
 
     iget v9, v8, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    invoke-virtual {v0, v9}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v9
 
@@ -38860,7 +38860,7 @@
 
     aget-object v3, v3, v5
 
-    invoke-virtual {v0, v3, p4, v4}, Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy(Ljava/lang/String;II)Z
+    nop
 
     goto :goto_1
 
@@ -38877,7 +38877,7 @@
 
     const-string/jumbo v3, "com.samsung.android.spay"
 
-    invoke-virtual {v0, v3, p4, v4}, Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy(Ljava/lang/String;II)Z
+    nop
 
     :cond_5
     :goto_1
@@ -40254,7 +40254,7 @@
 
     const-string/jumbo v1, "android.permission.INTERACT_ACROSS_USERS"
 
-    invoke-static {v1}, Lcom/android/server/am/MARsPolicyManager;->hasPermission(Ljava/lang/String;)Z
+    nop
 
     move-result v1
 
@@ -40262,7 +40262,7 @@
 
     const-string/jumbo v1, "android.permission.INTERACT_ACROSS_USERS_FULL"
 
-    invoke-static {v1}, Lcom/android/server/am/MARsPolicyManager;->hasPermission(Ljava/lang/String;)Z
+    nop
 
     move-result v1
 
@@ -43637,7 +43637,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v1}, Lcom/android/server/am/MARsPolicyManager;->hasPermission(Ljava/lang/String;)Z
+    nop
 
     move-result v1
 
@@ -43703,7 +43703,7 @@
 
     iget v10, v8, Lcom/android/server/am/MARsPackageInfo;->uid:I
 
-    invoke-virtual {v0, p1, v10, v9}, Lcom/android/server/am/MARsPolicyManager;->canRestrictBySEPWithoutPermissionCheck(IILjava/lang/String;)Z
+    nop
 
     move-result v9
 
@@ -43803,7 +43803,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v1}, Lcom/android/server/am/MARsPolicyManager;->hasPermission(Ljava/lang/String;)Z
+    nop
 
     move-result v1
 
@@ -43867,7 +43867,7 @@
 
     iget v9, v8, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    invoke-virtual {v0, v9}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v9
 
@@ -44011,7 +44011,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v0}, Lcom/android/server/am/MARsPolicyManager;->hasPermission(Ljava/lang/String;)Z
+    nop
 
     move-result v0
 
@@ -44035,7 +44035,7 @@
 
     move-result p3
 
-    invoke-static {v2, p2, p3}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p2
 
@@ -44045,7 +44045,7 @@
 
     iget v2, p2, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    invoke-virtual {p0, v2}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result p0
 
@@ -45981,7 +45981,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v2
 
@@ -45993,13 +45993,13 @@
 
     iget v3, p2, Lcom/android/server/am/ProcessRecord;->userId:I
 
-    invoke-virtual {v0, v3, v2}, Lcom/android/server/am/MARsPolicyManager;->isForegroundPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v2
 
     if-nez v2, :cond_e
 
-    invoke-virtual {v0}, Lcom/android/server/am/MARsPolicyManager;->getScreenOnState()Z
+    nop
 
     move-result v0
 
@@ -49260,7 +49260,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer;->useFreezer()Z
+    nop
 
     move-result p0
 
@@ -49324,7 +49324,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/Freezer;->isFreezerSupported()Z
+    nop
 
     move-result p0
     :try_end_0
@@ -49740,7 +49740,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/CachedAppOptimizer;->isProcessFrozen(I)Z
+    nop
 
     move-result p0
 
@@ -55042,7 +55042,7 @@
     :cond_4
     iput-boolean v8, v0, Lcom/android/server/am/FreecessController;->mIsDumpstateWorking:Z
 
-    invoke-virtual {v0, v8, v7}, Lcom/android/server/am/FreecessController;->setFreecessEnableForSpecificReason(IZ)V
+    nop
 
     :cond_5
     :goto_5
@@ -55100,7 +55100,7 @@
 
     const/16 v14, 0x3e8
 
-    invoke-virtual {v13, v5, v14, v6}, Lcom/android/server/am/FreecessController;->enterOLAF(IILjava/lang/String;)V
+    nop
 
     new-instance v6, Landroid/content/Intent;
 
@@ -59706,7 +59706,7 @@
 
     move v4, p5
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/server/am/MARsPolicyManager;->restrictBySEP(IILjava/lang/String;IZ)Z
+    nop
 
     move-result p0
 
@@ -68521,7 +68521,7 @@
 
     invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/Freezer;->isFreezerSupported()Z
+    nop
 
     move-result v10
 
@@ -68533,7 +68533,7 @@
 
     const/16 v11, 0x17
 
-    invoke-virtual {v10, v0, v11, v7}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP(Lcom/android/server/am/ProcessRecord;IZ)V
+    nop
 
     :cond_7
     new-instance v10, Ljava/lang/StringBuilder;
@@ -73595,7 +73595,7 @@
 
     sget-object v2, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v2}, Lcom/android/server/am/MARsPolicyManager;->getMARsEnabled()Z
+    nop
 
     move-result v2
 
@@ -73681,7 +73681,7 @@
 
     iget-object v5, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    invoke-virtual {v4, p2, v5}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v4
     :try_end_3
@@ -74518,7 +74518,7 @@
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-virtual {v0, v1, p3}, Lcom/android/server/am/MARsPolicyManager;->updateForegroundPackageToPkgStatus(IZ)V
+    nop
 
     :cond_5
     invoke-virtual {p4, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -74598,7 +74598,7 @@
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    invoke-virtual {p4, v0, p3}, Lcom/android/server/am/MARsPolicyManager;->updateForegroundPackageToPkgStatus(IZ)V
+    nop
 
     :cond_7
     :goto_3
@@ -74935,7 +74935,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/MARsPolicyManager;->updateRestrictionInfo(Lcom/samsung/android/sdhms/SemAppRestrictionManager$RestrictionInfo;Ljava/util/List;)Z
+    nop
 
     move-result p0
 
@@ -75111,7 +75111,7 @@
 
     iget-object v4, v2, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    invoke-virtual {v3, p2, v4}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v3
     :try_end_3
@@ -75394,7 +75394,7 @@
 
     const/16 v3, 0xf
 
-    invoke-virtual {v11, v3, v15}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily(ILcom/android/server/am/ProcessRecord;)V
+    nop
 
     invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
     :try_end_1

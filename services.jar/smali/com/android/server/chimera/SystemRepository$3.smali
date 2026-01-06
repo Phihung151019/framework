@@ -48,7 +48,7 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result p1
 
@@ -82,7 +82,7 @@
 
     const/16 v3, 0x7d0
 
-    invoke-virtual {p1, v2, v3, v1}, Lcom/android/server/am/FreecessController;->enterOLAF(IILjava/lang/String;)V
+    nop
 
     goto :goto_0
 
@@ -93,7 +93,7 @@
 
     sget-object p1, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p1}, Lcom/android/server/am/FreecessController;->exitOLAF()V
+    nop
 
     :cond_2
     :goto_0

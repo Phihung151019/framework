@@ -319,7 +319,7 @@
 
     const-wide/16 v4, 0x4e20
 
-    invoke-virtual {v0, v2, v3, v4, v5}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;J)V
+    nop
 
     goto :goto_5
 

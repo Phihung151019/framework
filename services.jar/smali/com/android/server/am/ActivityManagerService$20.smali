@@ -42,7 +42,7 @@
 
     const/4 p1, 0x1
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     return-void
 .end method

@@ -3529,7 +3529,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer;->useCompaction()Z
+    nop
 
     move-result p0
 

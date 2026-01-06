@@ -100,7 +100,7 @@
     invoke-virtual {v1, v3, v4}, Landroid/os/PowerManager$WakeLock;->acquire(J)V
 
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/android/server/am/FreecessController;->unFreezePackage(Ljava/lang/String;)V
+    nop
 
     const/4 v1, 0x2
 
@@ -108,7 +108,7 @@
 
     const/4 v4, -0x1
 
-    invoke-virtual {p0, v3, v4, v1, v4}, Lcom/android/server/am/FreecessController;->sendFreecessMsg2kernel(IIII)I
+    nop
 
     move-result v1
 
@@ -268,7 +268,7 @@
 
     sget-object v7, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v7, v2, v8}, Lcom/android/server/am/MARsPolicyManager;->restrictJobsByUid(IZ)V
+    nop
 
     :cond_1
     const/4 v7, 0x3
@@ -284,7 +284,7 @@
     :cond_2
     iget-object v4, p0, Lcom/android/server/am/FreecessHandler$MainHandler;->mFreecessController:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v4, v7, v3, v8, v2}, Lcom/android/server/am/FreecessController;->sendFreecessMsg2kernel(IIII)I
+    nop
 
     move-result v7
 
@@ -340,14 +340,14 @@
     :cond_4
     const-string/jumbo v7, "RegException"
 
-    invoke-virtual {v4, v1, v0, v7}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     goto :goto_4
 
     :cond_5
     iget-object v1, p0, Lcom/android/server/am/FreecessHandler$MainHandler;->mFreecessController:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v1, v7, v3, v9, v2}, Lcom/android/server/am/FreecessController;->sendFreecessMsg2kernel(IIII)I
+    nop
 
     move-result v4
 
@@ -488,7 +488,7 @@
 
     move-result v2
 
-    invoke-virtual {p0, v2, v0, v1}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     return-void
 
@@ -505,7 +505,7 @@
 
     move-result v2
 
-    invoke-virtual {p0, v2, v0, v1}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_e
     :goto_6
@@ -760,7 +760,7 @@
 
     iget-object v2, v0, Lcom/android/server/am/FreecessHandler$MainHandler;->mFreecessController:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v2, v5, v6, v1, v9}, Lcom/android/server/am/FreecessController;->freeze(IIILjava/lang/String;)Lcom/android/server/am/FreezeResult;
+    nop
 
     move-result-object v15
 
@@ -806,7 +806,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     return-void
 
@@ -845,7 +845,7 @@
     :try_start_0
     sget-object v2, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v2, v5}, Lcom/android/server/am/FreecessController;->getPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object v2
 
@@ -1049,7 +1049,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0, v0, p1, v3}, Lcom/android/server/am/MARsPolicyManager;->reportStatusWithMARs(ILjava/lang/String;Z)V
+    nop
 
     return-void
 
@@ -1075,7 +1075,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1, v7}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result p1
 
@@ -1089,14 +1089,14 @@
 
     const-string/jumbo v0, "has Focus"
 
-    invoke-virtual {p0, p1, v7, v0}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     return-void
 
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/am/FreecessHandler$MainHandler;->mFreecessController:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p0}, Lcom/android/server/am/FreecessController;->cancelCalmMode()V
+    nop
 
     return-void
 
@@ -1116,7 +1116,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/FreecessHandler$MainHandler;->mFreecessController:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessController;->triggerCalmMode(Ljava/util/ArrayList;)V
+    nop
 
     return-void
 
@@ -1149,7 +1149,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/FreecessHandler$MainHandler;->mFreecessController:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/server/am/FreecessController;->unFreezeSpecialPackage(ILjava/lang/String;)V
+    nop
 
     return-void
 
@@ -1174,7 +1174,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/FreecessHandler$MainHandler;->mFreecessController:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/server/am/FreecessController;->deleteRemovedPackage(ILjava/lang/String;)V
+    nop
 
     return-void
 
@@ -1199,7 +1199,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/FreecessHandler$MainHandler;->mFreecessController:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p0, v0}, Lcom/android/server/am/FreecessController;->getPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object v1
 
@@ -1226,7 +1226,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/server/am/FreecessController;->canUidBeFrozen(Ljava/util/ArrayList;)Lcom/android/server/am/FreezeResult;
+    nop
 
     move-result-object v0
 
@@ -1278,7 +1278,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, v1, p1}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;)V
+    nop
 
     return-void
 
@@ -1486,7 +1486,7 @@
     move v2, v3
 
     :goto_5
-    invoke-virtual {p0, v2}, Lcom/android/server/am/FreecessController;->turnOnOffFreecessMonitor(Z)V
+    nop
 
     goto/16 :goto_1
 
@@ -1607,7 +1607,7 @@
     move v2, v3
 
     :goto_8
-    invoke-virtual {p0, v2}, Lcom/android/server/am/FreecessController;->turnOnOffFreecessMonitor(Z)V
+    nop
 
     goto/16 :goto_1
 
@@ -1699,20 +1699,20 @@
 
     iput-boolean v3, p0, Lcom/android/server/am/FreecessController;->mIsSmartSwitchWorking:Z
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/server/am/FreecessController;->setFreecessEnableForSpecificReason(IZ)V
+    nop
 
     return-void
 
     :pswitch_c
     iget-object p1, p0, Lcom/android/server/am/FreecessHandler$MainHandler;->mFreecessController:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p1, v8, v3}, Lcom/android/server/am/FreecessController;->restrictJobsByOlaf(IZ)V
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/FreecessHandler$MainHandler;->mFreecessController:Lcom/android/server/am/FreecessController;
 
     const-string/jumbo p1, "timeout"
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessController;->unFreezeForOLAF(Ljava/lang/String;)V
+    nop
 
     return-void
 
@@ -1745,7 +1745,7 @@
 
     if-eqz p1, :cond_13
 
-    invoke-virtual {p0, v2, v0}, Lcom/android/server/am/FreecessController;->restrictJobsByOlaf(IZ)V
+    nop
 
     iget-object p1, p0, Lcom/android/server/am/FreecessController;->mFreecessOlafUpdate:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -1759,7 +1759,7 @@
 
     iput p1, p0, Lcom/android/server/am/FreecessController;->mOlafTargetUserId:I
 
-    invoke-virtual {p0, v2, v1}, Lcom/android/server/am/FreecessController;->triggerOLAF(ILjava/lang/String;)V
+    nop
 
     iget-object p1, p0, Lcom/android/server/am/FreecessController;->mFreecessOlafUpdate:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -1776,9 +1776,9 @@
     :cond_13
     const-string p1, "Force"
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessController;->unFreezeForOLAF(Ljava/lang/String;)V
+    nop
 
-    invoke-virtual {p0, v8, v3}, Lcom/android/server/am/FreecessController;->restrictJobsByOlaf(IZ)V
+    nop
 
     return-void
 
@@ -1795,7 +1795,7 @@
 
     const/4 v0, 0x4
 
-    invoke-virtual {p0, v0, p1, v3, v3}, Lcom/android/server/am/FreecessController;->sendFreecessMsg2kernel(IIII)I
+    nop
 
     move-result p1
 
@@ -1803,7 +1803,7 @@
 
     const-string p1, "FBException"
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessController;->unFreezePackage(Ljava/lang/String;)V
+    nop
 
     return-void
 
@@ -2037,7 +2037,7 @@
 
     move-result-object p1
 
-    invoke-virtual {v3, v4, p1}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     goto :goto_d
 
@@ -2481,13 +2481,13 @@
     monitor-enter v3
 
     :try_start_0
-    invoke-virtual {p0, v1, v0}, Lcom/android/server/am/FreecessController;->getPackageStatus(ILjava/lang/String;)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object v4
 
     if-eqz v4, :cond_0
 
-    invoke-virtual {p0, v4, v2}, Lcom/android/server/am/FreecessController;->freezeForCalmMode(Lcom/android/server/am/FreecessPkgStatus;Ljava/lang/String;)Z
+    nop
 
     move-result p0
 
@@ -2596,7 +2596,7 @@
 
     if-lez v6, :cond_0
 
-    invoke-virtual {p0, v5, v0, v2}, Lcom/android/server/am/FreecessController;->unFreezeAction(Lcom/android/server/am/FreecessPkgStatus;Ljava/lang/String;Z)Z
+    nop
 
     goto :goto_1
 
@@ -2668,7 +2668,7 @@
 
     if-nez v6, :cond_3
 
-    invoke-virtual {p0, v5, v0, v2}, Lcom/android/server/am/FreecessController;->unFreezeAction(Lcom/android/server/am/FreecessPkgStatus;Ljava/lang/String;Z)Z
+    nop
 
     goto :goto_4
 

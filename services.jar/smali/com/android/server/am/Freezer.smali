@@ -5,20 +5,32 @@
 
 # direct methods
 .method public static freezeBinder(IIZ)I
-    .locals 1
-    const/4 v0, 0x0
-    return v0
+    .locals 0
+
+    nop
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static getBinderFreezeInfo(I)I
-    .locals 1
-    const/4 v0, 0x0
-    return v0
+    .locals 0
+
+    nop
+
+    move-result p0
+
+    return p0
 .end method
 
 .method public static isFreezerSupported()Z
     .locals 1
-    const/4 v0, 0x0
+
+    nop
+
+    move-result v0
+
     return v0
 .end method
 

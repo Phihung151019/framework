@@ -44,7 +44,7 @@
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer$SettingsContentObserver;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer;->updateUseFreezer()V
+    nop
 
     monitor-exit p1
 

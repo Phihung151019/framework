@@ -44,7 +44,7 @@
 
     sget-object p3, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p3, p2}, Lcom/android/server/am/MARsPolicyManager;->getForegroundServiceStartTime(I)J
+    nop
 
     move-result-wide v0
 
@@ -109,7 +109,7 @@
 
     if-eqz p0, :cond_3
 
-    invoke-virtual {p3, p1, p4}, Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn(ILjava/lang/String;)Z
+    nop
 
     move-result p0
 

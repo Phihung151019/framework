@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-direct {v0}, Lcom/android/server/am/MARsPolicyManager;-><init>()V
+    nop
 
     sput-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 

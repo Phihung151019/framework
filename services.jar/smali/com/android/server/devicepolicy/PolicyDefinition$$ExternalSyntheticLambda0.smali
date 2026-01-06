@@ -539,7 +539,7 @@
 
     move-result v7
 
-    invoke-virtual {v0, p4, v7, v2}, Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy(Ljava/lang/String;II)Z
+    nop
 
     move-result v7
 
@@ -588,7 +588,7 @@
 
     sget-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v0, p4, p0, v2}, Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy(Ljava/lang/String;II)Z
+    nop
 
     move-result v0
 

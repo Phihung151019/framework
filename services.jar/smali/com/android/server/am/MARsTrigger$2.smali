@@ -54,7 +54,7 @@
 
     sget-object p1, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p1, v0}, Lcom/android/server/am/MARsPolicyManager;->setScreenOnState(Z)V
+    nop
 
     sget-boolean p2, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -570,7 +570,7 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result p1
 
@@ -764,7 +764,7 @@
 
     sget-object v6, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v6}, Lcom/android/server/am/MARsPolicyManager;->getScreenOnState()Z
+    nop
 
     move-result v6
 
@@ -1143,14 +1143,14 @@
     :goto_c
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager;->postInit()V
+    nop
 
     goto :goto_d
 
     :cond_21
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager;->setSubUserIds()V
+    nop
 
     :cond_22
     :goto_d
@@ -1239,7 +1239,7 @@
 
     const-string/jumbo v0, "switchUser"
 
-    invoke-virtual {p0, p2, v0}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     sget-boolean p2, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -1249,7 +1249,7 @@
 
     if-eqz v0, :cond_26
 
-    invoke-virtual {p2, v5}, Lcom/android/server/am/FreecessController;->setScreenOnFreecessEnabled(Z)V
+    nop
 
     sget-object v1, Lcom/android/server/am/FreecessHandler$FreecessHandlerHolder;->INSTANCE:Lcom/android/server/am/FreecessHandler;
 
@@ -1270,14 +1270,14 @@
 
     const-string/jumbo v1, "MUM"
 
-    invoke-virtual {p2, v1}, Lcom/android/server/am/FreecessController;->unFreezePackage(Ljava/lang/String;)V
+    nop
 
     :cond_27
     iput-boolean v4, p0, Lcom/android/server/am/MARsPolicyManager;->mFirstTimeUpdatePackages:Z
 
     if-eqz v0, :cond_28
 
-    invoke-virtual {p2, v4}, Lcom/android/server/am/FreecessController;->setScreenOnFreecessEnabled(Z)V
+    nop
 
     :cond_28
     sget-object p2, Lcom/android/server/am/mars/filter/FilterManager$FilterManagerHolder;->INSTANCE:Lcom/android/server/am/mars/filter/FilterManager;
@@ -1488,7 +1488,7 @@
 
     sget-object p1, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p1, v4}, Lcom/android/server/am/MARsPolicyManager;->setScreenOnState(Z)V
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
 

@@ -14,7 +14,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager;->postInit()V
+    nop
 
     return-void
 .end method

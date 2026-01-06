@@ -969,7 +969,7 @@
 
     sget-object v4, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v4}, Lcom/android/server/am/FreecessController;->updateRunningLocationPackages()V
+    nop
 
     sget-object v4, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$ActiveMusicRecordFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;
 
@@ -1384,19 +1384,19 @@
 
     sget-object v5, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v5}, Lcom/android/server/am/MARsPolicyManager;->getMARsEnabled()Z
+    nop
 
     move-result v14
 
     if-eqz v14, :cond_2d
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v14
 
     if-eqz v14, :cond_2d
 
-    invoke-virtual {v5, v11, v13}, Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn(ILjava/lang/String;)Z
+    nop
 
     move-result v5
 
@@ -1614,7 +1614,7 @@
 
     sget-object v5, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v5, v10}, Lcom/android/server/am/MARsPolicyManager;->getForegroundServiceStartTime(I)J
+    nop
 
     move-result-wide v10
 

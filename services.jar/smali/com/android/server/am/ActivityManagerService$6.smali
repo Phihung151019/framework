@@ -96,7 +96,7 @@
     iget v2, v1, Lcom/android/server/am/ProcessRecord;->uid:I
 
     :goto_0
-    invoke-virtual {v0, p0, v2}, Lcom/android/server/am/FreecessController;->releaseFreezedAppPid(II)V
+    nop
 
     :cond_1
     iget-object v0, v1, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;

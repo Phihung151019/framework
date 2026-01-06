@@ -137,7 +137,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0, p2, v0}, Lcom/android/server/am/MARsPolicyManager;->setManagedProfileEnabled(IZ)V
+    nop
 
     goto/16 :goto_0
 
@@ -213,7 +213,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0, p2, v1}, Lcom/android/server/am/MARsPolicyManager;->setManagedProfileEnabled(IZ)V
+    nop
 
     goto :goto_0
 
@@ -329,7 +329,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0, p2, v1}, Lcom/android/server/am/MARsPolicyManager;->setManagedProfileEnabled(IZ)V
+    nop
 
     :cond_9
     :goto_0
@@ -421,7 +421,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager;->postInit()V
+    nop
 
     goto :goto_4
 
@@ -608,7 +608,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager;->updateResetTime()V
+    nop
 
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MID:Z
 
@@ -655,7 +655,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager;->onPowerAllowListChanged()V
+    nop
 
     return-void
 

@@ -180,7 +180,7 @@
     monitor-enter v0
 
     :try_start_0
-    invoke-virtual {p2, v4}, Lcom/android/server/am/FreecessController;->getFrozenPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object p2
 

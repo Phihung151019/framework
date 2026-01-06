@@ -3009,7 +3009,7 @@
 
     sget-object v3, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v3}, Lcom/android/server/am/MARsPolicyManager;->getMARsEnabled()Z
+    nop
 
     move-result v7
 
@@ -3043,7 +3043,7 @@
 
     move-result v11
 
-    invoke-virtual {v3, v11, v15}, Lcom/android/server/am/MARsPolicyManager;->isMARsTarget(ILjava/lang/String;)Z
+    nop
 
     move-result v3
 
@@ -6382,7 +6382,7 @@
     :try_start_0
     iget-object v12, v3, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v12, v0, v7}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v12
 
@@ -6396,7 +6396,7 @@
 
     if-eqz v13, :cond_3
 
-    invoke-virtual {v3, v12, v11}, Lcom/android/server/am/MARsPolicyManager;->onAppUsed(Lcom/android/server/am/MARsPackageInfo;Z)V
+    nop
 
     sget-object v3, Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter$WidgetPkgFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;
 
@@ -6433,7 +6433,7 @@
 
     if-eqz v13, :cond_5
 
-    invoke-virtual {v3, v12, v11}, Lcom/android/server/am/MARsPolicyManager;->onAppUsed(Lcom/android/server/am/MARsPackageInfo;Z)V
+    nop
 
     goto :goto_3
 
@@ -6446,7 +6446,7 @@
 
     if-eqz v13, :cond_6
 
-    invoke-virtual {v3, v12, v11}, Lcom/android/server/am/MARsPolicyManager;->onAppUsed(Lcom/android/server/am/MARsPackageInfo;Z)V
+    nop
 
     sget-object v3, Lcom/android/server/am/mars/filter/filter/DeviceAdminPackageFilter$DeviceAdminPackageFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/DeviceAdminPackageFilter;
 
@@ -6720,7 +6720,7 @@
 
     move-result-wide v13
 
-    invoke-virtual {v0, v7, v13, v14, v3}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily(IJLcom/android/server/am/ProcessRecord;)V
+    nop
 
     goto :goto_9
 

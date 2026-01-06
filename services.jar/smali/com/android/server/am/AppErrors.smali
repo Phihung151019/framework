@@ -4788,7 +4788,7 @@
 
     const/16 p3, 0xc
 
-    invoke-virtual {p1, p2, p3}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeProcess(II)V
+    nop
 
     const-string/jumbo p1, "scheduleCrash for \'"
 

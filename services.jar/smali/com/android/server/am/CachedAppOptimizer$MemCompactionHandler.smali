@@ -93,7 +93,7 @@
     :cond_1
     iget-object v2, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v2, v1}, Lcom/android/server/am/CachedAppOptimizer;->isProcessFrozen(I)Z
+    nop
 
     move-result v2
 
@@ -172,7 +172,7 @@
 
     move-result-wide v3
 
-    invoke-static {v1, v11}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smcompactProcess(II)I
+    nop
 
     move-result v5
 
@@ -937,7 +937,7 @@
 
     if-ne v12, v13, :cond_1c
 
-    invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->getFreeSwapPercent()D
+    nop
 
     move-result-wide v21
 
@@ -1056,11 +1056,11 @@
 
     invoke-static {v3, v4}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;Z)V
 
-    invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smgetUsedZramMemory()J
+    nop
 
     move-result-wide v3
 
-    invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smthreadCpuTimeNs()J
+    nop
 
     move-result-wide v11
 
@@ -1070,7 +1070,7 @@
 
     invoke-interface {v13, v9, v5}, Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;->performCompaction(Lcom/android/server/am/CachedAppOptimizer$CompactProfile;I)V
 
-    invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smthreadCpuTimeNs()J
+    nop
 
     move-result-wide v13
 
@@ -1092,7 +1092,7 @@
 
     sub-long/2addr v13, v11
 
-    invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smgetUsedZramMemory()J
+    nop
 
     move-result-wide v11
 

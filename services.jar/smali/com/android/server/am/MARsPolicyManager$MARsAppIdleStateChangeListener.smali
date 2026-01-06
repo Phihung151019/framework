@@ -32,7 +32,7 @@
 
     iget-object p5, p5, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {p5, p1, p2}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p1
 
@@ -117,7 +117,7 @@
 
     const/16 p2, 0x400
 
-    invoke-virtual {p0, p2, p1}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result p0
 

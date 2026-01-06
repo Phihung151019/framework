@@ -371,7 +371,7 @@
 
     move-result v3
 
-    invoke-virtual {v2, v3, v1}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v1
 
@@ -381,7 +381,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v1
 
@@ -450,7 +450,7 @@
     monitor-enter v3
 
     :try_start_1
-    invoke-virtual {v2, v4, v1}, Lcom/android/server/am/FreecessController;->getFrozenPackageStatus(ILjava/lang/String;)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object v1
 
@@ -503,7 +503,7 @@
 
     const-string v3, "Alarm"
 
-    invoke-virtual {v2, v0, v1, v3}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     goto :goto_5
 
@@ -1664,7 +1664,7 @@
     :try_start_0
     iget-object v2, v2, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v2, p0, v0}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v2
 
@@ -1685,7 +1685,7 @@
     goto :goto_3
 
     :cond_2
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v5
 
@@ -1705,7 +1705,7 @@
 
     sget-object v2, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v2, v0, p0}, Lcom/android/server/am/FreecessController;->matchFreezeState(ILjava/lang/String;)Z
+    nop
 
     move-result p0
 
@@ -1748,7 +1748,7 @@
 
     sget-object v2, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v2, v0, p0}, Lcom/android/server/am/FreecessController;->matchFreezeState(ILjava/lang/String;)Z
+    nop
 
     move-result p0
 

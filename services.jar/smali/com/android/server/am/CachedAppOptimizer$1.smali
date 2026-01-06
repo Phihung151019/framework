@@ -73,7 +73,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v1}, Lcom/android/server/am/CachedAppOptimizer;->updateFreezerDebounceTimeout()V
+    nop
 
     goto :goto_0
 
@@ -93,7 +93,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v1}, Lcom/android/server/am/CachedAppOptimizer;->updateFreezerExemptInstPkg()V
+    nop
 
     goto :goto_0
 
@@ -157,7 +157,7 @@
     :cond_3
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-static {v1}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$mupdateFreezerBinderState(Lcom/android/server/am/CachedAppOptimizer;)V
+    nop
 
     goto :goto_0
 
@@ -225,7 +225,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v1}, Lcom/android/server/am/CachedAppOptimizer;->updateUseCompaction()V
+    nop
 
     goto :goto_2
 
@@ -440,7 +440,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v1}, Lcom/android/server/am/CachedAppOptimizer;->updateProcStateThrottle()V
+    nop
 
     goto/16 :goto_2
 
@@ -514,7 +514,7 @@
     :goto_3
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v1}, Lcom/android/server/am/CachedAppOptimizer;->updateCompactionThrottles()V
+    nop
 
     goto/16 :goto_2
 

@@ -240,7 +240,7 @@
 
     const-string v2, "Abusive"
 
-    invoke-virtual {v0, v2, v1}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     sget-boolean v0, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -436,7 +436,7 @@
 
     move-result v6
 
-    invoke-static {v5, v0, v6}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v5
 
@@ -510,11 +510,11 @@
 
     const/4 v6, 0x0
 
-    invoke-virtual {v0, v3, v6}, Lcom/android/server/am/FreecessController;->updateAbnormalAppFirewall(IZ)V
+    nop
 
     iget v0, v5, Lcom/android/server/am/MARsPackageInfo;->uid:I
 
-    invoke-virtual {p1, v0}, Lcom/android/server/am/MARsPolicyManager;->closeSocketsForUid(I)V
+    nop
 
     :cond_5
     :goto_2
@@ -540,7 +540,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p1, v0, p2}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_6
     monitor-exit v4
@@ -676,7 +676,7 @@
 
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result p3
 
@@ -688,7 +688,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord;->mFreecessParent:Lcom/android/server/am/FreecessPkgStatus;
 
-    invoke-virtual {p3, v1}, Lcom/android/server/am/FreecessController;->isInFreecessExcludeList(Lcom/android/server/am/FreecessPkgStatus;)Z
+    nop
 
     move-result p3
 

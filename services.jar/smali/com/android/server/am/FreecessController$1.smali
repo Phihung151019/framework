@@ -37,7 +37,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/FreecessController$1;->this$0:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p0}, Lcom/android/server/am/FreecessController;->exitOLAF()V
+    nop
 
     :cond_0
     return-void

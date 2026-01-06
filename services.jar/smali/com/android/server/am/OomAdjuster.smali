@@ -1404,7 +1404,7 @@
 
     iget-object v3, v1, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v3}, Lcom/android/server/am/CachedAppOptimizer;->useCompaction()Z
+    nop
 
     move-result v17
 
@@ -1416,7 +1416,7 @@
 
     sget-object v0, Lcom/android/server/am/CachedAppOptimizer$CancelCompactReason;->OOM_IMPROVEMENT:Lcom/android/server/am/CachedAppOptimizer$CancelCompactReason;
 
-    invoke-virtual {v3, v2, v0}, Lcom/android/server/am/CachedAppOptimizer;->cancelCompactionForProcess(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/CachedAppOptimizer$CancelCompactReason;)V
+    nop
 
     :cond_1
     iget-object v0, v1, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -11903,7 +11903,7 @@
 
     if-eqz v16, :cond_a
 
-    invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->getFreeSwapPercent()D
+    nop
 
     move-result-wide v4
 
@@ -14510,7 +14510,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v0}, Lcom/android/server/am/CachedAppOptimizer;->useFreezer()Z
+    nop
 
     move-result v1
 
@@ -14564,11 +14564,11 @@
 
     check-cast v2, Lcom/android/server/am/ProcessRecord;
 
-    invoke-static {p1}, Lcom/android/server/am/CachedAppOptimizer;->getUnfreezeReasonCodeFromOomAdjReason(I)I
+    nop
 
     move-result v3
 
-    invoke-virtual {v0, v3, v2}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily(ILcom/android/server/am/ProcessRecord;)V
+    nop
 
     add-int/lit8 p2, p2, 0x1
 
@@ -14585,7 +14585,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v0}, Lcom/android/server/am/CachedAppOptimizer;->useFreezer()Z
+    nop
 
     move-result v1
 
@@ -14956,11 +14956,11 @@
 
     const-wide/16 p2, 0x0
 
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/CachedAppOptimizer;->updateEarliestFreezableTime(Lcom/android/server/am/ProcessRecord;J)J
+    nop
 
     move-result-wide p2
 
-    invoke-virtual {v0, p2, p3, p1, v4}, Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP(JLcom/android/server/am/ProcessRecord;Z)V
+    nop
 
     return-void
 
@@ -14976,11 +14976,11 @@
     :cond_16
     iget-wide p2, v0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDebounceTimeout:J
 
-    invoke-static {p1, p2, p3}, Lcom/android/server/am/CachedAppOptimizer;->updateEarliestFreezableTime(Lcom/android/server/am/ProcessRecord;J)J
+    nop
 
     move-result-wide p2
 
-    invoke-virtual {v0, p2, p3, p1, v4}, Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP(JLcom/android/server/am/ProcessRecord;Z)V
+    nop
 
     return-void
 
@@ -15005,11 +15005,11 @@
 
     :cond_19
     :goto_11
-    invoke-static {p2}, Lcom/android/server/am/CachedAppOptimizer;->getUnfreezeReasonCodeFromOomAdjReason(I)I
+    nop
 
     move-result p0
 
-    invoke-virtual {v0, p1, p0, v4}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP(Lcom/android/server/am/ProcessRecord;IZ)V
+    nop
 
     return-void
 .end method

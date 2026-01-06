@@ -870,7 +870,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v1
 
@@ -880,7 +880,7 @@
 
     move-result v1
 
-    invoke-virtual {v0, v1, p2}, Lcom/android/server/am/MARsPolicyManager;->isMARsTarget(ILjava/lang/String;)Z
+    nop
 
     move-result v0
 
@@ -2267,7 +2267,7 @@
 
     sget-object v8, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v8, v15}, Lcom/android/server/am/FreecessController;->shouldDelayService(Lcom/android/server/am/ServiceRecord;)Z
+    nop
 
     move-result v8
 
@@ -2676,7 +2676,7 @@
 
     iget v0, v1, Lcom/android/server/am/ServiceRecord;->userId:I
 
-    invoke-virtual {v6, v0, v15, v9, v5}, Lcom/android/server/am/MARsPolicyManager;->onSpecialBindServiceActions(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     sget-object v25, Lcom/android/server/am/BaseRestrictionMgr$BaseRestrictionMgrHolder;->INSTANCE:Lcom/android/server/am/BaseRestrictionMgr;
 
@@ -4715,7 +4715,7 @@
 
     iget-object v5, v2, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
 
-    invoke-virtual {v4, v12, v5}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily(ILcom/android/server/am/ProcessRecord;)V
+    nop
 
     goto :goto_6
 
@@ -6844,7 +6844,7 @@
 
     if-eqz v8, :cond_3
 
-    invoke-virtual {v1, p3, v5}, Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp(Ljava/lang/String;I)Z
+    nop
 
     move-result v1
 
@@ -6864,7 +6864,7 @@
     monitor-enter v1
 
     :try_start_0
-    invoke-virtual {v4, v5, p3}, Lcom/android/server/am/FreecessController;->getPackageStatus(ILjava/lang/String;)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object p3
 
@@ -6924,7 +6924,7 @@
 
     iget-object p3, p1, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
 
-    invoke-static {p3}, Lcom/android/server/am/FreecessController;->isMainProcDepend(Lcom/android/server/am/ProcessRecord;)Z
+    nop
 
     move-result p3
 
@@ -6987,7 +6987,7 @@
 
     const-string/jumbo v1, "ServiceANR"
 
-    invoke-virtual {v4, p3, v1, v6, v7}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;J)V
+    nop
 
     goto :goto_6
 
@@ -7008,7 +7008,7 @@
 
     const-string/jumbo v1, "ServiceANR"
 
-    invoke-virtual {v4, p3, v1, v6, v7}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;J)V
+    nop
 
     :cond_8
     iget-object v6, p1, Lcom/android/server/am/ServiceRecord;->packageName:Ljava/lang/String;
@@ -7019,7 +7019,7 @@
 
     const-wide/16 v7, 0x7d0
 
-    invoke-virtual/range {v4 .. v9}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;JLjava/lang/String;)Z
+    nop
 
     :cond_9
     :goto_6
@@ -8442,7 +8442,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -8564,7 +8564,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p0, v7}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     return v1
 
@@ -8690,7 +8690,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p0, v7}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     return v7
 
@@ -8714,7 +8714,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {p0, v7}, Lcom/android/server/am/CachedAppOptimizer;->enableFreezer(Z)Z
+    nop
 
     throw p1
 .end method
@@ -10904,7 +10904,7 @@
 
     if-eqz v14, :cond_12
 
-    invoke-virtual {v13, v11, v12}, Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp(Ljava/lang/String;I)Z
+    nop
 
     move-result v13
 
@@ -10924,7 +10924,7 @@
     monitor-enter v13
 
     :try_start_2
-    invoke-virtual {v10, v12, v11}, Lcom/android/server/am/FreecessController;->getPackageStatus(ILjava/lang/String;)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object v10
 
@@ -14933,7 +14933,7 @@
 
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v12
 
@@ -14947,7 +14947,7 @@
 
     iget v13, v4, Lcom/android/server/am/ServiceRecord;->userId:I
 
-    invoke-virtual {v6, v13, v12}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v6
 
@@ -14988,7 +14988,7 @@
 
     iget-object v6, v4, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
 
-    invoke-static {v6}, Lcom/android/server/am/FreecessController;->isMainProcDepend(Lcom/android/server/am/ProcessRecord;)Z
+    nop
 
     move-result v6
 
@@ -15760,7 +15760,7 @@
 
     iget-object v4, v2, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
 
-    invoke-virtual {v3, v0, v4}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily(ILcom/android/server/am/ProcessRecord;)V
+    nop
 
     :cond_26
     iget-object v0, v2, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
@@ -15929,7 +15929,7 @@
 
     iget-object v4, v4, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v4, v5, v3}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily(ILcom/android/server/am/ProcessRecord;)V
+    nop
 
     :cond_1
     and-int/lit8 v3, p5, 0x2
@@ -26828,7 +26828,7 @@
 
     sget-object v3, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v3, v2}, Lcom/android/server/am/FreecessController;->shouldDelayService(Lcom/android/server/am/ServiceRecord;)Z
+    nop
 
     move-result v3
 
@@ -29755,7 +29755,7 @@
 
     const-wide/16 v12, 0x7d0
 
-    invoke-virtual {v15, v5, v9, v12, v13}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;J)V
+    nop
 
     iget-object v5, v6, Lcom/android/server/am/ConnectionRecord;->binding:Lcom/android/server/am/AppBindRecord;
 
@@ -29775,7 +29775,7 @@
 
     move-object/from16 v16, v15
 
-    invoke-virtual/range {v16 .. v21}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;JLjava/lang/String;)Z
+    nop
 
     goto :goto_2
 
@@ -29862,7 +29862,7 @@
 
     invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v15, v13, v12, v5}, Lcom/android/server/am/MARsPolicyManager;->onSpecialUnBindServiceActions(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_6
     iget-object v5, v14, Lcom/android/server/am/ProcessRecord;->mServices:Lcom/android/server/am/ProcessServiceRecord;

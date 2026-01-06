@@ -3516,7 +3516,7 @@
 
     iget-object v1, v1, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    invoke-virtual {v1}, Lcom/android/server/am/CachedAppOptimizer;->useFreezer()Z
+    nop
 
     move-result v1
 

@@ -79,11 +79,11 @@
 
     iget-wide v3, v0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDebounceTimeout:J
 
-    invoke-static {p1, v3, v4}, Lcom/android/server/am/CachedAppOptimizer;->updateEarliestFreezableTime(Lcom/android/server/am/ProcessRecord;J)J
+    nop
 
     move-result-wide v3
 
-    invoke-virtual {v0, v3, v4, p1, v2}, Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP(JLcom/android/server/am/ProcessRecord;Z)V
+    nop
 
     :cond_3
     :goto_0
@@ -98,7 +98,7 @@
 
     const/16 p0, 0x13
 
-    invoke-virtual {v0, p1, p0, v2}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP(Lcom/android/server/am/ProcessRecord;IZ)V
+    nop
 
     const/4 p0, 0x1
 

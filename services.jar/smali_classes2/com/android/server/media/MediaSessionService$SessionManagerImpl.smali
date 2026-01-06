@@ -2521,7 +2521,7 @@
 
     iget v4, v12, Lcom/android/server/media/MediaSessionRecord;->mUserId:I
 
-    invoke-virtual {v2, v4, v3}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v3
 
@@ -2533,7 +2533,7 @@
 
     const-string/jumbo v6, "MediaKeyEvent"
 
-    invoke-virtual {v2, v4, v3, v6}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_1b
     if-eqz p6, :cond_1c

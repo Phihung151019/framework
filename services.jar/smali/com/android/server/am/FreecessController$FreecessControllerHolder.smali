@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/FreecessController;
 
-    invoke-direct {v0}, Lcom/android/server/am/FreecessController;-><init>()V
+    nop
 
     sput-object v0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 

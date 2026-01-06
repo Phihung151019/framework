@@ -3075,19 +3075,19 @@
     move/from16 v6, v21
 
     :cond_f
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->getInstance()Lcom/android/server/am/MARsPolicyManager;
+    nop
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v5
 
     if-eqz v5, :cond_10
 
-    invoke-virtual {v0, v7, v2}, Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn(ILjava/lang/String;)Z
+    nop
 
     move-result v0
 

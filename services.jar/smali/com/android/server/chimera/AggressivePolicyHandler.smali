@@ -1083,7 +1083,7 @@
 
     sget-object v13, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    invoke-virtual {v13, v0, v12}, Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn(ILjava/lang/String;)Z
+    nop
 
     move-result v13
 
@@ -1111,7 +1111,7 @@
     monitor-enter v19
 
     :try_start_0
-    invoke-virtual {v13, v0, v12}, Lcom/android/server/am/FreecessController;->getPackageStatus(ILjava/lang/String;)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object v0
 

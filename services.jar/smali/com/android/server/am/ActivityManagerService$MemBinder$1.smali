@@ -1599,13 +1599,13 @@
     const/4 v9, 0x1
 
     :try_start_e
-    invoke-virtual {v5, v14, v9}, Lcom/android/server/am/FreecessController;->setIsDoingGC(IZ)V
+    nop
 
     const-string v9, "DumpMemInfo"
 
     const-wide/16 v0, 0xbb8
 
-    invoke-virtual {v5, v14, v9, v0, v1}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;J)V
+    nop
 
     goto :goto_23
 
@@ -1676,7 +1676,7 @@
 
     const/4 v9, 0x0
 
-    invoke-virtual {v5, v14, v9}, Lcom/android/server/am/FreecessController;->setIsDoingGC(IZ)V
+    nop
 
     goto :goto_27
 
@@ -1720,7 +1720,7 @@
 
     const/4 v9, 0x0
 
-    invoke-virtual {v4, v14, v9}, Lcom/android/server/am/FreecessController;->setIsDoingGC(IZ)V
+    nop
 
     :cond_35
     throw v0

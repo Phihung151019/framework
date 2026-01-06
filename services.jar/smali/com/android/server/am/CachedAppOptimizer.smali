@@ -343,7 +343,7 @@
 .method public static bridge synthetic -$$Nest$smcompactProcess(II)I
     .locals 0
 
-    invoke-static {p0, p1}, Lcom/android/server/am/CachedAppOptimizer;->compactProcess(II)I
+    nop
 
     move-result p0
 
@@ -353,7 +353,7 @@
 .method public static bridge synthetic -$$Nest$smgetUsedZramMemory()J
     .locals 2
 
-    invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->getUsedZramMemory()J
+    nop
 
     move-result-wide v0
 
@@ -363,7 +363,7 @@
 .method public static bridge synthetic -$$Nest$smthreadCpuTimeNs()J
     .locals 2
 
-    invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->threadCpuTimeNs()J
+    nop
 
     move-result-wide v0
 
@@ -952,7 +952,7 @@
 
     if-ne v0, p1, :cond_1
 
-    invoke-static {}, Lcom/android/server/am/CachedAppOptimizer;->cancelCompaction()V
+    nop
 
     move v2, v1
 
@@ -1139,9 +1139,188 @@
 .end method
 
 .method public final declared-synchronized enableFreezer(Z)Z
-    .locals 1
-    const/4 v0, 0x0
-    return v0
+    .locals 6
+
+    const-string/jumbo v0, "freezer override set to "
+
+    monitor-enter p0
+
+    :try_start_0
+    iget-boolean v1, p0, Lcom/android/server/am/CachedAppOptimizer;->mUseFreezer:Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_0
+
+    monitor-exit p0
+
+    return v2
+
+    :cond_0
+    const/4 v1, 0x1
+
+    if-eqz p1, :cond_2
+
+    :try_start_1
+    iget v3, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDisableCount:I
+
+    sub-int/2addr v3, v1
+
+    iput v3, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDisableCount:I
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    if-lez v3, :cond_1
+
+    monitor-exit p0
+
+    return v1
+
+    :cond_1
+    if-gez v3, :cond_3
+
+    :try_start_2
+    const-string p1, "ActivityManager"
+
+    const-string/jumbo v0, "unbalanced call to enableFreezer, ignoring"
+
+    invoke-static {p1, v0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
+
+    iput v2, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDisableCount:I
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    monitor-exit p0
+
+    return v2
+
+    :catchall_0
+    move-exception p1
+
+    goto :goto_1
+
+    :cond_2
+    :try_start_3
+    iget v2, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDisableCount:I
+
+    add-int/2addr v2, v1
+
+    iput v2, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDisableCount:I
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    if-le v2, v1, :cond_3
+
+    monitor-exit p0
+
+    return v1
+
+    :cond_3
+    :try_start_4
+    iget-object v2, p0, Lcom/android/server/am/CachedAppOptimizer;->mAm:Lcom/android/server/am/ActivityManagerService;
+
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForLockedSection()V
+
+    monitor-enter v2
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    :try_start_5
+    iget-object v3, p0, Lcom/android/server/am/CachedAppOptimizer;->mProcLock:Lcom/android/server/am/ActivityManagerProcLock;
+
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->boostPriorityForProcLockedSection()V
+
+    monitor-enter v3
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    xor-int/lit8 v4, p1, 0x1
+
+    :try_start_6
+    iput-boolean v4, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerOverride:Z
+
+    const-string v4, "ActivityManager"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v0, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerOverride:Z
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v0, p0, Lcom/android/server/am/CachedAppOptimizer;->mAm:Lcom/android/server/am/ActivityManagerService;
+
+    iget-object v0, v0, Lcom/android/server/am/ActivityManagerService;->mProcessList:Lcom/android/server/am/ProcessList;
+
+    new-instance v4, Lcom/android/server/am/CachedAppOptimizer$$ExternalSyntheticLambda0;
+
+    invoke-direct {v4, p0, p1}, Lcom/android/server/am/CachedAppOptimizer$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/am/CachedAppOptimizer;Z)V
+
+    invoke-virtual {v0, v4, v1}, Lcom/android/server/am/ProcessList;->forEachLruProcessesLOSP(Ljava/util/function/Consumer;Z)V
+
+    monitor-exit v3
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_2
+
+    :try_start_7
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterProcLockedSection()V
+
+    monitor-exit v2
+    :try_end_7
+    .catchall {:try_start_7 .. :try_end_7} :catchall_1
+
+    :try_start_8
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
+    :try_end_8
+    .catchall {:try_start_8 .. :try_end_8} :catchall_0
+
+    monitor-exit p0
+
+    return v1
+
+    :catchall_1
+    move-exception p1
+
+    goto :goto_0
+
+    :catchall_2
+    move-exception p1
+
+    :try_start_9
+    monitor-exit v3
+    :try_end_9
+    .catchall {:try_start_9 .. :try_end_9} :catchall_2
+
+    :try_start_a
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterProcLockedSection()V
+
+    throw p1
+
+    :goto_0
+    monitor-exit v2
+    :try_end_a
+    .catchall {:try_start_a .. :try_end_a} :catchall_1
+
+    :try_start_b
+    invoke-static {}, Lcom/android/server/am/ActivityManagerService;->resetPriorityAfterLockedSection()V
+
+    throw p1
+
+    :goto_1
+    monitor-exit p0
+    :try_end_b
+    .catchall {:try_start_b .. :try_end_b} :catchall_0
+
+    throw p1
 .end method
 
 .method public forceFreezeForTest(Lcom/android/server/am/ProcessRecord;Z)V
@@ -1169,14 +1348,14 @@
     const-wide/16 v3, 0x0
 
     :try_start_1
-    invoke-virtual {p0, v3, v4, p1, v2}, Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP(JLcom/android/server/am/ProcessRecord;Z)V
+    nop
 
     goto :goto_0
 
     :cond_0
     const/4 p2, 0x0
 
-    invoke-virtual {p0, p1, p2, v2}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP(Lcom/android/server/am/ProcessRecord;IZ)V
+    nop
 
     :goto_0
     monitor-exit v1
@@ -1352,7 +1531,7 @@
 
     invoke-virtual {p4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v5, v1}, Lcom/android/server/am/FreecessController;->freezeTargetProcess(ILjava/lang/String;)Z
+    nop
 
     move-result p4
 
@@ -1472,7 +1651,7 @@
 
     iget v0, v0, Lcom/android/server/am/UidRecord;->mUid:I
 
-    invoke-virtual {p0, v0, v2}, Lcom/android/server/am/CachedAppOptimizer;->postUidFrozenMessage(IZ)V
+    nop
 
     :cond_2
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer;->mFrozenProcesses:Landroid/util/SparseArray;
@@ -1488,7 +1667,7 @@
 .method public final onProcessFrozen(Lcom/android/server/am/ProcessRecord;)V
     .locals 6
 
-    invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer;->useCompaction()Z
+    nop
 
     move-result v0
 
@@ -1519,7 +1698,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p0, p1, v0, v2, v3}, Lcom/android/server/am/CachedAppOptimizer;->compactApp(Lcom/android/server/am/ProcessRecord;Lcom/android/server/am/CachedAppOptimizer$CompactProfile;Lcom/android/server/am/CachedAppOptimizer$CompactSource;Z)V
+    nop
 
     goto :goto_0
 
@@ -1778,7 +1957,7 @@
 
     iget v14, v15, Lcom/android/server/am/UidRecord;->mUid:I
 
-    invoke-virtual {v0, v14, v12}, Lcom/android/server/am/CachedAppOptimizer;->postUidFrozenMessage(IZ)V
+    nop
 
     :cond_2
     iput-boolean v12, v5, Lcom/android/server/am/ProcessCachedOptimizerRecord;->mFreezerOverride:Z
@@ -1795,7 +1974,7 @@
     :try_start_0
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v10}, Lcom/android/server/am/Freezer;->getBinderFreezeInfo(I)I
+    nop
 
     move-result v14
 
@@ -1867,12 +2046,12 @@
     :try_start_1
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v10, v12, v12}, Lcom/android/server/am/Freezer;->freezeBinder(IIZ)I
+    nop
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_2
 
     :try_start_2
-    invoke-static {v10, v2, v11}, Lcom/android/server/am/CachedAppOptimizer;->traceAppFreeze(IILjava/lang/String;)V
+    nop
 
     iget v3, v1, Lcom/android/server/am/ProcessRecord;->uid:I
 
@@ -2052,7 +2231,7 @@
     monitor-enter v0
 
     :try_start_0
-    invoke-virtual {p0, p1, p2, p3}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppInternalLSP(Lcom/android/server/am/ProcessRecord;IZ)Z
+    nop
 
     move-result p0
 
@@ -2151,7 +2330,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {p1, v2, v2}, Lcom/android/server/am/Freezer;->freezeBinder(IIZ)I
+    nop
     :try_end_1
     .catch Ljava/lang/RuntimeException; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2159,7 +2338,7 @@
     :try_start_2
     iget-object v0, v4, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    invoke-static {p1, p2, v0}, Lcom/android/server/am/CachedAppOptimizer;->traceAppFreeze(IILjava/lang/String;)V
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezer:Lcom/android/server/am/Freezer;
 
@@ -2252,7 +2431,7 @@
     monitor-enter v0
 
     :try_start_0
-    invoke-static {p4, p2, p3}, Lcom/android/server/am/CachedAppOptimizer;->updateEarliestFreezableTime(Lcom/android/server/am/ProcessRecord;J)J
+    nop
 
     move-result-wide p2
 
@@ -2269,9 +2448,9 @@
     :cond_0
     const/4 v1, 0x0
 
-    invoke-virtual {p0, p4, p1, v1}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP(Lcom/android/server/am/ProcessRecord;IZ)V
+    nop
 
-    invoke-virtual {p0, p2, p3, p4, v1}, Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP(JLcom/android/server/am/ProcessRecord;Z)V
+    nop
 
     :cond_1
     monitor-exit v0
@@ -2303,7 +2482,7 @@
 
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDebounceTimeout:J
 
-    invoke-virtual {p0, p1, v0, v1, p2}, Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily(IJLcom/android/server/am/ProcessRecord;)V
+    nop
 
     return-void
 .end method
@@ -2573,7 +2752,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/server/am/CachedAppOptimizer;->parseProcStateThrottle(Ljava/lang/String;)Z
+    nop
 
     move-result v2
 
@@ -2587,7 +2766,7 @@
 
     invoke-static {v2, v1, v3, v4}, Lcom/android/server/ProfileService$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {p0, v0}, Lcom/android/server/am/CachedAppOptimizer;->parseProcStateThrottle(Ljava/lang/String;)Z
+    nop
 
     move-result p0
 
@@ -2747,15 +2926,15 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/Freezer;->isFreezerSupported()Z
+    nop
 
     move-result v0
 
     iput-boolean v0, p0, Lcom/android/server/am/CachedAppOptimizer;->mUseFreezer:Z
 
-    invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer;->updateFreezerDebounceTimeout()V
+    nop
 
-    invoke-virtual {p0}, Lcom/android/server/am/CachedAppOptimizer;->updateFreezerExemptInstPkg()V
+    nop
 
     :goto_1
     iget-boolean v0, p0, Lcom/android/server/am/CachedAppOptimizer;->mUseFreezer:Z
@@ -2775,12 +2954,48 @@
 
 .method public final useCompaction()Z
     .locals 1
-    const/4 v0, 0x0
-    return v0
+
+    iget-object v0, p0, Lcom/android/server/am/CachedAppOptimizer;->mPhenotypeFlagLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean p0, p0, Lcom/android/server/am/CachedAppOptimizer;->mUseCompaction:Z
+
+    monitor-exit v0
+
+    return p0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method
 
 .method public final useFreezer()Z
     .locals 1
-    const/4 v0, 0x0
-    return v0
+
+    iget-object v0, p0, Lcom/android/server/am/CachedAppOptimizer;->mPhenotypeFlagLock:Ljava/lang/Object;
+
+    monitor-enter v0
+
+    :try_start_0
+    iget-boolean p0, p0, Lcom/android/server/am/CachedAppOptimizer;->mUseFreezer:Z
+
+    monitor-exit v0
+
+    return p0
+
+    :catchall_0
+    move-exception p0
+
+    monitor-exit v0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    throw p0
 .end method

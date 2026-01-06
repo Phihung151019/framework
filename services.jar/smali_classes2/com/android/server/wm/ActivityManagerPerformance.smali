@@ -6728,7 +6728,7 @@
     move v2, v6
 
     :goto_5
-    invoke-virtual {p2, p1, v2, v1}, Lcom/android/server/am/FreecessController;->enterOLAF(IILjava/lang/String;)V
+    nop
 
     goto :goto_6
 
@@ -6899,7 +6899,7 @@
 
     if-nez p2, :cond_f
 
-    invoke-virtual {p1}, Lcom/android/server/am/FreecessController;->exitOLAF()V
+    nop
 
     goto :goto_8
 

@@ -32,7 +32,7 @@
 
     const/4 p0, 0x3
 
-    invoke-static {p2, p0}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smcompactProcess(II)I
+    nop
 
     goto :goto_0
 
@@ -43,7 +43,7 @@
 
     const/4 p0, 0x1
 
-    invoke-static {p2, p0}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smcompactProcess(II)I
+    nop
 
     goto :goto_0
 
@@ -54,7 +54,7 @@
 
     const/4 p0, 0x2
 
-    invoke-static {p2, p0}, Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smcompactProcess(II)I
+    nop
 
     :cond_2
     :goto_0

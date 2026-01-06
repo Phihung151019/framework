@@ -717,7 +717,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v1, v3, v5, v2}, Lcom/android/server/am/MARsPolicyManager;->setEnabledSetting(IIILjava/lang/String;)Z
+    nop
 
     move-result v1
 
@@ -766,7 +766,7 @@
 
     iget v5, p0, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;->userId:I
 
-    invoke-static {v5, v0, v1, v4}, Lcom/android/server/am/MARsPolicyManager;->setEnabledSetting(IIILjava/lang/String;)Z
+    nop
 
     move-result v0
 
@@ -1556,7 +1556,7 @@
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p0, v1}, Lcom/android/server/am/FreecessController;->updateAbnormalAppFirewall(IZ)V
+    nop
 
     :cond_1
     monitor-exit v2
@@ -1773,7 +1773,7 @@
 
     move-result-wide v2
 
-    invoke-static {v2, v3}, Lcom/android/server/am/MARsPolicyManager;->formatDateTimeWithoutYear(J)Ljava/lang/String;
+    nop
 
     move-result-object v2
 
@@ -1852,7 +1852,7 @@
 
     move-result-wide v1
 
-    invoke-static {v1, v2}, Lcom/android/server/am/MARsPolicyManager;->formatDateTimeWithoutYear(J)Ljava/lang/String;
+    nop
 
     move-result-object v1
 
@@ -1971,7 +1971,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v1, p2, p1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p1
 
@@ -2007,7 +2007,7 @@
 
     iget p1, p1, Lcom/android/server/am/MARsPackageInfo;->uid:I
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/MARsPolicyManager;->putBindTempRestrictionForForceStop(I)V
+    nop
 
     goto :goto_0
 
@@ -2038,7 +2038,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, p4, p1}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     return-void
 
@@ -2095,7 +2095,7 @@
 
     move-result v6
 
-    invoke-virtual {p0, v6}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v7
 
@@ -2111,7 +2111,7 @@
     :try_start_0
     iget-object v8, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v8, v5, v6}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v5
 
@@ -2144,7 +2144,7 @@
     :cond_2
     const/16 v4, 0x100
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     sget-object v4, Lcom/android/server/am/MARsHandler$MARsHandlerHolder;->INSTANCE:Lcom/android/server/am/MARsHandler;
 
@@ -2295,7 +2295,7 @@
 
     if-nez v1, :cond_8
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/MARsPolicyManager;->enablePackageList(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object p0
 
@@ -2325,7 +2325,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v1
 
@@ -2338,7 +2338,7 @@
     :cond_0
     if-eqz p3, :cond_9
 
-    invoke-virtual {p0, v0, p3}, Lcom/android/server/am/MARsPolicyManager;->isMARsTarget(ILjava/lang/String;)Z
+    nop
 
     move-result v1
 
@@ -2441,7 +2441,7 @@
     :try_start_1
     iget-object p0, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {p0, p3, v0}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p0
 
@@ -2519,7 +2519,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsRestrictedPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v2, p1, p2}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v2
 
@@ -2602,7 +2602,7 @@
 
     iget v0, v2, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    invoke-static {v0}, Lcom/android/server/am/MARsPolicyManager;->isDisabledByUser(I)Z
+    nop
 
     move-result v0
 
@@ -2633,7 +2633,7 @@
     move v0, v3
 
     :goto_0
-    invoke-static {p2, v0, p3, p1}, Lcom/android/server/am/MARsPolicyManager;->setEnabledSetting(IIILjava/lang/String;)Z
+    nop
 
     move-result v0
 
@@ -2644,7 +2644,7 @@
     move v3, v4
 
     :cond_4
-    invoke-virtual {p0, p2, p1, v3}, Lcom/android/server/am/MARsPolicyManager;->changeAutoDisabledAppState(ILjava/lang/String;Z)V
+    nop
 
     return v4
 
@@ -2718,7 +2718,7 @@
     goto :goto_0
 
     :goto_1
-    invoke-virtual/range {v3 .. v8}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;JLjava/lang/String;)Z
+    nop
 
     move-result p2
 
@@ -2736,7 +2736,7 @@
     :cond_2
     iget-object p2, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsRestrictedPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {p2, v5, v4}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p2
 
@@ -2778,7 +2778,7 @@
 
     iget v2, p2, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    invoke-static {v2}, Lcom/android/server/am/MARsPolicyManager;->isDisabledByUser(I)Z
+    nop
 
     move-result v2
 
@@ -2845,7 +2845,7 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-virtual {p0, v2, v1, p4}, Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy(Ljava/lang/String;II)Z
+    nop
 
     add-int/lit8 p1, p1, 0x1
 
@@ -2885,7 +2885,7 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsRestrictedPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v1, p2, p1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p1
 
@@ -2905,7 +2905,7 @@
 
     iget v1, p1, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    invoke-static {v1}, Lcom/android/server/am/MARsPolicyManager;->isDisabledByUser(I)Z
+    nop
 
     move-result v1
 
@@ -2915,7 +2915,7 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0, v4, p1}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     goto/16 :goto_4
 
@@ -2929,14 +2929,14 @@
 
     const/16 v1, 0x800
 
-    invoke-virtual {p0, v1, p1}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     iput v2, p1, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0, v4, p1}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     const/4 v1, 0x4
 
@@ -2945,7 +2945,7 @@
     :goto_0
     if-eqz p3, :cond_2
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result p3
 
@@ -3242,7 +3242,7 @@
 
     iget v14, v13, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    invoke-virtual {v1, v14}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v14
 
@@ -3302,7 +3302,7 @@
 
     invoke-direct {v8, v9, v14, v15}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v13, v8}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     goto :goto_4
 
@@ -3416,7 +3416,7 @@
 
     iget v6, v6, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;->userId:I
 
-    invoke-static {v0, v8, v6}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v0
 
@@ -3424,7 +3424,7 @@
 
     const/4 v6, 0x4
 
-    invoke-virtual {v1, v6, v0}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v6
 
@@ -3541,7 +3541,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_d
     return-void
@@ -3673,7 +3673,7 @@
     return-object p0
 
     :cond_1
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result p1
 
@@ -3913,7 +3913,7 @@
 
     move-object/from16 v6, p2
 
-    invoke-static {v4, v6, v2}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v2
 
@@ -3948,7 +3948,7 @@
 
     iget v8, v2, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    invoke-virtual {v5, v8, v7}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v7
 
@@ -3960,7 +3960,7 @@
 
     const-string/jumbo v9, "specificDisable"
 
-    invoke-virtual {v5, v8, v7, v9}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     goto :goto_0
 
@@ -3983,7 +3983,7 @@
 
     const/16 v7, 0x2000
 
-    invoke-virtual {v1, v7, v2}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v17
 
@@ -4072,19 +4072,19 @@
     :try_start_2
     invoke-static/range {v18 .. v19}, Landroid/os/Binder;->restoreCallingIdentity(J)V
 
-    invoke-static {v2, v0}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     sget-object v5, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v5
 
     if-eqz v5, :cond_5
 
-    invoke-static {v2}, Lcom/android/server/am/MARsPolicyManager;->resetAbusiveFlag(Lcom/android/server/am/MARsPackageInfo;)V
+    nop
 
     :cond_5
     move-object v5, v0
@@ -4199,13 +4199,13 @@
 
     iget v6, v5, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;->userId:I
 
-    invoke-static {v0, v3, v6}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v0
 
     if-eqz v0, :cond_e
 
-    invoke-static {v0, v5}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToMARsPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     iget-object v3, v1, Lcom/android/server/am/MARsPolicyManager;->disablePolicy:Lcom/android/server/am/MARsPolicyManager$Policy;
 
@@ -4366,7 +4366,7 @@
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {p1}, Lcom/android/server/am/MARsPolicyManager;->getChangedByUserFromReason(Ljava/lang/String;)Z
+    nop
 
     move-result v2
 
@@ -4410,13 +4410,13 @@
 
     move-result v3
 
-    invoke-virtual {p0, v3}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/server/am/MARsPolicyManager;->isMARsTarget(ILjava/lang/String;)Z
+    nop
 
     move-result v5
 
@@ -4432,7 +4432,7 @@
     :try_start_0
     iget-object v6, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v6, v4, v3}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v6
 
@@ -4466,7 +4466,7 @@
     goto/16 :goto_6
 
     :cond_3
-    invoke-virtual {p0, v2, v6}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v8
 
@@ -4487,7 +4487,7 @@
 
     invoke-direct {v9, v10, v11, v12}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v6, v9}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     goto :goto_2
 
@@ -4513,7 +4513,7 @@
 
     if-eqz v8, :cond_6
 
-    invoke-virtual {v6, v3, v4}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v8
 
@@ -4521,10 +4521,10 @@
 
     const-string/jumbo v8, "manualDisable"
 
-    invoke-virtual {v6, v3, v4, v8}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_6
-    invoke-static {v9}, Lcom/android/server/am/MARsPolicyManager;->disableAction(Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)Z
+    nop
 
     move-result v6
 
@@ -4533,13 +4533,13 @@
     :try_start_1
     iget-object v8, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v8, v4, v3}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v3
 
     if-eqz v3, :cond_a
 
-    invoke-static {v3, v9}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToMARsPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     if-eqz v6, :cond_7
 
@@ -4741,7 +4741,7 @@
 
     move-result v2
 
-    invoke-virtual {p0, v2, v3, p1}, Lcom/android/server/am/MARsPolicyManager;->disablePackageForSpecific(ILjava/lang/String;Ljava/lang/String;)Z
+    nop
 
     move-result v3
 
@@ -4796,7 +4796,7 @@
 
     const-string/jumbo p2, "SEP"
 
-    invoke-virtual {p0, p2, p1}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_2
     return-object v0
@@ -4826,7 +4826,7 @@
 
     iget-wide v5, p0, Lcom/android/server/am/MARsPolicyManager;->mLastNotiSentTimeForDisabled:J
 
-    invoke-static {v5, v6}, Lcom/android/server/am/MARsPolicyManager;->formatDateTimeWithoutYear(J)Ljava/lang/String;
+    nop
 
     move-result-object v2
 
@@ -5060,9 +5060,9 @@
 
     if-ne v0, v10, :cond_0
 
-    invoke-virtual/range {p0 .. p1}, Lcom/android/server/am/MARsPolicyManager;->dumpMARs(Ljava/io/PrintWriter;)V
+    nop
 
-    invoke-virtual/range {p0 .. p1}, Lcom/android/server/am/MARsPolicyManager;->dumpMARsHistory(Ljava/io/PrintWriter;)V
+    nop
 
     sget-boolean v0, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -5072,7 +5072,7 @@
 
     if-eqz v1, :cond_42
 
-    invoke-virtual {v0, v7}, Lcom/android/server/am/FreecessController;->dumpFreecess(Ljava/io/PrintWriter;)V
+    nop
 
     return-void
 
@@ -5212,7 +5212,7 @@
 
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Lcom/android/server/am/MARsPolicyManager;->putBindTempRestrictionForForceStop(I)V
+    nop
 
     :cond_3
     const-string/jumbo v0, "tr_get"
@@ -5242,7 +5242,7 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, Lcom/android/server/am/MARsPolicyManager;->isUidBindTempRestricted(I)Z
+    nop
 
     move-result v2
 
@@ -5446,7 +5446,7 @@
 
     if-eqz v0, :cond_d
 
-    invoke-virtual {v1}, Lcom/android/server/am/MARsPolicyManager;->getBatteryStats()V
+    nop
 
     :cond_d
     const-string/jumbo v0, "disable"
@@ -5471,9 +5471,9 @@
 
     xor-int/2addr v0, v10
 
-    invoke-virtual {v1, v0}, Lcom/android/server/am/MARsPolicyManager;->setPackageDisablerEnabled(Z)V
+    nop
 
-    invoke-virtual {v1}, Lcom/android/server/am/MARsPolicyManager;->getPackageDisablerEnabled()Z
+    nop
 
     move-result v0
 
@@ -5526,7 +5526,7 @@
 
     move-result v3
 
-    invoke-static {v0, v4, v3}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v0
 
@@ -5560,7 +5560,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/MARsPolicyManager;->restrictBySEP(IILjava/lang/String;IZ)Z
+    nop
 
     move-result v2
 
@@ -5577,7 +5577,7 @@
 
     move-object/from16 v1, p0
 
-    invoke-virtual/range {v1 .. v6}, Lcom/android/server/am/MARsPolicyManager;->restrictBySEP(IILjava/lang/String;IZ)Z
+    nop
 
     move-result v2
 
@@ -5935,7 +5935,7 @@
 
     if-eqz v0, :cond_1e
 
-    invoke-virtual/range {p0 .. p1}, Lcom/android/server/am/MARsPolicyManager;->dumpMARsHistory(Ljava/io/PrintWriter;)V
+    nop
 
     :cond_1e
     const-string/jumbo v0, "hold"
@@ -6008,7 +6008,7 @@
 
     invoke-virtual {v7, v3}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/am/MARsPolicyManager;->restrictJobsByUid(IZ)V
+    nop
 
     :cond_22
     const-string/jumbo v0, "level"
@@ -6104,7 +6104,7 @@
 
     iget-object v9, v9, Lcom/android/server/am/MARsPackageInfo;->name:Ljava/lang/String;
 
-    invoke-virtual {v1, v0, v9}, Lcom/android/server/am/MARsPolicyManager;->setMaxLevel(ILjava/lang/String;)V
+    nop
 
     goto :goto_11
 
@@ -6140,7 +6140,7 @@
     :cond_27
     aget-object v2, v8, v12
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/am/MARsPolicyManager;->setMaxLevel(ILjava/lang/String;)V
+    nop
     :try_end_c
     .catch Ljava/lang/NumberFormatException; {:try_start_c .. :try_end_c} :catch_3
 
@@ -6163,7 +6163,7 @@
 
     if-eqz v0, :cond_29
 
-    invoke-virtual/range {p0 .. p1}, Lcom/android/server/am/MARsPolicyManager;->dumpMARs(Ljava/io/PrintWriter;)V
+    nop
 
     :cond_29
     const-string/jumbo v0, "close_socket"
@@ -6207,7 +6207,7 @@
 
     invoke-virtual {v7, v2}, Ljava/io/PrintWriter;->println(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v0}, Lcom/android/server/am/MARsPolicyManager;->closeSocketsForUid(I)V
+    nop
 
     :cond_2b
     :goto_14
@@ -6231,7 +6231,7 @@
 
     move-result v3
 
-    invoke-static {v0, v2, v3}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v0
 
@@ -6258,7 +6258,7 @@
 
     if-eqz v0, :cond_2d
 
-    invoke-virtual {v1}, Lcom/android/server/am/MARsPolicyManager;->updateFromMARsMainThread()V
+    nop
 
     :cond_2d
     const-string/jumbo v0, "widget"
@@ -6286,7 +6286,7 @@
 
     if-eqz v0, :cond_2f
 
-    invoke-virtual {v1}, Lcom/android/server/am/MARsPolicyManager;->checkUnusedTargetForDeepSleep()V
+    nop
 
     :cond_2f
     const-string/jumbo v0, "candidate"
@@ -6334,7 +6334,7 @@
 
     move-result v4
 
-    invoke-static {v0, v3, v4}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v0
 
@@ -6350,7 +6350,7 @@
 
     if-eqz v3, :cond_31
 
-    invoke-virtual {v1, v10, v0}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     goto :goto_15
 
@@ -6372,7 +6372,7 @@
 
     const/4 v6, 0x4
 
-    invoke-virtual {v1, v6, v0}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     goto :goto_15
 
@@ -6885,7 +6885,7 @@
     goto :goto_0
 
     :cond_0
-    invoke-static {p1}, Lcom/android/server/am/MARsPolicyManager;->getChangedByUserFromReason(Ljava/lang/String;)Z
+    nop
 
     move-result v2
 
@@ -6929,13 +6929,13 @@
 
     move-result v3
 
-    invoke-virtual {p0, v3}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v5
 
     if-eqz v5, :cond_2
 
-    invoke-virtual {p0, v3, v4}, Lcom/android/server/am/MARsPolicyManager;->isMARsTarget(ILjava/lang/String;)Z
+    nop
 
     move-result v5
 
@@ -6951,7 +6951,7 @@
     :try_start_0
     iget-object v6, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v6, v4, v3}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v6
 
@@ -6969,7 +6969,7 @@
 
     invoke-direct {v8, v9, v10, v11}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v6, v8}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     goto :goto_2
 
@@ -6988,7 +6988,7 @@
 
     if-eqz v8, :cond_2
 
-    invoke-static {v8}, Lcom/android/server/am/MARsPolicyManager;->enableAction(Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)Z
+    nop
 
     move-result v6
 
@@ -6997,17 +6997,17 @@
     :try_start_1
     iget-object v9, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v9, v4, v3}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v3
 
     if-eqz v3, :cond_9
 
-    invoke-static {v3, v8}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToMARsPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     if-eqz v6, :cond_6
 
-    invoke-virtual {p0, v2, v3}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v4
 
@@ -7264,7 +7264,7 @@
     goto :goto_0
 
     :cond_4
-    invoke-virtual {p0, p4}, Lcom/android/server/am/MARsPolicyManager;->closeSocketsForUid(I)V
+    nop
 
     if-eqz v3, :cond_5
 
@@ -7422,7 +7422,7 @@
     :cond_4
     iget-object v12, v0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v12, v1, v9}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v1
 
@@ -7488,7 +7488,7 @@
 
     if-eqz v2, :cond_6
 
-    invoke-virtual {v3, v13, v9}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v2
 
@@ -7496,7 +7496,7 @@
 
     const-string/jumbo v2, "RecentKill"
 
-    invoke-virtual {v3, v13, v9, v2}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     goto :goto_1
 
@@ -7507,7 +7507,7 @@
 
     :cond_6
     :goto_1
-    invoke-virtual {v0, v9, v6, v13, v12}, Lcom/android/server/am/MARsPolicyManager;->forceKillPackage(Ljava/lang/String;Lcom/android/server/am/MARsPolicyManager$Policy;II)Z
+    nop
 
     move-result v2
 
@@ -7572,7 +7572,7 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {v0, v3, v1}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     goto :goto_2
 
@@ -7605,7 +7605,7 @@
 
     iget v3, v1, Lcom/android/server/am/MARsPackageInfo;->uid:I
 
-    invoke-virtual {v0, v3}, Lcom/android/server/am/MARsPolicyManager;->putBindTempRestrictionForForceStop(I)V
+    nop
 
     goto :goto_3
 
@@ -7618,7 +7618,7 @@
 
     iget v3, v1, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    invoke-static {v3}, Lcom/android/server/am/MARsPolicyManager;->isDisabledByUser(I)Z
+    nop
 
     move-result v3
 
@@ -7638,7 +7638,7 @@
 
     iget v3, v1, Lcom/android/server/am/MARsPackageInfo;->uid:I
 
-    invoke-virtual {v0, v3}, Lcom/android/server/am/MARsPolicyManager;->putBindTempRestrictionForForceStop(I)V
+    nop
 
     :cond_9
     :goto_3
@@ -7660,7 +7660,7 @@
 
     move-result-object v4
 
-    invoke-virtual {v0, v3, v4}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     const-string/jumbo v0, "MARsPolicyManager"
 
@@ -7760,7 +7760,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual/range {p0 .. p1}, Lcom/android/server/am/MARsPolicyManager;->getPolicy(I)Lcom/android/server/am/MARsPolicyManager$Policy;
+    nop
 
     move-result-object v8
 
@@ -8011,7 +8011,7 @@
 
     if-ne v0, v13, :cond_f
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v12
 
@@ -8062,7 +8062,7 @@
 
     iget v13, v8, Lcom/android/server/am/MARsPolicyManager$Policy;->num:I
 
-    invoke-virtual {v1, v14, v13, v12}, Lcom/android/server/am/MARsPolicyManager;->isInPolicyExceptionList(IILjava/lang/String;)Z
+    nop
 
     move-result v12
 
@@ -8171,7 +8171,7 @@
 
     invoke-direct {v4, v12, v13, v14}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v11, v4}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     const/4 v14, 0x6
 
@@ -8306,7 +8306,7 @@
 
     iget v13, v0, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;->userId:I
 
-    invoke-virtual {v10, v13, v11}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v11
 
@@ -8318,7 +8318,7 @@
 
     iget-object v14, v8, Lcom/android/server/am/MARsPolicyManager$Policy;->name:Ljava/lang/String;
 
-    invoke-virtual {v10, v13, v11, v14}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     goto :goto_d
 
@@ -8335,7 +8335,7 @@
 
     iget v13, v0, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;->uid:I
 
-    invoke-virtual {v1, v10, v8, v11, v13}, Lcom/android/server/am/MARsPolicyManager;->forceKillPackage(Ljava/lang/String;Lcom/android/server/am/MARsPolicyManager$Policy;II)Z
+    nop
 
     move-result v10
 
@@ -8416,13 +8416,13 @@
 
     iget v9, v3, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;->userId:I
 
-    invoke-static {v4, v5, v9}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v4
 
     if-eqz v4, :cond_22
 
-    invoke-static {v4, v3}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToMARsPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     iget-object v3, v4, Lcom/android/server/am/MARsPackageInfo;->appliedPolicy:Lcom/android/server/am/MARsPolicyManager$Policy;
 
@@ -8455,7 +8455,7 @@
 
     iget v3, v4, Lcom/android/server/am/MARsPackageInfo;->uid:I
 
-    invoke-virtual {v1, v3}, Lcom/android/server/am/MARsPolicyManager;->putBindTempRestrictionForForceStop(I)V
+    nop
 
     :cond_22
     const/16 v20, 0x1
@@ -8503,7 +8503,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_24
     return-void
@@ -8538,7 +8538,7 @@
 .method public final getAutorunForFreezedPackage(ILjava/lang/String;)I
     .locals 1
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v0
 
@@ -8551,7 +8551,7 @@
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {p0, p2, p1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p0
 
@@ -8893,9 +8893,11 @@
 .end method
 
 .method public getMARsEnabled()Z
-    .locals 1
-    const/4 v0, 0x0
-    return v0
+    .locals 0
+
+    sget-boolean p0, Lcom/android/server/am/MARsPolicyManager;->MARs_ENABLE:Z
+
+    return p0
 .end method
 
 .method public final getPackageDisablerEnabled()Z
@@ -9067,7 +9069,7 @@
 .method public final isAutoRunBlockedApp(Ljava/lang/String;I)Z
     .locals 4
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v0
 
@@ -9085,7 +9087,7 @@
     :try_start_0
     iget-object v2, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v2, p1, p2}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v2
 
@@ -9100,7 +9102,7 @@
     :cond_1
     const/4 v3, 0x2
 
-    invoke-virtual {p0, p2, v3, p1}, Lcom/android/server/am/MARsPolicyManager;->isInPolicyExceptionList(IILjava/lang/String;)Z
+    nop
 
     move-result p0
 
@@ -9165,7 +9167,7 @@
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {p0, p2, p1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p0
 
@@ -9303,7 +9305,7 @@
 .method public final isFirstTimeTriggerAutorun()Z
     .locals 1
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v0
 
@@ -9350,7 +9352,7 @@
     return v0
 
     :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/MARsPolicyManager;->isMARsTarget(ILjava/lang/String;)Z
+    nop
 
     move-result p0
 
@@ -9489,7 +9491,7 @@
     :cond_0
     if-ne p2, v6, :cond_4
 
-    invoke-static {p3, v7, v4}, Lcom/android/server/am/MARsPolicyManager;->isTargetMatch(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop
 
     move-result v3
 
@@ -9500,7 +9502,7 @@
 
     iget-object v5, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v5, p3, p1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v5
 
@@ -9517,14 +9519,14 @@
 
     iget-object v3, v5, Lcom/android/server/am/MARsPackageInfo;->name:Ljava/lang/String;
 
-    invoke-static {v3, v7, v4}, Lcom/android/server/am/MARsPolicyManager;->isTargetMatch(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop
 
     move-result v3
 
     goto :goto_1
 
     :cond_3
-    invoke-static {p3, v7, v4}, Lcom/android/server/am/MARsPolicyManager;->isTargetMatch(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop
 
     move-result v3
 
@@ -9553,7 +9555,7 @@
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {p0, p2, p1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p0
 
@@ -9747,7 +9749,7 @@
     goto/16 :goto_4
 
     :sswitch_2
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v0
 
@@ -9785,7 +9787,7 @@
     :sswitch_3
     iget v5, p2, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    invoke-static {v5}, Lcom/android/server/am/MARsPolicyManager;->isDisabledByUser(I)Z
+    nop
 
     move-result v5
 
@@ -9831,7 +9833,7 @@
 
     iput-object v5, p2, Lcom/android/server/am/MARsPackageInfo;->fasReason:Ljava/lang/String;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v5
 
@@ -9868,7 +9870,7 @@
 
     iput v3, p2, Lcom/android/server/am/MARsPackageInfo;->state:I
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v1
 
@@ -10175,7 +10177,7 @@
     move-result-wide v0
 
     :try_start_0
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/MARsPolicyManager;->noteAppRestriction(ILcom/android/server/am/MARsPackageInfo;)V
+    nop
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -10381,7 +10383,7 @@
 
     const/4 v0, 0x0
 
-    invoke-virtual {p0, p1, p2, v0}, Lcom/android/server/am/MARsPolicyManager;->onAppUsed(ILjava/lang/String;Z)V
+    nop
 
     return-void
 .end method
@@ -10396,13 +10398,13 @@
     :try_start_0
     iget-object v1, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v1, p2, p1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager;->getScreenOnState()Z
+    nop
 
     move-result v2
 
@@ -10433,7 +10435,7 @@
 
     :cond_0
     :goto_0
-    invoke-virtual {p0, v1, p3}, Lcom/android/server/am/MARsPolicyManager;->onAppUsed(Lcom/android/server/am/MARsPackageInfo;Z)V
+    nop
 
     :cond_1
     monitor-exit v0
@@ -10453,7 +10455,7 @@
 
     const/16 v0, 0x400
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     iget v0, p1, Lcom/android/server/am/MARsPackageInfo;->fasType:I
 
@@ -10563,7 +10565,7 @@
     :goto_2
     iget v3, p1, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    invoke-virtual {p0, v2, v3, v1, p2}, Lcom/android/server/am/MARsPolicyManager;->cancelPolicy(IILjava/lang/String;Z)V
+    nop
 
     if-eqz v0, :cond_3
 
@@ -11179,7 +11181,7 @@
     :try_start_4
     iget-object v0, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v0, p2, p1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p1
 
@@ -11212,7 +11214,7 @@
     :goto_9
     const/4 p2, 0x0
 
-    invoke-virtual {p0, p1, p2}, Lcom/android/server/am/MARsPolicyManager;->onAppUsed(Lcom/android/server/am/MARsPackageInfo;Z)V
+    nop
 
     :cond_e
     monitor-exit p4
@@ -11359,13 +11361,13 @@
     sput-boolean v5, Lcom/android/server/am/MARsPolicyManager;->isChinaModel:Z
 
     :cond_3
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v3
 
     sput-boolean v3, Lcom/android/server/am/FreecessController;->FASTOLAF_FEATURE_DEALY_SERVICE:Z
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v3
 
@@ -11387,7 +11389,7 @@
 
     invoke-static {v2, v3}, Landroid/util/Slog;->v(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v3
 
@@ -11428,7 +11430,7 @@
 
     move-result v3
 
-    invoke-virtual {v0, v3}, Lcom/android/server/am/MARsPolicyManager;->setScreenOnState(Z)V
+    nop
 
     invoke-static {}, Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance()V
 
@@ -11981,7 +11983,7 @@
 
     invoke-virtual/range {v9 .. v14}, Landroid/content/Context;->registerReceiverForAllUsers(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;Ljava/lang/String;Landroid/os/Handler;I)Landroid/content/Intent;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v3
 
@@ -12100,9 +12102,9 @@
 
     :cond_13
     :goto_c
-    invoke-virtual {v0}, Lcom/android/server/am/MARsPolicyManager;->setSubUserIds()V
+    nop
 
-    invoke-virtual {v0}, Lcom/android/server/am/MARsPolicyManager;->onPowerAllowListChanged()V
+    nop
 
     return-void
 
@@ -12284,7 +12286,7 @@
 
     move-result v6
 
-    invoke-virtual {p0, v6}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v7
 
@@ -12300,7 +12302,7 @@
     :try_start_0
     iget-object v8, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v8, v5, v6}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v5
 
@@ -12456,7 +12458,7 @@
 
     if-nez p2, :cond_6
 
-    invoke-virtual {p0, p1, v0}, Lcom/android/server/am/MARsPolicyManager;->enablePackageList(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object p2
 
@@ -12469,7 +12471,7 @@
 
     if-nez p2, :cond_7
 
-    invoke-virtual {p0, p1, v1}, Lcom/android/server/am/MARsPolicyManager;->awakePackageList(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object p0
 
@@ -12502,7 +12504,7 @@
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {p0, p2, p1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p0
 
@@ -12546,7 +12548,7 @@
 
     const-string/jumbo v0, "com.samsung.android.permission.SEM_APP_RESTRICTION"
 
-    invoke-static {v0}, Lcom/android/server/am/MARsPolicyManager;->hasPermission(Ljava/lang/String;)Z
+    nop
 
     move-result v0
 
@@ -12559,7 +12561,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, v0}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v0
 
@@ -12620,7 +12622,7 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-virtual {p0, v1, v0}, Lcom/android/server/am/MARsPolicyManager;->updateRestrictionInfo(Lcom/samsung/android/sdhms/SemAppRestrictionManager$RestrictionInfo;Ljava/util/List;)Z
+    nop
 
     move-result p0
 
@@ -12749,7 +12751,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, v1, p1}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -12849,7 +12851,7 @@
 
     move-result v2
 
-    invoke-static {v0, p2, v2}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v0
 
@@ -12899,7 +12901,7 @@
 
     move-object v7, p2
 
-    invoke-virtual/range {v4 .. v9}, Lcom/android/server/am/MARsPolicyManager;->restrictBySEP(IILjava/lang/String;IZ)Z
+    nop
 
     goto :goto_0
 
@@ -12949,7 +12951,7 @@
     return-void
 
     :cond_5
-    invoke-virtual {v4, v2, v0}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result p0
 
@@ -13094,7 +13096,7 @@
 
     const-string v0, "DEV"
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_0
     return-void
@@ -13131,7 +13133,7 @@
 
     move-result-object p1
 
-    invoke-virtual {p0, v1, p1}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -13277,7 +13279,7 @@
 
     if-ne v0, v3, :cond_5
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result p0
 
@@ -13301,7 +13303,7 @@
     goto :goto_0
 
     :cond_5
-    invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager;->isFirstTimeTriggerAutorun()Z
+    nop
 
     move-result v5
 
@@ -13310,7 +13312,7 @@
     goto :goto_1
 
     :cond_6
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v5
 
@@ -13459,7 +13461,7 @@
 
     const-string/jumbo p2, "switchPolicy"
 
-    invoke-virtual {p1, p2}, Lcom/android/server/am/FreecessController;->unFreezePackage(Ljava/lang/String;)V
+    nop
 
     :cond_4
     sget-object p1, Lcom/android/server/am/MARsPolicyManager;->MARsLock:Lcom/android/server/am/MARsPolicyManager$Lock;
@@ -13599,7 +13601,7 @@
 
     move-result-wide v12
 
-    invoke-virtual {v0}, Lcom/android/server/am/FreecessController;->updateRunningLocationPackages()V
+    nop
 
     sget-object v0, Lcom/android/server/am/mars/filter/filter/BlueToothConnectedFilter$BlueToothConnectedFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/BlueToothConnectedFilter;
 
@@ -13691,7 +13693,7 @@
 
     if-eqz v0, :cond_2
 
-    invoke-virtual {v1}, Lcom/android/server/am/MARsPolicyManager;->isFirstTimeTriggerAutorun()Z
+    nop
 
     move-result v0
 
@@ -13751,13 +13753,13 @@
 
     iget v8, v9, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    invoke-virtual {v1, v8}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v8
 
     if-eqz v8, :cond_3
 
-    invoke-virtual {v1, v9}, Lcom/android/server/am/MARsPolicyManager;->skipTriggerAction(Lcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v8
 
@@ -13828,7 +13830,7 @@
 
     invoke-direct {v3, v6, v8, v0}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v9, v3}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     move-object/from16 v20, v11
 
@@ -13882,7 +13884,7 @@
 
     invoke-direct {v0, v3, v5, v6}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v9, v0}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     move-object v3, v0
 
@@ -13947,7 +13949,7 @@
 
     move/from16 v23, v7
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v3
 
@@ -13989,7 +13991,7 @@
 
     invoke-direct {v3, v0, v5, v6}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v9, v3}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     goto :goto_4
 
@@ -14016,7 +14018,7 @@
 
     invoke-direct {v3, v0, v5, v6}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v9, v3}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     goto/16 :goto_4
 
@@ -14107,7 +14109,7 @@
 
     invoke-direct {v3, v0, v5, v6}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v9, v3}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     goto/16 :goto_4
 
@@ -14147,7 +14149,7 @@
 
     move/from16 v23, v7
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v3
 
@@ -14197,7 +14199,7 @@
 
     invoke-direct {v3, v0, v5, v6}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v9, v3}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     goto/16 :goto_4
 
@@ -14207,13 +14209,13 @@
     :cond_14
     sget-object v3, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {v3, v9}, Lcom/android/server/am/FreecessController;->isInFreecessExcludeList(Lcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v3
 
     if-eqz v3, :cond_17
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v0
 
@@ -14296,7 +14298,7 @@
 
     invoke-direct {v5, v7, v11, v12}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v9, v5}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     const/4 v7, 0x5
 
@@ -14395,7 +14397,7 @@
 
     if-eqz v11, :cond_1f
 
-    invoke-virtual {v1, v8}, Lcom/android/server/am/MARsPolicyManager;->getForegroundServiceStartTime(I)J
+    nop
 
     move-result-wide v11
 
@@ -14486,7 +14488,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v0, v3}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     goto :goto_c
 
@@ -14607,7 +14609,7 @@
 
     move-result v6
 
-    invoke-virtual {v1, v6, v7}, Lcom/android/server/am/MARsPolicyManager;->restrictJobsByUid(IZ)V
+    nop
 
     goto :goto_10
 
@@ -14669,7 +14671,7 @@
 
     check-cast v6, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v7
 
@@ -14744,7 +14746,7 @@
 
     iget v13, v6, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;->userId:I
 
-    invoke-virtual {v8, v13, v12}, Lcom/android/server/am/FreecessController;->isFreezedPackage(ILjava/lang/String;)Z
+    nop
 
     move-result v12
 
@@ -14756,7 +14758,7 @@
 
     const-string/jumbo v14, "triggerAction"
 
-    invoke-virtual {v8, v13, v12, v14}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     goto :goto_13
 
@@ -14767,13 +14769,13 @@
 
     :cond_26
     :goto_13
-    invoke-virtual {v1}, Lcom/android/server/am/MARsPolicyManager;->getPackageDisablerEnabled()Z
+    nop
 
     move-result v8
 
     if-eqz v8, :cond_27
 
-    invoke-static {v6}, Lcom/android/server/am/MARsPolicyManager;->disableAction(Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)Z
+    nop
 
     move-result v8
 
@@ -14790,7 +14792,7 @@
 
     :cond_28
     :try_start_9
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v8
 
@@ -14802,7 +14804,7 @@
 
     iget v8, v6, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;->uid:I
 
-    invoke-virtual {v1, v8}, Lcom/android/server/am/MARsPolicyManager;->closeSocketsForUid(I)V
+    nop
 
     iget-object v8, v1, Lcom/android/server/am/MARsPolicyManager;->mAm:Lcom/android/server/am/ActivityManagerService;
 
@@ -14812,7 +14814,7 @@
 
     invoke-direct {v12, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v13
 
@@ -14904,7 +14906,7 @@
 
     invoke-direct {v12, v13}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v13
 
@@ -15006,7 +15008,7 @@
 
     const/4 v15, 0x2
 
-    invoke-virtual {v8, v12, v14, v15, v13}, Lcom/android/server/am/FreecessController;->freeze(IIILjava/lang/String;)Lcom/android/server/am/FreezeResult;
+    nop
 
     move-result-object v12
 
@@ -15075,7 +15077,7 @@
     .catchall {:try_start_a .. :try_end_a} :catchall_3
 
     :try_start_b
-    invoke-virtual {v8, v3}, Lcom/android/server/am/FreecessController;->getPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object v3
 
@@ -15232,13 +15234,13 @@
 
     iget v12, v7, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;->userId:I
 
-    invoke-static {v8, v9, v12}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v8
 
     if-eqz v8, :cond_39
 
-    invoke-static {v8, v7}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToMARsPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     iget v7, v8, Lcom/android/server/am/MARsPackageInfo;->curLevel:I
 
@@ -15335,7 +15337,7 @@
 
     if-le v7, v15, :cond_38
 
-    invoke-virtual {v1, v7}, Lcom/android/server/am/MARsPolicyManager;->convertLevelToPolicy(I)Lcom/android/server/am/MARsPolicyManager$Policy;
+    nop
 
     move-result-object v7
 
@@ -15388,7 +15390,7 @@
 
     if-lez v2, :cond_3b
 
-    invoke-static {}, Lcom/android/server/am/FreecessController;->getInstance()Lcom/android/server/am/FreecessController;
+    nop
 
     move-result-object v2
 
@@ -15415,11 +15417,11 @@
     :cond_3d
     const-string v0, "LEV"
 
-    invoke-static {v4, v10}, Lcom/android/server/am/MARsPolicyManager;->convertLevelChangeInfoToString([Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    nop
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_3e
     :goto_24
@@ -15653,7 +15655,7 @@
 
     iget v4, v15, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    invoke-virtual {v1, v4}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v4
 
@@ -15677,7 +15679,7 @@
 
     iget v4, v15, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    invoke-static {v4}, Lcom/android/server/am/MARsPolicyManager;->isDisabledByUser(I)Z
+    nop
 
     move-result v4
 
@@ -15718,7 +15720,7 @@
 
     const/16 v4, 0x2000
 
-    invoke-virtual {v1, v4, v15}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v4
 
@@ -15933,7 +15935,7 @@
     :cond_a
     const/16 v4, 0x8
 
-    invoke-virtual {v1, v4, v15}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v4
 
@@ -16124,7 +16126,7 @@
 
     const/16 v5, 0x400
 
-    invoke-virtual {v1, v5, v15}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v5
 
@@ -16252,7 +16254,7 @@
     goto :goto_d
 
     :cond_15
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v5
 
@@ -16308,11 +16310,11 @@
 
     const-string v4, "LVU"
 
-    invoke-static {v2, v0}, Lcom/android/server/am/MARsPolicyManager;->convertLevelChangeInfoToString([Ljava/lang/String;[Ljava/lang/String;)Ljava/lang/String;
+    nop
 
     move-result-object v0
 
-    invoke-virtual {v1, v4, v0}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_19
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -16509,7 +16511,7 @@
 
     const-string/jumbo v0, "com.samsung.android.permission.SEM_APP_RESTRICTION"
 
-    invoke-static {v0}, Lcom/android/server/am/MARsPolicyManager;->hasPermission(Ljava/lang/String;)Z
+    nop
 
     move-result v0
 
@@ -16563,7 +16565,7 @@
 
     const-string/jumbo v0, "deleted_from_user_manual"
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/am/MARsPolicyManager;->removeRestrictedInfo(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object v8
 
@@ -16576,7 +16578,7 @@
     :cond_5
     const-string/jumbo v0, "default"
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/am/MARsPolicyManager;->removeRestrictedInfo(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object v8
 
@@ -16626,7 +16628,7 @@
 
     move-result v5
 
-    invoke-virtual {v1, v5}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v12
 
@@ -16642,7 +16644,7 @@
     :try_start_0
     iget-object v13, v1, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v13, v11, v5}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v5
 
@@ -16670,7 +16672,7 @@
 
     if-nez v11, :cond_8
 
-    invoke-virtual {v1, v10, v5}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v11
 
@@ -16797,7 +16799,7 @@
 
     move-result v5
 
-    invoke-virtual {v1, v5}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v12
 
@@ -16813,7 +16815,7 @@
     :try_start_1
     iget-object v13, v1, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v13, v11, v5}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v5
 
@@ -16941,7 +16943,7 @@
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    invoke-static {v5}, Lcom/android/server/am/MARsPolicyManager;->getChangedByUserFromReason(Ljava/lang/String;)Z
+    nop
 
     move-result v12
 
@@ -16986,7 +16988,7 @@
 
     move-result v7
 
-    invoke-virtual {v1, v7}, Lcom/android/server/am/MARsPolicyManager;->isCurrentUser(I)Z
+    nop
 
     move-result v17
 
@@ -17020,7 +17022,7 @@
     :try_start_2
     iget-object v8, v1, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v8, v3, v7}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v8
 
@@ -17040,7 +17042,7 @@
 
     invoke-direct {v3, v6, v7, v13}, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;-><init>(Ljava/lang/String;II)V
 
-    invoke-static {v8, v3}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -17062,7 +17064,7 @@
     if-ge v13, v9, :cond_15
 
     :cond_14
-    invoke-virtual {v1, v12, v8}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     :cond_15
     invoke-static {v5}, Lcom/android/server/am/mars/database/FASTableContract;->convertFASReasonToValue(Ljava/lang/String;)I
@@ -17153,7 +17155,7 @@
 
     invoke-virtual {v11, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v8
 
@@ -17169,7 +17171,7 @@
 
     const-string/jumbo v9, "UserChangeFAS"
 
-    invoke-virtual {v1, v7, v3, v6, v9}, Lcom/android/server/am/MARsPolicyManager;->addRestrictListAvoidAssoicationLaunch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_17
     :goto_b
@@ -17212,7 +17214,7 @@
 
     check-cast v7, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;
 
-    invoke-static {v7}, Lcom/android/server/am/MARsPolicyManager;->enableAction(Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)Z
+    nop
 
     move-result v8
 
@@ -17227,17 +17229,17 @@
 
     iget v15, v7, Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;->userId:I
 
-    invoke-static {v10, v14, v15}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v10
 
     if-eqz v10, :cond_1c
 
-    invoke-static {v10, v7}, Lcom/android/server/am/MARsPolicyManager;->updateInfoToMARsPkgStatus(Lcom/android/server/am/MARsPackageInfo;Lcom/android/server/am/MARsPolicyManager$PkgStatusInfo;)V
+    nop
 
     if-eqz v8, :cond_1c
 
-    invoke-virtual {v1, v12, v10}, Lcom/android/server/am/MARsPolicyManager;->levelChange(ILcom/android/server/am/MARsPackageInfo;)Z
+    nop
 
     move-result v7
 
@@ -17419,7 +17421,7 @@
 
     if-ne v4, v13, :cond_20
 
-    invoke-virtual {v1, v5, v2}, Lcom/android/server/am/MARsPolicyManager;->awakePackageList(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object v8
 
@@ -17428,7 +17430,7 @@
     :cond_20
     const-string/jumbo v0, "default"
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/am/MARsPolicyManager;->removeRestrictedInfo(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object v8
 
@@ -17449,7 +17451,7 @@
 
     if-eqz v0, :cond_22
 
-    invoke-virtual {v1, v5, v2}, Lcom/android/server/am/MARsPolicyManager;->disablePackageListForSpecific(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object v8
 
@@ -17475,7 +17477,7 @@
     goto :goto_12
 
     :cond_23
-    invoke-virtual {v1, v5, v2}, Lcom/android/server/am/MARsPolicyManager;->disablePackageList(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object v8
 
@@ -17571,7 +17573,7 @@
     :cond_26
     if-nez v6, :cond_27
 
-    invoke-virtual {v1, v5, v2}, Lcom/android/server/am/MARsPolicyManager;->disablePackageListForSpecific(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object v8
 
@@ -17621,7 +17623,7 @@
 
     if-ne v4, v13, :cond_2a
 
-    invoke-virtual {v1, v5, v2}, Lcom/android/server/am/MARsPolicyManager;->enablePackageList(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object v8
 
@@ -17630,7 +17632,7 @@
     :cond_2a
     const-string/jumbo v0, "default"
 
-    invoke-virtual {v1, v0, v2}, Lcom/android/server/am/MARsPolicyManager;->removeRestrictedInfo(Ljava/lang/String;Ljava/util/List;)Ljava/util/List;
+    nop
 
     move-result-object v8
 
@@ -17774,7 +17776,7 @@
 
     move-result-object v3
 
-    invoke-virtual {v1, v0, v3}, Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop
 
     invoke-interface {v8}, Ljava/util/List;->size()I
 

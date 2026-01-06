@@ -9515,7 +9515,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v2, v9}, Lcom/android/server/am/FreecessController;->freezeTargetProcess(ILjava/lang/String;)Z
+    nop
 
     move-result v0
 
@@ -9576,7 +9576,7 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v8, v6, v1}, Lcom/android/server/am/Freezer;->freezeBinder(IIZ)I
+    nop
 
     move-result v6
 
@@ -12454,7 +12454,7 @@
     goto :goto_3
 
     :goto_4
-    invoke-virtual/range {v13 .. v18}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;JLjava/lang/String;)Z
+    nop
 
     goto :goto_6
 
@@ -12489,7 +12489,7 @@
     const-wide/16 v16, 0x2710
 
     :goto_5
-    invoke-virtual/range {v13 .. v18}, Lcom/android/server/am/FreecessController;->protectFreezePackage(ILjava/lang/String;JLjava/lang/String;)Z
+    nop
 
     goto :goto_6
 
@@ -15163,7 +15163,7 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {v4}, Lcom/android/server/am/MARsPolicyManager;->checkFreezerExempt(Lcom/android/server/am/ProcessRecord;)Z
+    nop
 
     move-result v7
 

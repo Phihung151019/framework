@@ -5849,9 +5849,9 @@
     monitor-enter v3
 
     :try_start_2
-    invoke-virtual {v2}, Lcom/android/server/am/CachedAppOptimizer;->updateUseCompaction()V
+    nop
 
-    invoke-virtual {v2}, Lcom/android/server/am/CachedAppOptimizer;->updateCompactionThrottles()V
+    nop
 
     const-string/jumbo v5, "compact_statsd_sample_rate"
 
@@ -5947,9 +5947,9 @@
     iput-wide v7, v2, Lcom/android/server/am/CachedAppOptimizer;->mFullDeltaRssThrottleKb:J
 
     :cond_8
-    invoke-virtual {v2}, Lcom/android/server/am/CachedAppOptimizer;->updateProcStateThrottle()V
+    nop
 
-    invoke-virtual {v2}, Lcom/android/server/am/CachedAppOptimizer;->updateUseFreezer()V
+    nop
 
     const-string/jumbo v5, "activity_manager"
 

@@ -69,7 +69,7 @@
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {p0, p1, v1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object p0
 
@@ -107,7 +107,7 @@
     :try_start_1
     iget-object v4, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsRestrictedPackages:Lcom/android/server/am/MARsPkgMap;
 
-    invoke-static {v4, p1, v1}, Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo(Lcom/android/server/am/MARsPkgMap;Ljava/lang/String;I)Lcom/android/server/am/MARsPackageInfo;
+    nop
 
     move-result-object v4
 
@@ -115,7 +115,7 @@
 
     iget v5, v4, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    invoke-static {v5}, Lcom/android/server/am/MARsPolicyManager;->isDisabledByUser(I)Z
+    nop
 
     move-result v5
 
@@ -123,7 +123,7 @@
 
     iput v3, v4, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    invoke-static {}, Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled()Z
+    nop
 
     move-result v5
 
@@ -142,7 +142,7 @@
 
     xor-int/2addr v0, v3
 
-    invoke-virtual {p0, v1, p1, v0}, Lcom/android/server/am/MARsPolicyManager;->changeAutoDisabledAppState(ILjava/lang/String;Z)V
+    nop
 
     return-void
 

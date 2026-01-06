@@ -134,7 +134,7 @@
 
     const-string/jumbo v3, "UidActive"
 
-    invoke-virtual {p0, v2, v1, v3}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;Ljava/lang/String;)V
+    nop
 
     :cond_4
     sget-object p0, Lcom/android/server/am/FreecessHandler$FreecessHandlerHolder;->INSTANCE:Lcom/android/server/am/FreecessHandler;
@@ -198,7 +198,7 @@
 
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessController;->getPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object p0
 
@@ -241,7 +241,7 @@
 
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessController;->getPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object p0
 
@@ -298,7 +298,7 @@
 
     sget-object p2, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p2, p1}, Lcom/android/server/am/FreecessController;->getPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object p2
 
@@ -404,7 +404,7 @@
     monitor-enter p2
 
     :try_start_1
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessController;->getPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object p1
 
@@ -426,7 +426,7 @@
 
     iget v2, p1, Lcom/android/server/am/FreecessPkgStatus;->userId:I
 
-    invoke-virtual {v0, v2, v1}, Lcom/android/server/am/MARsPolicyManager;->isMARsTarget(ILjava/lang/String;)Z
+    nop
 
     move-result v0
 
@@ -503,7 +503,7 @@
 
     const-string/jumbo p4, "procstate"
 
-    invoke-virtual {p3, p1, p4}, Lcom/android/server/am/FreecessController;->unFreezePackage(ILjava/lang/String;)V
+    nop
 
     :cond_0
     const/4 p3, 0x2
@@ -606,7 +606,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessController;->getPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object p4
 
@@ -623,7 +623,7 @@
 
     iget p4, p4, Lcom/android/server/am/FreecessPkgStatus;->userId:I
 
-    invoke-virtual {p5, p4, v0}, Lcom/android/server/am/MARsPolicyManager;->isMARsTarget(ILjava/lang/String;)Z
+    nop
 
     move-result p4
 
@@ -697,7 +697,7 @@
     monitor-enter p3
 
     :try_start_1
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessController;->getPackageStatus(I)Lcom/android/server/am/FreecessPkgStatus;
+    nop
 
     move-result-object p0
 

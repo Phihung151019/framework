@@ -160,7 +160,7 @@
 
     iput-boolean p0, v2, Lcom/android/server/am/FreecessController;->mIsUsingCgroupV2:Z
 
-    invoke-virtual {v2}, Lcom/android/server/am/FreecessController;->updateCgroupVersionToSsrm()V
+    nop
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -229,7 +229,7 @@
 
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    invoke-virtual {p0, v2}, Lcom/android/server/am/FreecessController;->reportSocketResult(Z)V
+    nop
 
     if-eqz v2, :cond_8
 
