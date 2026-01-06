@@ -12094,7 +12094,7 @@
     invoke-static {v0, v12, v2, v14}, Lcom/android/server/SystemServer$$ExternalSyntheticOutline0;->m(Lcom/android/server/SystemServiceManager;Ljava/lang/Class;Lcom/android/server/utils/TimingsTraceAndSlog;Ljava/lang/String;)V
 
     :try_start_7f
-    new-instance v0, Lcom/android/server/chimera/ChimeraManagerService;
+    goto :try_end_7f
 
     iget-object v12, v1, Lcom/android/server/SystemServer;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 

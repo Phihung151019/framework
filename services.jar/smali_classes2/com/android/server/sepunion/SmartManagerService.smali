@@ -751,27 +751,8 @@
 .end method
 
 .method public final onBootPhase(I)V
-    .locals 1
+    .locals 0
 
-    const/16 v0, 0x3e8
-
-    if-ne p1, v0, :cond_0
-
-    const-string/jumbo p1, "SmartManagerService"
-
-    const-string/jumbo v0, "onBootPhase"
-
-    invoke-static {p1, v0}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
-
-    iget-object p1, p0, Lcom/android/server/sepunion/SmartManagerService;->mHandler:Lcom/android/server/sepunion/SmartManagerService$BgWorkerHandler;
-
-    new-instance v0, Lcom/android/server/sepunion/SmartManagerService$$ExternalSyntheticLambda1;
-
-    invoke-direct {v0, p0}, Lcom/android/server/sepunion/SmartManagerService$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/sepunion/SmartManagerService;)V
-
-    invoke-virtual {p1, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
-
-    :cond_0
     return-void
 .end method
 

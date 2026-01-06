@@ -41,25 +41,8 @@
 
 # direct methods
 .method public static -$$Nest$mrestoreEFKAfterBoot(Lcom/android/server/bgslotmanager/CustomEFKManager;)V
-    .locals 1
+    .locals 0
 
-    iget p0, p0, Lcom/android/server/bgslotmanager/CustomEFKManager;->origin_EFK:I
-
-    const/4 v0, -0x1
-
-    if-eq p0, v0, :cond_0
-
-    invoke-static {p0}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    sget v0, Lcom/android/server/bgslotmanager/BgAppPropManager;->TOTAL_MEMORY_2ND:I
-
-    const-string/jumbo v0, "sys.sysctl.extra_free_kbytes"
-
-    invoke-static {v0, p0}, Landroid/os/SystemProperties;->set(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
     return-void
 .end method
 
