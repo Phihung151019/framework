@@ -81,7 +81,7 @@
 
     const-string/jumbo v3, "uid"
 
-    invoke-static {v0, v2, p1, v3}, Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
 
     move-result-object p1
 

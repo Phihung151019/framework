@@ -24,7 +24,7 @@
 
     const-string/jumbo v1, "uid"
 
-    invoke-static {p1, v0, p2, v1}, Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
 
     move-result-object p1
 
@@ -63,7 +63,7 @@
 
     const-string/jumbo v1, "userId"
 
-    invoke-static {p1, v0, p3, v1}, Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
 
     move-result-object p1
 
@@ -106,7 +106,7 @@
 
     const-string/jumbo v1, "uid"
 
-    invoke-static {p1, v0, p3, v1}, Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
 
     move-result-object p1
 
@@ -326,7 +326,7 @@
 
     const-string/jumbo v1, "uid"
 
-    invoke-static {p1, v0, p3, v1}, Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
 
     move-result-object p1
 

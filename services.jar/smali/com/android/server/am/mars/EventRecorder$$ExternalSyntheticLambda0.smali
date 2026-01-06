@@ -34,7 +34,7 @@
 
     iget-wide v1, p0, Lcom/android/server/am/mars/EventRecorder$$ExternalSyntheticLambda0;->f$1:J
 
-    invoke-virtual {v0, v1, v2}, Lcom/android/server/am/mars/EventRecorder;->performWrite(J)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/EventRecorder;->performWrite
 
     return-void
 .end method

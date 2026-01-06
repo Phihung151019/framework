@@ -9055,7 +9055,7 @@
 
     iget p1, p1, Lcom/android/server/job/controllers/JobStatus;->callingUid:I
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs(Landroid/app/job/JobInfo;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs
 
     :cond_3
     :goto_1

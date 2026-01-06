@@ -7,7 +7,7 @@
 .method public static freezeBinder(IIZ)I
     .locals 0
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/Freezer;->nativeFreezeBinder
 
     move-result p0
 
@@ -17,7 +17,7 @@
 .method public static getBinderFreezeInfo(I)I
     .locals 0
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/Freezer;->nativeGetBinderFreezeInfo
 
     move-result p0
 
@@ -27,7 +27,7 @@
 .method public static isFreezerSupported()Z
     .locals 1
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/Freezer;->nativeIsFreezerSupported
 
     move-result v0
 

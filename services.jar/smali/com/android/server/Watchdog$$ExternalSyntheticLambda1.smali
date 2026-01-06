@@ -401,7 +401,7 @@
 
     const-string/jumbo v8, "Watchdog_HALF"
 
-    invoke-virtual {v7, v8}, Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
 
     :cond_a
     move v9, v1
@@ -1143,7 +1143,7 @@
 
     const-string/jumbo v2, "Watchdog"
 
-    invoke-virtual {v0, v2}, Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
 
     :cond_1a
     if-eqz v7, :cond_1b

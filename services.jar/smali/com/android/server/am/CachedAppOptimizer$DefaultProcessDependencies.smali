@@ -32,7 +32,7 @@
 
     const/4 p0, 0x3
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smcompactProcess
 
     goto :goto_0
 
@@ -43,7 +43,7 @@
 
     const/4 p0, 0x1
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smcompactProcess
 
     goto :goto_0
 
@@ -54,7 +54,7 @@
 
     const/4 p0, 0x2
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smcompactProcess
 
     :cond_2
     :goto_0

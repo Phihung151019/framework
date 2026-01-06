@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;
 
-    invoke-direct {v0}, Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;-><init>
 
     sput-object v0, Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter$WidgetPkgFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;
 

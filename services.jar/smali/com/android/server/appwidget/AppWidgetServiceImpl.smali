@@ -6151,7 +6151,7 @@
     :try_start_0
     iget-object v7, v8, Lcom/android/server/am/MARsPolicyManager;->mMARsRestrictedPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
 
     move-result-object v7
 
@@ -6180,7 +6180,7 @@
 
     const/4 v7, 0x0
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy
 
     :cond_3
     iget-object v6, v0, Lcom/android/server/appwidget/AppWidgetServiceImpl;->mLock:Ljava/lang/Object;

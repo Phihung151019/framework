@@ -13,7 +13,7 @@
 .method public constructor <init>(Lcom/android/server/am/mars/events/EventType;Ljava/lang/Integer;JLcom/android/server/am/FreezeResult;I)V
     .locals 0
 
-    invoke-direct {p0, p1, p2, p3, p4}, Lcom/android/server/am/mars/events/Event;-><init>(Lcom/android/server/am/mars/events/EventType;Ljava/lang/Integer;J)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/Event;-><init>
 
     iput-object p5, p0, Lcom/android/server/am/mars/events/FreezeSkipEvent;->result:Lcom/android/server/am/FreezeResult;
 
@@ -51,7 +51,7 @@
 
     iget-object v2, p0, Lcom/android/server/am/mars/events/Event;->eventType:Lcom/android/server/am/mars/events/EventType;
 
-    invoke-virtual {v2}, Lcom/android/server/am/mars/events/EventType;->getNumber()I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->getNumber
 
     move-result v2
 
@@ -115,7 +115,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/mars/events/Event;->eventType:Lcom/android/server/am/mars/events/EventType;
 
-    invoke-virtual {v1}, Lcom/android/server/am/mars/events/EventType;->getNumber()I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->getNumber
 
     move-result v1
 

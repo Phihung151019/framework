@@ -416,7 +416,7 @@
 
     const/4 v1, 0x0
 
-    invoke-direct {p1, p0, v0, v1}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;-><init>(Lcom/android/server/am/mars/filter/filter/LockScreenFilter;Landroid/os/Handler;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;-><init>
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceObserver:Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;
 
@@ -433,7 +433,7 @@
 
     const/4 v1, 0x1
 
-    invoke-direct {p1, p0, v0, v1}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;-><init>(Lcom/android/server/am/mars/filter/filter/LockScreenFilter;Landroid/os/Handler;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;-><init>
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceSubObserver:Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;
 
@@ -484,9 +484,9 @@
 
     :cond_2
     :goto_0
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFace()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFace
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFaceSub()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFaceSub
 
     return-void
 .end method

@@ -42,7 +42,7 @@
 
     const/4 p1, 0x1
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
 
     return-void
 .end method

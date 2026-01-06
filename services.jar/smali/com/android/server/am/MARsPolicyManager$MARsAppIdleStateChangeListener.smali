@@ -32,7 +32,7 @@
 
     iget-object p5, p5, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
 
     move-result-object p1
 
@@ -63,7 +63,7 @@
 
     new-instance p0, Lcom/android/server/am/mars/database/FASEntityBuilder;
 
-    invoke-direct {p0}, Lcom/android/server/am/mars/database/FASEntityBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntityBuilder;-><init>
 
     iget-object p2, p1, Lcom/android/server/am/MARsPackageInfo;->name:Ljava/lang/String;
 
@@ -93,7 +93,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/mars/database/FASEntityBuilder;->strResetTime:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/database/FASEntityBuilder;->build()Lcom/android/server/am/mars/database/FASEntity;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntityBuilder;->build
 
     move-result-object p0
 
@@ -117,7 +117,7 @@
 
     const/16 p2, 0x400
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->levelChange
 
     move-result p0
 
@@ -131,7 +131,7 @@
 
     new-instance p0, Lcom/android/server/am/mars/database/FASEntityBuilder;
 
-    invoke-direct {p0}, Lcom/android/server/am/mars/database/FASEntityBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntityBuilder;-><init>
 
     iget-object p2, p1, Lcom/android/server/am/MARsPackageInfo;->name:Ljava/lang/String;
 
@@ -161,7 +161,7 @@
 
     iget p2, p1, Lcom/android/server/am/MARsPackageInfo;->fasType:I
 
-    invoke-static {p2}, Lcom/android/server/am/mars/database/FASTableContract;->convertFASTypeToReason(I)Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASTypeToReason
 
     move-result-object p2
 
@@ -169,7 +169,7 @@
 
     iget p2, p1, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    invoke-static {p2}, Lcom/android/server/am/mars/database/FASTableContract;->convertDisableReasonToDBValue(I)Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertDisableReasonToDBValue
 
     move-result-object p2
 
@@ -177,7 +177,7 @@
 
     iget p2, p1, Lcom/android/server/am/MARsPackageInfo;->state:I
 
-    invoke-static {p2}, Lcom/android/server/am/mars/database/FASTableContract;->convertStateToDBExtrasValue(I)Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertStateToDBExtrasValue
 
     move-result-object p2
 
@@ -199,7 +199,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/mars/database/FASEntityBuilder;->strResetTime:Ljava/lang/String;
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/database/FASEntityBuilder;->build()Lcom/android/server/am/mars/database/FASEntity;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntityBuilder;->build
 
     move-result-object p0
 
@@ -221,11 +221,11 @@
 
     if-eqz p0, :cond_5
 
-    invoke-static {}, Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance
 
     sget-object p1, Lcom/android/server/am/mars/database/MARsDBHandler$MARsDBHandlerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBHandler;
 
-    invoke-virtual {p1, p0}, Lcom/android/server/am/mars/database/MARsDBHandler;->sendUpdateResetTimeSpecificMsgToDBHandler(Lcom/android/server/am/mars/database/FASEntity;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->sendUpdateResetTimeSpecificMsgToDBHandler
 
     :cond_5
     return-void

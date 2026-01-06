@@ -156,7 +156,7 @@
 
     if-eqz v1, :cond_2
 
-    invoke-static {}, Lcom/android/server/am/mars/database/scpm/ScpmApiContract$MessageType;->values()[Lcom/android/server/am/mars/database/scpm/ScpmApiContract$MessageType;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/ScpmApiContract$MessageType;->values
 
     move-result-object v1
 
@@ -180,7 +180,7 @@
     const/4 v4, 0x0
 
     :goto_1
-    invoke-virtual {v0, v4}, Lcom/android/server/am/mars/database/scpm/ScpmHelper;->getScpmFileDescriptor(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/ScpmHelper;->getScpmFileDescriptor
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 

@@ -31,7 +31,7 @@
     :try_start_0
     iget-object p3, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
 
     move-result-object p1
 
@@ -57,7 +57,7 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isFirstTimeTriggerAutorun
 
     move-result p0
 

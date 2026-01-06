@@ -25,11 +25,11 @@
 
     iget-object v0, p0, Lcom/android/server/am/mars/util/UidStateMgr$1;->this$0:Lcom/android/server/am/mars/util/UidStateMgr;
 
-    invoke-static {v0, p1}, Lcom/android/server/am/mars/util/UidStateMgr;->-$$Nest$mremoveFromUidIdleList(Lcom/android/server/am/mars/util/UidStateMgr;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->-$$Nest$mremoveFromUidIdleList
 
     iget-object v0, p0, Lcom/android/server/am/mars/util/UidStateMgr$1;->this$0:Lcom/android/server/am/mars/util/UidStateMgr;
 
-    invoke-virtual {v0, p1}, Lcom/android/server/am/mars/util/UidStateMgr;->addToRunningList(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->addToRunningList
 
     iget-object p0, p0, Lcom/android/server/am/mars/util/UidStateMgr$1;->this$0:Lcom/android/server/am/mars/util/UidStateMgr;
 
@@ -39,7 +39,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/util/UidStateMgr;->mUidGoneList:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    invoke-virtual {p0, v0}, Lcom/android/server/am/mars/util/ConcurrentList;->remove(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->remove
 
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
@@ -106,7 +106,7 @@
 
     const-string v2, "CalmMode for restart"
 
-    invoke-virtual {p0, p1, v1, v2}, Lcom/android/server/am/FreecessHandler;->sendCalmModeRepeatMsg(ILjava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendCalmModeRepeatMsg
 
     monitor-exit v0
 
@@ -134,7 +134,7 @@
 
     const-string/jumbo v3, "UidActive"
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->unFreezePackage
 
     :cond_4
     sget-object p0, Lcom/android/server/am/FreecessHandler$FreecessHandlerHolder;->INSTANCE:Lcom/android/server/am/FreecessHandler;
@@ -179,7 +179,7 @@
 
     move-result-object v0
 
-    invoke-virtual {p2, v0}, Lcom/android/server/am/mars/util/ConcurrentList;->contains(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->contains
 
     move-result p2
 
@@ -191,14 +191,14 @@
 
     move-result-object p2
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/mars/util/ConcurrentList;->add(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->add
 
     :cond_0
     sget-boolean p0, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
 
     move-result-object p0
 
@@ -235,13 +235,13 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/util/UidStateMgr;->mUidCached:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/mars/util/ConcurrentList;->remove(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->remove
 
     sget-boolean p0, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
 
     move-result-object p0
 
@@ -278,7 +278,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/mars/util/UidStateMgr$1;->this$0:Lcom/android/server/am/mars/util/UidStateMgr;
 
-    invoke-static {p2, p1}, Lcom/android/server/am/mars/util/UidStateMgr;->-$$Nest$mremoveFromUidIdleList(Lcom/android/server/am/mars/util/UidStateMgr;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->-$$Nest$mremoveFromUidIdleList
 
     iget-object p2, p0, Lcom/android/server/am/mars/util/UidStateMgr$1;->this$0:Lcom/android/server/am/mars/util/UidStateMgr;
 
@@ -288,7 +288,7 @@
 
     iget-object p2, p2, Lcom/android/server/am/mars/util/UidStateMgr;->mRunningList:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    invoke-virtual {p2, v0}, Lcom/android/server/am/mars/util/ConcurrentList;->remove(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->remove
 
     move-result p2
 
@@ -298,7 +298,7 @@
 
     sget-object p2, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
 
     move-result-object p2
 
@@ -336,7 +336,7 @@
 
     sget-object v6, Lcom/android/server/am/mars/events/EventType;->UID_STOP:Lcom/android/server/am/mars/events/EventType;
 
-    invoke-direct {v5, v6, v0, v1, v2}, Lcom/android/server/am/mars/events/Event;-><init>(Lcom/android/server/am/mars/events/EventType;Ljava/lang/Integer;J)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/Event;-><init>
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
@@ -350,7 +350,7 @@
 
     if-le v0, v4, :cond_1
 
-    invoke-virtual {p2, v1, v2}, Lcom/android/server/am/mars/EventRecorder;->performWriteAsync(J)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/EventRecorder;->performWriteAsync
 
     goto :goto_0
 
@@ -382,7 +382,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/util/UidStateMgr;->mUidGoneList:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/mars/util/ConcurrentList;->contains(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->contains
 
     move-result p2
 
@@ -392,7 +392,7 @@
 
     move-result-object p2
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/mars/util/ConcurrentList;->add(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->add
 
     :cond_3
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
@@ -404,7 +404,7 @@
     monitor-enter p2
 
     :try_start_1
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
 
     move-result-object p1
 
@@ -426,7 +426,7 @@
 
     iget v2, p1, Lcom/android/server/am/FreecessPkgStatus;->userId:I
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isMARsTarget
 
     move-result v0
 
@@ -475,11 +475,11 @@
 
     iget-object p2, p0, Lcom/android/server/am/mars/util/UidStateMgr$1;->this$0:Lcom/android/server/am/mars/util/UidStateMgr;
 
-    invoke-virtual {p2, p1}, Lcom/android/server/am/mars/util/UidStateMgr;->addToUidIdleList(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->addToUidIdleList
 
     iget-object p0, p0, Lcom/android/server/am/mars/util/UidStateMgr$1;->this$0:Lcom/android/server/am/mars/util/UidStateMgr;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/mars/util/UidStateMgr;->addToRunningList(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->addToRunningList
 
     return-void
 .end method
@@ -503,7 +503,7 @@
 
     const-string/jumbo p4, "procstate"
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->unFreezePackage
 
     :cond_0
     const/4 p3, 0x2
@@ -518,7 +518,7 @@
 
     iget-object p3, p3, Lcom/android/server/am/mars/util/UidStateMgr;->mTopUidList:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    invoke-virtual {p3, p4}, Lcom/android/server/am/mars/util/ConcurrentList;->contains(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->contains
 
     move-result p4
 
@@ -528,7 +528,7 @@
 
     move-result-object p4
 
-    invoke-virtual {p3, p4}, Lcom/android/server/am/mars/util/ConcurrentList;->add(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->add
 
     goto :goto_0
 
@@ -541,7 +541,7 @@
 
     iget-object p3, p3, Lcom/android/server/am/mars/util/UidStateMgr;->mTopUidList:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    invoke-virtual {p3, p4}, Lcom/android/server/am/mars/util/ConcurrentList;->remove(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->remove
 
     :cond_2
     :goto_0
@@ -564,7 +564,7 @@
 
     iget-object p3, p3, Lcom/android/server/am/mars/util/UidStateMgr;->mUidForegroundList:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    invoke-virtual {p3, p4}, Lcom/android/server/am/mars/util/ConcurrentList;->remove(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->remove
 
     goto :goto_2
 
@@ -578,7 +578,7 @@
 
     iget-object p3, p3, Lcom/android/server/am/mars/util/UidStateMgr;->mUidForegroundList:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    invoke-virtual {p3, p4}, Lcom/android/server/am/mars/util/ConcurrentList;->contains(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->contains
 
     move-result p4
 
@@ -588,7 +588,7 @@
 
     move-result-object p4
 
-    invoke-virtual {p3, p4}, Lcom/android/server/am/mars/util/ConcurrentList;->add(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->add
 
     :cond_5
     :goto_2
@@ -606,7 +606,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
 
     move-result-object p4
 
@@ -623,7 +623,7 @@
 
     iget p4, p4, Lcom/android/server/am/FreecessPkgStatus;->userId:I
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isMARsTarget
 
     move-result p4
 
@@ -697,7 +697,7 @@
     monitor-enter p3
 
     :try_start_1
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
 
     move-result-object p0
 

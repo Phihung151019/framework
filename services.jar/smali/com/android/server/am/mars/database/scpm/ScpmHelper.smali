@@ -169,7 +169,7 @@
 
     sget-object p0, Lcom/android/server/am/mars/database/scpm/archive/ScpmPolicyForArchive$ScpmPolicyForArchiveHolder;->INSTANCE:Lcom/android/server/am/mars/database/scpm/archive/ScpmPolicyForArchive;
 
-    invoke-virtual {p0, v2}, Lcom/android/server/am/mars/database/scpm/archive/ScpmPolicyForArchive;->setSCPMPolicy(Landroid/os/ParcelFileDescriptor;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/archive/ScpmPolicyForArchive;->setSCPMPolicy
 
     goto :goto_2
 

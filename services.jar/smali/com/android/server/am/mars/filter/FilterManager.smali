@@ -29,7 +29,7 @@
 .method public static filterForSpecificPolicy(IIILjava/lang/String;)I
     .locals 3
 
-    invoke-static {}, Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled()Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled
 
     move-result v0
 
@@ -47,7 +47,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {v0, v1, p3, v2, v2}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v0
 
@@ -72,7 +72,7 @@
 
     if-eqz v0, :cond_1
 
-    invoke-virtual {v0, p1, p2, p0, p3}, Lcom/android/server/am/mars/filter/FilterChain;->filter(IIILjava/lang/String;)I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChain;->filter
 
     move-result p0
 
@@ -521,7 +521,7 @@
 
     iget-object v15, v2, Lcom/android/server/am/mars/filter/FilterFactory;->mContext:Landroid/content/Context;
 
-    invoke-interface {v7, v15}, Lcom/android/server/am/mars/filter/IFilter;->init(Landroid/content/Context;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/IFilter;->init
 
     add-int/lit8 v1, v1, 0x1
 
@@ -538,7 +538,7 @@
 
     sget-object v7, Lcom/android/server/am/mars/filter/FilterFactory$FilterFactoryHolder;->INSTANCE:Lcom/android/server/am/mars/filter/FilterFactory;
 
-    invoke-virtual {v7, v11}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v15
 
@@ -552,7 +552,7 @@
 
     iput-object v15, v4, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v12}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v15
 
@@ -564,7 +564,7 @@
 
     iput-object v4, v10, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v13}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v4
 
@@ -576,7 +576,7 @@
 
     iput-object v10, v15, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v14}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v4
 
@@ -588,7 +588,7 @@
 
     iput-object v15, v10, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v3}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v4
 
@@ -610,23 +610,23 @@
 
     new-instance v4, Lcom/android/server/am/mars/filter/FilterChainBuilder;
 
-    invoke-direct {v4}, Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>
 
-    invoke-static {v7, v5, v4, v6, v8}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
-    invoke-static {v7, v9, v4, v11, v12}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v10, 0xe
 
     const/16 v15, 0x10
 
-    invoke-static {v7, v13, v4, v10, v15}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
-    invoke-virtual {v7, v3}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v10
 
-    invoke-virtual {v4, v10}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     iget-object v4, v4, Lcom/android/server/am/mars/filter/FilterChainBuilder;->filterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
@@ -640,47 +640,47 @@
 
     new-instance v4, Lcom/android/server/am/mars/filter/FilterChainBuilder;
 
-    invoke-direct {v4}, Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>
 
     move/from16 v15, v19
 
     const/4 v10, 0x5
 
-    invoke-static {v7, v15, v4, v6, v10}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v10, 0x8
 
-    invoke-static {v7, v8, v4, v9, v10}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
-    invoke-static {v7, v11, v4, v12, v13}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v10, 0xd
 
     const/16 v15, 0xe
 
-    invoke-static {v7, v14, v4, v10, v15}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v10, 0xf
 
     const/16 v15, 0x10
 
-    invoke-static {v7, v10, v4, v15, v3}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v10, 0x1b
 
-    invoke-virtual {v7, v10}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v15
 
-    invoke-virtual {v4, v15}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     const/16 v10, 0x1c
 
-    invoke-virtual {v7, v10}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v15
 
-    invoke-virtual {v4, v15}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     iget-object v4, v4, Lcom/android/server/am/mars/filter/FilterChainBuilder;->filterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
@@ -694,15 +694,15 @@
 
     new-instance v4, Lcom/android/server/am/mars/filter/FilterChainBuilder;
 
-    invoke-direct {v4}, Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>
 
-    invoke-static {v7, v5, v4, v6, v8}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
-    invoke-static {v7, v9, v4, v11, v12}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v15, 0xe
 
-    invoke-static {v7, v13, v4, v15, v3}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     iget-object v4, v4, Lcom/android/server/am/mars/filter/FilterChainBuilder;->filterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
@@ -718,15 +718,15 @@
 
     new-instance v4, Lcom/android/server/am/mars/filter/FilterChainBuilder;
 
-    invoke-direct {v4}, Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>
 
-    invoke-static {v7, v5, v4, v6, v8}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
-    invoke-static {v7, v9, v4, v11, v12}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v15, 0xe
 
-    invoke-static {v7, v13, v4, v15, v3}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     iget-object v4, v4, Lcom/android/server/am/mars/filter/FilterChainBuilder;->filterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
@@ -740,17 +740,17 @@
 
     new-instance v4, Lcom/android/server/am/mars/filter/FilterChainBuilder;
 
-    invoke-direct {v4}, Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>
 
-    invoke-static {v7, v6, v4, v8, v9}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
-    invoke-static {v7, v11, v4, v12, v13}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v10, 0x15
 
     const/16 v15, 0xe
 
-    invoke-static {v7, v15, v4, v14, v10}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v3, 0x1b
 
@@ -758,15 +758,15 @@
 
     const/16 v15, 0x19
 
-    invoke-static {v7, v10, v4, v15, v3}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v3, 0x1e
 
-    invoke-virtual {v7, v3}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v10
 
-    invoke-virtual {v4, v10}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     iget-object v3, v4, Lcom/android/server/am/mars/filter/FilterChainBuilder;->filterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
@@ -780,15 +780,15 @@
 
     new-instance v3, Lcom/android/server/am/mars/filter/FilterChainBuilder;
 
-    invoke-direct {v3}, Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>
 
-    invoke-static {v7, v6, v3, v11, v12}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v10, 0x15
 
     const/16 v15, 0xe
 
-    invoke-static {v7, v13, v3, v15, v10}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v4, 0x1e
 
@@ -796,7 +796,7 @@
 
     const/16 v15, 0x19
 
-    invoke-static {v7, v10, v3, v15, v4}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     iget-object v3, v3, Lcom/android/server/am/mars/filter/FilterChainBuilder;->filterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
@@ -812,39 +812,39 @@
 
     new-instance v3, Lcom/android/server/am/mars/filter/FilterChainBuilder;
 
-    invoke-direct {v3}, Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>
 
     move/from16 v4, p1
 
-    invoke-static {v7, v5, v3, v4, v6}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/4 v10, 0x5
 
-    invoke-static {v7, v10, v3, v8, v9}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
-    invoke-static {v7, v11, v3, v12, v13}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v4, 0x11
 
     const/16 v15, 0xe
 
-    invoke-static {v7, v14, v3, v15, v4}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v10, 0x13
 
-    invoke-virtual {v7, v10}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v15
 
-    invoke-virtual {v3, v15}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     const/16 v10, 0x18
 
-    invoke-virtual {v7, v10}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v15
 
-    invoke-virtual {v3, v15}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     iget-object v3, v3, Lcom/android/server/am/mars/filter/FilterChainBuilder;->filterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
@@ -858,13 +858,13 @@
 
     new-instance v3, Lcom/android/server/am/mars/filter/FilterChainBuilder;
 
-    invoke-direct {v3}, Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>
 
     const/4 v4, 0x2
 
-    invoke-static {v7, v8, v3, v4, v9}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
-    invoke-static {v7, v11, v3, v13, v14}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v4, 0x12
 
@@ -872,21 +872,21 @@
 
     const/16 v15, 0x18
 
-    invoke-static {v7, v4, v3, v10, v15}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v4, 0x1a
 
-    invoke-virtual {v7, v4}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v10
 
-    invoke-virtual {v3, v10}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
-    invoke-virtual {v7, v12}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     iget-object v3, v3, Lcom/android/server/am/mars/filter/FilterChainBuilder;->filterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
@@ -898,7 +898,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v7, v5}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -912,7 +912,7 @@
 
     iput-object v3, v4, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v6}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -924,7 +924,7 @@
 
     iput-object v4, v5, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v8}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -936,7 +936,7 @@
 
     iput-object v5, v4, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v11}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -948,7 +948,7 @@
 
     iput-object v4, v5, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v12}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -960,7 +960,7 @@
 
     iput-object v5, v4, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v13}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -980,7 +980,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v7, v8}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -994,7 +994,7 @@
 
     iput-object v3, v4, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v9}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1006,7 +1006,7 @@
 
     iput-object v4, v5, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v13}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1020,7 +1020,7 @@
 
     const/4 v3, 0x2
 
-    invoke-virtual {v7, v3}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v5
 
@@ -1034,7 +1034,7 @@
 
     const/16 v4, 0x20
 
-    invoke-virtual {v7, v4}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v5
 
@@ -1056,35 +1056,35 @@
 
     new-instance v3, Lcom/android/server/am/mars/filter/FilterChainBuilder;
 
-    invoke-direct {v3}, Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>
 
     const/4 v4, 0x2
 
     const/4 v15, 0x1
 
-    invoke-static {v7, v15, v3, v4, v9}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v10, 0xf
 
-    invoke-static {v7, v10, v3, v6, v8}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
-    invoke-static {v7, v11, v3, v13, v14}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v15, 0xe
 
-    invoke-virtual {v7, v15}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     const/16 v4, 0x11
 
-    invoke-virtual {v7, v4}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v5
 
-    invoke-virtual {v3, v5}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     iget-object v3, v3, Lcom/android/server/am/mars/filter/FilterChainBuilder;->filterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
@@ -1096,7 +1096,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v7, v15}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1112,7 +1112,7 @@
 
     const/4 v10, 0x5
 
-    invoke-virtual {v7, v10}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1136,7 +1136,7 @@
 
     const/4 v15, 0x1
 
-    invoke-virtual {v7, v15}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1162,19 +1162,19 @@
 
     new-instance v3, Lcom/android/server/am/mars/filter/FilterChainBuilder;
 
-    invoke-direct {v3}, Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;-><init>
 
     const/4 v4, 0x2
 
     const/16 v10, 0x8
 
-    invoke-static {v7, v4, v3, v10, v8}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
-    invoke-static {v7, v9, v3, v11, v13}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v10, 0xf
 
-    invoke-static {v7, v14, v3, v15, v10}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v4, 0x11
 
@@ -1182,13 +1182,13 @@
 
     const/16 v9, 0x17
 
-    invoke-static {v7, v4, v3, v5, v9}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v4, 0x1a
 
     const/16 v10, 0x1b
 
-    invoke-static {v7, v4, v3, v10, v12}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v4, 0x1d
 
@@ -1196,23 +1196,23 @@
 
     const/16 v10, 0x1c
 
-    invoke-static {v7, v10, v3, v4, v5}, Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager$$ExternalSyntheticOutline0;->m
 
     const/16 v4, 0x20
 
-    invoke-virtual {v7, v4}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     const/16 v4, 0x21
 
-    invoke-virtual {v7, v4}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v4
 
-    invoke-virtual {v3, v4}, Lcom/android/server/am/mars/filter/FilterChainBuilder;->add(Lcom/android/server/am/mars/filter/IFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
 
     iget-object v3, v3, Lcom/android/server/am/mars/filter/FilterChainBuilder;->filterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
@@ -1226,7 +1226,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v7, v6}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1240,7 +1240,7 @@
 
     iput-object v3, v4, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v8}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1252,7 +1252,7 @@
 
     iput-object v4, v5, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v11}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1264,7 +1264,7 @@
 
     iput-object v5, v4, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v12}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1276,7 +1276,7 @@
 
     iput-object v4, v5, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v13}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1290,7 +1290,7 @@
 
     const/16 v10, 0xd
 
-    invoke-virtual {v7, v10}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1302,7 +1302,7 @@
 
     iput-object v4, v5, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v14}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v3
 
@@ -1324,7 +1324,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v7, v11}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v2
 
@@ -1338,7 +1338,7 @@
 
     iput-object v2, v3, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v12}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v2
 
@@ -1350,7 +1350,7 @@
 
     iput-object v3, v4, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v13}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v2
 
@@ -1362,7 +1362,7 @@
 
     iput-object v4, v3, Lcom/android/server/am/mars/filter/FilterChain;->nextFilterChain:Lcom/android/server/am/mars/filter/FilterChain;
 
-    invoke-virtual {v7, v14}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v2
 
@@ -1376,7 +1376,7 @@
 
     const/16 v2, 0x11
 
-    invoke-virtual {v7, v2}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v2
 

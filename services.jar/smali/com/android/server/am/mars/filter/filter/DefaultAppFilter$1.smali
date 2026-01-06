@@ -46,7 +46,7 @@
 
     move-result p2
 
-    invoke-virtual {p1, p2}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage
 
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;
 
@@ -74,12 +74,12 @@
 
     if-gt p2, v0, :cond_1
 
-    invoke-virtual {p1, p2}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage
 
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getSubUserIdsDefaultIMEPackage()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getSubUserIdsDefaultIMEPackage
 
     return-void
 .end method

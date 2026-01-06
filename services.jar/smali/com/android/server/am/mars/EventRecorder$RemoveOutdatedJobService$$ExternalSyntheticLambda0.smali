@@ -60,7 +60,7 @@
 
     invoke-direct {v7, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v7}, Lcom/android/server/am/mars/EventRecorder;->createNewEmptyFile(Ljava/io/File;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/EventRecorder;->createNewEmptyFile
 
     move-result v8
 
@@ -223,7 +223,7 @@
 
     move-result v9
 
-    invoke-static {v9}, Lcom/android/server/am/mars/events/EventType;->fromInt(I)Lcom/android/server/am/mars/events/EventType;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->fromInt
 
     move-result-object v9
 
@@ -236,7 +236,7 @@
     :try_start_9
     new-instance v9, Lcom/android/server/am/mars/events/FreezeEvent;
 
-    invoke-direct {v9, v0}, Lcom/android/server/am/mars/events/FreezeEvent;-><init>(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/FreezeEvent;-><init>
 
     iget-object v0, v9, Lcom/android/server/am/mars/events/Event;->uid:Ljava/lang/Integer;
 
@@ -308,7 +308,7 @@
 
     move-result v15
 
-    invoke-static {v15}, Lcom/android/server/am/mars/events/EventType;->fromInt(I)Lcom/android/server/am/mars/events/EventType;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->fromInt
 
     move-result-object v15
 
@@ -387,7 +387,7 @@
     :cond_5
     move-object/from16 v22, v8
 
-    invoke-virtual/range {v17 .. v17}, Lcom/android/server/am/mars/events/FreezeEvent;->toFile()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/FreezeEvent;->toFile
 
     move-result-object v8
 
@@ -405,7 +405,7 @@
 
     invoke-virtual {v8, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual/range {v19 .. v19}, Lcom/android/server/am/mars/events/EventType;->getNumber()I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->getNumber
 
     move-result v5
 
@@ -478,7 +478,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/android/server/am/mars/events/EventType;->fromInt(I)Lcom/android/server/am/mars/events/EventType;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->fromInt
 
     move-result-object v0
 
@@ -538,7 +538,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/android/server/am/mars/events/EventType;->fromInt(I)Lcom/android/server/am/mars/events/EventType;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->fromInt
 
     move-result-object v0
 
@@ -576,7 +576,7 @@
     goto :goto_6
 
     :cond_b
-    invoke-virtual {v9}, Lcom/android/server/am/mars/events/Event;->toFile()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/Event;->toFile
 
     move-result-object v9
 
@@ -594,7 +594,7 @@
 
     invoke-virtual {v9, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/android/server/am/mars/events/EventType;->getNumber()I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->getNumber
 
     move-result v0
 
@@ -646,7 +646,7 @@
 
     move-result v9
 
-    invoke-static {v9}, Lcom/android/server/am/mars/events/EventType;->fromInt(I)Lcom/android/server/am/mars/events/EventType;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->fromInt
 
     move-result-object v9
 
@@ -689,7 +689,7 @@
 
     invoke-virtual {v15, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v9}, Lcom/android/server/am/mars/events/EventType;->getNumber()I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->getNumber
 
     move-result v5
 
@@ -750,7 +750,7 @@
 
     check-cast v1, Lcom/android/server/am/mars/events/Event;
 
-    invoke-virtual {v1}, Lcom/android/server/am/mars/events/Event;->toFile()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/Event;->toFile
 
     move-result-object v1
 
@@ -780,7 +780,7 @@
 
     check-cast v1, Lcom/android/server/am/mars/events/FreezeEvent;
 
-    invoke-virtual {v1}, Lcom/android/server/am/mars/events/FreezeEvent;->toFile()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/FreezeEvent;->toFile
 
     move-result-object v1
 

@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/FilterManager;
 
-    invoke-direct {v0}, Lcom/android/server/am/mars/filter/FilterManager;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager;-><init>
 
     sput-object v0, Lcom/android/server/am/mars/filter/FilterManager$FilterManagerHolder;->INSTANCE:Lcom/android/server/am/mars/filter/FilterManager;
 

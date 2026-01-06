@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;
 
-    invoke-direct {v0}, Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;-><init>
 
     sput-object v0, Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter$ActiveSensorFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/ActiveSensorFilter;
 

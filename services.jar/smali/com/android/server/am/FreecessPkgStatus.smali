@@ -91,7 +91,7 @@
 
     invoke-direct {p4}, Ljava/lang/Object;-><init>()V
 
-    invoke-static {}, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->values()[Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->values
 
     move-result-object v2
 
@@ -101,7 +101,7 @@
 
     iput-object v2, p4, Lcom/android/server/am/mars/MARsFreezeStateRecord;->mFreezeCounts:[I
 
-    invoke-static {}, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->values()[Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->values
 
     move-result-object v2
 
@@ -192,7 +192,7 @@
 
     iget-wide v2, v1, Lcom/android/server/am/mars/MARsFreezeStateRecord;->freezedTime:J
 
-    invoke-static {v2, v3}, Lcom/android/server/am/mars/MARsUtils;->formatDateTime(J)Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->formatDateTime
 
     move-result-object v2
 
@@ -204,7 +204,7 @@
 
     iget-wide v2, v1, Lcom/android/server/am/mars/MARsFreezeStateRecord;->unfreezedTime:J
 
-    invoke-static {v2, v3}, Lcom/android/server/am/mars/MARsUtils;->formatDateTime(J)Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->formatDateTime
 
     move-result-object v2
 
@@ -224,7 +224,7 @@
 
     const-string v3, "-UserId "
 
-    invoke-static {v2, v1, v0, v3}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget v1, p0, Lcom/android/server/am/FreecessPkgStatus;->userId:I
 
@@ -240,7 +240,7 @@
 
     const-string v3, "-Pkg "
 
-    invoke-static {v2, v1, v0, v3}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget-object p0, p0, Lcom/android/server/am/FreecessPkgStatus;->name:Ljava/lang/String;
 
@@ -282,7 +282,7 @@
     :goto_0
     sget-object v6, Lcom/android/server/am/mars/util/UidStateMgr$UidStateMgrHolder;->INSTANCE:Lcom/android/server/am/mars/util/UidStateMgr;
 
-    invoke-virtual {v6, v1}, Lcom/android/server/am/mars/util/UidStateMgr;->isUidIdle(I)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->isUidIdle
 
     move-result v7
 
@@ -304,7 +304,7 @@
 
     iget-object v9, v6, Lcom/android/server/am/mars/util/UidStateMgr;->mTopUidList:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    invoke-virtual {v9, v8}, Lcom/android/server/am/mars/util/ConcurrentList;->contains(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->contains
 
     move-result v8
 
@@ -336,7 +336,7 @@
     goto :goto_4
 
     :cond_3
-    invoke-virtual {v6, v1}, Lcom/android/server/am/mars/util/UidStateMgr;->isUidRunning(I)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->isUidRunning
 
     move-result v1
 
@@ -350,7 +350,7 @@
     move-object v6, v7
 
     :goto_4
-    invoke-virtual {v8}, Lcom/android/server/am/mars/MARsFreezeStateRecord;->dumpUfzContent()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord;->dumpUfzContent
 
     move-result-object v7
 

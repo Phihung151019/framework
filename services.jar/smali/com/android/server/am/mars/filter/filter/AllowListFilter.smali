@@ -79,7 +79,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AllowListFilter;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/AllowListFilter;->setCarrierAllowList()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AllowListFilter;->setCarrierAllowList
 
     return-void
 .end method

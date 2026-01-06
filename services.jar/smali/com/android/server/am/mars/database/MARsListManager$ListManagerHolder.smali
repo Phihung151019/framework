@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/database/MARsListManager;
 
-    invoke-direct {v0}, Lcom/android/server/am/mars/database/MARsListManager;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;-><init>
 
     sput-object v0, Lcom/android/server/am/mars/database/MARsListManager$ListManagerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsListManager;
 

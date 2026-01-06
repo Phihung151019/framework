@@ -140,7 +140,7 @@
 
     const-string v3, "FGSN"
 
-    invoke-virtual {p0, v3, v2}, Lcom/android/server/am/mars/MARsBigData;->sendBigData(Ljava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData;->sendBigData
 
     goto :goto_0
 
@@ -340,9 +340,9 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1, v2}, Lcom/android/server/am/mars/MARsBigData$UsageInfo;-><init>(Ljava/lang/String;[Lcom/android/server/am/mars/MARsBigData$LevelInfo;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData$UsageInfo;-><init>
 
-    invoke-virtual {v0}, Lcom/android/server/am/mars/MARsBigData$UsageInfo;->toString()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData$UsageInfo;->toString
 
     move-result-object v0
 

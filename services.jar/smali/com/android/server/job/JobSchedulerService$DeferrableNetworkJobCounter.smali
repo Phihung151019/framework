@@ -63,7 +63,7 @@
 
     const-string v3, ",d:"
 
-    invoke-static {v2, v1, v0, v3}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget-wide v1, p0, Lcom/android/server/job/JobSchedulerService$DeferrableNetworkJobCounter;->deferrable:J
 

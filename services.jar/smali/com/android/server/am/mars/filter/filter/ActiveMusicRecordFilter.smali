@@ -100,7 +100,7 @@
     :cond_1
     new-instance p1, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$$ExternalSyntheticLambda1;
 
-    invoke-direct {p1, p0}, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$$ExternalSyntheticLambda1;-><init>(Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$$ExternalSyntheticLambda1;-><init>
 
     new-instance p4, Ljava/util/concurrent/FutureTask;
 
@@ -157,7 +157,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v3
 
@@ -170,7 +170,7 @@
 
     move-result-wide v3
 
-    invoke-static {}, Lcom/android/server/am/mars/MARsUtils;->getScreenOnState()Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->getScreenOnState
 
     move-result v5
 
@@ -190,7 +190,7 @@
     if-nez p3, :cond_7
 
     :cond_6
-    invoke-virtual {p0, p2, p4}, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;->isUsingAudio(ILjava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;->isUsingAudio
 
     move-result p3
 
@@ -244,7 +244,7 @@
 
     check-cast v5, Ljava/lang/Long;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v6
 
@@ -292,13 +292,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    invoke-static {}, Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled()Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled
 
     move-result p3
 
     if-eqz p3, :cond_b
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn
 
     move-result p3
 
@@ -651,7 +651,7 @@
 
     new-instance p1, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$1;
 
-    invoke-direct {p1}, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$1;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$1;-><init>
 
     const/4 v0, 0x4
 
@@ -718,7 +718,7 @@
     :cond_0
     new-instance v0, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$$ExternalSyntheticLambda0;
 
-    invoke-direct {v0, p0, p2, p1}, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;Ljava/lang/String;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$$ExternalSyntheticLambda0;-><init>
 
     new-instance p1, Ljava/util/concurrent/FutureTask;
 

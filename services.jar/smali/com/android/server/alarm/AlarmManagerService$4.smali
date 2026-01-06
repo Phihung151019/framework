@@ -1882,7 +1882,7 @@
 
     const/16 v14, 0x19
 
-    invoke-virtual {v13, v14, v10, v9, v0}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v13
 

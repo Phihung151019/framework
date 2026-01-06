@@ -34,7 +34,7 @@
 
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0, v0}, Lcom/android/server/am/mars/MARsHistoryLog;->saveLogToFile(ZZ)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsHistoryLog;->saveLogToFile
 
     return-void
 .end method

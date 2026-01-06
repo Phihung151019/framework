@@ -41,11 +41,11 @@
     return-void
 
     :cond_0
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->getPaymentDefaultPackageFromRoleManager()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->getPaymentDefaultPackageFromRoleManager
 
     move-result-object p1
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->setPaymentDefaultPackage(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->setPaymentDefaultPackage
 
     return-void
 .end method

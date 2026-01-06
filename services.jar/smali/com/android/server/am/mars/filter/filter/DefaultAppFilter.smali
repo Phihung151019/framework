@@ -199,7 +199,7 @@
 
     if-eqz p2, :cond_5
 
-    invoke-static {}, Lcom/android/server/am/mars/MARsUtils;->getScreenOnState()Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->getScreenOnState
 
     move-result p2
 
@@ -338,7 +338,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy
 
     :cond_4
     return-void
@@ -403,7 +403,7 @@
 
     invoke-static {v3, v2}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    invoke-virtual {p0, v1}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage
 
     goto :goto_0
 
@@ -452,9 +452,9 @@
     :goto_0
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mDefaultSmsPackage:Ljava/lang/String;
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getSubUserIdsDefaultIMEPackage()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getSubUserIdsDefaultIMEPackage
 
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mContext:Landroid/content/Context;
 
@@ -513,7 +513,7 @@
 
     iput-boolean v1, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mSecureFolderEnabled:Z
 
-    invoke-virtual {p0, v0}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage
 
     goto :goto_1
 
@@ -524,7 +524,7 @@
     :goto_1
     new-instance v0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$RoleObserver;
 
-    invoke-direct {v0, p0}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$RoleObserver;-><init>(Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$RoleObserver;-><init>
 
     iget-boolean v0, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mInputMethodObserverRegistered:Z
 
@@ -536,7 +536,7 @@
 
     invoke-direct {v3}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v3}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;-><init>(Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;Landroid/os/Handler;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;-><init>
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mInputMethodObserver:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;
 
@@ -580,7 +580,7 @@
 
     new-instance v5, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$DefaultAppChangedReceiver;
 
-    invoke-direct {v5, p0}, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$DefaultAppChangedReceiver;-><init>(Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$DefaultAppChangedReceiver;-><init>
 
     iput-object v5, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mDefaultAppChangedReceiver:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$DefaultAppChangedReceiver;
 

@@ -38,7 +38,7 @@
 
     move-result-wide v1
 
-    invoke-virtual {v0}, Lcom/android/server/am/MARsTrigger$14$$ExternalSyntheticLambda0;->run()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$14$$ExternalSyntheticLambda0;->run
 
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 

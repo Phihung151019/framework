@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/FreecessController;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;-><init>
 
     sput-object v0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 

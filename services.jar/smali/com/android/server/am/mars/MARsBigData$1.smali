@@ -40,7 +40,7 @@
 
     iget-object p1, p0, Lcom/android/server/am/mars/MARsBigData$1;->this$0:Lcom/android/server/am/mars/MARsBigData;
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/MARsBigData;->updateBigdataInfo()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData;->updateBigdataInfo
 
     iget-object p1, p0, Lcom/android/server/am/mars/MARsBigData$1;->this$0:Lcom/android/server/am/mars/MARsBigData;
 
@@ -50,12 +50,12 @@
 
     const-string/jumbo v0, "PLEV"
 
-    invoke-virtual {p1, v0, p2}, Lcom/android/server/am/mars/MARsBigData;->sendBigData(Ljava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData;->sendBigData
 
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/mars/MARsBigData$1;->this$0:Lcom/android/server/am/mars/MARsBigData;
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/MARsBigData;->sendFGSTypeBigData()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData;->sendFGSTypeBigData
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

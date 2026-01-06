@@ -348,7 +348,7 @@
 
     iget-object v1, v1, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeProcess
 
     :cond_1
     if-eqz v0, :cond_3
@@ -1725,7 +1725,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy
 
     move-result p0
 
@@ -5284,7 +5284,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp
 
     move-result p0
 
@@ -6387,7 +6387,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v1
 
@@ -6395,7 +6395,7 @@
 
     sget-object v1, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$ActiveMusicRecordFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;
 
-    invoke-virtual {v1}, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;->getUidListUsingAudio()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;->getUidListUsingAudio
 
     :cond_0
     iget-object p0, p0, Lcom/android/server/am/ActivityManagerService$LocalService;->this$0:Lcom/android/server/am/ActivityManagerService;
@@ -6502,7 +6502,7 @@
 
     iget v9, v6, Lcom/android/server/am/ProcessRecord;->userId:I
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp
 
     move-result v7
 
@@ -6641,7 +6641,7 @@
 
     iget v9, v6, Lcom/android/server/am/ProcessRecord;->userId:I
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp
 
     move-result v7
 
@@ -6773,7 +6773,7 @@
 
     sget-object v4, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->forceRunPolicyForRecentKill
 
     move-result v6
 
@@ -7475,7 +7475,7 @@
     :try_start_0
     iget-object p3, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
 
     move-result-object p1
 
@@ -7483,7 +7483,7 @@
 
     if-eqz p0, :cond_0
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result p0
 
@@ -7615,7 +7615,7 @@
     invoke-static {p6, p3, p2, p4, p5}, Lcom/android/server/am/ActivityManagerService$$ExternalSyntheticOutline0;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_3
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getScreenOnState
 
     move-result p3
 
@@ -7627,7 +7627,7 @@
 
     check-cast p1, Ljava/util/ArrayList;
 
-    invoke-virtual {p3, p6, p1}, Lcom/android/server/am/mars/filter/filter/TopPackageFilter;->updateTopPkgList(ILjava/util/ArrayList;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/TopPackageFilter;->updateTopPkgList
 
     goto :goto_1
 
@@ -7640,7 +7640,7 @@
 
     sget-object p3, Lcom/android/server/am/mars/filter/filter/TopPackageFilter$TopPackageFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/TopPackageFilter;
 
-    invoke-virtual {p3, p6, p1}, Lcom/android/server/am/mars/filter/filter/TopPackageFilter;->updateTopPkgList(ILjava/util/ArrayList;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/TopPackageFilter;->updateTopPkgList
 
     :cond_5
     :goto_1
@@ -7660,7 +7660,7 @@
 
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->unfreezeWallPaperPackage
 
     return-void
 
@@ -7694,7 +7694,7 @@
     goto :goto_2
 
     :cond_7
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->onAppUsed
 
     :cond_8
     :goto_2
@@ -10706,7 +10706,7 @@
 
     const-wide/32 v2, 0x2bf20
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
 
     :cond_1
     const-string v0, "DEV"
@@ -10719,7 +10719,7 @@
 
     move-result-object p1
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory
 
     return-void
 

@@ -112,7 +112,7 @@
 
     new-instance v1, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;
 
-    invoke-direct {v1, p1, p2}, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;-><init>(ILjava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;-><init>
 
     if-eqz v0, :cond_1
 

@@ -207,15 +207,15 @@
 
     iput v0, p0, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->userId:I
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->getPaymentDefaultPackageFromRoleManager()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->getPaymentDefaultPackageFromRoleManager
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->setPaymentDefaultPackage(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->setPaymentDefaultPackage
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter$$ExternalSyntheticLambda0;
 
-    invoke-direct {v0, p0}, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter$$ExternalSyntheticLambda0;-><init>
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->mOnRoleHoldersChangedListener:Lcom/android/server/am/mars/filter/filter/NFCPackageFilter$$ExternalSyntheticLambda0;
 
@@ -274,7 +274,7 @@
 
     :cond_0
     :goto_0
-    invoke-static {p0, p1}, Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
 
     monitor-exit v0
 

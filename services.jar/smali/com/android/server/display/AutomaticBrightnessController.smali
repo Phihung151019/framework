@@ -3714,7 +3714,7 @@
 
     const-string v15, " < "
 
-    invoke-static {v14, v13, v10, v15}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     sget-object v13, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -4122,7 +4122,7 @@
 
     const-string v9, "("
 
-    invoke-static {v8, v7, v4, v9}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -4160,7 +4160,7 @@
 
     const-string v9, " < "
 
-    invoke-static {v8, v3, v4, v9}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mAmbientLux:F
 
@@ -4194,7 +4194,7 @@
 
     const-string v9, " (adj:"
 
-    invoke-static {v8, v3, v4, v9}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget-object v3, p0, Lcom/android/server/display/AutomaticBrightnessController;->mCurrentBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
 

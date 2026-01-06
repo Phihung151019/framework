@@ -292,7 +292,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->getActiveQuickTilePackages()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->getActiveQuickTilePackages
 
     iget-boolean p1, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mRegisteredQuickTileContentObserver:Z
 
@@ -304,7 +304,7 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {p1, p0, v0}, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter$1;-><init>(Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;Landroid/os/Handler;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter$1;-><init>
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->mQuickTileContentObserver:Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter$1;
 

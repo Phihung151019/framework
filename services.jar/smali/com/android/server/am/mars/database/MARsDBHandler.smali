@@ -167,9 +167,9 @@
 
     sget-object v0, Lcom/android/server/am/mars/database/MARsDBManager$MARsDBManagerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBManager;
 
-    invoke-virtual {v0}, Lcom/android/server/am/mars/database/MARsDBManager;->getSCPMList()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBManager;->getSCPMList
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/database/MARsDBHandler;->sendGetSCPMPolicyMsgToDBHandler()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->sendGetSCPMPolicyMsgToDBHandler
 
     return-void
 .end method

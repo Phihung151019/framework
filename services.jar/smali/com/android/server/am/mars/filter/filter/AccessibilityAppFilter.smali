@@ -285,7 +285,7 @@
 
     if-eqz v4, :cond_1
 
-    invoke-virtual {p0, v3}, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->addPackages(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->addPackages
 
     :cond_1
     add-int/lit8 v2, v2, 0x1
@@ -301,7 +301,7 @@
 
     if-eqz v1, :cond_3
 
-    invoke-virtual {p0, v0}, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->addPackages(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->addPackages
 
     :cond_3
     :goto_1
@@ -323,9 +323,9 @@
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->mContext:Landroid/content/Context;
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->getEnabledAccessibilityPackage()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->getEnabledAccessibilityPackage
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->registerContentObserver()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->registerContentObserver
 
     return-void
 .end method
@@ -343,7 +343,7 @@
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
-    invoke-direct {v0, p0, v1}, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter$1;-><init>(Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;Landroid/os/Handler;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter$1;-><init>
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->mAccessibilityContentObserver:Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter$1;
 

@@ -682,7 +682,7 @@
 
     const/4 v5, 0x1
 
-    invoke-direct {v4, v5, v2}, Lcom/android/server/am/FreecessController$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController$$ExternalSyntheticLambda0;-><init>
 
     invoke-interface {v1, v4}, Ljava/util/stream/Stream;->anyMatch(Ljava/util/function/Predicate;)Z
 

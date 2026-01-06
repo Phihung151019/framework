@@ -41,7 +41,7 @@
 
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setScreenOnState
 
     iget-boolean p0, p0, Lcom/android/server/am/FreecessController;->mIsFreecessEnable:Z
 
@@ -51,7 +51,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result p0
 
@@ -61,7 +61,7 @@
 
     const-string/jumbo p1, "screenOn"
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessHandler;->sendUnfreezeActivePackagesMsg(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendUnfreezeActivePackagesMsg
 
     goto :goto_0
 
@@ -70,7 +70,7 @@
 
     const-string/jumbo p1, "screenOn-widget"
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessHandler;->sendUnfreezeActivePackagesMsg(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendUnfreezeActivePackagesMsg
 
     :goto_0
     sget-object p0, Lcom/android/server/am/FreecessHandler$FreecessHandlerHolder;->INSTANCE:Lcom/android/server/am/FreecessHandler;
@@ -113,7 +113,7 @@
 
     sget-object p1, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setScreenOnState
 
     iget-boolean p1, p1, Lcom/android/server/am/FreecessController;->mIsScreenOnFreecessEnabled:Z
 
@@ -138,7 +138,7 @@
 
     if-nez p0, :cond_d
 
-    invoke-static {}, Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance
 
     sget-object p0, Lcom/android/server/am/mars/database/MARsDBHandler$MARsDBHandlerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBHandler;
 
@@ -184,7 +184,7 @@
 
     const-string p1, "CarMode"
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
 
     return-void
 
@@ -269,7 +269,7 @@
 
     const-string p1, "EmeregencyMode"
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
 
     return-void
 
@@ -303,7 +303,7 @@
 
     const-string/jumbo p1, "ShutDown"
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
 
     :cond_d
     :goto_3

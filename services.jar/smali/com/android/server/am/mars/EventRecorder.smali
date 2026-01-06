@@ -166,7 +166,7 @@
 
     move v7, p3
 
-    invoke-direct/range {v1 .. v7}, Lcom/android/server/am/mars/events/FreezeSkipEvent;-><init>(Lcom/android/server/am/mars/events/EventType;Ljava/lang/Integer;JLcom/android/server/am/FreezeResult;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/FreezeSkipEvent;-><init>
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayDeque;->add(Ljava/lang/Object;)Z
 
@@ -180,7 +180,7 @@
 
     if-le p1, p2, :cond_1
 
-    invoke-virtual {p0, v4, v5}, Lcom/android/server/am/mars/EventRecorder;->performWriteAsync(J)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/EventRecorder;->performWriteAsync
 
     goto :goto_0
 
@@ -283,7 +283,7 @@
 
     check-cast p1, Lcom/android/server/am/mars/events/Event;
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/events/Event;->toFile()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/Event;->toFile
 
     move-result-object p1
 
@@ -446,7 +446,7 @@
 
     new-instance v1, Lcom/android/server/am/mars/EventRecorder$$ExternalSyntheticLambda0;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/android/server/am/mars/EventRecorder$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/am/mars/EventRecorder;J)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/EventRecorder$$ExternalSyntheticLambda0;-><init>
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 

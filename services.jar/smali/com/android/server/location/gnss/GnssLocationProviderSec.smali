@@ -2867,7 +2867,7 @@
 
     const-string v7, "%.1f"
 
-    invoke-static {v7, v5, v0, v6}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     invoke-virtual {p1, v2}, Landroid/location/GnssStatus;->usedInFix(I)Z
 

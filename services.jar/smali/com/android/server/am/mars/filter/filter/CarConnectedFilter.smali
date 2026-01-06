@@ -42,7 +42,7 @@
 
     const-string/jumbo v1, "android auto off"
 
-    invoke-static {v0, v1}, Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
 
     return-void
 .end method
@@ -186,7 +186,7 @@
 
     new-instance p1, Lcom/android/server/am/mars/filter/filter/CarConnectedFilter$1;
 
-    invoke-direct {p1, p0}, Lcom/android/server/am/mars/filter/filter/CarConnectedFilter$1;-><init>(Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CarConnectedFilter$1;-><init>
 
     sput-object p1, Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;->listener:Lcom/android/server/am/mars/filter/filter/CarConnectedFilter$1;
 
@@ -198,7 +198,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/CarConnectedFilter$CarConnectionReceiver;
 
-    invoke-direct {v0, p0}, Lcom/android/server/am/mars/filter/filter/CarConnectedFilter$CarConnectionReceiver;-><init>(Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CarConnectedFilter$CarConnectionReceiver;-><init>
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;->carConnectionReceiver:Lcom/android/server/am/mars/filter/filter/CarConnectedFilter$CarConnectionReceiver;
 
@@ -208,7 +208,7 @@
 
     invoke-virtual {v1, v0, p1, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;I)Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;->queryForState()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;->queryForState
 
     return-void
 .end method

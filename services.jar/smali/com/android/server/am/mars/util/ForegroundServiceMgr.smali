@@ -44,19 +44,19 @@
 
     new-instance v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$1;
 
-    invoke-direct {v0, p0}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$1;-><init>(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr$1;-><init>
 
     iput-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mProcessObserver:Lcom/android/server/am/mars/util/ForegroundServiceMgr$1;
 
     new-instance v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;
 
-    invoke-direct {v0, p0}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;-><init>(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;-><init>
 
     iput-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->getAccesesTimeHelper:Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;
 
     new-instance v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$$ExternalSyntheticLambda0;
 
-    invoke-direct {v0, p0}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/am/mars/util/ForegroundServiceMgr;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr$$ExternalSyntheticLambda0;-><init>
 
     iput-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mGetUsingFGSTypeRunnable:Lcom/android/server/am/mars/util/ForegroundServiceMgr$$ExternalSyntheticLambda0;
 
@@ -114,7 +114,7 @@
 .method public final onForegroundServiceStateChanged(Ljava/lang/String;IIZ)V
     .locals 2
 
-    invoke-static {p1}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->isFGSTarget(Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr;->isFGSTarget
 
     move-result p3
 
@@ -136,7 +136,7 @@
 
     new-instance p3, Lcom/android/server/am/mars/ForegroundServiceRecord;
 
-    invoke-direct {p3, p1}, Lcom/android/server/am/mars/ForegroundServiceRecord;-><init>(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/ForegroundServiceRecord;-><init>
 
     iget-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mMapFGSRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -198,7 +198,7 @@
 
     new-instance p3, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$$ExternalSyntheticLambda0;
 
-    invoke-direct {p3, p0, p2, p1}, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$$ExternalSyntheticLambda0;-><init>(Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;ILjava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$$ExternalSyntheticLambda0;-><init>
 
     sget-boolean p1, Lcom/android/server/am/mars/MARsUtils;->IS_SUPPORT_FREEZE_FG_SERVICE_FEATURE:Z
 

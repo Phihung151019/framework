@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/ProtectedPackagesFilter;
 
-    invoke-direct {v0}, Lcom/android/server/am/mars/filter/filter/ProtectedPackagesFilter;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ProtectedPackagesFilter;-><init>
 
     sput-object v0, Lcom/android/server/am/mars/filter/filter/ProtectedPackagesFilter$ProtectedPackagesFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/ProtectedPackagesFilter;
 

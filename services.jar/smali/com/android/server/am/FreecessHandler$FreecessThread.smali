@@ -35,7 +35,7 @@
 
     move-result-object p0
 
-    invoke-direct {v1, p0}, Lcom/android/server/am/FreecessHandler$BluetoothHandler;-><init>(Landroid/os/Looper;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$BluetoothHandler;-><init>
 
     iput-object v1, v0, Lcom/android/server/am/FreecessHandler;->mHandleAmsLockHandler:Lcom/android/server/am/FreecessHandler$BluetoothHandler;
 
@@ -50,7 +50,7 @@
 
     move-result-object p0
 
-    invoke-direct {v1, v0, p0}, Lcom/android/server/am/FreecessHandler$BluetoothHandler;-><init>(Lcom/android/server/am/FreecessHandler;Landroid/os/Looper;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$BluetoothHandler;-><init>
 
     iput-object v1, v0, Lcom/android/server/am/FreecessHandler;->mBluetoothHandler:Lcom/android/server/am/FreecessHandler$BluetoothHandler;
 
@@ -65,7 +65,7 @@
 
     move-result-object p0
 
-    invoke-direct {v1, v0, p0}, Lcom/android/server/am/FreecessHandler$MainHandler;-><init>(Lcom/android/server/am/FreecessHandler;Landroid/os/Looper;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler;-><init>
 
     iput-object v1, v0, Lcom/android/server/am/FreecessHandler;->mMainHandler:Lcom/android/server/am/FreecessHandler$MainHandler;
 

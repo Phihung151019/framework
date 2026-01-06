@@ -1390,7 +1390,7 @@
 
     invoke-virtual {p2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->freezeTargetProcess
 
     move-result v2
 

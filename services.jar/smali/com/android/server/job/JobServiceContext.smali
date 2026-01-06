@@ -1790,7 +1790,7 @@
 
     iget-object v5, v14, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
-    invoke-virtual {v3, v5, v7}, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs(Landroid/app/job/JobInfo;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs
 
     iget-object v3, v0, Lcom/android/server/job/JobConcurrencyManager;->mActiveServices:Ljava/util/List;
 

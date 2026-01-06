@@ -144,7 +144,7 @@
 
     move-result p1
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/ImportantRoleFilter;->getSystemGalleryHolder(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ImportantRoleFilter;->getSystemGalleryHolder
 
     if-nez p1, :cond_0
 
@@ -176,7 +176,7 @@
 
     if-gt p1, v0, :cond_0
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/ImportantRoleFilter;->getSystemGalleryHolder(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ImportantRoleFilter;->getSystemGalleryHolder
 
     :cond_0
     return-void

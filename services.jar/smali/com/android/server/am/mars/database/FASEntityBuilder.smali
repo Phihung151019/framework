@@ -86,7 +86,7 @@
     :cond_0
     new-instance v0, Lcom/android/server/am/mars/database/FASEntity;
 
-    invoke-direct {v0, p0}, Lcom/android/server/am/mars/database/FASEntity;-><init>(Lcom/android/server/am/mars/database/FASEntityBuilder;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;-><init>
 
     return-object v0
 

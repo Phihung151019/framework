@@ -15,7 +15,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/mars/filter/FilterChain;->mFilter:Lcom/android/server/am/mars/filter/IFilter;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/android/server/am/mars/filter/IFilter;->filter(IIILjava/lang/String;)I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/IFilter;->filter
 
     move-result v0
 
@@ -28,7 +28,7 @@
 
     if-eqz p0, :cond_1
 
-    invoke-virtual {p0, p1, p2, p3, p4}, Lcom/android/server/am/mars/filter/FilterChain;->filter(IIILjava/lang/String;)I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChain;->filter
 
     move-result p0
 

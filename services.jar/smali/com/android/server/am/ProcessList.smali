@@ -9515,7 +9515,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->freezeTargetProcess
 
     move-result v0
 
@@ -9576,7 +9576,7 @@
 
     const/4 v1, 0x1
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/Freezer;->freezeBinder
 
     move-result v6
 
@@ -12454,7 +12454,7 @@
     goto :goto_3
 
     :goto_4
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
 
     goto :goto_6
 
@@ -12489,7 +12489,7 @@
     const-wide/16 v16, 0x2710
 
     :goto_5
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
 
     goto :goto_6
 
@@ -15163,7 +15163,7 @@
 
     invoke-virtual {v7}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->checkFreezerExempt
 
     move-result v7
 

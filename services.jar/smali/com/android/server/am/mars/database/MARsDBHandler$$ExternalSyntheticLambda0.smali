@@ -12,7 +12,7 @@
 
     sget-object p0, Lcom/android/server/am/mars/database/FASDataManager$FASDataManagerHolder;->INSTANCE:Lcom/android/server/am/mars/database/FASDataManager;
 
-    invoke-virtual {p0}, Lcom/android/server/am/mars/database/FASDataManager;->getFASDataFromDB()Ljava/util/ArrayList;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASDataManager;->getFASDataFromDB
 
     move-result-object p0
 
@@ -24,7 +24,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Lcom/android/server/am/mars/MARsUtils;->updateMARsTargetPackages(Ljava/util/ArrayList;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->updateMARsTargetPackages
 
     return-void
 

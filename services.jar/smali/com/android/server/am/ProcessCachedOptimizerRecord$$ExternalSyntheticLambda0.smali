@@ -75,7 +75,7 @@
 
     const/4 v2, 0x1
 
-    invoke-direct {v1, p0, p1, v2}, Lcom/android/server/am/ProcessCachedOptimizerRecord$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/am/ProcessCachedOptimizerRecord;Landroid/util/Pair;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/ProcessCachedOptimizerRecord$$ExternalSyntheticLambda2;-><init>
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
@@ -96,7 +96,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v1, p0, p1, v2}, Lcom/android/server/am/ProcessCachedOptimizerRecord$$ExternalSyntheticLambda2;-><init>(Lcom/android/server/am/ProcessCachedOptimizerRecord;Landroid/util/Pair;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/ProcessCachedOptimizerRecord$$ExternalSyntheticLambda2;-><init>
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 

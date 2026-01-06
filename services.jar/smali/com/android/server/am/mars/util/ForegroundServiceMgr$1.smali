@@ -113,7 +113,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    invoke-static {p1}, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->isFGSTarget(Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr;->isFGSTarget
 
     move-result v0
 
@@ -137,7 +137,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/ForegroundServiceRecord;
 
-    invoke-direct {v0, p1}, Lcom/android/server/am/mars/ForegroundServiceRecord;-><init>(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/ForegroundServiceRecord;-><init>
 
     iget-object p0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$1;->this$0:Lcom/android/server/am/mars/util/ForegroundServiceMgr;
 

@@ -127,7 +127,7 @@
     :goto_2
     if-ne p3, v2, :cond_7
 
-    invoke-static {}, Lcom/android/server/am/mars/MARsUtils;->getScreenOnState()Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->getScreenOnState
 
     move-result p0
 

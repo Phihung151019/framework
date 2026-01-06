@@ -4247,7 +4247,7 @@
 
     iget p1, p1, Lcom/android/server/job/controllers/JobStatus;->callingUid:I
 
-    invoke-virtual {p0, v0, p1}, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs(Landroid/app/job/JobInfo;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs
 
     :cond_3
     return-object v1
@@ -6218,7 +6218,7 @@
 
     iget v3, p3, Lcom/android/server/job/controllers/JobStatus;->callingUid:I
 
-    invoke-virtual {v0, v2, v3}, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->addRunningJobs(Landroid/app/job/JobInfo;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->addRunningJobs
 
     iget-object v0, p0, Lcom/android/server/job/JobConcurrencyManager;->mActiveServices:Ljava/util/List;
 
@@ -6377,7 +6377,7 @@
 
     iget p1, p1, Lcom/android/server/job/controllers/JobStatus;->callingUid:I
 
-    invoke-virtual {p0, p2, p1}, Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs(Landroid/app/job/JobInfo;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs
 
     :cond_3
     return v1

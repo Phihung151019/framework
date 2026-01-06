@@ -73,7 +73,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->updateFreezerDebounceTimeout
 
     goto :goto_0
 
@@ -93,7 +93,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->updateFreezerExemptInstPkg
 
     goto :goto_0
 
@@ -157,7 +157,7 @@
     :cond_3
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$mupdateFreezerBinderState
 
     goto :goto_0
 
@@ -172,7 +172,7 @@
 
     if-eqz p0, :cond_5
 
-    invoke-interface {p0}, Lcom/android/server/am/CachedAppOptimizer$PropertyChangedCallbackForTest;->onPropertyChanged()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$PropertyChangedCallbackForTest;->onPropertyChanged
 
     :cond_5
     return-void
@@ -225,7 +225,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->updateUseCompaction
 
     goto :goto_2
 
@@ -440,7 +440,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->updateProcStateThrottle
 
     goto/16 :goto_2
 
@@ -514,7 +514,7 @@
     :goto_3
     iget-object v1, p0, Lcom/android/server/am/CachedAppOptimizer$1;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->updateCompactionThrottles
 
     goto/16 :goto_2
 
@@ -529,7 +529,7 @@
 
     if-eqz p0, :cond_11
 
-    invoke-interface {p0}, Lcom/android/server/am/CachedAppOptimizer$PropertyChangedCallbackForTest;->onPropertyChanged()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$PropertyChangedCallbackForTest;->onPropertyChanged
 
     :cond_11
     return-void

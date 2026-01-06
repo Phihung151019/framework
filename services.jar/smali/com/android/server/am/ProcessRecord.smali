@@ -473,7 +473,7 @@
 
     new-instance v7, Lcom/android/server/am/ProcessCachedOptimizerRecord;
 
-    invoke-direct {v7, p0}, Lcom/android/server/am/ProcessCachedOptimizerRecord;-><init>(Lcom/android/server/am/ProcessRecord;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/ProcessCachedOptimizerRecord;-><init>
 
     iput-object v7, p0, Lcom/android/server/am/ProcessRecord;->mOptRecord:Lcom/android/server/am/ProcessCachedOptimizerRecord;
 
@@ -2990,7 +2990,7 @@
 
     const/4 v5, 0x2
 
-    invoke-direct {v4, v5, v1}, Lcom/android/server/am/ProcessCachedOptimizerRecord$$ExternalSyntheticLambda0;-><init>(ILjava/lang/Object;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/ProcessCachedOptimizerRecord$$ExternalSyntheticLambda0;-><init>
 
     invoke-virtual {v3, v4}, Ljava/util/concurrent/CopyOnWriteArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -3516,7 +3516,7 @@
 
     iget-object v1, v1, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->useFreezer
 
     move-result v1
 

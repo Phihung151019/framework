@@ -174,7 +174,7 @@
 
     const/4 v3, 0x0
 
-    invoke-virtual {p0, v2, v0, v3, v3}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v0
 
@@ -224,7 +224,7 @@
     :cond_1
     aget-object p1, v0, v4
 
-    invoke-virtual {p0, v2, p1, v3, v3}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result p0
 
@@ -277,7 +277,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isMARsTarget
 
     move-result p0
 
@@ -437,7 +437,7 @@
 
     iget-object v14, v14, Lcom/android/server/am/mars/util/UidStateMgr;->mUidGoneList:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    invoke-virtual {v14, v15}, Lcom/android/server/am/mars/util/ConcurrentList;->contains(Ljava/lang/Object;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->contains
 
     move-result v14
 
@@ -454,7 +454,7 @@
 
     move/from16 v15, p6
 
-    invoke-virtual {v14, v15}, Lcom/android/server/am/mars/util/UidStateMgr;->isUidRunning(I)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->isUidRunning
 
     move-result v14
 
@@ -575,7 +575,7 @@
 
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v13
 
@@ -587,7 +587,7 @@
 
     move/from16 v3, v19
 
-    invoke-virtual {v13, v3, v7, v1, v14}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v13
 
@@ -596,7 +596,7 @@
     goto/16 :goto_0
 
     :cond_a
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v3
 
@@ -608,13 +608,13 @@
 
     const/4 v13, 0x7
 
-    invoke-virtual {v3, v13, v7, v1, v14}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v3
 
     if-eqz v3, :cond_5
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isForegroundPackage
 
     move-result v3
 
@@ -896,7 +896,7 @@
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v2
 
@@ -908,7 +908,7 @@
 
     sget-object v2, Lcom/android/server/am/mars/database/MARsVersionManager$MARsVersionManagerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsVersionManager;
 
-    invoke-virtual {v2, v3, v7, v1, v0}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v0
 
@@ -926,7 +926,7 @@
     return v16
 
     :cond_18
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v0
 
@@ -1305,7 +1305,7 @@
 
     sget-object v7, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->onAppUsed
 
     :cond_2
     if-eqz p5, :cond_4
@@ -1333,7 +1333,7 @@
     :try_start_0
     iget-object v11, v7, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
 
     move-result-object v11
 
@@ -1345,7 +1345,7 @@
 
     iput-wide v12, v11, Lcom/android/server/am/MARsPackageInfo;->disableResetTime:J
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->onAppUsed
 
     goto :goto_1
 
@@ -1396,7 +1396,7 @@
 
     iget-object v7, v7, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
 
     goto :goto_4
 
@@ -1649,7 +1649,7 @@
 
     sget-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isUidBindTempRestricted
 
     move-result v0
 
@@ -1716,7 +1716,7 @@
 
     move-object/from16 v0, v21
 
-    invoke-static/range {v0 .. v6}, Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo
 
     :cond_12
     monitor-exit v10
@@ -1767,7 +1767,7 @@
 
     move/from16 v3, p11
 
-    invoke-static/range {v0 .. v6}, Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo
 
     :cond_15
     monitor-exit v10
@@ -1818,7 +1818,7 @@
 
     move/from16 v3, p11
 
-    invoke-static/range {v0 .. v6}, Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo
 
     :cond_18
     monitor-exit v10
@@ -1836,7 +1836,7 @@
 
     sget-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getAutorunForFreezedPackage
 
     move-result v13
 
@@ -1966,7 +1966,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v0
 
@@ -1988,7 +1988,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v0
 
@@ -2010,7 +2010,7 @@
 
     invoke-virtual {v5}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v14
 
@@ -2023,7 +2023,7 @@
     goto :goto_1b
 
     :cond_29
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getScreenOnState
 
     move-result v5
 
@@ -2042,7 +2042,7 @@
 
     sget-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getScreenOnState
 
     move-result v0
 
@@ -2110,7 +2110,7 @@
 
     sget-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isForegroundPackage
 
     move-result v0
 
@@ -2198,7 +2198,7 @@
 
     const/16 v1, 0x8
 
-    invoke-virtual {v11, v1, v14, v0, v0}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v0
 
@@ -2339,7 +2339,7 @@
 
     sget-object v3, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isForegroundPackage
 
     move-result v3
 
@@ -2421,7 +2421,7 @@
 
     sget-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isForegroundPackage
 
     move-result v0
 
@@ -2548,7 +2548,7 @@
 
     const/4 v11, 0x3
 
-    invoke-virtual {v5, v11, v12, v1, v3}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v3
 
@@ -2568,7 +2568,7 @@
 
     sget-object v3, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getScreenOnState
 
     move-result v3
 
@@ -2783,7 +2783,7 @@
 
     sget-object v3, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isForegroundPackage
 
     move-result v3
 
@@ -2877,7 +2877,7 @@
 
     const/4 v14, 0x1
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->cancelPolicy
 
     :cond_59
     sget-object v3, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
@@ -2886,7 +2886,7 @@
 
     if-eqz v5, :cond_5d
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->isFreezedPackage
 
     move-result v5
 
@@ -2934,7 +2934,7 @@
     move-object v0, v4
 
     :goto_3b
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->unFreezePackage
 
     const-string v0, "BaseRestrictionMgr"
 
@@ -3004,7 +3004,7 @@
 
     move-object v0, v12
 
-    invoke-static/range {v0 .. v6}, Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo
 
     :cond_5c
     monitor-exit v10
@@ -3028,7 +3028,7 @@
 
     const/16 v4, 0x1000
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->levelChange
 
     :cond_5e
     sget-boolean v3, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MARs:Z
@@ -3139,7 +3139,7 @@
 
     sget-object v0, Lcom/android/server/am/mars/util/UidStateMgr$UidStateMgrHolder;->INSTANCE:Lcom/android/server/am/mars/util/UidStateMgr;
 
-    invoke-virtual {v0, v6}, Lcom/android/server/am/mars/util/UidStateMgr;->isUidRunning(I)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->isUidRunning
 
     move-result v0
 
@@ -3156,7 +3156,7 @@
 
     if-nez v13, :cond_63
 
-    invoke-static {}, Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance
 
     sget-object v0, Lcom/android/server/am/mars/database/MARsDBHandler$MARsDBHandlerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBHandler;
 
@@ -3164,7 +3164,7 @@
 
     move-object v1, v12
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/server/am/mars/database/MARsDBHandler;->sendUpdateAppStartUpInfoMsgToDBHandler(Ljava/lang/String;ZLjava/lang/String;J)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->sendUpdateAppStartUpInfoMsgToDBHandler
 
     move-object v0, v1
 
@@ -3184,7 +3184,7 @@
 
     if-eqz v13, :cond_65
 
-    invoke-static {}, Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance
 
     move-object v12, v0
 
@@ -3194,7 +3194,7 @@
 
     move-object v1, v12
 
-    invoke-virtual/range {v0 .. v5}, Lcom/android/server/am/mars/database/MARsDBHandler;->sendUpdateAppStartUpInfoMsgToDBHandler(Ljava/lang/String;ZLjava/lang/String;J)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->sendUpdateAppStartUpInfoMsgToDBHandler
 
     move-object v0, v1
 
@@ -3293,7 +3293,7 @@
 
     move-object v2, v11
 
-    invoke-static/range {v0 .. v6}, Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ILjava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsComponentTracker;->sendCTInfo
 
     :cond_69
     return v7

@@ -176,7 +176,7 @@
 
     const-string v0, "/data/log/mars/mars_log_count"
 
-    invoke-static {v0}, Lcom/android/server/am/mars/MARsHistoryLog;->recreateLogFile(Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsHistoryLog;->recreateLogFile
 
     :try_start_0
     new-instance v1, Ljava/io/FileWriter;
@@ -287,7 +287,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/am/mars/MARsHistoryLog;->recreateLogFile(Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsHistoryLog;->recreateLogFile
 
     move-result v0
 
@@ -316,7 +316,7 @@
     const/4 v0, 0x0
 
     :try_start_1
-    invoke-virtual {p0, v0, v0}, Lcom/android/server/am/mars/MARsHistoryLog;->saveLogToFile(ZZ)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsHistoryLog;->saveLogToFile
 
     iget v2, p0, Lcom/android/server/am/mars/MARsHistoryLog;->mLogFileIndex:I
 
@@ -356,7 +356,7 @@
 
     if-eqz v4, :cond_1
 
-    invoke-static {v3, v1}, Lcom/android/server/am/mars/MARsHistoryLog;->readLogFromFile(Ljava/io/File;Ljava/util/ArrayList;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsHistoryLog;->readLogFromFile
 
     goto :goto_0
 
@@ -394,7 +394,7 @@
 
     if-eqz v3, :cond_3
 
-    invoke-static {v2, v1}, Lcom/android/server/am/mars/MARsHistoryLog;->readLogFromFile(Ljava/io/File;Ljava/util/ArrayList;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsHistoryLog;->readLogFromFile
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -441,7 +441,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/am/mars/MARsHistoryLog;->recreateLogFile(Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsHistoryLog;->recreateLogFile
 
     new-instance v1, Ljava/io/File;
 
@@ -462,7 +462,7 @@
     if-eqz p2, :cond_0
 
     :try_start_1
-    invoke-static {p1}, Lcom/android/server/am/mars/MARsHistoryLog;->writeFileIndex(I)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsHistoryLog;->writeFileIndex
 
     move-result p1
     :try_end_1

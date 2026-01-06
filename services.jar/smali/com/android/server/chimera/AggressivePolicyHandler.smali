@@ -1083,7 +1083,7 @@
 
     sget-object v13, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn
 
     move-result v13
 
@@ -1111,7 +1111,7 @@
     monitor-enter v19
 
     :try_start_0
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
 
     move-result-object v0
 

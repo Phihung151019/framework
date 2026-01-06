@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;
 
-    invoke-direct {v0}, Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;-><init>
 
     sput-object v0, Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter$CameraInFgsFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;
 

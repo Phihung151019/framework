@@ -34,7 +34,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter$1;
 
-    invoke-direct {v0, p0}, Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter$1;-><init>(Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter$1;-><init>
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;->mNotificationListener:Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter$1;
 

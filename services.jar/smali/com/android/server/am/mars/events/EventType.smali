@@ -45,7 +45,7 @@
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, v1, v2, v2}, Lcom/android/server/am/mars/events/EventType;-><init>(Ljava/lang/String;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;-><init>
 
     sput-object v0, Lcom/android/server/am/mars/events/EventType;->UID_RUN:Lcom/android/server/am/mars/events/EventType;
 
@@ -55,7 +55,7 @@
 
     const/4 v3, 0x1
 
-    invoke-direct {v1, v2, v3, v3}, Lcom/android/server/am/mars/events/EventType;-><init>(Ljava/lang/String;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;-><init>
 
     sput-object v1, Lcom/android/server/am/mars/events/EventType;->UID_STOP:Lcom/android/server/am/mars/events/EventType;
 
@@ -65,7 +65,7 @@
 
     const/4 v4, 0x2
 
-    invoke-direct {v2, v3, v4, v4}, Lcom/android/server/am/mars/events/EventType;-><init>(Ljava/lang/String;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;-><init>
 
     sput-object v2, Lcom/android/server/am/mars/events/EventType;->FREEZE:Lcom/android/server/am/mars/events/EventType;
 
@@ -75,7 +75,7 @@
 
     const/4 v5, 0x3
 
-    invoke-direct {v3, v4, v5, v5}, Lcom/android/server/am/mars/events/EventType;-><init>(Ljava/lang/String;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;-><init>
 
     sput-object v3, Lcom/android/server/am/mars/events/EventType;->UNFREEZE:Lcom/android/server/am/mars/events/EventType;
 
@@ -85,7 +85,7 @@
 
     const/4 v6, 0x4
 
-    invoke-direct {v4, v5, v6, v6}, Lcom/android/server/am/mars/events/EventType;-><init>(Ljava/lang/String;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;-><init>
 
     sput-object v4, Lcom/android/server/am/mars/events/EventType;->FREEZE_SKIP_SCREEN_ON:Lcom/android/server/am/mars/events/EventType;
 
@@ -95,7 +95,7 @@
 
     const/4 v7, 0x5
 
-    invoke-direct {v5, v6, v7, v7}, Lcom/android/server/am/mars/events/EventType;-><init>(Ljava/lang/String;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;-><init>
 
     sput-object v5, Lcom/android/server/am/mars/events/EventType;->FREEZE_SKIP_SCREEN_OFF:Lcom/android/server/am/mars/events/EventType;
 
@@ -105,7 +105,7 @@
 
     const/4 v8, 0x6
 
-    invoke-direct {v6, v7, v8, v8}, Lcom/android/server/am/mars/events/EventType;-><init>(Ljava/lang/String;II)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;-><init>
 
     sput-object v6, Lcom/android/server/am/mars/events/EventType;->NONE:Lcom/android/server/am/mars/events/EventType;
 
@@ -131,7 +131,7 @@
 .method public static fromInt(I)Lcom/android/server/am/mars/events/EventType;
     .locals 5
 
-    invoke-static {}, Lcom/android/server/am/mars/events/EventType;->values()[Lcom/android/server/am/mars/events/EventType;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->values
 
     move-result-object v0
 

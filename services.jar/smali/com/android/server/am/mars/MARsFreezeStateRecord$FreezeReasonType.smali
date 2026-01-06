@@ -41,7 +41,7 @@
 
     const-string v4, "FREEZE_TOTAL"
 
-    invoke-direct {v0, v1, v2, v4, v3}, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>
 
     sput-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->FREEZE_TOTAL:Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
@@ -57,7 +57,7 @@
 
     const-string v5, "FREEZE_REASON_LCDON"
 
-    invoke-direct {v1, v2, v3, v5, v4}, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>
 
     new-instance v2, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
@@ -71,7 +71,7 @@
 
     const-string v6, "FREEZE_REASON_LCDOFF"
 
-    invoke-direct {v2, v3, v4, v6, v5}, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>
 
     new-instance v3, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
@@ -85,7 +85,7 @@
 
     const-string v7, "FREEZE_REASON_OLAF"
 
-    invoke-direct {v3, v4, v5, v7, v6}, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>(ILjava/lang/Integer;Ljava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>
 
     filled-new-array {v0, v1, v2, v3}, [Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 

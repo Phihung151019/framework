@@ -2521,7 +2521,7 @@
 
     iget v4, v12, Lcom/android/server/media/MediaSessionRecord;->mUserId:I
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->isFreezedPackage
 
     move-result v3
 
@@ -2533,7 +2533,7 @@
 
     const-string/jumbo v6, "MediaKeyEvent"
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->unFreezePackage
 
     :cond_1b
     if-eqz p6, :cond_1c

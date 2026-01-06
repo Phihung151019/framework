@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/MARsTrigger;
 
-    invoke-direct {v0}, Lcom/android/server/am/MARsTrigger;-><init>()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger;-><init>
 
     sput-object v0, Lcom/android/server/am/MARsTrigger$MARsTriggerHolder;->INSTANCE:Lcom/android/server/am/MARsTrigger;
 

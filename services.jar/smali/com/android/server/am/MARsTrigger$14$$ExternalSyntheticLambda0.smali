@@ -78,7 +78,7 @@
     const/4 p0, 0x0
 
     :goto_1
-    invoke-virtual {v1, p0}, Lcom/android/server/am/mars/database/scpm/ScpmHelper;->getScpmFileDescriptor(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/ScpmHelper;->getScpmFileDescriptor
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

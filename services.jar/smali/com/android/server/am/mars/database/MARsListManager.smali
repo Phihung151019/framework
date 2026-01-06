@@ -324,7 +324,7 @@
 
     invoke-interface {v1, v3, v4}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/android/server/am/mars/database/MARsListManager;->readConfigFileLocked(Lorg/xmlpull/v1/XmlPullParser;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->readConfigFileLocked
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -1150,49 +1150,49 @@
     :pswitch_0
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mFastOlafUfzList:Ljava/util/Set;
 
-    invoke-static {v1, v15, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_1
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mFgsExemptionPackages:Ljava/util/Set;
 
-    invoke-static {v1, v4, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_2
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mOLAFExemptionGlobal:Ljava/util/Set;
 
-    invoke-static {v1, v4, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_3
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mOlafJobRestrictionExemptionList:Ljava/util/Set;
 
-    invoke-static {v1, v4, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_4
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mFreezeExemptionChina:Ljava/util/Set;
 
-    invoke-static {v1, v4, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_5
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mFreezeExemption:Ljava/util/Set;
 
-    invoke-static {v1, v4, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_6
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mLocationPackages:Ljava/util/Set;
 
-    invoke-static {v1, v4, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
@@ -1201,14 +1201,14 @@
 
     const-string/jumbo v3, "process"
 
-    invoke-static {v1, v3, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_8
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mFreezeExemptionStartsWith:Ljava/util/Set;
 
-    invoke-static {v1, v12, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
@@ -1251,7 +1251,7 @@
 
     invoke-static {v10}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-direct {v4, v5, v8, v9, v3}, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetExcludePackage;-><init>(IILjava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetExcludePackage;-><init>
 
     iget-object v3, v0, Lcom/android/server/am/mars/database/MARsListManager;->mExcludePackageDefault:Ljava/util/ArrayList;
 
@@ -1285,7 +1285,7 @@
     :pswitch_a
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mCtsGtsList:Ljava/util/Set;
 
-    invoke-static {v1, v4, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
@@ -1312,35 +1312,35 @@
     :pswitch_c
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mOlafUfzList:Ljava/util/Set;
 
-    invoke-static {v1, v15, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_d
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mOLAFExemptionStartsWith:Ljava/util/Set;
 
-    invoke-static {v1, v12, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_e
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mFilterList:Ljava/util/Set;
 
-    invoke-static {v1, v15, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_f
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mCalmModeDefaultList:Ljava/util/Set;
 
-    invoke-static {v1, v4, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
     :pswitch_10
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mCalmModeFilterList:Ljava/util/Set;
 
-    invoke-static {v1, v15, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     goto/16 :goto_4
 
@@ -1425,7 +1425,7 @@
 
     move-result-object v23
 
-    invoke-direct/range {v18 .. v24}, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager$AdjustRestriction;-><init>
 
     move-object/from16 v3, v18
 
@@ -1461,7 +1461,7 @@
     :pswitch_13
     iget-object v2, v0, Lcom/android/server/am/mars/database/MARsListManager;->mOLAFExemption:Ljava/util/Set;
 
-    invoke-static {v1, v4, v7, v2}, Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/util/Set;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;->parseAttributeValue
 
     :goto_4
     const/4 v2, 0x4

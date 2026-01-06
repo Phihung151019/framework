@@ -65,7 +65,7 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrPkgName()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrPkgName
 
     move-result-object v0
 
@@ -81,19 +81,19 @@
 
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageInfo;->isFASEnabled:Z
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrFasReason()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrFasReason
 
     move-result-object v2
 
     iput-object v2, p0, Lcom/android/server/am/MARsPackageInfo;->fasReason:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/android/server/am/mars/database/FASTableContract;->convertFASReasonToValue(Ljava/lang/String;)I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASReasonToValue
 
     move-result v2
 
     iput v2, p0, Lcom/android/server/am/MARsPackageInfo;->fasType:I
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrExtras()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrExtras
 
     move-result-object v2
 
@@ -193,11 +193,11 @@
 
     iput-wide v5, p0, Lcom/android/server/am/MARsPackageInfo;->preBatteryUsage:D
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrDisableReason()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrDisableReason
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/android/server/am/mars/database/FASTableContract;->convertDBValueToDisableReason(Ljava/lang/String;)I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertDBValueToDisableReason
 
     move-result v0
 
@@ -206,13 +206,13 @@
     iput-boolean v1, p0, Lcom/android/server/am/MARsPackageInfo;->isDisabled:Z
 
     :try_start_0
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrUid()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrUid
 
     move-result-object v0
 
     if-eqz v0, :cond_6
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrUid()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrUid
 
     move-result-object v0
 
@@ -239,13 +239,13 @@
 
     iput v0, p0, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrMode()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrMode
 
     move-result-object v0
 
     if-eqz v0, :cond_8
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrMode()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrMode
 
     move-result-object v0
 
@@ -264,13 +264,13 @@
     iput-boolean v4, p0, Lcom/android/server/am/MARsPackageInfo;->isFASEnabled:Z
 
     :cond_8
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrResetTime()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrResetTime
 
     move-result-object v0
 
     if-eqz v0, :cond_9
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrResetTime()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrResetTime
 
     move-result-object v0
 
@@ -281,13 +281,13 @@
     iput-wide v4, p0, Lcom/android/server/am/MARsPackageInfo;->resetTime:J
 
     :cond_9
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrPackageType()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrPackageType
 
     move-result-object v0
 
     if-eqz v0, :cond_a
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrPackageType()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrPackageType
 
     move-result-object v0
 
@@ -298,13 +298,13 @@
     iput v0, p0, Lcom/android/server/am/MARsPackageInfo;->packageType:I
 
     :cond_a
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrLevel()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrLevel
 
     move-result-object v0
 
     if-eqz v0, :cond_b
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrLevel()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrLevel
 
     move-result-object v0
 
@@ -323,7 +323,7 @@
 
     sget-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isFirstTimeTriggerAutorun
 
     move-result v0
 
@@ -338,13 +338,13 @@
     iput v0, p0, Lcom/android/server/am/MARsPackageInfo;->maxLevel:I
 
     :cond_c
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrDisableType()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrDisableType
 
     move-result-object v0
 
     if-eqz v0, :cond_d
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrDisableType()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrDisableType
 
     move-result-object v0
 
@@ -355,13 +355,13 @@
     iput v0, p0, Lcom/android/server/am/MARsPackageInfo;->disableType:I
 
     :cond_d
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrDisableResetTime()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrDisableResetTime
 
     move-result-object v0
 
     if-eqz v0, :cond_e
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrDisableResetTime()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrDisableResetTime
 
     move-result-object v0
 
@@ -372,13 +372,13 @@
     iput-wide v2, p0, Lcom/android/server/am/MARsPackageInfo;->disableResetTime:J
 
     :cond_e
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrPreBatteryUsage()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrPreBatteryUsage
 
     move-result-object v0
 
     if-eqz v0, :cond_f
 
-    invoke-virtual {p1}, Lcom/android/server/am/mars/database/FASEntity;->getStrPreBatteryUsage()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrPreBatteryUsage
 
     move-result-object p1
 
@@ -447,7 +447,7 @@
 
     const-string v3, "-Pkg "
 
-    invoke-static {v2, v1, v0, v3}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget-object v1, p0, Lcom/android/server/am/MARsPackageInfo;->name:Ljava/lang/String;
 
@@ -461,7 +461,7 @@
 
     if-eqz p0, :cond_0
 
-    invoke-virtual {p0}, Lcom/android/server/am/MARsPolicyManager$Policy;->toString()Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager$Policy;->toString
 
     move-result-object p0
 
@@ -505,7 +505,7 @@
 
     iget-wide v1, p0, Lcom/android/server/am/MARsPackageInfo;->disableResetTime:J
 
-    invoke-static {v1, v2}, Lcom/android/server/am/mars/MARsUtils;->formatDateTime(J)Ljava/lang/String;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->formatDateTime
 
     move-result-object v1
 
@@ -529,7 +529,7 @@
 
     const-string v3, "-ST "
 
-    invoke-static {v2, v1, v0, v3}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget v1, p0, Lcom/android/server/am/MARsPackageInfo;->state:I
 
@@ -545,7 +545,7 @@
 
     const-string v3, "-SC "
 
-    invoke-static {v2, v1, v0, v3}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget-boolean v1, p0, Lcom/android/server/am/MARsPackageInfo;->isSCPMTarget:Z
 
@@ -581,7 +581,7 @@
 
     const-string v5, "-DR "
 
-    invoke-static {v2, v1, v0, v5}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget v1, p0, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
@@ -595,7 +595,7 @@
 
     const-string v5, "-DD "
 
-    invoke-static {v2, v1, v0, v5}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget-boolean v1, p0, Lcom/android/server/am/MARsPackageInfo;->isDisabled:Z
 
@@ -624,7 +624,7 @@
 
     const-string v4, "("
 
-    invoke-static {v3, v2, v0, v4}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget-object v2, p0, Lcom/android/server/am/MARsPackageInfo;->sharedUidName:Ljava/lang/String;
 
@@ -692,7 +692,7 @@
 
     const-string v5, "%4d"
 
-    invoke-static {v5, v2, v0, v4}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget v2, p0, Lcom/android/server/am/MARsPackageInfo;->fasType:I
 
@@ -723,7 +723,7 @@
 
     const-string v4, "-Pkg "
 
-    invoke-static {v3, v2, v0, v4}, Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m(Ljava/lang/String;[Ljava/lang/Object;Ljava/lang/StringBuilder;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
 
     iget-object p0, p0, Lcom/android/server/am/MARsPackageInfo;->name:Ljava/lang/String;
 
@@ -731,7 +731,7 @@
 
     sget-object p0, Lcom/android/server/am/mars/util/UidStateMgr$UidStateMgrHolder;->INSTANCE:Lcom/android/server/am/mars/util/UidStateMgr;
 
-    invoke-virtual {p0, v1}, Lcom/android/server/am/mars/util/UidStateMgr;->isUidRunning(I)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->isUidRunning
 
     move-result p0
 
@@ -828,7 +828,7 @@
 
     const/16 v3, 0x13
 
-    invoke-virtual {v2, v3, v1, v0, v0}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v3
 
@@ -846,7 +846,7 @@
     :cond_2
     const/16 v3, 0xb
 
-    invoke-virtual {v2, v3, v1, v0, v0}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v2
 
@@ -866,7 +866,7 @@
 
     const/16 v3, 0x14
 
-    invoke-virtual {v2, v3, v1, v0, v0}, Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
 
     move-result v0
 

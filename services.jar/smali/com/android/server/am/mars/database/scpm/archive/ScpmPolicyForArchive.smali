@@ -269,7 +269,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/android/server/am/mars/database/scpm/archive/ScpmPolicyForArchive;->parsePolicyData(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/archive/ScpmPolicyForArchive;->parsePolicyData
 
     const-string/jumbo p0, "ScpmPolicyForArchive"
 

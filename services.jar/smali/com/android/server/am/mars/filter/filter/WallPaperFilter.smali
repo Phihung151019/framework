@@ -45,7 +45,7 @@
 
     if-ne p3, p1, :cond_1
 
-    invoke-static {}, Lcom/android/server/am/mars/MARsUtils;->getScreenOnState()Z
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->getScreenOnState
 
     move-result p1
 
@@ -101,19 +101,19 @@
 
     const/4 p1, 0x5
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM
 
     const/4 p1, 0x6
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM
 
     const/16 p1, 0x11
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM
 
     const/16 p1, 0x12
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM
 
     return-void
 .end method
@@ -132,7 +132,7 @@
 
     const-string p0, "FILTER 10"
 
-    invoke-static {p0, p1}, Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
 
     monitor-exit v0
 
@@ -187,7 +187,7 @@
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory(Ljava/lang/String;Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
 
     monitor-exit p1
 

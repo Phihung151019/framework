@@ -96,7 +96,7 @@
     iget v2, v1, Lcom/android/server/am/ProcessRecord;->uid:I
 
     :goto_0
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->releaseFreezedAppPid
 
     :cond_1
     iget-object v0, v1, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;

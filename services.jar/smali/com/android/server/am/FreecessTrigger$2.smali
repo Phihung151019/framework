@@ -100,7 +100,7 @@
 
     monitor-exit p0
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result p0
 
@@ -112,7 +112,7 @@
 
     const-string p1, "DeviceIdleOFF"
 
-    invoke-virtual {p0, p1}, Lcom/android/server/am/FreecessHandler;->sendUnfreezeActivePackagesMsg(Ljava/lang/String;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendUnfreezeActivePackagesMsg
 
     goto :goto_1
 
@@ -163,7 +163,7 @@
     :cond_5
     iput-boolean v0, p0, Lcom/android/server/am/FreecessController;->mIsSmartSwitchWorking:Z
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setFreecessEnableForSpecificReason
 
     goto :goto_3
 
@@ -184,7 +184,7 @@
 
     const-string/jumbo v1, "OFF by SmartSwitch-Ongoing"
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory
 
     sget-boolean p0, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -194,7 +194,7 @@
 
     sget-object p0, Lcom/android/server/am/FreecessHandler$FreecessHandlerHolder;->INSTANCE:Lcom/android/server/am/FreecessHandler;
 
-    invoke-virtual {p0, p2}, Lcom/android/server/am/FreecessHandler;->sendSetFreecessEnableDelayedMsg(I)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendSetFreecessEnableDelayedMsg
 
     goto :goto_3
 
@@ -233,7 +233,7 @@
     :goto_2
     iput-boolean v1, p0, Lcom/android/server/am/FreecessController;->mIsSmartSwitchWorking:Z
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setFreecessEnableForSpecificReason
 
     :cond_9
     :goto_3
@@ -293,7 +293,7 @@
 
     sget-object v1, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
 
     move-result-object v1
 
@@ -316,7 +316,7 @@
 
     const-string/jumbo v1, "uid"
 
-    invoke-static {p1, v0, p0, v1}, Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
 
     move-result-object p0
 

@@ -69,7 +69,7 @@
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
 
     move-result-object p0
 
@@ -107,7 +107,7 @@
     :try_start_1
     iget-object v4, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsRestrictedPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
 
     move-result-object v4
 
@@ -115,7 +115,7 @@
 
     iget v5, v4, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isDisabledByUser
 
     move-result v5
 
@@ -123,7 +123,7 @@
 
     iput v3, v4, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v5
 
@@ -142,7 +142,7 @@
 
     xor-int/2addr v0, v3
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->changeAutoDisabledAppState
 
     return-void
 

@@ -969,11 +969,11 @@
 
     sget-object v4, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->updateRunningLocationPackages
 
     sget-object v4, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$ActiveMusicRecordFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;
 
-    invoke-virtual {v4}, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;->getUidListUsingAudio()V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;->getUidListUsingAudio
 
     new-instance v4, Ljava/util/ArrayList;
 
@@ -1050,7 +1050,7 @@
     :cond_18
     sget-object v13, Lcom/android/server/am/mars/filter/FilterFactory$FilterFactoryHolder;->INSTANCE:Lcom/android/server/am/mars/filter/FilterFactory;
 
-    invoke-virtual {v13, v12}, Lcom/android/server/am/mars/filter/FilterFactory;->getFilter(I)Lcom/android/server/am/mars/filter/IFilter;
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
 
     move-result-object v13
 
@@ -1058,7 +1058,7 @@
 
     const/16 v14, 0x10
 
-    invoke-interface {v13, v11, v7, v14, v10}, Lcom/android/server/am/mars/filter/IFilter;->filter(IIILjava/lang/String;)I
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/IFilter;->filter
 
     move-result v13
 
@@ -1384,19 +1384,19 @@
 
     sget-object v5, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsEnabled
 
     move-result v14
 
     if-eqz v14, :cond_2d
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
 
     move-result v14
 
     if-eqz v14, :cond_2d
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn
 
     move-result v5
 
@@ -1614,7 +1614,7 @@
 
     sget-object v5, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop
+    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getForegroundServiceStartTime
 
     move-result-wide v10
 

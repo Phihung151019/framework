@@ -23,7 +23,7 @@
 
     new-instance v1, Lcom/android/server/am/mars/MARsBigData$1;
 
-    invoke-direct {v1, v0}, Lcom/android/server/am/mars/MARsBigData$1;-><init>(Lcom/android/server/am/mars/MARsBigData;)V
+    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData$1;-><init>
 
     iput-object v1, v0, Lcom/android/server/am/mars/MARsBigData;->mIntentReceiver:Lcom/android/server/am/mars/MARsBigData$1;
 
