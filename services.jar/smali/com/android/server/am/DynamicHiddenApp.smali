@@ -702,85 +702,15 @@
 .end method
 
 .method public static setKpmParams(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 2
+.locals 1
 
-    const-string/jumbo v0, "ro.slmk.kpm_debug_trigger"
+    const/4 v0, 0x0
 
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-eqz v0, :cond_0
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    sput p0, Lcom/android/server/am/KillPolicyManager;->sWarmUpTrigger:I
-
-    return v1
-
-    :cond_0
-    const-string/jumbo v0, "ro.slmk.kpm_policy_trigger"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    sput p0, Lcom/android/server/am/KillPolicyManager;->sPolicyTrigger:I
-
-    return v1
-
-    :cond_1
-    const-string/jumbo v0, "ro.slmk.kpm_debug_cycles"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-static {p1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result p0
-
-    sput p0, Lcom/android/server/am/KillPolicyManager;->sWarmUpCycles:I
-
-    return v1
-
-    :cond_2
-    const-string/jumbo v0, "ro.slmk.kpm_boot_enable"
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    invoke-static {p1}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
-
-    move-result p0
-
-    sput-boolean p0, Lcom/android/server/am/KillPolicyManager;->KPM_BTIME_ENABLE:Z
-
-    return v1
-
-    :cond_3
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method
 
 .method public static setLmkdCameraKillBoost(III)V
-    .locals 0
+.locals 0
 
     return-void
 .end method
@@ -788,25 +718,25 @@
 
 # virtual methods
 .method public final dumpLMKDParameter(Ljava/io/PrintWriter;)V
-    .locals 0
+.locals 0
 
     return-void
 .end method
 
 .method public final initDynamicHiddenApp(Lcom/android/server/am/ActivityManagerService;Lcom/android/server/am/ProcessList;Lcom/android/server/am/ActivityManagerConstants;)V
-    .locals 0
+.locals 0
 
     return-void
 .end method
 
 .method public final resetKillExceptFlag(Lcom/android/server/am/ProcessRecord;)V
-    .locals 0
+.locals 0
 
     return-void
 .end method
 
 .method public final setCustomADJAndGetProcState(Lcom/android/server/am/ProcessRecord;)I
-    .locals 1
+.locals 1
 
     const/4 v0, 0x0
 

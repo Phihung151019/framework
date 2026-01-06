@@ -13,9 +13,7 @@
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;Lcom/android/server/am/ActivityManagerService;)V
-    .locals 0
-
-    invoke-direct {p0}, Lcom/samsung/android/chimera/IChimera$Stub;-><init>()V
+.locals 0
 
     return-void
 .end method

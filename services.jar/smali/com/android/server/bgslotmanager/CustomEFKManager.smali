@@ -41,7 +41,7 @@
 
 # direct methods
 .method public static -$$Nest$mrestoreEFKAfterBoot(Lcom/android/server/bgslotmanager/CustomEFKManager;)V
-    .locals 0
+.locals 0
 
     return-void
 .end method

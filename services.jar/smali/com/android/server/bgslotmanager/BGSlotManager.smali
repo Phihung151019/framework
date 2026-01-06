@@ -183,19 +183,19 @@
 
 # virtual methods
 .method public final changeBGSlot()V
-    .locals 0
+.locals 0
 
     return-void
 .end method
 
 .method public final setBonusMaxCachedAppsPerSwap()V
-    .locals 0
+.locals 0
 
     return-void
 .end method
 
 .method public final updateDefaultCachedMAX()V
-    .locals 0
+.locals 0
 
     return-void
 .end method

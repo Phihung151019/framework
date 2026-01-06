@@ -51,7 +51,7 @@
 
 # virtual methods
 .method public final onCameraDeviceStateChanged(Ljava/lang/String;IILjava/lang/String;)V
-    .locals 0
+.locals 0
 
     return-void
 .end method

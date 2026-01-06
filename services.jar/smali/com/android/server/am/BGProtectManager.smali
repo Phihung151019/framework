@@ -777,184 +777,25 @@
 .end method
 
 .method public static IsProtected(Lcom/android/server/am/ProcessRecord;)Z
-    .locals 3
-
-    sget-boolean v0, Lcom/android/server/am/DynamicHiddenApp;->sHH_AMSExceptionEnable:Z
-
-    sget-object v1, Lcom/android/server/am/BGProtectManager$exceptFlag;->SANDBOX:Lcom/android/server/am/BGProtectManager$exceptFlag;
-
-    const/4 v2, 0x3
-
-    if-eqz v0, :cond_2
-
-    iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->isAMSException:Z
-
-    if-eqz v0, :cond_0
-
-    iget v0, p0, Lcom/android/server/am/ProcessRecord;->AMSExceptionFlag:I
-
-    invoke-virtual {v1}, Lcom/android/server/am/BGProtectManager$exceptFlag;->getValue()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_5
-
-    :cond_0
-    iget v0, p0, Lcom/android/server/am/ProcessRecord;->dhaKeepEmptyFlag:I
-
-    if-lez v0, :cond_1
-
-    if-ge v0, v2, :cond_1
-
-    goto :goto_0
-
-    :cond_1
-    invoke-static {p0}, Lcom/android/server/am/BGProtectManager;->isOnlyActCheck(Lcom/android/server/am/ProcessRecord;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_6
-
-    goto :goto_0
-
-    :cond_2
-    iget-boolean v0, p0, Lcom/android/server/am/ProcessRecord;->isAMSException:Z
-
-    if-eqz v0, :cond_3
-
-    iget v0, p0, Lcom/android/server/am/ProcessRecord;->AMSExceptionFlag:I
-
-    invoke-virtual {v1}, Lcom/android/server/am/BGProtectManager$exceptFlag;->getValue()I
-
-    move-result v1
-
-    if-eq v0, v1, :cond_3
-
-    iget v0, p0, Lcom/android/server/am/ProcessRecord;->AMSExceptionFlag:I
-
-    sget-object v1, Lcom/android/server/am/BGProtectManager$exceptFlag;->HOMEHUB:Lcom/android/server/am/BGProtectManager$exceptFlag;
-
-    invoke-virtual {v1}, Lcom/android/server/am/BGProtectManager$exceptFlag;->getValue()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_5
-
-    :cond_3
-    iget v0, p0, Lcom/android/server/am/ProcessRecord;->dhaKeepEmptyFlag:I
-
-    if-lez v0, :cond_4
-
-    if-ge v0, v2, :cond_4
-
-    goto :goto_0
-
-    :cond_4
-    invoke-static {p0}, Lcom/android/server/am/BGProtectManager;->isOnlyActCheck(Lcom/android/server/am/ProcessRecord;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_6
-
-    :cond_5
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_6
-    const/4 p0, 0x0
-
-    return p0
-.end method
-
-.method public static addBEKSList(Z)V
-    .locals 3
-
-    if-nez p0, :cond_0
-
-    sget-object p0, Lcom/android/server/am/BGProtectManager;->sBEKS_processList:Ljava/util/ArrayList;
-
-    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
-
-    :cond_0
-    const/4 p0, 0x1
+.locals 1
 
     const/4 v0, 0x0
 
-    :goto_0
-    sget-object v1, Lcom/android/server/am/BGProtectManager;->BOOTING_EMPTY_KILL_SKIP_ARRAY:[Ljava/lang/String;
+    return v0
+.end method
 
-    array-length v2, v1
+.method public static addBEKSList(Z)V
+.locals 0
 
-    if-ge v0, v2, :cond_2
-
-    sget v2, Lcom/android/server/am/BGProtectManager;->beks_package_key_bit:I
-
-    and-int/2addr v2, p0
-
-    if-eqz v2, :cond_1
-
-    sget-object v2, Lcom/android/server/am/BGProtectManager;->sBEKS_processList:Ljava/util/ArrayList;
-
-    aget-object v1, v1, v0
-
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    :cond_1
-    shl-int/lit8 p0, p0, 0x1
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_2
     return-void
 .end method
 
 .method public static appIsPickedProcess(ILjava/lang/String;)I
-    .locals 1
+.locals 1
 
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo p0, "_&_"
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object p0
-
-    sget-object p1, Lcom/android/server/am/BGProtectManager;->dha_MLexcept_map:Ljava/util/ArrayList;
-
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1, p0}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p1, p0}, Ljava/util/ArrayList;->indexOf(Ljava/lang/Object;)I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, -0x1
-
-    return p0
+    return v0
 .end method
 
 .method public static getContactsPackageName(Landroid/content/Context;)Ljava/lang/String;
@@ -1108,514 +949,42 @@
 .end method
 
 .method public static isCachedOrPickedActivityProcess(Lcom/android/server/am/ProcessRecord;)Z
-    .locals 2
+.locals 1
 
-    iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
+    const/4 v0, 0x0
 
-    iget v0, v0, Lcom/android/server/am/ProcessStateRecord;->mCurAdj:I
-
-    const/16 v1, 0x352
-
-    if-lt v0, v1, :cond_2
-
-    const/16 v1, 0x3e7
-
-    if-gt v0, v1, :cond_2
-
-    iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->mWindowProcessController:Lcom/android/server/wm/WindowProcessController;
-
-    iget-boolean v0, v0, Lcom/android/server/wm/WindowProcessController;->mHasActivities:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
-
-    iget v0, v0, Lcom/android/server/am/ProcessStateRecord;->mCurProcState:I
-
-    const/16 v1, 0xa
-
-    if-eq v0, v1, :cond_1
-
-    const/16 v1, 0xf
-
-    if-ne v0, v1, :cond_0
-
-    goto :goto_0
-
-    :cond_0
-    iget-object p0, p0, Lcom/android/server/am/ProcessRecord;->mState:Lcom/android/server/am/ProcessStateRecord;
-
-    iget p0, p0, Lcom/android/server/am/ProcessStateRecord;->mCurProcState:I
-
-    const/16 v0, 0x10
-
-    if-ne p0, v0, :cond_2
-
-    :cond_1
-    :goto_0
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_2
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method
 
 .method public static isDhaKeepEmptyProcess(Ljava/lang/String;)I
-    .locals 2
+.locals 1
 
-    sget-object v0, Lcom/android/server/am/BGProtectManager;->dha_keepempty_map:Ljava/util/HashMap;
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object p0
-
-    check-cast p0, Ljava/lang/Integer;
-
-    invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
-
-    move-result p0
-
-    return p0
-
-    :cond_0
-    const/4 p0, -0x1
-
-    return p0
+    return v0
 .end method
 
 .method public static isOnlyActCheck(Lcom/android/server/am/ProcessRecord;)Z
-    .locals 2
+.locals 1
 
-    iget v0, p0, Lcom/android/server/am/ProcessRecord;->dhaKeepEmptyFlag:I
+    const/4 v0, 0x0
 
-    const/4 v1, 0x4
-
-    if-ne v0, v1, :cond_0
-
-    iget-object p0, p0, Lcom/android/server/am/ProcessRecord;->mWindowProcessController:Lcom/android/server/wm/WindowProcessController;
-
-    iget-boolean p0, p0, Lcom/android/server/wm/WindowProcessController;->mHasActivities:Z
-
-    if-eqz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method
 
 .method public static isWebviewProcess(Lcom/android/server/am/ProcessRecord;)I
-    .locals 3
+.locals 1
 
-    iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->mHostingRecord:Lcom/android/server/am/HostingRecord;
+    const/4 v0, 0x0
 
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->mHostingRecord:Lcom/android/server/am/HostingRecord;
-
-    iget v0, v0, Lcom/android/server/am/HostingRecord;->mHostingZygote:I
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->mHostingRecord:Lcom/android/server/am/HostingRecord;
-
-    iget-object v0, v0, Lcom/android/server/am/HostingRecord;->mHostingName:Ljava/lang/String;
-
-    const-string/jumbo v1, "check webview name : "
-
-    const-string v2, "DynamicHiddenApp_BGProtectManager"
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object v1, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v1, "check hostingname webview : "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object p0, p0, Lcom/android/server/am/ProcessRecord;->mHostingRecord:Lcom/android/server/am/HostingRecord;
-
-    iget-object p0, p0, Lcom/android/server/am/HostingRecord;->mHostingName:Ljava/lang/String;
-
-    invoke-static {v0, p0, v2}, Lcom/android/server/DeviceIdleController$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_0
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget-object p0, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
-
-    const-string/jumbo v1, "check hostingname webview : null "
-
-    invoke-static {v0, p0, v1, v2}, Lcom/android/server/BootReceiver$$ExternalSyntheticOutline0;->m(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-
-    :goto_0
-    const/4 p0, 0x2
-
-    return p0
-
-    :cond_1
-    iget-object v0, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
-
-    const-string v1, ":sandboxed_process"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    const/4 p0, 0x4
-
-    return p0
-
-    :cond_2
-    const-string/jumbo v0, "com.sec.android.app.sbrowser"
-
-    iget-object p0, p0, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
-
-    invoke-virtual {v0, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_3
-
-    const/4 p0, 0x6
-
-    return p0
-
-    :cond_3
-    const/4 p0, -0x1
-
-    return p0
+    return v0
 .end method
 
 
 # virtual methods
 .method public final addAllowlistList(Z)V
-    .locals 12
+.locals 0
 
-    if-nez p1, :cond_0
-
-    sget-object v1, Lcom/android/server/am/BGProtectManager;->dha_amsexcept_map:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
-
-    sget-object v1, Lcom/android/server/am/BGProtectManager;->dha_keepempty_map:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
-
-    sget-object v1, Lcom/android/server/am/BGProtectManager;->dha_neverkillexcept_map:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
-
-    sget-object v1, Lcom/android/server/am/BGProtectManager;->dha_cameraguard_map:Ljava/util/HashMap;
-
-    invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
-
-    :cond_0
-    const/4 v6, 0x0
-
-    move v1, v6
-
-    :goto_0
-    sget-object v2, Lcom/android/server/am/BGProtectManager;->DHA_STATICEXCEPT_PROC_ARRAY:[[Ljava/lang/String;
-
-    array-length v3, v2
-
-    const/4 v7, 0x1
-
-    if-ge v1, v3, :cond_1
-
-    sget-object v3, Lcom/android/server/am/BGProtectManager;->dha_amsexcept_map:Ljava/util/HashMap;
-
-    aget-object v2, v2, v1
-
-    aget-object v4, v2, v6
-
-    aget-object v2, v2, v7
-
-    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-virtual {p0, v3, v4, v2, p1}, Lcom/android/server/am/BGProtectManager;->dhaAddPackageName(Ljava/util/HashMap;Ljava/lang/String;IZ)V
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    sget v1, Lcom/android/server/am/BGProtectManager;->sProvider_lifeguard_memory_TH:I
-
-    int-to-long v1, v1
-
-    sget-wide v3, Lcom/android/server/am/BGProtectManager;->mTotalMemMb:J
-
-    cmp-long v1, v3, v1
-
-    if-lez v1, :cond_3
-
-    move v1, v6
-
-    move v2, v7
-
-    :goto_1
-    sget-object v3, Lcom/android/server/am/BGProtectManager;->PROVIDER_LIFEGUARD_ARRAY:[Ljava/lang/String;
-
-    array-length v4, v3
-
-    if-ge v1, v4, :cond_3
-
-    sget v4, Lcom/android/server/am/BGProtectManager;->sProvider_lifeguard_key:I
-
-    and-int/2addr v4, v2
-
-    if-eqz v4, :cond_2
-
-    sget-object v4, Lcom/android/server/am/BGProtectManager;->dha_amsexcept_map:Ljava/util/HashMap;
-
-    aget-object v3, v3, v1
-
-    invoke-virtual {p0, v4, v3, v7, p1}, Lcom/android/server/am/BGProtectManager;->dhaAddPackageName(Ljava/util/HashMap;Ljava/lang/String;IZ)V
-
-    :cond_2
-    shl-int/lit8 v2, v2, 0x1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    iget-boolean v1, p0, Lcom/android/server/am/BGProtectManager;->NEVERKILL_SQETOOL_ENABLE:Z
-
-    const/4 v8, 0x3
-
-    const/4 v9, 0x2
-
-    if-eqz v1, :cond_4
-
-    move v10, v6
-
-    :goto_2
-    sget-object v1, Lcom/android/server/am/BGProtectManager;->DHA_NEVERKILLEXCEPT_ARRAY:[[Ljava/lang/String;
-
-    array-length v2, v1
-
-    if-ge v10, v2, :cond_4
-
-    sget-object v5, Lcom/android/server/am/BGProtectManager;->dha_neverkillexcept_map:Ljava/util/HashMap;
-
-    aget-object v2, v1, v10
-
-    move-object v3, v2
-
-    aget-object v2, v3, v6
-
-    aget-object v3, v3, v7
-
-    invoke-static {v3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v3
-
-    aget-object v1, v1, v10
-
-    move-object v4, v1
-
-    move v1, v3
-
-    aget-object v3, v4, v9
-
-    aget-object v4, v4, v8
-
-    move-object v0, p0
-
-    invoke-virtual/range {v0 .. v5}, Lcom/android/server/am/BGProtectManager;->dhaAddNeverKilledPackageName(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)V
-
-    add-int/lit8 v10, v10, 0x1
-
-    goto :goto_2
-
-    :cond_4
-    move v10, v6
-
-    move v11, v7
-
-    :goto_3
-    sget-object v0, Lcom/android/server/am/BGProtectManager;->DHA_NEVERKILLEXCEPT_ARRAY_BY_KEY:[[Ljava/lang/String;
-
-    array-length v1, v0
-
-    if-ge v10, v1, :cond_6
-
-    sget v1, Lcom/android/server/am/BGProtectManager;->dha_neverkillexcept_key:I
-
-    and-int/2addr v1, v11
-
-    if-eqz v1, :cond_5
-
-    sget-object v5, Lcom/android/server/am/BGProtectManager;->dha_neverkillexcept_map:Ljava/util/HashMap;
-
-    aget-object v1, v0, v10
-
-    aget-object v2, v1, v6
-
-    aget-object v1, v1, v7
-
-    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    aget-object v0, v0, v10
-
-    aget-object v3, v0, v9
-
-    aget-object v4, v0, v8
-
-    move-object v0, p0
-
-    invoke-virtual/range {v0 .. v5}, Lcom/android/server/am/BGProtectManager;->dhaAddNeverKilledPackageName(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/util/HashMap;)V
-
-    :cond_5
-    shl-int/lit8 v11, v11, 0x1
-
-    add-int/lit8 v10, v10, 0x1
-
-    goto :goto_3
-
-    :cond_6
-    move v1, v6
-
-    move v2, v7
-
-    :goto_4
-    sget-object v3, Lcom/android/server/am/BGProtectManager;->DHA_DYNAMICEXCEPT_PROC_ARRAY:[Ljava/lang/String;
-
-    array-length v4, v3
-
-    if-ge v1, v4, :cond_b
-
-    iget v4, p0, Lcom/android/server/am/BGProtectManager;->mDhaKeepEmptyEnable:I
-
-    if-ne v4, v7, :cond_7
-
-    sget v5, Lcom/android/server/am/BGProtectManager;->dha_keepchimera_key:I
-
-    and-int/2addr v5, v2
-
-    if-eqz v5, :cond_7
-
-    sget-object v5, Lcom/android/server/am/BGProtectManager;->dha_keepempty_map:Ljava/util/HashMap;
-
-    aget-object v10, v3, v1
-
-    invoke-virtual {p0, v5, v10, v8, p1}, Lcom/android/server/am/BGProtectManager;->dhaAddPackageName(Ljava/util/HashMap;Ljava/lang/String;IZ)V
-
-    :cond_7
-    iget v5, p0, Lcom/android/server/am/BGProtectManager;->mDhaKeepEmptyEnableKnox:I
-
-    if-ne v5, v7, :cond_8
-
-    sget v5, Lcom/android/server/am/BGProtectManager;->dha_keepempty_key_knox:I
-
-    and-int/2addr v5, v2
-
-    if-eqz v5, :cond_8
-
-    sget-object v5, Lcom/android/server/am/BGProtectManager;->dha_keepempty_map:Ljava/util/HashMap;
-
-    aget-object v10, v3, v1
-
-    invoke-virtual {p0, v5, v10, v9, p1}, Lcom/android/server/am/BGProtectManager;->dhaAddPackageName(Ljava/util/HashMap;Ljava/lang/String;IZ)V
-
-    :cond_8
-    if-ne v4, v7, :cond_9
-
-    sget v5, Lcom/android/server/am/BGProtectManager;->dha_keepempty_key:I
-
-    and-int/2addr v5, v2
-
-    if-eqz v5, :cond_9
-
-    sget-object v5, Lcom/android/server/am/BGProtectManager;->dha_keepempty_map:Ljava/util/HashMap;
-
-    aget-object v10, v3, v1
-
-    invoke-virtual {p0, v5, v10, v7, p1}, Lcom/android/server/am/BGProtectManager;->dhaAddPackageName(Ljava/util/HashMap;Ljava/lang/String;IZ)V
-
-    :cond_9
-    if-ne v4, v7, :cond_a
-
-    sget v4, Lcom/android/server/am/BGProtectManager;->dha_keep_onlyact_key:I
-
-    and-int/2addr v4, v2
-
-    if-eqz v4, :cond_a
-
-    sget-object v4, Lcom/android/server/am/BGProtectManager;->dha_keepempty_map:Ljava/util/HashMap;
-
-    aget-object v3, v3, v1
-
-    const/4 v5, 0x4
-
-    invoke-virtual {p0, v4, v3, v5, p1}, Lcom/android/server/am/BGProtectManager;->dhaAddPackageName(Ljava/util/HashMap;Ljava/lang/String;IZ)V
-
-    :cond_a
-    shl-int/lit8 v2, v2, 0x1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_4
-
-    :cond_b
-    :goto_5
-    sget-boolean v1, Lcom/android/server/am/BGProtectManager;->mCameraGuardEnable:Z
-
-    if-eqz v1, :cond_c
-
-    sget-object v1, Lcom/android/server/am/BGProtectManager;->CAMERA_GUARD_ARRAY:[Ljava/lang/String;
-
-    array-length v2, v1
-
-    if-ge v6, v2, :cond_c
-
-    sget-object v2, Lcom/android/server/am/BGProtectManager;->dha_cameraguard_map:Ljava/util/HashMap;
-
-    aget-object v1, v1, v6
-
-    invoke-virtual {p0, v2, v1, v7, p1}, Lcom/android/server/am/BGProtectManager;->dhaAddPackageName(Ljava/util/HashMap;Ljava/lang/String;IZ)V
-
-    add-int/lit8 v6, v6, 0x1
-
-    goto :goto_5
-
-    :cond_c
     return-void
 .end method
 
@@ -2267,145 +1636,21 @@
 .end method
 
 .method public final initBGProtectManagerPostBoot()V
-    .locals 2
+.locals 0
 
-    const/4 v0, 0x0
-
-    invoke-virtual {p0, v0}, Lcom/android/server/am/BGProtectManager;->addAllowlistList(Z)V
-
-    iget-boolean v1, p0, Lcom/android/server/am/BGProtectManager;->BOOTING_EMPTY_KILL_SKIP_ENABLE:Z
-
-    if-eqz v1, :cond_0
-
-    invoke-static {v0}, Lcom/android/server/am/BGProtectManager;->addBEKSList(Z)V
-
-    :cond_0
-    const-string/jumbo v0, "persist.sys.bub_onoff"
-
-    const-string/jumbo v1, "on"
-
-    invoke-static {v0, v1}, Landroid/os/SystemProperties;->get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-virtual {p0}, Lcom/android/server/am/BGProtectManager;->removeAllowlistByBUB()V
-
-    :cond_1
     return-void
 .end method
 
 .method public final isBEKCondition(Lcom/android/server/am/ProcessRecord;)Z
-    .locals 2
+.locals 1
 
-    iget-boolean p0, p0, Lcom/android/server/am/BGProtectManager;->BOOTING_EMPTY_KILL_SKIP_ENABLE:Z
+    const/4 v0, 0x0
 
-    if-eqz p0, :cond_0
-
-    sget-object p0, Lcom/android/server/am/BGProtectManager;->sBEKS_processList:Ljava/util/ArrayList;
-
-    iget-object p1, p1, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
-
-    invoke-virtual {p0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
-
-    move-result p0
-
-    if-eqz p0, :cond_0
-
-    invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
-
-    move-result-wide p0
-
-    const-wide/32 v0, 0x927c0
-
-    cmp-long p0, p0, v0
-
-    if-gtz p0, :cond_0
-
-    const/4 p0, 0x1
-
-    return p0
-
-    :cond_0
-    const/4 p0, 0x0
-
-    return p0
+    return v0
 .end method
 
 .method public final removeAllowlistByBUB()V
-    .locals 4
-
-    sget-object v0, Lcom/android/server/am/BGProtectManager;->dha_amsexcept_map:Ljava/util/HashMap;
-
-    const-string/jumbo v1, "Q09OVEFDVFM="
-
-    invoke-static {v1}, Lcom/android/server/am/DynamicHiddenApp;->decodeToStr(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1, v0}, Lcom/android/server/am/BGProtectManager;->dhaDeletePackageName(Ljava/lang/String;Ljava/util/HashMap;)V
-
-    const-string/jumbo v1, "RElBTEVS"
-
-    invoke-static {v1}, Lcom/android/server/am/DynamicHiddenApp;->decodeToStr(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1, v0}, Lcom/android/server/am/BGProtectManager;->dhaDeletePackageName(Ljava/lang/String;Ljava/util/HashMap;)V
-
-    sget v0, Lcom/android/server/am/BGProtectManager;->sProvider_lifeguard_memory_TH:I
-
-    int-to-long v0, v0
-
-    sget-wide v2, Lcom/android/server/am/BGProtectManager;->mTotalMemMb:J
-
-    cmp-long v0, v2, v0
-
-    if-lez v0, :cond_1
-
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    :goto_0
-    sget-object v2, Lcom/android/server/am/BGProtectManager;->PROVIDER_LIFEGUARD_ARRAY:[Ljava/lang/String;
-
-    array-length v3, v2
-
-    if-ge v1, v3, :cond_1
-
-    sget v3, Lcom/android/server/am/BGProtectManager;->sProvider_lifeguard_key:I
-
-    and-int/2addr v3, v0
-
-    if-eqz v3, :cond_0
-
-    sget-object v3, Lcom/android/server/am/BGProtectManager;->dha_amsexcept_map:Ljava/util/HashMap;
-
-    aget-object v2, v2, v1
-
-    invoke-virtual {p0, v2, v3}, Lcom/android/server/am/BGProtectManager;->dhaDeletePackageName(Ljava/lang/String;Ljava/util/HashMap;)V
-
-    :cond_0
-    shl-int/lit8 v0, v0, 0x1
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    sget-object p0, Lcom/android/server/am/BGProtectManager;->dha_keepempty_map:Ljava/util/HashMap;
-
-    invoke-virtual {p0}, Ljava/util/HashMap;->clear()V
-
-    sget-object p0, Lcom/android/server/am/BGProtectManager;->dha_cameraguard_map:Ljava/util/HashMap;
-
-    invoke-virtual {p0}, Ljava/util/HashMap;->clear()V
+.locals 0
 
     return-void
 .end method
