@@ -969,11 +969,11 @@
 
     sget-object v4, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->updateRunningLocationPackages
+    nop
 
     sget-object v4, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$ActiveMusicRecordFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;->getUidListUsingAudio
+    nop
 
     new-instance v4, Ljava/util/ArrayList;
 
@@ -1050,7 +1050,7 @@
     :cond_18
     sget-object v13, Lcom/android/server/am/mars/filter/FilterFactory$FilterFactoryHolder;->INSTANCE:Lcom/android/server/am/mars/filter/FilterFactory;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
+    nop
 
     move-result-object v13
 
@@ -1058,7 +1058,7 @@
 
     const/16 v14, 0x10
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/IFilter;->filter
+    nop
 
     move-result v13
 
@@ -1384,19 +1384,19 @@
 
     sget-object v5, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsEnabled
+    nop
 
     move-result v14
 
     if-eqz v14, :cond_2d
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v14
 
     if-eqz v14, :cond_2d
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn
+    nop
 
     move-result v5
 
@@ -1614,7 +1614,7 @@
 
     sget-object v5, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getForegroundServiceStartTime
+    nop
 
     move-result-wide v10
 

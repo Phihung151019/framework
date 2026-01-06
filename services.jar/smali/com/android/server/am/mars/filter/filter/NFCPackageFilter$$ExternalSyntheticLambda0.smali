@@ -41,11 +41,11 @@
     return-void
 
     :cond_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->getPaymentDefaultPackageFromRoleManager
+    nop
 
     move-result-object p1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->setPaymentDefaultPackage
+    nop
 
     return-void
 .end method

@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/RunningLocationFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/RunningLocationFilter;-><init>
+    nop
 
     sput-object v0, Lcom/android/server/am/mars/filter/filter/RunningLocationFilter$RunningLocationFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/RunningLocationFilter;
 

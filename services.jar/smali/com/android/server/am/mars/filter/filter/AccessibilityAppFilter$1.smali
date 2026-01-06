@@ -25,7 +25,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AccessibilityAppFilter;->getEnabledAccessibilityPackage
+    nop
 
     return-void
 .end method

@@ -424,13 +424,13 @@
 
     invoke-static {v4}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->convertPolicyNumToName
+    nop
 
     move-result-object v8
 
     new-instance v7, Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager$PolicyInfo;-><init>
+    nop
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -579,7 +579,7 @@
 
     new-instance v6, Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetCurrentImportant;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager$AdjustTargetCurrentImportant;-><init>
+    nop
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
@@ -588,7 +588,7 @@
     goto :goto_0
 
     :cond_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->setAdjustTargetCurrentImportant
+    nop
 
     return-void
 .end method

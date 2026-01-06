@@ -82,7 +82,7 @@
 
     iget-object v0, p1, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mDefaultAssistantPackage:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     iget-object v0, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$RoleObserver;->mRm:Landroid/app/role/RoleManager;
 
@@ -112,7 +112,7 @@
 
     iget-object p1, p1, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mDefaultWalletPackage:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -193,7 +193,7 @@
 
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mDefaultAssistantPackage:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     iput-object v5, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mDefaultAssistantPackage:Ljava/lang/String;
 
@@ -209,7 +209,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mDefaultAssistantPackage:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     return-void
 
@@ -261,7 +261,7 @@
 
     iget-object p2, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mDefaultWalletPackage:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mDefaultWalletPackage:Ljava/lang/String;
 
@@ -277,7 +277,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->mDefaultWalletPackage:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     :cond_4
     return-void

@@ -100,7 +100,7 @@
     :cond_1
     new-instance p1, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$$ExternalSyntheticLambda1;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$$ExternalSyntheticLambda1;-><init>
+    nop
 
     new-instance p4, Ljava/util/concurrent/FutureTask;
 
@@ -157,7 +157,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v3
 
@@ -170,7 +170,7 @@
 
     move-result-wide v3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->getScreenOnState
+    nop
 
     move-result v5
 
@@ -190,7 +190,7 @@
     if-nez p3, :cond_7
 
     :cond_6
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;->isUsingAudio
+    nop
 
     move-result p3
 
@@ -244,7 +244,7 @@
 
     check-cast v5, Ljava/lang/Long;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v6
 
@@ -292,13 +292,13 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled
+    nop
 
     move-result p3
 
     if-eqz p3, :cond_b
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn
+    nop
 
     move-result p3
 
@@ -651,7 +651,7 @@
 
     new-instance p1, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$1;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$1;-><init>
+    nop
 
     const/4 v0, 0x4
 
@@ -718,7 +718,7 @@
     :cond_0
     new-instance v0, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$$ExternalSyntheticLambda0;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$$ExternalSyntheticLambda0;-><init>
+    nop
 
     new-instance p1, Ljava/util/concurrent/FutureTask;
 

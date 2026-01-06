@@ -63,7 +63,7 @@
 
     const-string v3, ",d:"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
+    nop
 
     iget-wide v1, p0, Lcom/android/server/job/JobSchedulerService$DeferrableNetworkJobCounter;->deferrable:J
 

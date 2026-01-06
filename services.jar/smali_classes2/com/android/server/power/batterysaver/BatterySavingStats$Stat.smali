@@ -94,7 +94,7 @@
 
     const-string/jumbo v3, "uA/H,"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
+    nop
 
     iget-wide v3, p0, Lcom/android/server/power/batterysaver/BatterySavingStats$Stat;->totalTimeMillis:J
 

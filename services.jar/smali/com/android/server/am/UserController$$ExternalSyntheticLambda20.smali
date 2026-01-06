@@ -14,7 +14,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->postInit
+    nop
 
     return-void
 .end method

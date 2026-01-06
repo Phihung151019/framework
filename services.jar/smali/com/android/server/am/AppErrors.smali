@@ -4788,7 +4788,7 @@
 
     const/16 p3, 0xc
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeProcess
+    nop
 
     const-string/jumbo p1, "scheduleCrash for \'"
 

@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;-><init>
+    nop
 
     sput-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 

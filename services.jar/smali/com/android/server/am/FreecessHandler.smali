@@ -54,11 +54,11 @@
 
     const-wide v4, 0x12a05f200L
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/netlink/NetlinkSocket;->recvMessage
+    nop
 
     move-result-object v2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/netlink/StructFreeCessMsg;->parse
+    nop
 
     move-result-object v2
 
@@ -155,7 +155,7 @@
     invoke-static {v3, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
     :cond_1
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->kernelFreecessReport
+    nop
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -180,7 +180,7 @@
 
     move-result-object p3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$BluetoothHandler;-><init>
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/FreecessHandler;->mBluetoothHandler:Lcom/android/server/am/FreecessHandler$BluetoothHandler;
 
@@ -200,7 +200,7 @@
 
     move-result-object p2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler;-><init>
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/FreecessHandler;->mMainHandler:Lcom/android/server/am/FreecessHandler$MainHandler;
 
@@ -221,7 +221,7 @@
 
     const-string/jumbo v1, "userId"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object p1
 
@@ -268,7 +268,7 @@
 
     const-string/jumbo v2, "userId"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object p1
 
@@ -577,7 +577,7 @@
 
     new-instance v4, Lcom/android/server/am/FreecessController$3;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController$3;-><init>
+    nop
 
     invoke-virtual {v4}, Ljava/lang/Thread;->start()V
 

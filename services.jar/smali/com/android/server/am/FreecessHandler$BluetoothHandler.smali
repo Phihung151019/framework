@@ -260,7 +260,7 @@
 
     new-instance v2, Lcom/android/server/am/FreecessController$$ExternalSyntheticLambda2;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController$$ExternalSyntheticLambda2;-><init>
+    nop
 
     invoke-virtual {p1, v0, v2}, Landroid/util/ArrayMap;->computeIfAbsent(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
 

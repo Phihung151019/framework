@@ -142,7 +142,7 @@
 
     const/4 v2, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AppCastFilter$1;-><init>
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastEnabledObserver:Lcom/android/server/am/mars/filter/filter/AppCastFilter$1;
 
@@ -171,7 +171,7 @@
 
     const/4 v2, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AppCastFilter$1;-><init>
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AppCastFilter;->mAppCastPackageObserver:Lcom/android/server/am/mars/filter/filter/AppCastFilter$1;
 

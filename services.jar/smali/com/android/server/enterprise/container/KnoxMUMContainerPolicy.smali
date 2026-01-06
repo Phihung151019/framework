@@ -3810,7 +3810,7 @@
 
     const-string/jumbo v2, "android.intent.extra.user_handle"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object p0
 

@@ -635,7 +635,7 @@
 
     if-ne p1, v0, :cond_2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->useCompaction
+    nop
 
     move-result p1
 
@@ -669,7 +669,7 @@
 
     check-cast v1, Lcom/android/server/am/ProcessRecord;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->cancelCompactionForProcess
+    nop
 
     goto :goto_0
 

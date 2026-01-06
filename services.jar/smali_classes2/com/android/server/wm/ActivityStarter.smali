@@ -3075,19 +3075,19 @@
     move/from16 v6, v21
 
     :cond_f
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getInstance
+    nop
 
     move-result-object v0
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v5
 
     if-eqz v5, :cond_10
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn
+    nop
 
     move-result v0
 

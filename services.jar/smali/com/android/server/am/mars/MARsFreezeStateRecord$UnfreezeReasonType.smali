@@ -47,7 +47,7 @@
 
     const-string/jumbo v4, "UNFREEZE_TOTAL"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     sput-object v1, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->UNFREEZE_TOTAL:Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -63,7 +63,7 @@
 
     const-string/jumbo v5, "UNFREEZE_REASON_ALARM"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     sput-object v2, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->UNFREEZE_REASON_ALARM:Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -79,7 +79,7 @@
 
     const-string/jumbo v6, "UNFREEZE_REASON_PACKET"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     sput-object v3, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->UNFREEZE_REASON_PACKET:Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -95,7 +95,7 @@
 
     const-string/jumbo v7, "UNFREEZE_REASON_WAKELOCK"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v5, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -109,7 +109,7 @@
 
     const-string/jumbo v8, "UNFREEZE_REASON_BINDER_1"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v6, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -123,7 +123,7 @@
 
     const-string/jumbo v9, "UNFREEZE_REASON_BINDER_0"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v7, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -137,7 +137,7 @@
 
     const-string/jumbo v10, "UNFREEZE_REASON_DEVICE_IDLE_OFF"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v8, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -151,7 +151,7 @@
 
     const-string/jumbo v11, "UNFREEZE_REASON_START_PROCESS"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v9, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -165,7 +165,7 @@
 
     const-string/jumbo v12, "UNFREEZE_REASON_LAUNCHING_PROVIDER"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v10, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -179,7 +179,7 @@
 
     const-string/jumbo v13, "UNFREEZE_REASON_RECEIVING_INTENT"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v11, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -193,7 +193,7 @@
 
     const-string/jumbo v14, "UNFREEZE_REASON_EXECUITNG_SERVICE"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v12, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -207,7 +207,7 @@
 
     const-string/jumbo v15, "UNFREEZE_REASON_UIDACTIVE"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v13, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -223,7 +223,7 @@
 
     const-string/jumbo v1, "UNFREEZE_REASON_STARTSERVICE"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v14, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -239,7 +239,7 @@
 
     const-string/jumbo v2, "UNFREEZE_REASON_BINDSERVICE"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v15, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -255,7 +255,7 @@
 
     const-string/jumbo v3, "UNFREEZE_REASON_ACTIVITY"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -271,7 +271,7 @@
 
     const-string/jumbo v4, "UNFREEZE_REASON_BROADCAST"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v1, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -287,7 +287,7 @@
 
     const-string/jumbo v0, "UNFREEZE_REASON_PROVIDER"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -303,7 +303,7 @@
 
     const-string/jumbo v1, "UNFREEZE_REASON_UNBINDSERVICE"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v1, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -319,7 +319,7 @@
 
     const-string/jumbo v0, "UNFREEZE_REASON_STARTPROCESS"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -335,7 +335,7 @@
 
     const-string/jumbo v1, "UNFREEZE_REASON_SERVICEANR"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v1, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -351,7 +351,7 @@
 
     const-string/jumbo v0, "UNFREEZE_REASON_SIGNAL"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -367,7 +367,7 @@
 
     const-string/jumbo v1, "UNFREEZE_REASON_CFB"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v1, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -383,7 +383,7 @@
 
     const-string/jumbo v0, "UNFREEZE_REASON_PROC_STATE"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -399,7 +399,7 @@
 
     const-string/jumbo v1, "UNFREEZE_REASON_OLAF"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     new-instance v1, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -415,7 +415,7 @@
 
     const-string/jumbo v0, "UNFREEZE_REASON_NONE"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;-><init>
+    nop
 
     sput-object v1, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->UNFREEZE_REASON_NONE:Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
@@ -488,7 +488,7 @@
     goto :goto_1
 
     :cond_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->values
+    nop
 
     move-result-object v1
 

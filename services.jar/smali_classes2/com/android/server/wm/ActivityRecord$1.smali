@@ -319,7 +319,7 @@
 
     const-wide/16 v4, 0x4e20
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
+    nop
 
     goto :goto_5
 

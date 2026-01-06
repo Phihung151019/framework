@@ -4247,7 +4247,7 @@
 
     iget p1, p1, Lcom/android/server/job/controllers/JobStatus;->callingUid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs
+    nop
 
     :cond_3
     return-object v1
@@ -6218,7 +6218,7 @@
 
     iget v3, p3, Lcom/android/server/job/controllers/JobStatus;->callingUid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->addRunningJobs
+    nop
 
     iget-object v0, p0, Lcom/android/server/job/JobConcurrencyManager;->mActiveServices:Ljava/util/List;
 
@@ -6377,7 +6377,7 @@
 
     iget p1, p1, Lcom/android/server/job/controllers/JobStatus;->callingUid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs
+    nop
 
     :cond_3
     return v1

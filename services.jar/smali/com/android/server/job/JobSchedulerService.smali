@@ -9055,7 +9055,7 @@
 
     iget p1, p1, Lcom/android/server/job/controllers/JobStatus;->callingUid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs
+    nop
 
     :cond_3
     :goto_1

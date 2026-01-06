@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/database/MARsListManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsListManager;-><init>
+    nop
 
     sput-object v0, Lcom/android/server/am/mars/database/MARsListManager$ListManagerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsListManager;
 

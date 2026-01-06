@@ -34,7 +34,7 @@
 
     const/4 v0, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsHistoryLog;->saveLogToFile
+    nop
 
     return-void
 .end method

@@ -54,7 +54,7 @@
 
     sget-object p1, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->setScreenOnState
+    nop
 
     sget-boolean p2, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -81,7 +81,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsHandler$MARsHandlerHolder;->INSTANCE:Lcom/android/server/am/MARsHandler;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendFirstTriggerMsgToMainHandler
+    nop
 
     return-void
 
@@ -333,7 +333,7 @@
 
     move-result-wide v1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/EventRecorder;->performWrite
+    nop
 
     sput-boolean v5, Lcom/android/server/am/mars/EventRecorder;->mFeatureEnable:Z
 
@@ -525,7 +525,7 @@
     :goto_1
     iget-object v2, p0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger;->-$$Nest$mactionToString
+    nop
 
     move-result-object p1
 
@@ -537,7 +537,7 @@
 
     move-result p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendRunPolicySpecificPkgMsgToMainHandler
+    nop
 
     iget-boolean p0, p2, Lcom/android/server/am/FreecessController;->mGameModeEnabled:Z
 
@@ -570,7 +570,7 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result p1
 
@@ -578,7 +578,7 @@
 
     const/4 p1, -0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendCancelPolicyMsgToMainHandler
+    nop
 
     iget-boolean p1, p0, Lcom/android/server/am/FreecessController;->mGameModeEnabled:Z
 
@@ -666,7 +666,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger;->-$$Nest$mactionToString
+    nop
 
     move-result-object p1
 
@@ -678,7 +678,7 @@
 
     move-result p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendRunPolicySpecificPkgMsgToMainHandler
+    nop
 
     goto :goto_4
 
@@ -711,7 +711,7 @@
 
     move-result p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendCancelPolicyMsgToMainHandler
+    nop
 
     goto :goto_4
 
@@ -724,7 +724,7 @@
 
     move-result p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendCancelPolicyMsgToMainHandler
+    nop
 
     :cond_11
     :goto_4
@@ -764,7 +764,7 @@
 
     sget-object v6, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getScreenOnState
+    nop
 
     move-result v6
 
@@ -778,9 +778,9 @@
 
     if-nez v6, :cond_13
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendFirstTriggerMsgToMainHandler
+    nop
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendRepeatTriggerMsgToMainHandler
+    nop
 
     :cond_13
     const-string/jumbo v6, "com.samsung.android.server.am.ACTION_UI_TRIGGER_POLICY"
@@ -893,14 +893,14 @@
 
     move-result p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendRunPolicySpecificPkgMsgToMainHandler
+    nop
 
     :cond_19
     :goto_6
     return-void
 
     :pswitch_3
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$2;->onReceive$com$android$server$am$MARsTrigger$3
+    nop
 
     return-void
 
@@ -941,7 +941,7 @@
     :cond_1b
     new-instance p0, Lcom/android/server/am/MARsTrigger$14$$ExternalSyntheticLambda0;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$14$$ExternalSyntheticLambda0;-><init>
+    nop
 
     const-class p1, Lcom/android/server/am/mars/database/scpm/ScpmExecutor;
 
@@ -991,7 +991,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/database/scpm/ScpmExecutor$$ExternalSyntheticLambda0;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/ScpmExecutor$$ExternalSyntheticLambda0;-><init>
+    nop
 
     invoke-virtual {p2, v0}, Landroid/os/HandlerExecutor;->execute(Ljava/lang/Runnable;)V
 
@@ -1042,7 +1042,7 @@
 
     new-instance p1, Lcom/android/server/am/mars/database/scpm/ScpmHelper$$ExternalSyntheticLambda0;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/ScpmHelper$$ExternalSyntheticLambda0;-><init>
+    nop
 
     const-wide/16 v0, 0x3c
 
@@ -1143,14 +1143,14 @@
     :goto_c
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->postInit
+    nop
 
     goto :goto_d
 
     :cond_21
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->setSubUserIds
+    nop
 
     :cond_22
     :goto_d
@@ -1230,7 +1230,7 @@
 
     sget-object p0, Lcom/android/server/am/mars/database/MARsDBManager$MARsDBManagerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBManager;->doUpdateCompHistory
+    nop
 
     :cond_24
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
@@ -1239,7 +1239,7 @@
 
     const-string/jumbo v0, "switchUser"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory
+    nop
 
     sget-boolean p2, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -1249,7 +1249,7 @@
 
     if-eqz v0, :cond_26
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setScreenOnFreecessEnabled
+    nop
 
     sget-object v1, Lcom/android/server/am/FreecessHandler$FreecessHandlerHolder;->INSTANCE:Lcom/android/server/am/FreecessHandler;
 
@@ -1270,14 +1270,14 @@
 
     const-string/jumbo v1, "MUM"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->unFreezePackage
+    nop
 
     :cond_27
     iput-boolean v4, p0, Lcom/android/server/am/MARsPolicyManager;->mFirstTimeUpdatePackages:Z
 
     if-eqz v0, :cond_28
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setScreenOnFreecessEnabled
+    nop
 
     :cond_28
     sget-object p2, Lcom/android/server/am/mars/filter/FilterManager$FilterManagerHolder;->INSTANCE:Lcom/android/server/am/mars/filter/FilterManager;
@@ -1303,7 +1303,7 @@
 
     check-cast v1, Lcom/android/server/am/mars/filter/IFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/IFilter;->deInit
+    nop
 
     add-int/2addr v0, v4
 
@@ -1415,17 +1415,17 @@
     :goto_11
     iput-object p0, p2, Lcom/android/server/am/mars/database/MARsDBManager;->mCurrentContext:Landroid/content/Context;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBManager;->registerContentObservers
+    nop
 
     sget-object p2, Lcom/android/server/am/mars/filter/FilterManager$FilterManagerHolder;->INSTANCE:Lcom/android/server/am/mars/filter/FilterManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager;->init
+    nop
 
     sget-object p0, Lcom/android/server/am/MARsHandler$MARsHandlerHolder;->INSTANCE:Lcom/android/server/am/MARsHandler;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendInitDisabledMsgToMainHandler
+    nop
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance
+    nop
 
     sget-object p0, Lcom/android/server/am/mars/database/MARsDBHandler$MARsDBHandlerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBHandler;
 
@@ -1488,7 +1488,7 @@
 
     sget-object p1, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->setScreenOnState
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/MARsTrigger$2;->this$0:Lcom/android/server/am/MARsTrigger;
 
@@ -1628,7 +1628,7 @@
 
     sget-object p0, Lcom/android/server/am/mars/filter/filter/AllowListFilter$AllowListFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/AllowListFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AllowListFilter;->setCarrierAllowList
+    nop
 
     goto :goto_16
 
@@ -1674,7 +1674,7 @@
 
     if-nez v4, :cond_3b
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance
+    nop
 
     sget-object p0, Lcom/android/server/am/mars/database/MARsDBHandler$MARsDBHandlerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBHandler;
 
@@ -1718,11 +1718,11 @@
 
     if-eqz p0, :cond_3b
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance
+    nop
 
     sget-object p0, Lcom/android/server/am/mars/database/MARsDBHandler$MARsDBHandlerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBHandler;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->sendGetSCPMPolicyMsgToDBHandler
+    nop
 
     :cond_3b
     :goto_16

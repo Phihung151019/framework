@@ -80,7 +80,7 @@
 
     iget v4, v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$CustomVisitor;->filterUid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;->getAccessTimeOfOp
+    nop
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

@@ -269,7 +269,7 @@
 
     move-result-object v1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/archive/ScpmPolicyForArchive;->parsePolicyData
+    nop
 
     const-string/jumbo p0, "ScpmPolicyForArchive"
 

@@ -78,7 +78,7 @@
     const/4 p0, 0x0
 
     :goto_1
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/ScpmHelper;->getScpmFileDescriptor
+    nop
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 

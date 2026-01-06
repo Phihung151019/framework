@@ -625,7 +625,7 @@
 
     sget-object v0, Lcom/android/server/am/mars/database/FASDataManager$FASDataManagerHolder;->INSTANCE:Lcom/android/server/am/mars/database/FASDataManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASDataManager;->getFASDataFromDB
+    nop
 
     move-result-object v12
 
@@ -669,15 +669,15 @@
 
     invoke-direct {v9}, Ljava/lang/Object;-><init>()V
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrPkgName
+    nop
 
     move-result-object v7
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrFasReason
+    nop
 
     move-result-object v16
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASReasonToValue
+    nop
 
     move-result v6
 
@@ -686,13 +686,13 @@
     const-wide/16 v17, 0x0
 
     :try_start_7
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrUid
+    nop
 
     move-result-object v19
 
     if-eqz v19, :cond_12
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrUid
+    nop
 
     move-result-object v19
 
@@ -720,13 +720,13 @@
 
     move-result v16
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrDisableResetTime
+    nop
 
     move-result-object v20
 
     if-eqz v20, :cond_13
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;->getStrDisableResetTime
+    nop
 
     move-result-object v0
 

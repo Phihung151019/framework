@@ -178,7 +178,7 @@
 
     const-string/jumbo v12, "bV"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object v8
 

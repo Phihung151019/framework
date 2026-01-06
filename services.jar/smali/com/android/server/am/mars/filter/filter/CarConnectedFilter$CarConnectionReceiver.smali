@@ -25,7 +25,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/CarConnectedFilter$CarConnectionReceiver;->this$0:Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;->queryForState
+    nop
 
     return-void
 .end method

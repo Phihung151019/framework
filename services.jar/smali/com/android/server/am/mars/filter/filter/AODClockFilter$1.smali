@@ -96,7 +96,7 @@
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/AODClockFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AODClockFilter;->getAODClockType
+    nop
 
     return-void
 

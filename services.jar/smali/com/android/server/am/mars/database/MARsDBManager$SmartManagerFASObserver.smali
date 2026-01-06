@@ -40,21 +40,21 @@
 
     const/4 p1, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBManager;->getSettingsValueFromDB
+    nop
 
     return-void
 
     :pswitch_1
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsDBManager$SmartManagerFASObserver;->this$0:Lcom/android/server/am/mars/database/MARsDBManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBManager;->getFreezeExcludeListFromDB
+    nop
 
     return-void
 
     :pswitch_2
     iget-object p0, p0, Lcom/android/server/am/mars/database/MARsDBManager$SmartManagerFASObserver;->this$0:Lcom/android/server/am/mars/database/MARsDBManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBManager;->getDefaultAllowedListDBValues
+    nop
 
     return-void
 

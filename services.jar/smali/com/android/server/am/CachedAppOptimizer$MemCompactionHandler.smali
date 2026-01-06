@@ -93,7 +93,7 @@
     :cond_1
     iget-object v2, v0, Lcom/android/server/am/CachedAppOptimizer$MemCompactionHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->isProcessFrozen
+    nop
 
     move-result v2
 
@@ -164,7 +164,7 @@
 
     iget-object v2, v2, Lcom/android/server/am/CachedAppOptimizer;->mProcessDependencies:Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;->getRss
+    nop
 
     move-result-object v2
 
@@ -172,7 +172,7 @@
 
     move-result-wide v3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smcompactProcess
+    nop
 
     move-result v5
 
@@ -180,7 +180,7 @@
 
     iget-object v7, v7, Lcom/android/server/am/CachedAppOptimizer;->mProcessDependencies:Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;->getRss
+    nop
 
     move-result-object v7
 
@@ -360,7 +360,7 @@
     :cond_6
     iget v2, v1, Landroid/os/Message;->arg1:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$CompactProfile;->values
+    nop
 
     move-result-object v3
 
@@ -399,7 +399,7 @@
 
     iget-object v0, v0, Lcom/android/server/am/CachedAppOptimizer;->mProcessDependencies:Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;->performCompaction
+    nop
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
@@ -714,7 +714,7 @@
 
     iget-object v8, v8, Lcom/android/server/am/CachedAppOptimizer;->mProcessDependencies:Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;->getRss
+    nop
 
     move-result-object v8
 
@@ -920,7 +920,7 @@
 
     iget-object v8, v8, Lcom/android/server/am/CachedAppOptimizer;->mProcessDependencies:Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;->getRss
+    nop
 
     move-result-object v8
 
@@ -937,7 +937,7 @@
 
     if-ne v12, v13, :cond_1c
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->getFreeSwapPercent
+    nop
 
     move-result-wide v21
 
@@ -1056,11 +1056,11 @@
 
     invoke-static {v3, v4}, Lcom/android/server/chimera/umr/KernelMemoryProxy$ReclaimerLog;->write(Ljava/lang/String;Z)V
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smgetUsedZramMemory
+    nop
 
     move-result-wide v3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smthreadCpuTimeNs
+    nop
 
     move-result-wide v11
 
@@ -1068,9 +1068,9 @@
 
     iget-object v13, v13, Lcom/android/server/am/CachedAppOptimizer;->mProcessDependencies:Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;->performCompaction
+    nop
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smthreadCpuTimeNs
+    nop
 
     move-result-wide v13
 
@@ -1078,7 +1078,7 @@
 
     iget-object v15, v15, Lcom/android/server/am/CachedAppOptimizer;->mProcessDependencies:Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$ProcessDependencies;->getRss
+    nop
 
     move-result-object v28
 
@@ -1092,7 +1092,7 @@
 
     sub-long/2addr v13, v11
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->-$$Nest$smgetUsedZramMemory
+    nop
 
     move-result-wide v11
 

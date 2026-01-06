@@ -20,7 +20,7 @@
 .method public final filter(IIILjava/lang/String;)I
     .locals 2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled
+    nop
 
     move-result p2
 
@@ -55,7 +55,7 @@
     :try_start_0
     iget-object p0, p0, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
+    nop
 
     move-result-object p0
 

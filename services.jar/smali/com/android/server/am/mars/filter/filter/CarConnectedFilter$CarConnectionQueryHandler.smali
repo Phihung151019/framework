@@ -18,7 +18,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;->-$$Nest$smnotifyCarDisconnected
+    nop
 
     return-void
 
@@ -35,7 +35,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;->-$$Nest$smnotifyCarDisconnected
+    nop
 
     return-void
 
@@ -50,7 +50,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;->-$$Nest$smnotifyCarDisconnected
+    nop
 
     return-void
 
@@ -65,7 +65,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;->-$$Nest$smnotifyCarDisconnected
+    nop
 
     return-void
 
@@ -100,7 +100,7 @@
 
     const-string/jumbo p2, "android auto on"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -111,7 +111,7 @@
 
     invoke-static {p1, p0}, Landroid/util/Slog;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;->-$$Nest$smnotifyCarDisconnected
+    nop
 
     return-void
 .end method

@@ -146,7 +146,7 @@
 
     const/4 v1, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mIntentReceiver:Lcom/android/server/am/MARsTrigger$2;
 
@@ -154,7 +154,7 @@
 
     const/4 v1, 0x4
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mTriggerIntentReceiver:Lcom/android/server/am/MARsTrigger$2;
 
@@ -162,7 +162,7 @@
 
     const/4 v1, 0x5
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mPolicyIntentReceiver:Lcom/android/server/am/MARsTrigger$2;
 
@@ -170,7 +170,7 @@
 
     const/4 v1, 0x6
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mPolicySBikeIntentReceiver:Lcom/android/server/am/MARsTrigger$2;
 
@@ -178,7 +178,7 @@
 
     const/4 v1, 0x3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$1;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mTCPUReceiver:Lcom/android/server/am/MARsTrigger$1;
 
@@ -186,7 +186,7 @@
 
     const/4 v1, 0x7
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mPolicyGameIntentReceiver:Lcom/android/server/am/MARsTrigger$2;
 
@@ -194,7 +194,7 @@
 
     const/16 v1, 0x8
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mTimeIntentReceiver:Lcom/android/server/am/MARsTrigger$2;
 
@@ -202,7 +202,7 @@
 
     const/4 v1, 0x4
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$1;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mUserActionReceiver:Lcom/android/server/am/MARsTrigger$1;
 
@@ -210,7 +210,7 @@
 
     const/4 v1, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mUserIntentReceiver:Lcom/android/server/am/MARsTrigger$2;
 
@@ -218,7 +218,7 @@
 
     const/4 v1, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$1;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mAppStartUpIntentReceiver:Lcom/android/server/am/MARsTrigger$1;
 
@@ -226,7 +226,7 @@
 
     const/4 v1, 0x2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mEmergencyStateChangedReceiver:Lcom/android/server/am/MARsTrigger$2;
 
@@ -234,7 +234,7 @@
 
     const/4 v1, 0x2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$1;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mSMDBChangedReceiver:Lcom/android/server/am/MARsTrigger$1;
 
@@ -242,7 +242,7 @@
 
     const/4 v1, 0x3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/MARsTrigger;->mScpmPolicyReceiver:Lcom/android/server/am/MARsTrigger$2;
 

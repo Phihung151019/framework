@@ -28,7 +28,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter$1;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter$1;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter;->mCameraDeviceStateCallback:Lcom/android/server/am/mars/filter/filter/CameraInFgsFilter$1;
 
@@ -59,7 +59,7 @@
 
     if-eqz p1, :cond_0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled
+    nop
 
     move-result p1
 
@@ -69,7 +69,7 @@
 
     sget-object p1, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getForegroundServiceStartTime
+    nop
 
     move-result-wide p1
 

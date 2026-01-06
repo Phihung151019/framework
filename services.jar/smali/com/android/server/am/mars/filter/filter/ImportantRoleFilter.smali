@@ -144,7 +144,7 @@
 
     move-result p1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ImportantRoleFilter;->getSystemGalleryHolder
+    nop
 
     if-nez p1, :cond_0
 
@@ -176,7 +176,7 @@
 
     if-gt p1, v0, :cond_0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ImportantRoleFilter;->getSystemGalleryHolder
+    nop
 
     :cond_0
     return-void

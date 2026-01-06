@@ -44,19 +44,19 @@
 
     new-instance v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$1;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr$1;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mProcessObserver:Lcom/android/server/am/mars/util/ForegroundServiceMgr$1;
 
     new-instance v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->getAccesesTimeHelper:Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper;
 
     new-instance v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$$ExternalSyntheticLambda0;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr$$ExternalSyntheticLambda0;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mGetUsingFGSTypeRunnable:Lcom/android/server/am/mars/util/ForegroundServiceMgr$$ExternalSyntheticLambda0;
 
@@ -114,7 +114,7 @@
 .method public final onForegroundServiceStateChanged(Ljava/lang/String;IIZ)V
     .locals 2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr;->isFGSTarget
+    nop
 
     move-result p3
 
@@ -136,7 +136,7 @@
 
     new-instance p3, Lcom/android/server/am/mars/ForegroundServiceRecord;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/ForegroundServiceRecord;-><init>
+    nop
 
     iget-object v0, p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;->mMapFGSRecord:Ljava/util/concurrent/ConcurrentHashMap;
 
@@ -198,7 +198,7 @@
 
     new-instance p3, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$$ExternalSyntheticLambda0;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$$ExternalSyntheticLambda0;-><init>
+    nop
 
     sget-boolean p1, Lcom/android/server/am/mars/MARsUtils;->IS_SUPPORT_FREEZE_FG_SERVICE_FEATURE:Z
 

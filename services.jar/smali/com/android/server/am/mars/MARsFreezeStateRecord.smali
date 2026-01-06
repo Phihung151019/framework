@@ -207,7 +207,7 @@
 
     const-string/jumbo v5, "uid"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object v2
 
@@ -240,7 +240,7 @@
 
     const-string v2, "Abusive"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory
+    nop
 
     sget-boolean v0, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -273,7 +273,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/FreecessPkgStatus;->name:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgMap;->remove
+    nop
 
     goto :goto_1
 
@@ -303,7 +303,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->values
+    nop
 
     move-result-object v1
 
@@ -318,7 +318,7 @@
 
     iget-object v5, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord;->mUnfreezeCounts:[I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->getTypeNum
+    nop
 
     move-result v4
 
@@ -436,7 +436,7 @@
 
     move-result v6
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
+    nop
 
     move-result-object v5
 
@@ -468,7 +468,7 @@
 
     sget-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->UNFREEZE_REASON_ALARM:Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->getTypeNum
+    nop
 
     move-result v0
 
@@ -490,7 +490,7 @@
     :cond_4
     sget-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->UNFREEZE_REASON_PACKET:Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->getTypeNum
+    nop
 
     move-result v0
 
@@ -510,11 +510,11 @@
 
     const/4 v6, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->updateAbnormalAppFirewall
+    nop
 
     iget v0, v5, Lcom/android/server/am/MARsPackageInfo;->uid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->closeSocketsForUid
+    nop
 
     :cond_5
     :goto_2
@@ -526,7 +526,7 @@
 
     const-string/jumbo v6, "excessive_unfreeze"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsHandler;->sendAnomalyMsgToMainHandler
+    nop
 
     const-string v0, "Abusive"
 
@@ -540,7 +540,7 @@
 
     move-result-object p2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory
+    nop
 
     :cond_6
     monitor-exit v4
@@ -549,7 +549,7 @@
 
     sget-object p1, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->UNFREEZE_REASON_ALARM:Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->getTypeNum
+    nop
 
     move-result p1
 
@@ -557,7 +557,7 @@
 
     sget-object p1, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->UNFREEZE_REASON_PACKET:Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->getTypeNum
+    nop
 
     move-result p1
 
@@ -593,7 +593,7 @@
 
     iget-object v1, p2, Lcom/android/server/am/FreecessPkgStatus;->name:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgMap;->put
+    nop
 
     goto :goto_3
 
@@ -643,7 +643,7 @@
 
     sget-object v1, Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->UNFREEZE_TOTAL:Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->getTypeNum
+    nop
 
     move-result v1
 
@@ -656,11 +656,11 @@
     aput v3, v2, v1
 
     :try_start_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->reasonTypeOf
+    nop
 
     move-result-object p3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->getTypeNum
+    nop
 
     move-result p3
 
@@ -676,7 +676,7 @@
 
     invoke-virtual {p3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result p3
 
@@ -688,13 +688,13 @@
 
     iget-object v1, p0, Lcom/android/server/am/mars/MARsFreezeStateRecord;->mFreecessParent:Lcom/android/server/am/FreecessPkgStatus;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->isInFreecessExcludeList
+    nop
 
     move-result p3
 
     if-nez p3, :cond_0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord;->abnormalRealtimeDetectionVer0
+    nop
 
     move-result p3
 
@@ -728,7 +728,7 @@
 
     invoke-static {p3, v0}, Landroid/util/Slog;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord;->handleAbnormalApp
+    nop
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 

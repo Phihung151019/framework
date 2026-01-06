@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr;-><init>
+    nop
 
     sput-object v0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$ForegroundServiceMgrHolder;->INSTANCE:Lcom/android/server/am/mars/util/ForegroundServiceMgr;
 

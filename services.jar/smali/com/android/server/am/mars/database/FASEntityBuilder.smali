@@ -86,7 +86,7 @@
     :cond_0
     new-instance v0, Lcom/android/server/am/mars/database/FASEntity;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntity;-><init>
+    nop
 
     return-object v0
 

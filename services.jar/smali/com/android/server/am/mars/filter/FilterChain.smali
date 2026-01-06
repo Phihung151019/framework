@@ -15,7 +15,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/mars/filter/FilterChain;->mFilter:Lcom/android/server/am/mars/filter/IFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/IFilter;->filter
+    nop
 
     move-result v0
 
@@ -28,7 +28,7 @@
 
     if-eqz p0, :cond_1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChain;->filter
+    nop
 
     move-result p0
 

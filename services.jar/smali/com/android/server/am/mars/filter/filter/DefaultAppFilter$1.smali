@@ -46,7 +46,7 @@
 
     move-result p2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage
+    nop
 
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;
 
@@ -74,12 +74,12 @@
 
     if-gt p2, v0, :cond_1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getDefaultIMEPackage
+    nop
 
     :cond_1
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/DefaultAppFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DefaultAppFilter;->getSubUserIdsDefaultIMEPackage
+    nop
 
     return-void
 .end method

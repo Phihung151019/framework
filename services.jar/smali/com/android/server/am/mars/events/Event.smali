@@ -51,7 +51,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/events/Event;->eventType:Lcom/android/server/am/mars/events/EventType;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->getNumber
+    nop
 
     move-result p0
 
@@ -99,7 +99,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/events/Event;->eventType:Lcom/android/server/am/mars/events/EventType;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->getNumber
+    nop
 
     move-result p0
 

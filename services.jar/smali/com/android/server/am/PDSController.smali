@@ -405,7 +405,7 @@
 
     iget v5, v5, Lcom/android/server/am/pds/PDSPackageInfo;->uid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->isUidRunning
+    nop
 
     move-result v5
 
@@ -633,7 +633,7 @@
 
     if-eqz v0, :cond_2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/HistoryBuffer;->getBuffer
+    nop
 
     move-result-object v0
 
@@ -782,7 +782,7 @@
 
     sget-object v10, Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter$ActiveMusicRecordFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ActiveMusicRecordFilter;->getUidListUsingAudio
+    nop
 
     sget-object v10, Lcom/android/server/am/PDSController;->PDSLock:Lcom/android/server/am/PDSController$Lock;
 
@@ -908,7 +908,7 @@
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterManager;->filterForSpecificPolicy
+    nop
 
     move-result v4
 
@@ -1394,7 +1394,7 @@
 
     move-result-object v1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/HistoryBuffer;->put
+    nop
 
     goto :goto_11
 

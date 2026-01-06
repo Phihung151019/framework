@@ -2867,7 +2867,7 @@
 
     const-string v7, "%.1f"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
+    nop
 
     invoke-virtual {p1, v2}, Landroid/location/GnssStatus;->usedInFix(I)Z
 

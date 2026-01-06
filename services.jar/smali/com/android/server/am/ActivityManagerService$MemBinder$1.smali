@@ -1599,13 +1599,13 @@
     const/4 v9, 0x1
 
     :try_start_e
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setIsDoingGC
+    nop
 
     const-string v9, "DumpMemInfo"
 
     const-wide/16 v0, 0xbb8
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
+    nop
 
     goto :goto_23
 
@@ -1676,7 +1676,7 @@
 
     const/4 v9, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setIsDoingGC
+    nop
 
     goto :goto_27
 
@@ -1720,7 +1720,7 @@
 
     const/4 v9, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setIsDoingGC
+    nop
 
     :cond_35
     throw v0

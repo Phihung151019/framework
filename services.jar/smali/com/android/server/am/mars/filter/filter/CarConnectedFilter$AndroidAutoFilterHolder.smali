@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;-><init>
+    nop
 
     sput-object v0, Lcom/android/server/am/mars/filter/filter/CarConnectedFilter$AndroidAutoFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/CarConnectedFilter;
 

@@ -31,13 +31,13 @@
 
     const-string p3, "FGActivity"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->unFreezePackage
+    nop
 
     sget-object p1, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result p1
 
@@ -101,7 +101,7 @@
     :try_start_2
     iget-object p0, p0, Lcom/android/server/am/FreecessPkgStatus;->freezedRecord:Lcom/android/server/am/mars/MARsFreezeStateRecord;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord;->cancelRestrictState
+    nop
 
     goto :goto_1
 
@@ -177,7 +177,7 @@
     :goto_4
     iget-object p0, p0, Lcom/android/server/am/FreecessController$2;->this$0:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
+    nop
 
     move-result-object p0
 
@@ -194,7 +194,7 @@
 
     iget v1, p0, Lcom/android/server/am/FreecessPkgStatus;->userId:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isMARsTarget
+    nop
 
     move-result p3
 
@@ -215,9 +215,9 @@
 
     move v1, p2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->triggerScreenOnFreezeWithDelay
+    nop
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result p0
 
@@ -267,7 +267,7 @@
     :goto_0
     iget-object p0, p0, Lcom/android/server/am/FreecessController$2;->this$0:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
+    nop
 
     move-result-object p0
 
@@ -284,7 +284,7 @@
 
     iget v1, p0, Lcom/android/server/am/FreecessPkgStatus;->userId:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isMARsTarget
+    nop
 
     move-result p2
 

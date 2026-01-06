@@ -119,7 +119,7 @@
 
     if-eq p3, v2, :cond_1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->getScreenOnState
+    nop
 
     move-result v2
 
@@ -246,7 +246,7 @@
 
     invoke-direct {v0}, Landroid/os/Handler;-><init>()V
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/EdgeAppFilter$1;-><init>
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/EdgeAppFilter;->mCocktailBarSettingsObserver:Landroid/database/ContentObserver;
 
@@ -279,7 +279,7 @@
     iput-boolean p1, p0, Lcom/android/server/am/mars/filter/filter/EdgeAppFilter;->mRegisteredCocktailBarSettingsObserver:Z
 
     :cond_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/EdgeAppFilter;->getCocktailBarPackage
+    nop
 
     return-void
 .end method

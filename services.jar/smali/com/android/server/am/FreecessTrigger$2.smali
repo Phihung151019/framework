@@ -100,7 +100,7 @@
 
     monitor-exit p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result p0
 
@@ -112,7 +112,7 @@
 
     const-string p1, "DeviceIdleOFF"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendUnfreezeActivePackagesMsg
+    nop
 
     goto :goto_1
 
@@ -163,7 +163,7 @@
     :cond_5
     iput-boolean v0, p0, Lcom/android/server/am/FreecessController;->mIsSmartSwitchWorking:Z
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setFreecessEnableForSpecificReason
+    nop
 
     goto :goto_3
 
@@ -184,7 +184,7 @@
 
     const-string/jumbo v1, "OFF by SmartSwitch-Ongoing"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory
+    nop
 
     sget-boolean p0, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -194,7 +194,7 @@
 
     sget-object p0, Lcom/android/server/am/FreecessHandler$FreecessHandlerHolder;->INSTANCE:Lcom/android/server/am/FreecessHandler;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendSetFreecessEnableDelayedMsg
+    nop
 
     goto :goto_3
 
@@ -233,7 +233,7 @@
     :goto_2
     iput-boolean v1, p0, Lcom/android/server/am/FreecessController;->mIsSmartSwitchWorking:Z
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setFreecessEnableForSpecificReason
+    nop
 
     :cond_9
     :goto_3
@@ -293,7 +293,7 @@
 
     sget-object v1, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
+    nop
 
     move-result-object v1
 
@@ -316,7 +316,7 @@
 
     const-string/jumbo v1, "uid"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object p0
 

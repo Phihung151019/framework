@@ -386,7 +386,7 @@
 
     const-string v8, "FILTER 4 add to bound"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     :cond_5
     iget-object v5, p0, Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;->mBoundedWidgetPkgs:Landroid/util/ArrayMap;
@@ -513,7 +513,7 @@
     :goto_1
     const-string v2, "FILTER 4 remove from running"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     iget-object v2, p0, Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;->mRunningWidgets:Landroid/util/ArrayMap;
 
@@ -565,7 +565,7 @@
 
     const-string v2, "FILTER 4 remove from bound"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;->mBoundedWidgetPkgs:Landroid/util/ArrayMap;
 
@@ -678,7 +678,7 @@
 
     const-string v2, "FILTER 4 add to running"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;->mRunningWidgets:Landroid/util/ArrayMap;
 

@@ -79,7 +79,7 @@
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AllowListFilter;->mContext:Landroid/content/Context;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AllowListFilter;->setCarrierAllowList
+    nop
 
     return-void
 .end method

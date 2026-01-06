@@ -23,7 +23,7 @@
 
     new-instance v1, Lcom/android/server/am/mars/MARsBigData$1;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData$1;-><init>
+    nop
 
     iput-object v1, v0, Lcom/android/server/am/mars/MARsBigData;->mIntentReceiver:Lcom/android/server/am/mars/MARsBigData$1;
 

@@ -371,7 +371,7 @@
 
     move-result v3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->isFreezedPackage
+    nop
 
     move-result v1
 
@@ -381,7 +381,7 @@
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v1
 
@@ -450,7 +450,7 @@
     monitor-enter v3
 
     :try_start_1
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getFrozenPackageStatus
+    nop
 
     move-result-object v1
 
@@ -503,7 +503,7 @@
 
     const-string v3, "Alarm"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->unFreezePackage
+    nop
 
     goto :goto_5
 
@@ -1664,7 +1664,7 @@
     :try_start_0
     iget-object v2, v2, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
+    nop
 
     move-result-object v2
 
@@ -1685,7 +1685,7 @@
     goto :goto_3
 
     :cond_2
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v5
 
@@ -1705,7 +1705,7 @@
 
     sget-object v2, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->matchFreezeState
+    nop
 
     move-result p0
 
@@ -1748,7 +1748,7 @@
 
     sget-object v2, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->matchFreezeState
+    nop
 
     move-result p0
 
@@ -8942,7 +8942,7 @@
 
     const/16 v3, 0x18
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
+    nop
 
     move-result v3
 
@@ -8950,7 +8950,7 @@
 
     const/16 v3, 0x17
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
+    nop
 
     move-result v3
     :try_end_0

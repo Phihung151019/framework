@@ -112,7 +112,7 @@
 
     new-instance v1, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;-><init>
+    nop
 
     if-eqz v0, :cond_1
 

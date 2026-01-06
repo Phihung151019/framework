@@ -7,23 +7,23 @@
 .method public static m(Lcom/android/server/am/mars/filter/FilterFactory;ILcom/android/server/am/mars/filter/FilterChainBuilder;II)V
     .locals 0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
+    nop
 
     move-result-object p1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
+    nop
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
+    nop
 
     move-result-object p1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
+    nop
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterFactory;->getFilter
+    nop
 
     move-result-object p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/FilterChainBuilder;->add
+    nop
 
     return-void
 .end method

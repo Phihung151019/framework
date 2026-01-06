@@ -907,7 +907,7 @@
 
     const-string/jumbo v5, "wP"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object v0
 
@@ -1012,7 +1012,7 @@
 
     const-string/jumbo v4, "wP"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object v0
 

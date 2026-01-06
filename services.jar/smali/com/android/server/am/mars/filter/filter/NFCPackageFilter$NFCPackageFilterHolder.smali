@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;-><init>
+    nop
 
     sput-object v0, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter$NFCPackageFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;
 

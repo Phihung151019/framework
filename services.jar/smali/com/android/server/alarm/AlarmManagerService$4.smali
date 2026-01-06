@@ -1882,7 +1882,7 @@
 
     const/16 v14, 0x19
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
+    nop
 
     move-result v13
 

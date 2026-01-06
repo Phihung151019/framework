@@ -41,7 +41,7 @@
 
     const-string v4, "FREEZE_TOTAL"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>
+    nop
 
     sput-object v0, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->FREEZE_TOTAL:Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
@@ -57,7 +57,7 @@
 
     const-string v5, "FREEZE_REASON_LCDON"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>
+    nop
 
     new-instance v2, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
@@ -71,7 +71,7 @@
 
     const-string v6, "FREEZE_REASON_LCDOFF"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>
+    nop
 
     new-instance v3, Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 
@@ -85,7 +85,7 @@
 
     const-string v7, "FREEZE_REASON_OLAF"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;-><init>
+    nop
 
     filled-new-array {v0, v1, v2, v3}, [Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;
 

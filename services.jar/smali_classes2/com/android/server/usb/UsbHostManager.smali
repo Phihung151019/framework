@@ -1338,7 +1338,7 @@
 
     move-result-object v4
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
+    nop
 
     move v4, v5
 

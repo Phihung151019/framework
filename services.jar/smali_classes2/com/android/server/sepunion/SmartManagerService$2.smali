@@ -81,7 +81,7 @@
 
     const-string/jumbo v3, "uid"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object p1
 

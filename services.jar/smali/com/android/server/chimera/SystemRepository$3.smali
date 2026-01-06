@@ -48,7 +48,7 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result p1
 
@@ -82,7 +82,7 @@
 
     const/16 v3, 0x7d0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->enterOLAF
+    nop
 
     goto :goto_0
 
@@ -93,7 +93,7 @@
 
     sget-object p1, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->exitOLAF
+    nop
 
     :cond_2
     :goto_0

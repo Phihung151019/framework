@@ -64,7 +64,7 @@
 
     const-string v2, "%.3f"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
+    nop
 
     iget p1, p1, Landroid/media/SoundDoseRecord;->averageMel:F
 

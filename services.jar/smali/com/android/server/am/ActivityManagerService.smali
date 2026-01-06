@@ -2161,7 +2161,7 @@
 
     const/4 v7, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     invoke-virtual {v4, v0}, Lcom/android/server/am/ProviderMap;->getProvidersForName(Ljava/lang/String;)Ljava/util/ArrayList;
 
@@ -2179,7 +2179,7 @@
 
     iget-object v2, v2, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -2268,7 +2268,7 @@
 
     iget-object v0, v0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     :goto_24
     move-object/from16 v3, p2
@@ -2286,7 +2286,7 @@
 
     iget-object v1, v1, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     throw v0
 
@@ -2933,7 +2933,7 @@
 
     sget-object v2, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->dumpMARsCommand
+    nop
 
     goto/16 :goto_2c
 
@@ -2950,7 +2950,7 @@
 
     sget-object v2, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->dumpFreecessCommand
+    nop
 
     goto/16 :goto_2c
 
@@ -4773,7 +4773,7 @@
 
     invoke-direct {v13}, Ljava/lang/Object;-><init>()V
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;-><init>
+    nop
 
     move-object v13, v6
 
@@ -5996,7 +5996,7 @@
 
     iput-object v2, v4, Lcom/android/server/am/mars/database/FASDataManager;->context:Landroid/content/Context;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance
+    nop
 
     sget-object v2, Lcom/android/server/am/mars/database/MARsDBHandler$MARsDBHandlerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBHandler;
 
@@ -7535,7 +7535,7 @@
 
     invoke-direct {v2}, Ljava/lang/Object;-><init>()V
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;-><init>
+    nop
 
     iput-object p2, p1, Lcom/android/server/am/ProcessStateController$Builder;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -16799,7 +16799,7 @@
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v6
 
@@ -16864,7 +16864,7 @@
     goto :goto_5
 
     :goto_6
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy
+    nop
 
     goto :goto_8
 
@@ -17504,7 +17504,7 @@
 
     const-string/jumbo v0, "com.samsung.android.permission.SEM_APP_RESTRICTION"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->hasPermission
+    nop
 
     move-result v0
 
@@ -17515,7 +17515,7 @@
     return p0
 
     :cond_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->canRestrictBySEPWithoutPermissionCheck
+    nop
 
     move-result p0
 
@@ -17968,13 +17968,13 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsEnabled
+    nop
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp
+    nop
 
     move-result p0
 
@@ -18628,7 +18628,7 @@
 
     if-eqz v10, :cond_1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp
+    nop
 
     move-result v5
 
@@ -18648,7 +18648,7 @@
     monitor-enter v5
 
     :try_start_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
+    nop
 
     move-result-object v2
 
@@ -18759,7 +18759,7 @@
 
     iget-object v3, v3, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->onCleanupApplicationRecordLocked
+    nop
 
     monitor-exit v2
     :try_end_1
@@ -20008,13 +20008,13 @@
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v3
 
     if-eqz v3, :cond_10
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp
+    nop
 
     move-result v3
 
@@ -20024,7 +20024,7 @@
 
     const-string/jumbo v4, "UserClearData"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->addRestrictListAvoidAssoicationLaunch
+    nop
 
     goto :goto_7
 
@@ -20514,7 +20514,7 @@
 
     const-string/jumbo v0, "com.samsung.android.permission.SEM_APP_RESTRICTION"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->hasPermission
+    nop
 
     move-result v0
 
@@ -20527,7 +20527,7 @@
     :cond_0
     const-string/jumbo v0, "default"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->removeRestrictedInfo
+    nop
 
     move-result-object v0
 
@@ -20573,7 +20573,7 @@
 
     const-string/jumbo v2, "SEP"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->addDebugInfoToHistory
+    nop
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -23098,13 +23098,13 @@
     const/4 v4, 0x1
 
     :try_start_3
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setIsDoingGC
+    nop
 
     const-string v5, "DumpMemInfo"
 
     const-wide/16 v6, 0xbb8
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
+    nop
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -23201,7 +23201,7 @@
     const/4 v4, 0x0
 
     :try_start_9
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setIsDoingGC
+    nop
 
     goto/16 :goto_22
 
@@ -23273,7 +23273,7 @@
 
     sget-object v5, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setIsDoingGC
+    nop
 
     :cond_1e
     throw v0
@@ -27185,9 +27185,9 @@
     :cond_1a
     sget-object v0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->dumpMARs
+    nop
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->dumpMARsHistory
+    nop
 
     sget-boolean v0, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -27197,7 +27197,7 @@
 
     if-eqz v1, :cond_1b
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->dumpFreecess
+    nop
 
     :cond_1b
     sget-object v0, Lcom/android/server/am/PDSController;->PDSLock:Lcom/android/server/am/PDSController$Lock;
@@ -27654,7 +27654,7 @@
 
     const-wide/16 v3, 0x7530
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
+    nop
 
     goto :goto_0
 
@@ -27677,7 +27677,7 @@
 
     const/4 p2, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     new-instance v8, Landroid/os/RemoteCallback;
 
@@ -30378,7 +30378,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     move-result p0
 
@@ -33819,7 +33819,7 @@
 
     sget-object v5, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->postInit
+    nop
 
     sget-boolean v5, Lcom/android/server/am/FreecessController;->IS_MINIMIZE_OLAF_LOCK:Z
 
@@ -33833,7 +33833,7 @@
 
     const/4 v14, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setScreenOnFreecessEnabled
+    nop
 
     iput-boolean v14, v5, Lcom/android/server/am/FreecessController;->FREECESS_ENHANCEMENT:Z
 
@@ -33861,7 +33861,7 @@
 
     const/4 v14, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$FreecessThread;-><init>
+    nop
 
     invoke-virtual {v10}, Landroid/os/HandlerThread;->start()V
 
@@ -33877,7 +33877,7 @@
 
     const/4 v12, 0x2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$FreecessThread;-><init>
+    nop
 
     invoke-virtual {v4}, Landroid/os/HandlerThread;->start()V
 
@@ -34086,7 +34086,7 @@
 
     new-instance v6, Lcom/android/server/am/mars/HistoryBuffer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/HistoryBuffer;-><init>
+    nop
 
     iput-object v6, v4, Lcom/android/server/am/PDSController;->mHistoryBufferArray:Lcom/android/server/am/mars/HistoryBuffer;
 
@@ -35478,13 +35478,13 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result p1
 
     if-eqz p1, :cond_1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp
+    nop
 
     move-result p1
 
@@ -35494,7 +35494,7 @@
 
     const-string/jumbo p2, "UserForceStop"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->addRestrictListAvoidAssoicationLaunch
+    nop
 
     :cond_1
     return-void
@@ -37213,7 +37213,7 @@
 
     const/16 v0, 0xa
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/Freezer;->freezeBinder
+    nop
 
     move-result p0
 
@@ -37477,7 +37477,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->hasPermission
+    nop
 
     move-result v1
 
@@ -37541,7 +37541,7 @@
 
     iget v9, v8, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isCurrentUser
+    nop
 
     move-result v9
 
@@ -37557,7 +37557,7 @@
 
     iget v10, v8, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertDisableReasonToDBValue
+    nop
 
     move-result-object v10
 
@@ -37579,7 +37579,7 @@
 
     iget v10, v8, Lcom/android/server/am/MARsPackageInfo;->fasType:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASTypeToReason
+    nop
 
     move-result-object v10
 
@@ -37598,7 +37598,7 @@
 
     iget v10, v8, Lcom/android/server/am/MARsPackageInfo;->fasType:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASTypeToReason
+    nop
 
     move-result-object v10
 
@@ -38860,7 +38860,7 @@
 
     aget-object v3, v3, v5
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy
+    nop
 
     goto :goto_1
 
@@ -38877,7 +38877,7 @@
 
     const-string/jumbo v3, "com.samsung.android.spay"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->cancelDisablePolicy
+    nop
 
     :cond_5
     :goto_1
@@ -40254,7 +40254,7 @@
 
     const-string/jumbo v1, "android.permission.INTERACT_ACROSS_USERS"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->hasPermission
+    nop
 
     move-result v1
 
@@ -40262,7 +40262,7 @@
 
     const-string/jumbo v1, "android.permission.INTERACT_ACROSS_USERS_FULL"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->hasPermission
+    nop
 
     move-result v1
 
@@ -43637,7 +43637,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->hasPermission
+    nop
 
     move-result v1
 
@@ -43703,7 +43703,7 @@
 
     iget v10, v8, Lcom/android/server/am/MARsPackageInfo;->uid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->canRestrictBySEPWithoutPermissionCheck
+    nop
 
     move-result v9
 
@@ -43719,7 +43719,7 @@
 
     iget v10, v8, Lcom/android/server/am/MARsPackageInfo;->fasType:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASTypeToReason
+    nop
 
     move-result-object v10
 
@@ -43745,7 +43745,7 @@
 
     iget v10, v8, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertDisableReasonToDBValue
+    nop
 
     move-result-object v10
 
@@ -43803,7 +43803,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->hasPermission
+    nop
 
     move-result v1
 
@@ -43867,7 +43867,7 @@
 
     iget v9, v8, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isCurrentUser
+    nop
 
     move-result v9
 
@@ -43900,7 +43900,7 @@
 
     if-ne v9, v10, :cond_5
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASTypeToReason
+    nop
 
     move-result-object v9
 
@@ -43924,7 +43924,7 @@
 
     iget v9, v8, Lcom/android/server/am/MARsPackageInfo;->fasType:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASTypeToReason
+    nop
 
     move-result-object v9
 
@@ -43937,7 +43937,7 @@
 
     iget v9, v8, Lcom/android/server/am/MARsPackageInfo;->fasType:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASTypeToReason
+    nop
 
     move-result-object v9
 
@@ -43950,7 +43950,7 @@
 
     iget v9, v8, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertDisableReasonToDBValue
+    nop
 
     move-result-object v9
 
@@ -44011,7 +44011,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->hasPermission
+    nop
 
     move-result v0
 
@@ -44035,7 +44035,7 @@
 
     move-result p3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
+    nop
 
     move-result-object p2
 
@@ -44045,7 +44045,7 @@
 
     iget v2, p2, Lcom/android/server/am/MARsPackageInfo;->userId:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isCurrentUser
+    nop
 
     move-result p0
 
@@ -44065,7 +44065,7 @@
 
     iget p0, p2, Lcom/android/server/am/MARsPackageInfo;->disableReason:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertDisableReasonToDBValue
+    nop
 
     move-result-object v0
 
@@ -44089,7 +44089,7 @@
     goto :goto_2
 
     :cond_2
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertDisableReasonToDBValue
+    nop
 
     move-result-object v0
 
@@ -44107,7 +44107,7 @@
 
     iget p0, p2, Lcom/android/server/am/MARsPackageInfo;->fasType:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASTypeToReason
+    nop
 
     move-result-object v0
 
@@ -44123,7 +44123,7 @@
     goto :goto_2
 
     :cond_5
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASTableContract;->convertFASTypeToReason
+    nop
 
     move-result-object v0
 
@@ -45981,7 +45981,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v2
 
@@ -45993,13 +45993,13 @@
 
     iget v3, p2, Lcom/android/server/am/ProcessRecord;->userId:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isForegroundPackage
+    nop
 
     move-result v2
 
     if-nez v2, :cond_e
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getScreenOnState
+    nop
 
     move-result v0
 
@@ -49260,7 +49260,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->useFreezer
+    nop
 
     move-result p0
 
@@ -49324,7 +49324,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/Freezer;->isFreezerSupported
+    nop
 
     move-result p0
     :try_end_0
@@ -49740,7 +49740,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->isProcessFrozen
+    nop
 
     move-result p0
 
@@ -55042,7 +55042,7 @@
     :cond_4
     iput-boolean v8, v0, Lcom/android/server/am/FreecessController;->mIsDumpstateWorking:Z
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setFreecessEnableForSpecificReason
+    nop
 
     :cond_5
     :goto_5
@@ -55100,7 +55100,7 @@
 
     const/16 v14, 0x3e8
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->enterOLAF
+    nop
 
     new-instance v6, Landroid/content/Intent;
 
@@ -59706,7 +59706,7 @@
 
     move v4, p5
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->restrictBySEP
+    nop
 
     move-result p0
 
@@ -65782,7 +65782,7 @@
 
     move-result-object v15
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
+    nop
 
     move-result v0
 
@@ -68371,7 +68371,7 @@
 
     const-string v4, "BinderTracker"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
+    nop
 
     goto :goto_0
 
@@ -68521,7 +68521,7 @@
 
     invoke-virtual {v10}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/Freezer;->isFreezerSupported
+    nop
 
     move-result v10
 
@@ -68533,7 +68533,7 @@
 
     const/16 v11, 0x17
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP
+    nop
 
     :cond_7
     new-instance v10, Ljava/lang/StringBuilder;
@@ -73595,7 +73595,7 @@
 
     sget-object v2, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsEnabled
+    nop
 
     move-result v2
 
@@ -73681,7 +73681,7 @@
 
     iget-object v5, v3, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->isFreezedPackage
+    nop
 
     move-result v4
     :try_end_3
@@ -74518,7 +74518,7 @@
 
     iget v1, v1, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->updateForegroundPackageToPkgStatus
+    nop
 
     :cond_5
     invoke-virtual {p4, p2}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -74598,7 +74598,7 @@
 
     iget v0, v0, Landroid/content/pm/ApplicationInfo;->uid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->updateForegroundPackageToPkgStatus
+    nop
 
     :cond_7
     :goto_3
@@ -74935,7 +74935,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->updateRestrictionInfo
+    nop
 
     move-result p0
 
@@ -75111,7 +75111,7 @@
 
     iget-object v4, v2, Lcom/android/server/am/ProcessRecord;->processName:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->isFreezedPackage
+    nop
 
     move-result v3
     :try_end_3
@@ -75394,7 +75394,7 @@
 
     const/16 v3, 0xf
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily
+    nop
 
     invoke-virtual/range {v16 .. v16}, Ljava/util/concurrent/atomic/AtomicInteger;->incrementAndGet()I
     :try_end_1

@@ -156,7 +156,7 @@
 
     if-eqz v1, :cond_2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/ScpmApiContract$MessageType;->values
+    nop
 
     move-result-object v1
 
@@ -180,7 +180,7 @@
     const/4 v4, 0x0
 
     :goto_1
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/ScpmHelper;->getScpmFileDescriptor
+    nop
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
 

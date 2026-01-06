@@ -49,7 +49,7 @@
 
     new-instance p1, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/PredownloadFilter$TargetPackageTuple;-><init>
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mTempAllowlist:Ljava/util/ArrayList;
 
@@ -90,7 +90,7 @@
 
     new-instance p1, Lcom/android/server/am/mars/filter/filter/PredownloadFilter$PredownloadRequestReceiver;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/PredownloadFilter$PredownloadRequestReceiver;-><init>
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/PredownloadFilter;->mReceiver:Lcom/android/server/am/mars/filter/filter/PredownloadFilter$PredownloadRequestReceiver;
 

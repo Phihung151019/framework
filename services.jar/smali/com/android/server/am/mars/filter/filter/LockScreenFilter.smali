@@ -416,7 +416,7 @@
 
     const/4 v1, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;-><init>
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceObserver:Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;
 
@@ -433,7 +433,7 @@
 
     const/4 v1, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;-><init>
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->mLockClockFaceSubObserver:Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;
 
@@ -484,9 +484,9 @@
 
     :cond_2
     :goto_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFace
+    nop
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFaceSub
+    nop
 
     return-void
 .end method

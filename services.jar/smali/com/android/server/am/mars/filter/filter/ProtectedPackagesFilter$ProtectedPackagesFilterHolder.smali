@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/ProtectedPackagesFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/ProtectedPackagesFilter;-><init>
+    nop
 
     sput-object v0, Lcom/android/server/am/mars/filter/filter/ProtectedPackagesFilter$ProtectedPackagesFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/ProtectedPackagesFilter;
 

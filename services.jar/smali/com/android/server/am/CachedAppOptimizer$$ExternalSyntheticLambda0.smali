@@ -79,11 +79,11 @@
 
     iget-wide v3, v0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDebounceTimeout:J
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->updateEarliestFreezableTime
+    nop
 
     move-result-wide v3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP
+    nop
 
     :cond_3
     :goto_0
@@ -98,7 +98,7 @@
 
     const/16 p0, 0x13
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP
+    nop
 
     const/4 p0, 0x1
 

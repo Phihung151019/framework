@@ -13,7 +13,7 @@
 .method public constructor <init>(Lcom/android/server/am/mars/events/EventType;Ljava/lang/Integer;JLcom/android/server/am/FreezeResult;I)V
     .locals 0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/Event;-><init>
+    nop
 
     iput-object p5, p0, Lcom/android/server/am/mars/events/FreezeSkipEvent;->result:Lcom/android/server/am/FreezeResult;
 
@@ -51,7 +51,7 @@
 
     iget-object v2, p0, Lcom/android/server/am/mars/events/Event;->eventType:Lcom/android/server/am/mars/events/EventType;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->getNumber
+    nop
 
     move-result v2
 
@@ -115,7 +115,7 @@
 
     iget-object v1, p0, Lcom/android/server/am/mars/events/Event;->eventType:Lcom/android/server/am/mars/events/EventType;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/events/EventType;->getNumber
+    nop
 
     move-result v1
 

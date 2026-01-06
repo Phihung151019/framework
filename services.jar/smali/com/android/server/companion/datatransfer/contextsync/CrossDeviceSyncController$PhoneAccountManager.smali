@@ -51,7 +51,7 @@
 
     const-string/jumbo v1, "com.android.server.companion.datatransfer.contextsync.extra.ASSOCIATION_ID"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object p2
 

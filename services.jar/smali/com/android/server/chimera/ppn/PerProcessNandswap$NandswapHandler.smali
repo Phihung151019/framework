@@ -180,7 +180,7 @@
     monitor-enter v0
 
     :try_start_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getFrozenPackageStatus
+    nop
 
     move-result-object p2
 

@@ -34,7 +34,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v1
 
@@ -44,7 +44,7 @@
 
     move-result v1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isMARsTarget
+    nop
 
     move-result v0
 

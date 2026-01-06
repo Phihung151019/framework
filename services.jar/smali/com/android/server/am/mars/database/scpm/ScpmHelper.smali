@@ -169,7 +169,7 @@
 
     sget-object p0, Lcom/android/server/am/mars/database/scpm/archive/ScpmPolicyForArchive$ScpmPolicyForArchiveHolder;->INSTANCE:Lcom/android/server/am/mars/database/scpm/archive/ScpmPolicyForArchive;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/scpm/archive/ScpmPolicyForArchive;->setSCPMPolicy
+    nop
 
     goto :goto_2
 

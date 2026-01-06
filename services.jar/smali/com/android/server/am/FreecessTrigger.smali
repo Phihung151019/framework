@@ -29,7 +29,7 @@
 
     new-instance v0, Lcom/android/server/am/FreecessTrigger$1;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessTrigger$1;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/FreecessTrigger;->mIntentReceiver:Lcom/android/server/am/FreecessTrigger$1;
 
@@ -37,7 +37,7 @@
 
     const/4 v1, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/FreecessTrigger;->mPkgIntentReceiver:Lcom/android/server/am/FreecessTrigger$2;
 
@@ -45,7 +45,7 @@
 
     const/4 v1, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/FreecessTrigger;->mSmartSwitchIntentReceiver:Lcom/android/server/am/FreecessTrigger$2;
 
@@ -53,7 +53,7 @@
 
     const/4 v1, 0x2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessTrigger$2;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/FreecessTrigger;->mIntentReceiverForBird:Lcom/android/server/am/FreecessTrigger$2;
 

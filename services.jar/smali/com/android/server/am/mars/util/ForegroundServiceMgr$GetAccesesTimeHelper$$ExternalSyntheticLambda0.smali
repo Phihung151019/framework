@@ -49,7 +49,7 @@
 
     new-instance p0, Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$$ExternalSyntheticLambda1;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ForegroundServiceMgr$GetAccesesTimeHelper$$ExternalSyntheticLambda1;-><init>
+    nop
 
     invoke-direct {v13, p0}, Landroid/os/RemoteCallback;-><init>(Landroid/os/RemoteCallback$OnResultListener;)V
 

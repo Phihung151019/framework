@@ -24,7 +24,7 @@
 .method public final filter(IIILjava/lang/String;)I
     .locals 0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled
+    nop
 
     move-result p1
 

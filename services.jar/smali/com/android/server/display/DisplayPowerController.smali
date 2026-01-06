@@ -3479,7 +3479,7 @@
 
     const-string v6, "("
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
+    nop
 
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -3551,7 +3551,7 @@
 
     const-string v0, " (adj:"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
+    nop
 
     iget-object p0, p0, Lcom/android/server/display/AutomaticBrightnessController;->mCurrentBrightnessMapper:Lcom/android/server/display/BrightnessMappingStrategy;
 

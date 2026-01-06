@@ -140,7 +140,7 @@
 
     const-string v3, "FGSN"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData;->sendBigData
+    nop
 
     goto :goto_0
 
@@ -340,9 +340,9 @@
 
     move-result-object v1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData$UsageInfo;-><init>
+    nop
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData$UsageInfo;->toString
+    nop
 
     move-result-object v0
 

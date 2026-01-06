@@ -66,7 +66,7 @@
 
     if-gt v5, v6, :cond_4
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/netlink/FreecessNetlinkMessage;->newFreecessRequest
+    nop
 
     move-result-object v6
 
@@ -135,11 +135,11 @@
 
     sget v7, Lcom/android/server/am/FreecessController;->DEFAULT_RECV_BUFSIZE:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/netlink/NetlinkSocket;->recvMessage
+    nop
 
     move-result-object v6
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/netlink/StructFreeCessMsg;->parse
+    nop
 
     move-result-object v6
 
@@ -160,7 +160,7 @@
 
     iput-boolean p0, v2, Lcom/android/server/am/FreecessController;->mIsUsingCgroupV2:Z
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->updateCgroupVersionToSsrm
+    nop
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
@@ -229,7 +229,7 @@
 
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->reportSocketResult
+    nop
 
     if-eqz v2, :cond_8
 
@@ -239,13 +239,13 @@
 
     const-string v2, "FreecessHandler"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$FreecessThread;-><init>
+    nop
 
     iput-object v1, p0, Lcom/android/server/am/FreecessHandler;->mFreecessThread:Lcom/android/server/am/FreecessHandler$FreecessThread;
 
     invoke-virtual {v1}, Landroid/os/HandlerThread;->start()V
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->receiveNetLinkInformationContinously
+    nop
 
     :cond_8
     return-void

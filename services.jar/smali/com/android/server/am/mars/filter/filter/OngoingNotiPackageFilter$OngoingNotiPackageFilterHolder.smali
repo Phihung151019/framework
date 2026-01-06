@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;-><init>
+    nop
 
     sput-object v0, Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter$OngoingNotiPackageFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/OngoingNotiPackageFilter;
 

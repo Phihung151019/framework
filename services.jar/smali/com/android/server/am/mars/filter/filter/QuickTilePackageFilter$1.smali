@@ -25,7 +25,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/QuickTilePackageFilter;->getActiveQuickTilePackages
+    nop
 
     return-void
 .end method

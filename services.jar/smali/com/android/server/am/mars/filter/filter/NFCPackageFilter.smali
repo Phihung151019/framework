@@ -207,15 +207,15 @@
 
     iput v0, p0, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->userId:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->getPaymentDefaultPackageFromRoleManager
+    nop
 
     move-result-object v0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->setPaymentDefaultPackage
+    nop
 
     new-instance v0, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter$$ExternalSyntheticLambda0;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/NFCPackageFilter$$ExternalSyntheticLambda0;-><init>
+    nop
 
     iput-object v0, p0, Lcom/android/server/am/mars/filter/filter/NFCPackageFilter;->mOnRoleHoldersChangedListener:Lcom/android/server/am/mars/filter/filter/NFCPackageFilter$$ExternalSyntheticLambda0;
 
@@ -274,7 +274,7 @@
 
     :cond_0
     :goto_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     monitor-exit v0
 

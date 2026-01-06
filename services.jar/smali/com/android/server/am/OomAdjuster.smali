@@ -1404,7 +1404,7 @@
 
     iget-object v3, v1, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->useCompaction
+    nop
 
     move-result v17
 
@@ -1416,7 +1416,7 @@
 
     sget-object v0, Lcom/android/server/am/CachedAppOptimizer$CancelCompactReason;->OOM_IMPROVEMENT:Lcom/android/server/am/CachedAppOptimizer$CancelCompactReason;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->cancelCompactionForProcess
+    nop
 
     :cond_1
     iget-object v0, v1, Lcom/android/server/am/OomAdjuster;->mService:Lcom/android/server/am/ActivityManagerService;
@@ -4348,7 +4348,7 @@
     :goto_0
     iget v14, v0, Lcom/android/server/am/OomAdjuster;->mAdjSeq:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/ProcessCachedOptimizerRecord;->setShouldNotFreeze
+    nop
 
     :cond_6
     iget-object v12, v5, Lcom/android/server/am/ProcessRecord;->info:Landroid/content/pm/ApplicationInfo;
@@ -7968,7 +7968,7 @@
 
     const/4 v12, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/ProcessCachedOptimizerRecord;->setShouldNotFreeze
+    nop
 
     move-result v8
 
@@ -8600,7 +8600,7 @@
 
     const/4 v0, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/ProcessCachedOptimizerRecord;->setShouldNotFreeze
+    nop
 
     move-result v1
 
@@ -8872,7 +8872,7 @@
 
     const/4 v3, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/ProcessCachedOptimizerRecord;->setShouldNotFreeze
+    nop
 
     move-result v5
 
@@ -9643,7 +9643,7 @@
 
     const/4 v7, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/ProcessCachedOptimizerRecord;->setShouldNotFreeze
+    nop
 
     move-result v3
 
@@ -11903,7 +11903,7 @@
 
     if-eqz v16, :cond_a
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->getFreeSwapPercent
+    nop
 
     move-result-wide v4
 
@@ -14510,7 +14510,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->useFreezer
+    nop
 
     move-result v1
 
@@ -14564,11 +14564,11 @@
 
     check-cast v2, Lcom/android/server/am/ProcessRecord;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->getUnfreezeReasonCodeFromOomAdjReason
+    nop
 
     move-result v3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily
+    nop
 
     add-int/lit8 p2, p2, 0x1
 
@@ -14585,7 +14585,7 @@
 
     iget-object v0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->useFreezer
+    nop
 
     move-result v1
 
@@ -14956,11 +14956,11 @@
 
     const-wide/16 p2, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->updateEarliestFreezableTime
+    nop
 
     move-result-wide p2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP
+    nop
 
     return-void
 
@@ -14976,11 +14976,11 @@
     :cond_16
     iget-wide p2, v0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDebounceTimeout:J
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->updateEarliestFreezableTime
+    nop
 
     move-result-wide p2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP
+    nop
 
     return-void
 
@@ -15005,11 +15005,11 @@
 
     :cond_19
     :goto_11
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->getUnfreezeReasonCodeFromOomAdjReason
+    nop
 
     move-result p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP
+    nop
 
     return-void
 .end method

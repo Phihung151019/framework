@@ -219,7 +219,7 @@
 
     const-string v1, "FASDataManager"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASDataManager;->checkDisableReasonColumnExist
+    nop
 
     move-result-object v0
 
@@ -229,7 +229,7 @@
 
     if-eqz v0, :cond_0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASDataManager;->checkPreBatteryUsageColumnExist
+    nop
 
     move-result-object v0
 
@@ -247,7 +247,7 @@
     goto :goto_1
 
     :cond_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASDataManager;->checkPreBatteryUsageColumnExist
+    nop
 
     move-result-object v0
 
@@ -342,7 +342,7 @@
 
     if-eqz v4, :cond_2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASDataManager;->checkDisableReasonColumnExist
+    nop
 
     move-result-object v4
 
@@ -372,7 +372,7 @@
 
     if-eqz v4, :cond_3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASDataManager;->checkPreBatteryUsageColumnExist
+    nop
 
     move-result-object v4
 
@@ -384,7 +384,7 @@
 
     new-instance v4, Lcom/android/server/am/mars/database/FASEntityBuilder;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntityBuilder;-><init>
+    nop
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -468,14 +468,14 @@
 
     iput-object v3, v4, Lcom/android/server/am/mars/database/FASEntityBuilder;->strDisableReason:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntityBuilder;->build
+    nop
 
     move-result-object v3
 
     goto/16 :goto_4
 
     :cond_3
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASDataManager;->checkPreBatteryUsageColumnExist
+    nop
 
     move-result-object v4
 
@@ -487,7 +487,7 @@
 
     new-instance v4, Lcom/android/server/am/mars/database/FASEntityBuilder;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntityBuilder;-><init>
+    nop
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -563,7 +563,7 @@
 
     iput-object v3, v4, Lcom/android/server/am/mars/database/FASEntityBuilder;->strPreBatteryUsage:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntityBuilder;->build
+    nop
 
     move-result-object v3
 
@@ -572,7 +572,7 @@
     :cond_4
     new-instance v4, Lcom/android/server/am/mars/database/FASEntityBuilder;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntityBuilder;-><init>
+    nop
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -640,7 +640,7 @@
 
     iput-object v3, v4, Lcom/android/server/am/mars/database/FASEntityBuilder;->strDisableResetTime:Ljava/lang/String;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASEntityBuilder;->build
+    nop
 
     move-result-object v3
 

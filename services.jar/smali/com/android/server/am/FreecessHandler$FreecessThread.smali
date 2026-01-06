@@ -35,7 +35,7 @@
 
     move-result-object p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$BluetoothHandler;-><init>
+    nop
 
     iput-object v1, v0, Lcom/android/server/am/FreecessHandler;->mHandleAmsLockHandler:Lcom/android/server/am/FreecessHandler$BluetoothHandler;
 
@@ -50,7 +50,7 @@
 
     move-result-object p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$BluetoothHandler;-><init>
+    nop
 
     iput-object v1, v0, Lcom/android/server/am/FreecessHandler;->mBluetoothHandler:Lcom/android/server/am/FreecessHandler$BluetoothHandler;
 
@@ -65,7 +65,7 @@
 
     move-result-object p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler;-><init>
+    nop
 
     iput-object v1, v0, Lcom/android/server/am/FreecessHandler;->mMainHandler:Lcom/android/server/am/FreecessHandler$MainHandler;
 

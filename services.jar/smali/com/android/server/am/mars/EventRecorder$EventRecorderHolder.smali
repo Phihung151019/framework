@@ -13,7 +13,7 @@
 
     new-instance v0, Lcom/android/server/am/mars/EventRecorder;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/EventRecorder;-><init>
+    nop
 
     sput-object v0, Lcom/android/server/am/mars/EventRecorder$EventRecorderHolder;->INSTANCE:Lcom/android/server/am/mars/EventRecorder;
 

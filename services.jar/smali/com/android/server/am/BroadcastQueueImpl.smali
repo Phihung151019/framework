@@ -3009,7 +3009,7 @@
 
     sget-object v3, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsEnabled
+    nop
 
     move-result v7
 
@@ -3043,7 +3043,7 @@
 
     move-result v11
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isMARsTarget
+    nop
 
     move-result v3
 
@@ -3057,7 +3057,7 @@
 
     sget-object v11, Lcom/android/server/am/mars/util/UidStateMgr$UidStateMgrHolder;->INSTANCE:Lcom/android/server/am/mars/util/UidStateMgr;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->isUidIdle
+    nop
 
     move-result v8
 
@@ -6382,7 +6382,7 @@
     :try_start_0
     iget-object v12, v3, Lcom/android/server/am/MARsPolicyManager;->mMARsTargetPackages:Lcom/android/server/am/MARsPkgMap;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getMARsPackageInfo
+    nop
 
     move-result-object v12
 
@@ -6396,11 +6396,11 @@
 
     if-eqz v13, :cond_3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->onAppUsed
+    nop
 
     sget-object v3, Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter$WidgetPkgFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;->onAppWidgetEnabled
+    nop
 
     goto :goto_3
 
@@ -6420,7 +6420,7 @@
 
     sget-object v3, Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter$WidgetPkgFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WidgetPkgFilter;->onAppWidgetDisabled
+    nop
 
     goto :goto_3
 
@@ -6433,7 +6433,7 @@
 
     if-eqz v13, :cond_5
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->onAppUsed
+    nop
 
     goto :goto_3
 
@@ -6446,11 +6446,11 @@
 
     if-eqz v13, :cond_6
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->onAppUsed
+    nop
 
     sget-object v3, Lcom/android/server/am/mars/filter/filter/DeviceAdminPackageFilter$DeviceAdminPackageFilterHolder;->INSTANCE:Lcom/android/server/am/mars/filter/filter/DeviceAdminPackageFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DeviceAdminPackageFilter;->onDeviceAdminEnabled
+    nop
 
     goto :goto_3
 
@@ -6720,7 +6720,7 @@
 
     move-result-wide v13
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily
+    nop
 
     goto :goto_9
 

@@ -1790,7 +1790,7 @@
 
     iget-object v5, v14, Lcom/android/server/job/controllers/JobStatus;->job:Landroid/app/job/JobInfo;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/JobSchedulerPackageFilter;->removeRunningJobs
+    nop
 
     iget-object v3, v0, Lcom/android/server/job/JobConcurrencyManager;->mActiveServices:Ljava/util/List;
 

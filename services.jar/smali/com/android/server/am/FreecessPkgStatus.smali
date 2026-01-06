@@ -91,7 +91,7 @@
 
     invoke-direct {p4}, Ljava/lang/Object;-><init>()V
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$FreezeReasonType;->values
+    nop
 
     move-result-object v2
 
@@ -101,7 +101,7 @@
 
     iput-object v2, p4, Lcom/android/server/am/mars/MARsFreezeStateRecord;->mFreezeCounts:[I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord$UnfreezeReasonType;->values
+    nop
 
     move-result-object v2
 
@@ -192,7 +192,7 @@
 
     iget-wide v2, v1, Lcom/android/server/am/mars/MARsFreezeStateRecord;->freezedTime:J
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->formatDateTime
+    nop
 
     move-result-object v2
 
@@ -204,7 +204,7 @@
 
     iget-wide v2, v1, Lcom/android/server/am/mars/MARsFreezeStateRecord;->unfreezedTime:J
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->formatDateTime
+    nop
 
     move-result-object v2
 
@@ -224,7 +224,7 @@
 
     const-string v3, "-UserId "
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
+    nop
 
     iget v1, p0, Lcom/android/server/am/FreecessPkgStatus;->userId:I
 
@@ -240,7 +240,7 @@
 
     const-string v3, "-Pkg "
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessPkgStatus$$ExternalSyntheticOutline0;->m
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/FreecessPkgStatus;->name:Ljava/lang/String;
 
@@ -282,7 +282,7 @@
     :goto_0
     sget-object v6, Lcom/android/server/am/mars/util/UidStateMgr$UidStateMgrHolder;->INSTANCE:Lcom/android/server/am/mars/util/UidStateMgr;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->isUidIdle
+    nop
 
     move-result v7
 
@@ -304,7 +304,7 @@
 
     iget-object v9, v6, Lcom/android/server/am/mars/util/UidStateMgr;->mTopUidList:Lcom/android/server/am/mars/util/ConcurrentList;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/ConcurrentList;->contains
+    nop
 
     move-result v8
 
@@ -336,7 +336,7 @@
     goto :goto_4
 
     :cond_3
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/util/UidStateMgr;->isUidRunning
+    nop
 
     move-result v1
 
@@ -350,7 +350,7 @@
     move-object v6, v7
 
     :goto_4
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsFreezeStateRecord;->dumpUfzContent
+    nop
 
     move-result-object v7
 

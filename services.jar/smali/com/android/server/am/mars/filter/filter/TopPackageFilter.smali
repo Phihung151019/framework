@@ -36,7 +36,7 @@
 .method public final filter(IIILjava/lang/String;)I
     .locals 3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled
+    nop
 
     move-result p2
 
@@ -44,7 +44,7 @@
 
     if-eqz p2, :cond_0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->getScreenOnState
+    nop
 
     move-result p2
 
@@ -58,7 +58,7 @@
 
     const/4 v2, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsVersionManager;->isAdjustRestrictionMatch
+    nop
 
     move-result p2
 
@@ -71,7 +71,7 @@
 
     if-ne p3, p2, :cond_1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->getScreenOnState
+    nop
 
     move-result p2
 
@@ -93,7 +93,7 @@
 
     sget-object p2, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isFirstTimeTriggerAutorun
+    nop
 
     move-result p2
 

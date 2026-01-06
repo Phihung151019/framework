@@ -41,7 +41,7 @@
 
     sget-object p0, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setScreenOnState
+    nop
 
     iget-boolean p0, p0, Lcom/android/server/am/FreecessController;->mIsFreecessEnable:Z
 
@@ -51,7 +51,7 @@
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result p0
 
@@ -61,7 +61,7 @@
 
     const-string/jumbo p1, "screenOn"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendUnfreezeActivePackagesMsg
+    nop
 
     goto :goto_0
 
@@ -70,7 +70,7 @@
 
     const-string/jumbo p1, "screenOn-widget"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendUnfreezeActivePackagesMsg
+    nop
 
     :goto_0
     sget-object p0, Lcom/android/server/am/FreecessHandler$FreecessHandlerHolder;->INSTANCE:Lcom/android/server/am/FreecessHandler;
@@ -113,7 +113,7 @@
 
     sget-object p1, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->setScreenOnState
+    nop
 
     iget-boolean p1, p1, Lcom/android/server/am/FreecessController;->mIsScreenOnFreecessEnabled:Z
 
@@ -138,7 +138,7 @@
 
     if-nez p0, :cond_d
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance
+    nop
 
     sget-object p0, Lcom/android/server/am/mars/database/MARsDBHandler$MARsDBHandlerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBHandler;
 
@@ -184,7 +184,7 @@
 
     const-string p1, "CarMode"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
+    nop
 
     return-void
 
@@ -269,7 +269,7 @@
 
     const-string p1, "EmeregencyMode"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
+    nop
 
     return-void
 
@@ -303,7 +303,7 @@
 
     const-string/jumbo p1, "ShutDown"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
+    nop
 
     :cond_d
     :goto_3

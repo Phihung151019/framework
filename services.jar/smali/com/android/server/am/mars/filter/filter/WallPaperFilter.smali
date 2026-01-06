@@ -45,7 +45,7 @@
 
     if-ne p3, p1, :cond_1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->getScreenOnState
+    nop
 
     move-result p1
 
@@ -101,19 +101,19 @@
 
     const/4 p1, 0x5
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM
+    nop
 
     const/4 p1, 0x6
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM
+    nop
 
     const/16 p1, 0x11
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM
+    nop
 
     const/16 p1, 0x12
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/WallPaperFilter;->setWallPaperInfoFromWM
+    nop
 
     return-void
 .end method
@@ -132,7 +132,7 @@
 
     const-string p0, "FILTER 10"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     monitor-exit v0
 
@@ -187,7 +187,7 @@
 
     move-result-object v0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     monitor-exit p1
 

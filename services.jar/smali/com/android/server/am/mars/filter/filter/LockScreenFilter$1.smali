@@ -33,14 +33,14 @@
 
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/LockScreenFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFaceSub
+    nop
 
     return-void
 
     :pswitch_0
     iget-object p0, p0, Lcom/android/server/am/mars/filter/filter/LockScreenFilter$1;->this$0:Lcom/android/server/am/mars/filter/filter/LockScreenFilter;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/LockScreenFilter;->getLockClockFace
+    nop
 
     return-void
 

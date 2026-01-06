@@ -137,7 +137,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->setManagedProfileEnabled
+    nop
 
     goto/16 :goto_0
 
@@ -213,7 +213,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->setManagedProfileEnabled
+    nop
 
     goto :goto_0
 
@@ -329,7 +329,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->setManagedProfileEnabled
+    nop
 
     :cond_9
     :goto_0
@@ -421,7 +421,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->postInit
+    nop
 
     goto :goto_4
 
@@ -472,7 +472,7 @@
     move v1, p2
 
     :goto_3
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBHandler;->getInstance
+    nop
 
     sget-object p0, Lcom/android/server/am/mars/database/MARsDBHandler$MARsDBHandlerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBHandler;
 
@@ -573,7 +573,7 @@
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     :try_start_a
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData;->updateBigdataInfo
+    nop
     :try_end_a
     .catch Ljava/lang/IllegalStateException; {:try_start_a .. :try_end_a} :catch_0
 
@@ -586,9 +586,9 @@
 
     new-instance p1, Lcom/android/server/am/mars/MARsBigData$UsageInfo;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData$UsageInfo;-><init>
+    nop
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData$UsageInfo;->toString
+    nop
 
     move-result-object p1
 
@@ -601,14 +601,14 @@
 
     const-string/jumbo p2, "PLEV"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsBigData;->sendBigData
+    nop
 
     :cond_14
     sget-boolean p0, Lcom/android/server/am/MARsPolicyManager;->MARs_ENABLE:Z
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->updateResetTime
+    nop
 
     sget-boolean p0, Lcom/android/server/am/mars/MARsDebugConfig;->DEBUG_MID:Z
 
@@ -629,7 +629,7 @@
 
     new-instance p2, Lcom/android/server/am/mars/MARsHistoryLog$SaveLogThread$$ExternalSyntheticLambda0;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsHistoryLog$SaveLogThread$$ExternalSyntheticLambda0;-><init>
+    nop
 
     invoke-direct {p1, p2}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
@@ -644,7 +644,7 @@
 
     sget-object p0, Lcom/android/server/am/mars/database/MARsDBManager$MARsDBManagerHolder;->INSTANCE:Lcom/android/server/am/mars/database/MARsDBManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/MARsDBManager;->doUpdateCompHistory
+    nop
 
     :cond_17
     :goto_6
@@ -655,7 +655,7 @@
 
     sget-object p0, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->onPowerAllowListChanged
+    nop
 
     return-void
 

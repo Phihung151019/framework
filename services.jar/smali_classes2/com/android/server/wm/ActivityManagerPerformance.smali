@@ -6728,7 +6728,7 @@
     move v2, v6
 
     :goto_5
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->enterOLAF
+    nop
 
     goto :goto_6
 
@@ -6899,7 +6899,7 @@
 
     if-nez p2, :cond_f
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->exitOLAF
+    nop
 
     goto :goto_8
 

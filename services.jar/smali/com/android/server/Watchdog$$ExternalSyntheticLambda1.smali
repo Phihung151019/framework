@@ -401,7 +401,7 @@
 
     const-string/jumbo v8, "Watchdog_HALF"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
+    nop
 
     :cond_a
     move v9, v1
@@ -1143,7 +1143,7 @@
 
     const-string/jumbo v2, "Watchdog"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler;->sendResetAllStateMsg
+    nop
 
     :cond_1a
     if-eqz v7, :cond_1b

@@ -44,7 +44,7 @@
 
     sget-object p3, Lcom/android/server/am/MARsPolicyManager$MARsPolicyManagerHolder;->INSTANCE:Lcom/android/server/am/MARsPolicyManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->getForegroundServiceStartTime
+    nop
 
     move-result-wide v0
 
@@ -84,7 +84,7 @@
 
     if-eqz v0, :cond_1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled
+    nop
 
     move-result p2
 
@@ -103,13 +103,13 @@
     goto :goto_1
 
     :cond_1
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->isChinaPolicyEnabled
+    nop
 
     move-result p0
 
     if-eqz p0, :cond_3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunOn
+    nop
 
     move-result p0
 

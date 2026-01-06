@@ -202,7 +202,7 @@
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/Freezer;->freezeBinder
+    nop
 
     move-result v2
 
@@ -210,7 +210,7 @@
 
     const-string/jumbo v2, "outstanding txns"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->handleBinderFreezerFailure
+    nop
     :try_end_4
     .catch Ljava/lang/RuntimeException; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -254,7 +254,7 @@
 
     const/4 v3, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$FreezeHandler$$ExternalSyntheticLambda0;-><init>
+    nop
 
     invoke-virtual {v1, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -268,7 +268,7 @@
 
     const/4 v8, -0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->traceAppFreeze
+    nop
 
     iget-object v3, p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
@@ -350,7 +350,7 @@
 
     iget v1, v1, Lcom/android/server/am/UidRecord;->mUid:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->postUidFrozenMessage
+    nop
 
     :cond_5
     monitor-exit v4
@@ -410,7 +410,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/Freezer;->getBinderFreezeInfo
+    nop
 
     move-result v0
 
@@ -431,7 +431,7 @@
     :try_start_a
     const-string/jumbo v0, "new pending txns"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->handleBinderFreezerFailure
+    nop
 
     monitor-exit v1
     :try_end_a
@@ -490,7 +490,7 @@
 
     const/4 v2, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$FreezeHandler$$ExternalSyntheticLambda0;-><init>
+    nop
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -501,7 +501,7 @@
 
     const/4 v0, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/ProcessCachedOptimizerRecord$$ExternalSyntheticLambda0;-><init>
+    nop
 
     invoke-virtual {p0, p1}, Ljava/util/concurrent/CopyOnWriteArrayList;->forEach(Ljava/util/function/Consumer;)V
 
@@ -545,17 +545,17 @@
 
     iget-object p2, p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
     iget-wide v0, p0, Lcom/android/server/am/CachedAppOptimizer;->mFreezerDebounceTimeout:J
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->updateEarliestFreezableTime
+    nop
 
     move-result-wide v0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP
+    nop
 
     return-void
 
@@ -602,7 +602,7 @@
 
     const/4 v1, 0x2
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$FreezeHandler$$ExternalSyntheticLambda0;-><init>
+    nop
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -715,11 +715,11 @@
 
     iget-object p2, p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP
+    nop
 
     iget-object p0, p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->freezeAppAsyncInternalLSP
+    nop
 
     return-void
 .end method
@@ -850,7 +850,7 @@
 
     invoke-virtual {v4}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/Freezer;->getBinderFreezeInfo
+    nop
 
     move-result v4
 
@@ -868,7 +868,7 @@
 
     const/16 v10, 0x14
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$$ExternalSyntheticLambda5;-><init>
+    nop
 
     invoke-virtual {v8, v9}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
@@ -928,11 +928,11 @@
 
     new-instance v0, Lcom/android/server/am/CachedAppOptimizer$$ExternalSyntheticLambda2;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$$ExternalSyntheticLambda2;-><init>
+    nop
 
     new-instance v1, Lcom/android/server/am/CachedAppOptimizer$$ExternalSyntheticLambda3;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$$ExternalSyntheticLambda3;-><init>
+    nop
 
     new-instance p0, Lcom/android/server/am/CachedAppOptimizer$$ExternalSyntheticLambda4;
 
@@ -1108,7 +1108,7 @@
 
     move-object v3, p0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->reportUnfreeze
+    nop
 
     return-void
 
@@ -1151,7 +1151,7 @@
 
     :cond_f
     :try_start_8
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->freezeProcess
+    nop
 
     monitor-exit p1
     :try_end_8
@@ -1167,7 +1167,7 @@
 
     iget-object p1, v3, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;->this$0:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->onProcessFrozen
+    nop
 
     invoke-virtual {v3, v4}, Landroid/os/Handler;->removeMessages(I)V
 
@@ -1182,7 +1182,7 @@
 
     invoke-virtual {p1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->onProcessFrozenCancelled
+    nop
 
     return-void
 
@@ -1337,7 +1337,7 @@
 
     const/16 p1, 0x10
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeAppLSP
+    nop
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 

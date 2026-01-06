@@ -870,7 +870,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v1
 
@@ -880,7 +880,7 @@
 
     move-result v1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isMARsTarget
+    nop
 
     move-result v0
 
@@ -2267,7 +2267,7 @@
 
     sget-object v8, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->shouldDelayService
+    nop
 
     move-result v8
 
@@ -2676,7 +2676,7 @@
 
     iget v0, v1, Lcom/android/server/am/ServiceRecord;->userId:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->onSpecialBindServiceActions
+    nop
 
     sget-object v25, Lcom/android/server/am/BaseRestrictionMgr$BaseRestrictionMgrHolder;->INSTANCE:Lcom/android/server/am/BaseRestrictionMgr;
 
@@ -4715,7 +4715,7 @@
 
     iget-object v5, v2, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily
+    nop
 
     goto :goto_6
 
@@ -6844,7 +6844,7 @@
 
     if-eqz v8, :cond_3
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp
+    nop
 
     move-result v1
 
@@ -6864,7 +6864,7 @@
     monitor-enter v1
 
     :try_start_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
+    nop
 
     move-result-object p3
 
@@ -6924,7 +6924,7 @@
 
     iget-object p3, p1, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->isMainProcDepend
+    nop
 
     move-result p3
 
@@ -6987,7 +6987,7 @@
 
     const-string/jumbo v1, "ServiceANR"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
+    nop
 
     goto :goto_6
 
@@ -7008,7 +7008,7 @@
 
     const-string/jumbo v1, "ServiceANR"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
+    nop
 
     :cond_8
     iget-object v6, p1, Lcom/android/server/am/ServiceRecord;->packageName:Ljava/lang/String;
@@ -7019,7 +7019,7 @@
 
     const-wide/16 v7, 0x7d0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
+    nop
 
     :cond_9
     :goto_6
@@ -8442,7 +8442,7 @@
 
     const/4 v1, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     new-instance v0, Ljava/util/ArrayList;
 
@@ -8564,7 +8564,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     return v1
 
@@ -8690,7 +8690,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     return v7
 
@@ -8714,7 +8714,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     throw p1
 .end method
@@ -10904,7 +10904,7 @@
 
     if-eqz v14, :cond_12
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isAutoRunBlockedApp
+    nop
 
     move-result v13
 
@@ -10924,7 +10924,7 @@
     monitor-enter v13
 
     :try_start_2
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->getPackageStatus
+    nop
 
     move-result-object v10
 
@@ -14933,7 +14933,7 @@
 
     invoke-virtual {v12}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->isChinaPolicyEnabled
+    nop
 
     move-result v12
 
@@ -14947,7 +14947,7 @@
 
     iget v13, v4, Lcom/android/server/am/ServiceRecord;->userId:I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->isFreezedPackage
+    nop
 
     move-result v6
 
@@ -14988,7 +14988,7 @@
 
     iget-object v6, v4, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->isMainProcDepend
+    nop
 
     move-result v6
 
@@ -15760,7 +15760,7 @@
 
     iget-object v4, v2, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily
+    nop
 
     :cond_26
     iget-object v0, v2, Lcom/android/server/am/ServiceRecord;->app:Lcom/android/server/am/ProcessRecord;
@@ -15929,7 +15929,7 @@
 
     iget-object v4, v4, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->unfreezeTemporarily
+    nop
 
     :cond_1
     and-int/lit8 v3, p5, 0x2
@@ -26828,7 +26828,7 @@
 
     sget-object v3, Lcom/android/server/am/FreecessController$FreecessControllerHolder;->INSTANCE:Lcom/android/server/am/FreecessController;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->shouldDelayService
+    nop
 
     move-result v3
 
@@ -29755,7 +29755,7 @@
 
     const-wide/16 v12, 0x7d0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
+    nop
 
     iget-object v5, v6, Lcom/android/server/am/ConnectionRecord;->binding:Lcom/android/server/am/AppBindRecord;
 
@@ -29775,7 +29775,7 @@
 
     move-object/from16 v16, v15
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessController;->protectFreezePackage
+    nop
 
     goto :goto_2
 
@@ -29862,7 +29862,7 @@
 
     invoke-virtual {v9}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/MARsPolicyManager;->onSpecialUnBindServiceActions
+    nop
 
     :cond_6
     iget-object v5, v14, Lcom/android/server/am/ProcessRecord;->mServices:Lcom/android/server/am/ProcessServiceRecord;

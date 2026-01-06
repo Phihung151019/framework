@@ -12,7 +12,7 @@
 
     sget-object p0, Lcom/android/server/am/mars/database/FASDataManager$FASDataManagerHolder;->INSTANCE:Lcom/android/server/am/mars/database/FASDataManager;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/database/FASDataManager;->getFASDataFromDB
+    nop
 
     move-result-object p0
 
@@ -24,7 +24,7 @@
 
     if-nez v0, :cond_0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->updateMARsTargetPackages
+    nop
 
     return-void
 

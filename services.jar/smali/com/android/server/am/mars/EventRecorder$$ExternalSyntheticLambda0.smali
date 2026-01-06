@@ -34,7 +34,7 @@
 
     iget-wide v1, p0, Lcom/android/server/am/mars/EventRecorder$$ExternalSyntheticLambda0;->f$1:J
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/EventRecorder;->performWrite
+    nop
 
     return-void
 .end method

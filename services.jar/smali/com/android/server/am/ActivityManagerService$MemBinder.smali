@@ -42,7 +42,7 @@
 
     const/4 v2, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     iget-object v1, p0, Lcom/android/server/am/ActivityManagerService$MemBinder;->mActivityManagerService:Lcom/android/server/am/ActivityManagerService;
 
@@ -65,7 +65,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     return-void
 
@@ -88,7 +88,7 @@
 
     iget-object p0, p0, Lcom/android/server/am/OomAdjuster;->mCachedAppOptimizer:Lcom/android/server/am/CachedAppOptimizer;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     throw p1
 .end method

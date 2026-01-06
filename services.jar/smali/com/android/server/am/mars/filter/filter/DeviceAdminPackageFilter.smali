@@ -164,7 +164,7 @@
 
     const-string v4, "FILTER 9"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/MARsUtils;->addFilterDebugInfoToHistory
+    nop
 
     goto :goto_1
 
@@ -190,7 +190,7 @@
 
     move-result p1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DeviceAdminPackageFilter;->getActiveAdminsPackages
+    nop
 
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/DeviceAdminPackageFilter;->mContext:Landroid/content/Context;
 
@@ -228,7 +228,7 @@
 
     if-gt p1, v0, :cond_0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DeviceAdminPackageFilter;->getActiveAdminsPackages
+    nop
 
     :cond_0
     iget-object p1, p0, Lcom/android/server/am/mars/filter/filter/DeviceAdminPackageFilter;->mContext:Landroid/content/Context;
@@ -287,7 +287,7 @@
 
     invoke-static {v2, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/DeviceAdminPackageFilter;->getActiveAdminsPackages
+    nop
 
     goto :goto_0
 

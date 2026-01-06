@@ -315,7 +315,7 @@
 
     const-string/jumbo v4, "srcContainerId"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object p4
 
@@ -522,7 +522,7 @@
 
     const-string/jumbo v4, "srcContainerId"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object p4
 
@@ -879,7 +879,7 @@
 
     const-string/jumbo v4, "srcContainerId"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object p1
 
@@ -1079,7 +1079,7 @@
 
     const-string/jumbo v4, "srcContainerId"
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/FreecessHandler$MainHandler$$ExternalSyntheticOutline0;->m
+    nop
 
     move-result-object p1
 

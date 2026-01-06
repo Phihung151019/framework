@@ -48,7 +48,7 @@
 
     const/4 p0, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     iget-object p0, v0, Lcom/android/server/am/CachedAppOptimizer;->mCachedAppOptimizerThread:Lcom/android/server/ServiceThread;
 
@@ -69,7 +69,7 @@
 
     new-instance p0, Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;-><init>
+    nop
 
     iput-object p0, v0, Lcom/android/server/am/CachedAppOptimizer;->mFreezeHandler:Lcom/android/server/am/CachedAppOptimizer$FreezeHandler;
 
@@ -93,7 +93,7 @@
 
     const/4 p0, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer;->enableFreezer
+    nop
 
     return-void
 .end method

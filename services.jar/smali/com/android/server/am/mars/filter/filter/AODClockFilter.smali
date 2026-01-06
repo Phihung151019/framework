@@ -230,7 +230,7 @@
 
     const/4 v1, 0x0
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AODClockFilter$1;-><init>
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mAODClockTypeObserver:Lcom/android/server/am/mars/filter/filter/AODClockFilter$1;
 
@@ -247,7 +247,7 @@
 
     const/4 v1, 0x1
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AODClockFilter$1;-><init>
+    nop
 
     iput-object p1, p0, Lcom/android/server/am/mars/filter/filter/AODClockFilter;->mAODCalendarWidgetObserver:Lcom/android/server/am/mars/filter/filter/AODClockFilter$1;
 
@@ -298,7 +298,7 @@
 
     :cond_2
     :goto_0
-    nop  # patched: removed indirect call to Lcom/android/server/am/mars/filter/filter/AODClockFilter;->getAODClockType
+    nop
 
     return-void
 .end method

@@ -84,7 +84,7 @@
 
     const/16 v2, 0x1f
 
-    nop  # patched: removed indirect call to Lcom/android/server/am/CachedAppOptimizer$$ExternalSyntheticLambda5;-><init>
+    nop
 
     invoke-virtual {p2, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
