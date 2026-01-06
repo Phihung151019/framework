@@ -8893,11 +8893,9 @@
 .end method
 
 .method public getMARsEnabled()Z
-    .locals 0
-
-    sget-boolean p0, Lcom/android/server/am/MARsPolicyManager;->MARs_ENABLE:Z
-
-    return p0
+    .locals 1
+    const/4 v0, 0x0
+    return v0
 .end method
 
 .method public final getPackageDisablerEnabled()Z

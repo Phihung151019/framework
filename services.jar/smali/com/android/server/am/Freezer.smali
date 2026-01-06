@@ -5,32 +5,20 @@
 
 # direct methods
 .method public static freezeBinder(IIZ)I
-    .locals 0
-
-    invoke-static {p0, p2, p1}, Lcom/android/server/am/Freezer;->nativeFreezeBinder(IZI)I
-
-    move-result p0
-
-    return p0
+    .locals 1
+    const/4 v0, 0x0
+    return v0
 .end method
 
 .method public static getBinderFreezeInfo(I)I
-    .locals 0
-
-    invoke-static {p0}, Lcom/android/server/am/Freezer;->nativeGetBinderFreezeInfo(I)I
-
-    move-result p0
-
-    return p0
+    .locals 1
+    const/4 v0, 0x0
+    return v0
 .end method
 
 .method public static isFreezerSupported()Z
     .locals 1
-
-    invoke-static {}, Lcom/android/server/am/Freezer;->nativeIsFreezerSupported()Z
-
-    move-result v0
-
+    const/4 v0, 0x0
     return v0
 .end method
 
