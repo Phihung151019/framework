@@ -1,0 +1,6 @@
+version: v2.12.1-41-07ae073b-SNAPSHOT
+apkFileName: vexfwk_service_lib.jar
+sdkInfo:
+  minSdkVersion: 29
+doNotCompress:
+- dex

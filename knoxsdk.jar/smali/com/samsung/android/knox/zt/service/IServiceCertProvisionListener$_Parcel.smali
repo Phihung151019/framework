@@ -1,0 +1,85 @@
+.class public Lcom/samsung/android/knox/zt/service/IServiceCertProvisionListener$_Parcel;
+.super Ljava/lang/Object;
+.source "qb/104190634 99f1dbf964410b239c7a01052e351590f66e8dc00afbe8338c9b357cd98f1b2a"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/samsung/android/knox/zt/service/IServiceCertProvisionListener;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "_Parcel"
+.end annotation
+
+
+# direct methods
+.method public constructor blacklist <init>()V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static blacklist readTypedObject(Landroid/os/Parcel;Landroid/os/Parcelable$Creator;)Ljava/lang/Object;
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "Landroid/os/Parcelable$Creator<",
+            "TT;>;)TT;"
+        }
+    .end annotation
+
+    invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {p1, p0}, Landroid/os/Parcelable$Creator;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :cond_0
+    const/4 p0, 0x0
+
+    return-object p0
+.end method
+
+.method public static blacklist writeTypedObject(Landroid/os/Parcel;Landroid/os/Parcelable;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T::",
+            "Landroid/os/Parcelable;",
+            ">(",
+            "Landroid/os/Parcel;",
+            "TT;I)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_0
+
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    invoke-interface {p1, p0, p2}, Landroid/os/Parcelable;->writeToParcel(Landroid/os/Parcel;I)V
+
+    return-void
+
+    :cond_0
+    const/4 p1, 0x0
+
+    invoke-virtual {p0, p1}, Landroid/os/Parcel;->writeInt(I)V
+
+    return-void
+.end method

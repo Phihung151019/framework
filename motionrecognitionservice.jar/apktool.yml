@@ -1,0 +1,28 @@
+version: v2.12.1-41-07ae073b-SNAPSHOT
+apkFileName: motionrecognitionservice.jar
+sdkInfo:
+  minSdkVersion: 29
+doNotCompress:
+- dex
+- META-INF/MANIFEST.MF
+- META-INF/androidx.activity_activity.version
+- META-INF/androidx.annotation_annotation-experimental.version
+- META-INF/androidx.arch.core_core-runtime.version
+- META-INF/androidx.car.app_app.version
+- META-INF/androidx.core_core-ktx.version
+- META-INF/androidx.core_core-viewtree.version
+- META-INF/androidx.core_core.version
+- META-INF/androidx.interpolator_interpolator.version
+- META-INF/androidx.lifecycle_lifecycle-livedata-core.version
+- META-INF/androidx.lifecycle_lifecycle-runtime.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version
+- META-INF/androidx.lifecycle_lifecycle-viewmodel.version
+- META-INF/androidx.profileinstaller_profileinstaller.version
+- META-INF/androidx.savedstate_savedstate.version
+- META-INF/androidx.startup_startup-runtime.version
+- META-INF/androidx.tracing_tracing.version
+- META-INF/androidx.versionedparcelable_versionedparcelable.version
+- META-INF/external__kotlinx.coroutines__android_common__kotlinx_coroutines_android.kotlin_module
+- META-INF/services/kotlinx.coroutines.CoroutineExceptionHandler
+- META-INF/services/kotlinx.coroutines.internal.MainDispatcherFactory
+- car-app-api.level

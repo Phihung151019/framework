@@ -1,0 +1,129 @@
+.class public Lcom/gsma/services/rcs/filetransfer/IGroupFileTransferListener$Default;
+.super Ljava/lang/Object;
+.source "IGroupFileTransferListener.java"
+
+# interfaces
+.implements Lcom/gsma/services/rcs/filetransfer/IGroupFileTransferListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/gsma/services/rcs/filetransfer/IGroupFileTransferListener;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Default"
+.end annotation
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 0
+
+    .line 14
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public asBinder()Landroid/os/IBinder;
+    .locals 1
+
+    .line 33
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public onDeleted(Ljava/lang/String;Ljava/util/List;)V
+    .locals 0
+    .param p1, "chatId"    # Ljava/lang/String;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/String;",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 27
+    .local p2, "transferIds":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
+    return-void
+.end method
+
+.method public onDeliveryInfoChanged(Ljava/lang/String;Ljava/lang/String;Lcom/gsma/services/rcs/contact/ContactId;Lcom/gsma/services/rcs/groupdelivery/GroupDeliveryInfo$Status;Lcom/gsma/services/rcs/groupdelivery/GroupDeliveryInfo$ReasonCode;)V
+    .locals 0
+    .param p1, "chatId"    # Ljava/lang/String;
+    .param p2, "transferId"    # Ljava/lang/String;
+    .param p3, "contact"    # Lcom/gsma/services/rcs/contact/ContactId;
+    .param p4, "state"    # Lcom/gsma/services/rcs/groupdelivery/GroupDeliveryInfo$Status;
+    .param p5, "reasonCode"    # Lcom/gsma/services/rcs/groupdelivery/GroupDeliveryInfo$ReasonCode;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 21
+    return-void
+.end method
+
+.method public onDeliveryInfoChanged1(Ljava/lang/String;Ljava/lang/String;Lcom/gsma/services/rcs/contact/ContactId;Lcom/gsma/services/rcs/groupdelivery/GroupDeliveryInfo$Status;Lcom/gsma/services/rcs/groupdelivery/GroupDeliveryInfo$ReasonCode;)V
+    .locals 0
+    .param p1, "chatId"    # Ljava/lang/String;
+    .param p2, "transferId"    # Ljava/lang/String;
+    .param p3, "contact"    # Lcom/gsma/services/rcs/contact/ContactId;
+    .param p4, "state"    # Lcom/gsma/services/rcs/groupdelivery/GroupDeliveryInfo$Status;
+    .param p5, "reasonCode"    # Lcom/gsma/services/rcs/groupdelivery/GroupDeliveryInfo$ReasonCode;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 30
+    return-void
+.end method
+
+.method public onProgressUpdate(Ljava/lang/String;Ljava/lang/String;JJ)V
+    .locals 0
+    .param p1, "chatId"    # Ljava/lang/String;
+    .param p2, "transferId"    # Ljava/lang/String;
+    .param p3, "currentSize"    # J
+    .param p5, "totalSize"    # J
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 24
+    return-void
+.end method
+
+.method public onStateChanged(Ljava/lang/String;Ljava/lang/String;Lcom/gsma/services/rcs/filetransfer/FileTransfer$State;Lcom/gsma/services/rcs/filetransfer/FileTransfer$ReasonCode;)V
+    .locals 0
+    .param p1, "chatId"    # Ljava/lang/String;
+    .param p2, "transferId"    # Ljava/lang/String;
+    .param p3, "state"    # Lcom/gsma/services/rcs/filetransfer/FileTransfer$State;
+    .param p4, "reasonCode"    # Lcom/gsma/services/rcs/filetransfer/FileTransfer$ReasonCode;
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 18
+    return-void
+.end method

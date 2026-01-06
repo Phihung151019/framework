@@ -1,0 +1,44 @@
+.class interface abstract Lcom/samsung/security/securekeyblob/SecureKeyGenerator$checkedRemoteRequest;
+.super Ljava/lang/Object;
+.source "SecureKeyGenerator.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/samsung/security/securekeyblob/SecureKeyGenerator;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x608
+    name = "checkedRemoteRequest"
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<R:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;"
+    }
+.end annotation
+
+.annotation runtime Ljava/lang/FunctionalInterface;
+.end annotation
+
+
+# virtual methods
+.method public abstract execute(Landroid/security/securekeygeneration/ISecureKeyGeneration;)Ljava/lang/Object;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/security/securekeygeneration/ISecureKeyGeneration;",
+            ")TR;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+.end method

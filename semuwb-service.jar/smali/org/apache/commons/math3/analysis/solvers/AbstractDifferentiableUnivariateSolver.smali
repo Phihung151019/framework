@@ -1,0 +1,144 @@
+.class public abstract Lorg/apache/commons/math3/analysis/solvers/AbstractDifferentiableUnivariateSolver;
+.super Lorg/apache/commons/math3/analysis/solvers/BaseAbstractUnivariateSolver;
+.source "AbstractDifferentiableUnivariateSolver.java"
+
+# interfaces
+.implements Lorg/apache/commons/math3/analysis/solvers/DifferentiableUnivariateSolver;
+
+
+# annotations
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lorg/apache/commons/math3/analysis/solvers/BaseAbstractUnivariateSolver<",
+        "Lorg/apache/commons/math3/analysis/DifferentiableUnivariateFunction;",
+        ">;",
+        "Lorg/apache/commons/math3/analysis/solvers/DifferentiableUnivariateSolver;"
+    }
+.end annotation
+
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
+# instance fields
+.field private functionDerivative:Lorg/apache/commons/math3/analysis/UnivariateFunction;
+
+
+# direct methods
+.method protected constructor <init>(D)V
+    .locals 0
+    .param p1, "absoluteAccuracy"    # D
+
+    .line 44
+    invoke-direct {p0, p1, p2}, Lorg/apache/commons/math3/analysis/solvers/BaseAbstractUnivariateSolver;-><init>(D)V
+
+    .line 45
+    return-void
+.end method
+
+.method protected constructor <init>(DDD)V
+    .locals 0
+    .param p1, "relativeAccuracy"    # D
+    .param p3, "absoluteAccuracy"    # D
+    .param p5, "functionValueAccuracy"    # D
+
+    .line 57
+    invoke-direct/range {p0 .. p6}, Lorg/apache/commons/math3/analysis/solvers/BaseAbstractUnivariateSolver;-><init>(DDD)V
+
+    .line 58
+    return-void
+.end method
+
+
+# virtual methods
+.method protected computeDerivativeObjectiveValue(D)D
+    .locals 2
+    .param p1, "point"    # D
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/apache/commons/math3/exception/TooManyEvaluationsException;
+        }
+    .end annotation
+
+    .line 69
+    invoke-virtual {p0}, Lorg/apache/commons/math3/analysis/solvers/AbstractDifferentiableUnivariateSolver;->incrementEvaluationCount()V
+
+    .line 70
+    iget-object v0, p0, Lorg/apache/commons/math3/analysis/solvers/AbstractDifferentiableUnivariateSolver;->functionDerivative:Lorg/apache/commons/math3/analysis/UnivariateFunction;
+
+    invoke-interface {v0, p1, p2}, Lorg/apache/commons/math3/analysis/UnivariateFunction;->value(D)D
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method protected setup(ILorg/apache/commons/math3/analysis/DifferentiableUnivariateFunction;DDD)V
+    .locals 2
+    .param p1, "maxEval"    # I
+    .param p2, "f"    # Lorg/apache/commons/math3/analysis/DifferentiableUnivariateFunction;
+    .param p3, "min"    # D
+    .param p5, "max"    # D
+    .param p7, "startValue"    # D
+
+    .line 79
+    invoke-super/range {p0 .. p8}, Lorg/apache/commons/math3/analysis/solvers/BaseAbstractUnivariateSolver;->setup(ILorg/apache/commons/math3/analysis/UnivariateFunction;DDD)V
+
+    .line 80
+    move-wide v0, p7
+
+    move-wide p6, p5
+
+    move-wide p4, p3
+
+    move-object p3, p2
+
+    move p2, p1
+
+    move-object p1, p0
+
+    .end local p1    # "maxEval":I
+    .end local p5    # "max":D
+    .end local p7    # "startValue":D
+    .local v0, "startValue":D
+    .local p2, "maxEval":I
+    .local p3, "f":Lorg/apache/commons/math3/analysis/DifferentiableUnivariateFunction;
+    .local p4, "min":D
+    .local p6, "max":D
+    invoke-interface {p3}, Lorg/apache/commons/math3/analysis/DifferentiableUnivariateFunction;->derivative()Lorg/apache/commons/math3/analysis/UnivariateFunction;
+
+    move-result-object p8
+
+    iput-object p8, p1, Lorg/apache/commons/math3/analysis/solvers/AbstractDifferentiableUnivariateSolver;->functionDerivative:Lorg/apache/commons/math3/analysis/UnivariateFunction;
+
+    .line 81
+    return-void
+.end method
+
+.method protected bridge synthetic setup(ILorg/apache/commons/math3/analysis/UnivariateFunction;DDD)V
+    .locals 9
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/apache/commons/math3/exception/NullArgumentException;
+        }
+    .end annotation
+
+    .line 31
+    move-object v2, p2
+
+    check-cast v2, Lorg/apache/commons/math3/analysis/DifferentiableUnivariateFunction;
+
+    move-object v0, p0
+
+    move v1, p1
+
+    move-wide v3, p3
+
+    move-wide v5, p5
+
+    move-wide/from16 v7, p7
+
+    invoke-virtual/range {v0 .. v8}, Lorg/apache/commons/math3/analysis/solvers/AbstractDifferentiableUnivariateSolver;->setup(ILorg/apache/commons/math3/analysis/DifferentiableUnivariateFunction;DDD)V
+
+    return-void
+.end method

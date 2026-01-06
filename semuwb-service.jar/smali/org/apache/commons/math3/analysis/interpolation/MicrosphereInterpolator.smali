@@ -1,0 +1,141 @@
+.class public Lorg/apache/commons/math3/analysis/interpolation/MicrosphereInterpolator;
+.super Ljava/lang/Object;
+.source "MicrosphereInterpolator.java"
+
+# interfaces
+.implements Lorg/apache/commons/math3/analysis/interpolation/MultivariateInterpolator;
+
+
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
+
+
+# static fields
+.field public static final DEFAULT_BRIGHTNESS_EXPONENT:I = 0x2
+
+.field public static final DEFAULT_MICROSPHERE_ELEMENTS:I = 0x7d0
+
+
+# instance fields
+.field private final brightnessExponent:I
+
+.field private final microsphereElements:I
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 2
+
+    .line 65
+    const/16 v0, 0x7d0
+
+    const/4 v1, 0x2
+
+    invoke-direct {p0, v0, v1}, Lorg/apache/commons/math3/analysis/interpolation/MicrosphereInterpolator;-><init>(II)V
+
+    .line 66
+    return-void
+.end method
+
+.method public constructor <init>(II)V
+    .locals 2
+    .param p1, "elements"    # I
+    .param p2, "exponent"    # I
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/apache/commons/math3/exception/NotPositiveException;,
+            Lorg/apache/commons/math3/exception/NotStrictlyPositiveException;
+        }
+    .end annotation
+
+    .line 78
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 79
+    if-ltz p2, :cond_1
+
+    .line 82
+    if-lez p1, :cond_0
+
+    .line 86
+    iput p1, p0, Lorg/apache/commons/math3/analysis/interpolation/MicrosphereInterpolator;->microsphereElements:I
+
+    .line 87
+    iput p2, p0, Lorg/apache/commons/math3/analysis/interpolation/MicrosphereInterpolator;->brightnessExponent:I
+
+    .line 88
+    return-void
+
+    .line 83
+    :cond_0
+    new-instance v0, Lorg/apache/commons/math3/exception/NotStrictlyPositiveException;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lorg/apache/commons/math3/exception/NotStrictlyPositiveException;-><init>(Ljava/lang/Number;)V
+
+    throw v0
+
+    .line 80
+    :cond_1
+    new-instance v0, Lorg/apache/commons/math3/exception/NotPositiveException;
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lorg/apache/commons/math3/exception/NotPositiveException;-><init>(Ljava/lang/Number;)V
+
+    throw v0
+.end method
+
+
+# virtual methods
+.method public interpolate([[D[D)Lorg/apache/commons/math3/analysis/MultivariateFunction;
+    .locals 8
+    .param p1, "xval"    # [[D
+    .param p2, "yval"    # [D
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Lorg/apache/commons/math3/exception/DimensionMismatchException;,
+            Lorg/apache/commons/math3/exception/NoDataException;,
+            Lorg/apache/commons/math3/exception/NullArgumentException;
+        }
+    .end annotation
+
+    .line 98
+    new-instance v0, Lorg/apache/commons/math3/random/UnitSphereRandomVectorGenerator;
+
+    const/4 v1, 0x0
+
+    aget-object v1, p1, v1
+
+    array-length v1, v1
+
+    invoke-direct {v0, v1}, Lorg/apache/commons/math3/random/UnitSphereRandomVectorGenerator;-><init>(I)V
+
+    move-object v7, v0
+
+    .line 100
+    .local v7, "rand":Lorg/apache/commons/math3/random/UnitSphereRandomVectorGenerator;
+    new-instance v2, Lorg/apache/commons/math3/analysis/interpolation/MicrosphereInterpolatingFunction;
+
+    iget v5, p0, Lorg/apache/commons/math3/analysis/interpolation/MicrosphereInterpolator;->brightnessExponent:I
+
+    iget v6, p0, Lorg/apache/commons/math3/analysis/interpolation/MicrosphereInterpolator;->microsphereElements:I
+
+    move-object v3, p1
+
+    move-object v4, p2
+
+    .end local p1    # "xval":[[D
+    .end local p2    # "yval":[D
+    .local v3, "xval":[[D
+    .local v4, "yval":[D
+    invoke-direct/range {v2 .. v7}, Lorg/apache/commons/math3/analysis/interpolation/MicrosphereInterpolatingFunction;-><init>([[D[DIILorg/apache/commons/math3/random/UnitSphereRandomVectorGenerator;)V
+
+    return-object v2
+.end method

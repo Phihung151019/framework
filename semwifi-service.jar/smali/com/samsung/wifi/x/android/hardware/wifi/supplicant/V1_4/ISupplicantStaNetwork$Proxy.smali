@@ -1,0 +1,12509 @@
+.class public final Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;
+.super Ljava/lang/Object;
+.source "qb/104190634 3f0c61d6e0e110a32c521efcc24f383ff81c48febc65f067ab9ac6b5ba8742fd"
+
+# interfaces
+.implements Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Proxy"
+.end annotation
+
+
+# instance fields
+.field private mRemote:Landroid/os/IHwBinder;
+
+
+# direct methods
+.method public constructor <init>(Landroid/os/IHwBinder;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    invoke-static {p1}, Ljava/util/Objects;->requireNonNull(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 5
+    .line 6
+    .line 7
+    check-cast p1, Landroid/os/IHwBinder;
+
+    .line 8
+    .line 9
+    iput-object p1, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public asBinder()Landroid/os/IHwBinder;
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 2
+    .line 3
+    return-object p0
+.end method
+
+.method public debug(Landroid/os/NativeHandle;Ljava/util/ArrayList;)V
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/os/NativeHandle;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hidl.base@1.0::IBase"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1, p2}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Landroid/os/NativeHandle;Ljava/util/ArrayList;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance p2, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {p2}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const v0, 0xf444247
+
+    .line 15
+    .line 16
+    .line 17
+    const/4 v1, 0x0
+
+    .line 18
+    invoke-interface {p0, v0, p1, p2, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {p2}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-virtual {p2}, Landroid/os/HwParcel;->release()V
+
+    .line 28
+    .line 29
+    .line 30
+    return-void
+
+    .line 31
+    :catchall_0
+    move-exception p0
+
+    .line 32
+    invoke-virtual {p2}, Landroid/os/HwParcel;->release()V
+
+    .line 33
+    .line 34
+    .line 35
+    throw p0
+.end method
+
+.method public disable()Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x41
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public enable(Z)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Z)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x40
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public enableSaePkOnlyMode(Z)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.4::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Z)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x71
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public enableSuiteBEapOpenSslCiphers()Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x54
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public enableTlsSuiteBEapPhase1Param(Z)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Z)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x53
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .locals 0
+
+    .line 1
+    invoke-static {p0, p1}, Landroid/os/HidlSupport;->interfacesEqual(Landroid/os/IHwInterface;Ljava/lang/Object;)Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result p0
+
+    .line 5
+    return p0
+.end method
+
+.method public getAuthAlg(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getAuthAlgCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x28
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getAuthAlgCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getAuthAlg_1_3(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getAuthAlg_1_3Callback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x67
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getAuthAlg_1_3Callback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getBssid(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getBssidCallback;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x24
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    const/4 v0, 0x6
+
+    .line 35
+    new-array v2, v0, [B
+
+    .line 36
+    .line 37
+    const-wide/16 v3, 0x6
+
+    .line 38
+    .line 39
+    invoke-virtual {v1, v3, v4}, Landroid/os/HwParcel;->readBuffer(J)Landroid/os/HwBlob;
+
+    .line 40
+    .line 41
+    .line 42
+    move-result-object v3
+
+    .line 43
+    const-wide/16 v4, 0x0
+
+    .line 44
+    .line 45
+    invoke-virtual {v3, v4, v5, v2, v0}, Landroid/os/HwBlob;->copyToInt8Array(J[BI)V
+
+    .line 46
+    .line 47
+    .line 48
+    invoke-interface {p1, p0, v2}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getBssidCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;[B)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 49
+    .line 50
+    .line 51
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 52
+    .line 53
+    .line 54
+    return-void
+
+    .line 55
+    :catchall_0
+    move-exception p0
+
+    .line 56
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 57
+    .line 58
+    .line 59
+    throw p0
+.end method
+
+.method public getDebugInfo()Lcom/samsung/wifi/x/android/hidl/base/V1_0/DebugInfo;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hidl.base@1.0::IBase"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const v2, 0xf524546
+
+    .line 15
+    .line 16
+    .line 17
+    const/4 v3, 0x0
+
+    .line 18
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 25
+    .line 26
+    .line 27
+    new-instance p0, Lcom/samsung/wifi/x/android/hidl/base/V1_0/DebugInfo;
+
+    .line 28
+    .line 29
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hidl/base/V1_0/DebugInfo;-><init>()V
+
+    .line 30
+    .line 31
+    .line 32
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hidl/base/V1_0/DebugInfo;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 33
+    .line 34
+    .line 35
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 36
+    .line 37
+    .line 38
+    return-object p0
+
+    .line 39
+    :catchall_0
+    move-exception p0
+
+    .line 40
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 41
+    .line 42
+    .line 43
+    throw p0
+.end method
+
+.method public getEapAltSubjectMatch(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapAltSubjectMatchCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x3a
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapAltSubjectMatchCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapAnonymousIdentity(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapAnonymousIdentityCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x33
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt8Vector()Ljava/util/ArrayList;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapAnonymousIdentityCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/util/ArrayList;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapCACert(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapCACertCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x35
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapCACertCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapCAPath(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapCAPathCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x36
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapCAPathCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapClientCert(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapClientCertCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x37
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapClientCertCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapDomainSuffixMatch(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapDomainSuffixMatchCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x3d
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapDomainSuffixMatchCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapEngine(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapEngineCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x3b
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readBool()Z
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapEngineCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapEngineID(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapEngineIDCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x3c
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapEngineIDCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapIdentity(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapIdentityCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x32
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt8Vector()Ljava/util/ArrayList;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapIdentityCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/util/ArrayList;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapMethod(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapMethodCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x30
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapMethodCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapPassword(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapPasswordCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x34
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt8Vector()Ljava/util/ArrayList;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapPasswordCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/util/ArrayList;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapPhase2Method(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapPhase2MethodCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x31
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapPhase2MethodCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapPrivateKeyId(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapPrivateKeyIdCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x38
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapPrivateKeyIdCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEapSubjectMatch(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapSubjectMatchCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x39
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getEapSubjectMatchCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getEdmg(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$getEdmgCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.4::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x6e
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readBool()Z
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$getEdmgCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getGroupCipher(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getGroupCipherCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x29
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getGroupCipherCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getGroupCipher_1_2(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getGroupCipher_1_2Callback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x50
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getGroupCipher_1_2Callback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getGroupCipher_1_3(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getGroupCipher_1_3Callback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x62
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getGroupCipher_1_3Callback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getGroupCipher_1_4(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$getGroupCipher_1_4Callback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.4::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x6a
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$getGroupCipher_1_4Callback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getGroupMgmtCipher(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getGroupMgmtCipherCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x52
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getGroupMgmtCipherCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getHashChain()Ljava/util/ArrayList;
+    .locals 11
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList<",
+            "[B>;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hidl.base@1.0::IBase"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const v2, 0xf485348
+
+    .line 15
+    .line 16
+    .line 17
+    const/4 v9, 0x0
+
+    .line 18
+    invoke-interface {p0, v2, v0, v1, v9}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 25
+    .line 26
+    .line 27
+    new-instance p0, Ljava/util/ArrayList;
+
+    .line 28
+    .line 29
+    invoke-direct {p0}, Ljava/util/ArrayList;-><init>()V
+
+    .line 30
+    .line 31
+    .line 32
+    const-wide/16 v2, 0x10
+
+    .line 33
+    .line 34
+    invoke-virtual {v1, v2, v3}, Landroid/os/HwParcel;->readBuffer(J)Landroid/os/HwBlob;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    const-wide/16 v2, 0x8
+
+    .line 39
+    .line 40
+    invoke-virtual {v0, v2, v3}, Landroid/os/HwBlob;->getInt32(J)I
+
+    .line 41
+    .line 42
+    .line 43
+    move-result v10
+
+    .line 44
+    mul-int/lit8 v2, v10, 0x20
+
+    .line 45
+    .line 46
+    int-to-long v2, v2
+
+    .line 47
+    invoke-virtual {v0}, Landroid/os/HwBlob;->handle()J
+
+    .line 48
+    .line 49
+    .line 50
+    move-result-wide v4
+
+    .line 51
+    const-wide/16 v6, 0x0
+
+    .line 52
+    .line 53
+    const/4 v8, 0x1
+
+    .line 54
+    invoke-virtual/range {v1 .. v8}, Landroid/os/HwParcel;->readEmbeddedBuffer(JJJZ)Landroid/os/HwBlob;
+
+    .line 55
+    .line 56
+    .line 57
+    move-result-object v0
+
+    .line 58
+    invoke-virtual {p0}, Ljava/util/ArrayList;->clear()V
+
+    .line 59
+    .line 60
+    .line 61
+    :goto_0
+    if-ge v9, v10, :cond_0
+
+    .line 62
+    .line 63
+    const/16 v2, 0x20
+
+    .line 64
+    .line 65
+    new-array v3, v2, [B
+
+    .line 66
+    .line 67
+    mul-int/lit8 v4, v9, 0x20
+
+    .line 68
+    .line 69
+    int-to-long v4, v4
+
+    .line 70
+    invoke-virtual {v0, v4, v5, v3, v2}, Landroid/os/HwBlob;->copyToInt8Array(J[BI)V
+
+    .line 71
+    .line 72
+    .line 73
+    invoke-virtual {p0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 74
+    .line 75
+    .line 76
+    add-int/lit8 v9, v9, 0x1
+
+    .line 77
+    .line 78
+    goto :goto_0
+
+    .line 79
+    :catchall_0
+    move-exception v0
+
+    .line 80
+    move-object p0, v0
+
+    .line 81
+    goto :goto_1
+
+    .line 82
+    :cond_0
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 83
+    .line 84
+    .line 85
+    return-object p0
+
+    .line 86
+    :goto_1
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 87
+    .line 88
+    .line 89
+    throw p0
+.end method
+
+.method public getId(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantNetwork$getIdCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/4 v2, 0x1
+
+    .line 15
+    const/4 v3, 0x0
+
+    .line 16
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 23
+    .line 24
+    .line 25
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 26
+    .line 27
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 34
+    .line 35
+    .line 36
+    move-result v0
+
+    .line 37
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantNetwork$getIdCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 38
+    .line 39
+    .line 40
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 41
+    .line 42
+    .line 43
+    return-void
+
+    .line 44
+    :catchall_0
+    move-exception p0
+
+    .line 45
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 46
+    .line 47
+    .line 48
+    throw p0
+.end method
+
+.method public getIdStr(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getIdStrCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x3e
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getIdStrCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getInterfaceName(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantNetwork$getInterfaceNameCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/4 v2, 0x2
+
+    .line 15
+    const/4 v3, 0x0
+
+    .line 16
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 23
+    .line 24
+    .line 25
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 26
+    .line 27
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 34
+    .line 35
+    .line 36
+    move-result-object v0
+
+    .line 37
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantNetwork$getInterfaceNameCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 38
+    .line 39
+    .line 40
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 41
+    .line 42
+    .line 43
+    return-void
+
+    .line 44
+    :catchall_0
+    move-exception p0
+
+    .line 45
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 46
+    .line 47
+    .line 48
+    throw p0
+.end method
+
+.method public getKeyMgmt(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getKeyMgmtCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x26
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getKeyMgmtCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getKeyMgmt_1_2(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getKeyMgmt_1_2Callback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x4c
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getKeyMgmt_1_2Callback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getKeyMgmt_1_3(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getKeyMgmt_1_3Callback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x5c
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getKeyMgmt_1_3Callback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getOcsp(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getOcspCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x5a
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getOcspCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getPairwiseCipher(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getPairwiseCipherCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x2a
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getPairwiseCipherCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getPairwiseCipher_1_2(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getPairwiseCipher_1_2Callback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x4e
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getPairwiseCipher_1_2Callback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getPairwiseCipher_1_3(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getPairwiseCipher_1_3Callback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x60
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getPairwiseCipher_1_3Callback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getPairwiseCipher_1_4(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$getPairwiseCipher_1_4Callback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.4::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x6c
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$getPairwiseCipher_1_4Callback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getProto(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getProtoCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x27
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getProtoCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getProto_1_3(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getProto_1_3Callback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x5e
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getProto_1_3Callback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getPsk(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getPskCallback;)V
+    .locals 6
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x2c
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    const/16 v0, 0x20
+
+    .line 35
+    .line 36
+    new-array v2, v0, [B
+
+    .line 37
+    .line 38
+    const-wide/16 v3, 0x20
+
+    .line 39
+    .line 40
+    invoke-virtual {v1, v3, v4}, Landroid/os/HwParcel;->readBuffer(J)Landroid/os/HwBlob;
+
+    .line 41
+    .line 42
+    .line 43
+    move-result-object v3
+
+    .line 44
+    const-wide/16 v4, 0x0
+
+    .line 45
+    .line 46
+    invoke-virtual {v3, v4, v5, v2, v0}, Landroid/os/HwBlob;->copyToInt8Array(J[BI)V
+
+    .line 47
+    .line 48
+    .line 49
+    invoke-interface {p1, p0, v2}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getPskCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;[B)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 50
+    .line 51
+    .line 52
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 53
+    .line 54
+    .line 55
+    return-void
+
+    .line 56
+    :catchall_0
+    move-exception p0
+
+    .line 57
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 58
+    .line 59
+    .line 60
+    throw p0
+.end method
+
+.method public getPskPassphrase(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getPskPassphraseCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x2b
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getPskPassphraseCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getRequirePmf(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getRequirePmfCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x2f
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readBool()Z
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getRequirePmfCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getSaePassword(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getSaePasswordCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x55
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getSaePasswordCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getSaePasswordId(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getSaePasswordIdCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x56
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_2/ISupplicantStaNetwork$getSaePasswordIdCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getScanSsid(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getScanSsidCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x25
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readBool()Z
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getScanSsidCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getSsid(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getSsidCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x23
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt8Vector()Ljava/util/ArrayList;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getSsidCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/util/ArrayList;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getType(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantNetwork$getTypeCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/4 v2, 0x3
+
+    .line 15
+    const/4 v3, 0x0
+
+    .line 16
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 23
+    .line 24
+    .line 25
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 26
+    .line 27
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 34
+    .line 35
+    .line 36
+    move-result v0
+
+    .line 37
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantNetwork$getTypeCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 38
+    .line 39
+    .line 40
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 41
+    .line 42
+    .line 43
+    return-void
+
+    .line 44
+    :catchall_0
+    move-exception p0
+
+    .line 45
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 46
+    .line 47
+    .line 48
+    throw p0
+.end method
+
+.method public getWapiCertSuite(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getWapiCertSuiteCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x64
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_3/ISupplicantStaNetwork$getWapiCertSuiteCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/lang/String;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getWepKey(ILcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getWepKeyCallback;)V
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x2d
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->readInt8Vector()Ljava/util/ArrayList;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object p1
+
+    .line 38
+    invoke-interface {p2, p0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getWepKeyCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/util/ArrayList;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getWepTxKeyIdx(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getWepTxKeyIdxCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x2e
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt32()I
+
+    .line 35
+    .line 36
+    .line 37
+    move-result v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getWepTxKeyIdxCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;I)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public getWpsNfcConfigurationToken(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getWpsNfcConfigurationTokenCallback;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x3f
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readInt8Vector()Ljava/util/ArrayList;
+
+    .line 35
+    .line 36
+    .line 37
+    move-result-object v0
+
+    .line 38
+    invoke-interface {p1, p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$getWpsNfcConfigurationTokenCallback;->onValues(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;Ljava/util/ArrayList;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-void
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public final hashCode()I
+    .locals 0
+
+    .line 1
+    invoke-virtual {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->asBinder()Landroid/os/IHwBinder;
+
+    .line 2
+    .line 3
+    .line 4
+    move-result-object p0
+
+    .line 5
+    invoke-interface {p0}, Landroid/os/IHwBinder;->hashCode()I
+
+    .line 6
+    .line 7
+    .line 8
+    move-result p0
+
+    .line 9
+    return p0
+.end method
+
+.method public interfaceChain()Ljava/util/ArrayList;
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/String;",
+            ">;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hidl.base@1.0::IBase"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const v2, 0xf43484e
+
+    .line 15
+    .line 16
+    .line 17
+    const/4 v3, 0x0
+
+    .line 18
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readStringVector()Ljava/util/ArrayList;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 31
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 32
+    .line 33
+    .line 34
+    return-object p0
+
+    .line 35
+    :catchall_0
+    move-exception p0
+
+    .line 36
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 37
+    .line 38
+    .line 39
+    throw p0
+.end method
+
+.method public interfaceDescriptor()Ljava/lang/String;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hidl.base@1.0::IBase"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const v2, 0xf445343
+
+    .line 15
+    .line 16
+    .line 17
+    const/4 v3, 0x0
+
+    .line 18
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-virtual {v1}, Landroid/os/HwParcel;->readString()Ljava/lang/String;
+
+    .line 28
+    .line 29
+    .line 30
+    move-result-object p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 31
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 32
+    .line 33
+    .line 34
+    return-object p0
+
+    .line 35
+    :catchall_0
+    move-exception p0
+
+    .line 36
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 37
+    .line 38
+    .line 39
+    throw p0
+.end method
+
+.method public linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 2
+    .line 3
+    invoke-interface {p0, p1, p2, p3}, Landroid/os/IHwBinder;->linkToDeath(Landroid/os/IHwBinder$DeathRecipient;J)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result p0
+
+    .line 7
+    return p0
+.end method
+
+.method public notifySyspropsChanged()V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hidl.base@1.0::IBase"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const v2, 0xf535953
+
+    .line 15
+    .line 16
+    .line 17
+    const/4 v3, 0x1
+
+    .line 18
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 25
+    .line 26
+    .line 27
+    return-void
+
+    .line 28
+    :catchall_0
+    move-exception p0
+
+    .line 29
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 30
+    .line 31
+    .line 32
+    throw p0
+.end method
+
+.method public ping()V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hidl.base@1.0::IBase"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const v2, 0xf504e47
+
+    .line 15
+    .line 16
+    .line 17
+    const/4 v3, 0x0
+
+    .line 18
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 28
+    .line 29
+    .line 30
+    return-void
+
+    .line 31
+    :catchall_0
+    move-exception p0
+
+    .line 32
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 33
+    .line 34
+    .line 35
+    throw p0
+.end method
+
+.method public registerCallback(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetworkCallback;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    if-nez p1, :cond_0
+
+    .line 8
+    .line 9
+    const/4 p1, 0x0
+
+    .line 10
+    goto :goto_0
+
+    .line 11
+    :cond_0
+    invoke-interface {p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetworkCallback;->asBinder()Landroid/os/IHwBinder;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p1
+
+    .line 15
+    :goto_0
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Landroid/os/HwParcel;Landroid/os/IHwBinder;)Landroid/os/HwParcel;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object p1
+
+    .line 19
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 20
+    .line 21
+    const/4 v1, 0x4
+
+    .line 22
+    const/4 v2, 0x0
+
+    .line 23
+    invoke-interface {p0, v1, v0, p1, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 24
+    .line 25
+    .line 26
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 27
+    .line 28
+    .line 29
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 30
+    .line 31
+    .line 32
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 33
+    .line 34
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 35
+    .line 36
+    .line 37
+    invoke-virtual {p0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 38
+    .line 39
+    .line 40
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 41
+    .line 42
+    .line 43
+    return-object p0
+
+    .line 44
+    :catchall_0
+    move-exception p0
+
+    .line 45
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 46
+    .line 47
+    .line 48
+    throw p0
+.end method
+
+.method public registerCallback_1_4(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetworkCallback;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.4::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    if-nez p1, :cond_0
+
+    .line 8
+    .line 9
+    const/4 p1, 0x0
+
+    .line 10
+    goto :goto_0
+
+    .line 11
+    :cond_0
+    invoke-interface {p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetworkCallback;->asBinder()Landroid/os/IHwBinder;
+
+    .line 12
+    .line 13
+    .line 14
+    move-result-object p1
+
+    .line 15
+    :goto_0
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Landroid/os/HwParcel;Landroid/os/IHwBinder;)Landroid/os/HwParcel;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object p1
+
+    .line 19
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 20
+    .line 21
+    const/16 v1, 0x6f
+
+    .line 22
+    .line 23
+    const/4 v2, 0x0
+
+    .line 24
+    invoke-interface {p0, v1, v0, p1, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 31
+    .line 32
+    .line 33
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+
+    .line 34
+    .line 35
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;-><init>()V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-virtual {p0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-object p0
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public select()Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x42
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public sendNetworkEapIdentityResponse(Ljava/util/ArrayList;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Byte;",
+            ">;)",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantP2pIface$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x48
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public sendNetworkEapIdentityResponse_1_1(Ljava/util/ArrayList;Ljava/util/ArrayList;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Byte;",
+            ">;",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Byte;",
+            ">;)",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    const-string v1, "android.hardware.wifi.supplicant@1.1::ISupplicantStaNetwork"
+
+    .line 7
+    .line 8
+    invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeInt8Vector(Ljava/util/ArrayList;)V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeInt8Vector(Ljava/util/ArrayList;)V
+
+    .line 15
+    .line 16
+    .line 17
+    new-instance p1, Landroid/os/HwParcel;
+
+    .line 18
+    .line 19
+    invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 20
+    .line 21
+    .line 22
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 23
+    .line 24
+    const/16 p2, 0x4a
+
+    .line 25
+    .line 26
+    const/4 v1, 0x0
+
+    .line 27
+    invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 34
+    .line 35
+    .line 36
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 37
+    .line 38
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {p0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 42
+    .line 43
+    .line 44
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 45
+    .line 46
+    .line 47
+    return-object p0
+
+    .line 48
+    :catchall_0
+    move-exception p0
+
+    .line 49
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 50
+    .line 51
+    .line 52
+    throw p0
+.end method
+
+.method public sendNetworkEapSimGsmAuthFailure()Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x44
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public sendNetworkEapSimGsmAuthResponse(Ljava/util/ArrayList;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$NetworkResponseEapSimGsmAuthParams;",
+            ">;)",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    const-string v1, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 7
+    .line 8
+    invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$NetworkResponseEapSimGsmAuthParams;->writeVectorToParcel(Landroid/os/HwParcel;Ljava/util/ArrayList;)V
+
+    .line 12
+    .line 13
+    .line 14
+    new-instance p1, Landroid/os/HwParcel;
+
+    .line 15
+    .line 16
+    invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 17
+    .line 18
+    .line 19
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 20
+    .line 21
+    const/16 v1, 0x43
+
+    .line 22
+    .line 23
+    const/4 v2, 0x0
+
+    .line 24
+    invoke-interface {p0, v1, v0, p1, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 31
+    .line 32
+    .line 33
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 34
+    .line 35
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-virtual {p0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-object p0
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public sendNetworkEapSimUmtsAuthFailure()Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v2, 0x47
+
+    .line 15
+    .line 16
+    const/4 v3, 0x0
+
+    .line 17
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public sendNetworkEapSimUmtsAuthResponse(Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$NetworkResponseEapSimUmtsAuthParams;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    const-string v1, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 7
+    .line 8
+    invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantStaNetwork$NetworkResponseEapSimUmtsAuthParams;->writeToParcel(Landroid/os/HwParcel;)V
+
+    .line 12
+    .line 13
+    .line 14
+    new-instance p1, Landroid/os/HwParcel;
+
+    .line 15
+    .line 16
+    invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 17
+    .line 18
+    .line 19
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 20
+    .line 21
+    const/16 v1, 0x45
+
+    .line 22
+    .line 23
+    const/4 v2, 0x0
+
+    .line 24
+    invoke-interface {p0, v1, v0, p1, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 25
+    .line 26
+    .line 27
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 31
+    .line 32
+    .line 33
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 34
+    .line 35
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 36
+    .line 37
+    .line 38
+    invoke-virtual {p0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 42
+    .line 43
+    .line 44
+    return-object p0
+
+    .line 45
+    :catchall_0
+    move-exception p0
+
+    .line 46
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 47
+    .line 48
+    .line 49
+    throw p0
+.end method
+
+.method public sendNetworkEapSimUmtsAutsResponse([B)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwBlob;
+
+    .line 8
+    .line 9
+    const/16 v2, 0xe
+
+    .line 10
+    .line 11
+    invoke-direct {v1, v2}, Landroid/os/HwBlob;-><init>(I)V
+
+    .line 12
+    .line 13
+    .line 14
+    if-eqz p1, :cond_0
+
+    .line 15
+    .line 16
+    array-length v3, p1
+
+    .line 17
+    if-ne v3, v2, :cond_0
+
+    .line 18
+    .line 19
+    const-wide/16 v2, 0x0
+
+    .line 20
+    .line 21
+    invoke-virtual {v1, v2, v3, p1}, Landroid/os/HwBlob;->putInt8Array(J[B)V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-static {v0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiApIface$Proxy$$ExternalSyntheticOutline0;->m(Landroid/os/HwParcel;Landroid/os/HwBlob;)Landroid/os/HwParcel;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object p1
+
+    .line 28
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 29
+    .line 30
+    const/16 v1, 0x46
+
+    .line 31
+    .line 32
+    const/4 v2, 0x0
+
+    .line 33
+    invoke-interface {p0, v1, v0, p1, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 34
+    .line 35
+    .line 36
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 37
+    .line 38
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 40
+    .line 41
+    .line 42
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 43
+    .line 44
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-virtual {p0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 48
+    .line 49
+    .line 50
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 51
+    .line 52
+    .line 53
+    return-object p0
+
+    .line 54
+    :catchall_0
+    move-exception p0
+
+    .line 55
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 56
+    .line 57
+    .line 58
+    throw p0
+
+    .line 59
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    .line 60
+    .line 61
+    const-string p1, "Array element is not of the expected length"
+
+    .line 62
+    .line 63
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 64
+    .line 65
+    .line 66
+    throw p0
+.end method
+
+.method public setAuthAlg(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0xa
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setAuthAlg_1_3(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x66
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setBssid([B)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 5
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwBlob;
+
+    .line 8
+    .line 9
+    const/4 v2, 0x6
+
+    .line 10
+    invoke-direct {v1, v2}, Landroid/os/HwBlob;-><init>(I)V
+
+    .line 11
+    .line 12
+    .line 13
+    if-eqz p1, :cond_0
+
+    .line 14
+    .line 15
+    array-length v3, p1
+
+    .line 16
+    if-ne v3, v2, :cond_0
+
+    .line 17
+    .line 18
+    const-wide/16 v3, 0x0
+
+    .line 19
+    .line 20
+    invoke-virtual {v1, v3, v4, p1}, Landroid/os/HwBlob;->putInt8Array(J[B)V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-static {v0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiApIface$Proxy$$ExternalSyntheticOutline0;->m(Landroid/os/HwParcel;Landroid/os/HwBlob;)Landroid/os/HwParcel;
+
+    .line 24
+    .line 25
+    .line 26
+    move-result-object p1
+
+    .line 27
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 28
+    .line 29
+    const/4 v1, 0x0
+
+    .line 30
+    invoke-interface {p0, v2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 34
+    .line 35
+    .line 36
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 37
+    .line 38
+    .line 39
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 40
+    .line 41
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 42
+    .line 43
+    .line 44
+    invoke-virtual {p0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 48
+    .line 49
+    .line 50
+    return-object p0
+
+    .line 51
+    :catchall_0
+    move-exception p0
+
+    .line 52
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 53
+    .line 54
+    .line 55
+    throw p0
+
+    .line 56
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    .line 57
+    .line 58
+    const-string p1, "Array element is not of the expected length"
+
+    .line 59
+    .line 60
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 61
+    .line 62
+    .line 63
+    throw p0
+.end method
+
+.method public setEapAltSubjectMatch(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x1c
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapAnonymousIdentity(Ljava/util/ArrayList;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Byte;",
+            ">;)",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantP2pIface$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x15
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapCACert(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x17
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapCAPath(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x18
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapClientCert(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x19
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapDomainSuffixMatch(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x1f
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapEncryptedImsiIdentity(Ljava/util/ArrayList;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Byte;",
+            ">;)",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.1::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantP2pIface$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x49
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapEngine(Z)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Z)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x1d
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapEngineID(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x1e
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapErp(Z)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Z)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x68
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapIdentity(Ljava/util/ArrayList;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Byte;",
+            ">;)",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantP2pIface$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x14
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapMethod(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x12
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapPassword(Ljava/util/ArrayList;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Byte;",
+            ">;)",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantP2pIface$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x16
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapPhase2Method(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x13
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapPrivateKeyId(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x1a
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEapSubjectMatch(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x1b
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setEdmg(Z)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.4::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Z)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x6d
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setGroupCipher(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0xb
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setGroupCipher_1_2(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x4f
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setGroupCipher_1_3(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x5f
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setGroupCipher_1_4(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.4::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x69
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setGroupMgmtCipher(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x51
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setHALInstrumentation()V
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hidl.base@1.0::IBase"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const v2, 0xf494e54
+
+    .line 15
+    .line 16
+    .line 17
+    const/4 v3, 0x1
+
+    .line 18
+    invoke-interface {p0, v2, v0, v1, v3}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 19
+    .line 20
+    .line 21
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 25
+    .line 26
+    .line 27
+    return-void
+
+    .line 28
+    :catchall_0
+    move-exception p0
+
+    .line 29
+    invoke-virtual {v1}, Landroid/os/HwParcel;->release()V
+
+    .line 30
+    .line 31
+    .line 32
+    throw p0
+.end method
+
+.method public setIdStr(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x21
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setKeyMgmt(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x8
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setKeyMgmt_1_2(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x4b
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setKeyMgmt_1_3(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x5b
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setOcsp(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x59
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setPairwiseCipher(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0xc
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setPairwiseCipher_1_2(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x4d
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setPairwiseCipher_1_3(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x61
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setPairwiseCipher_1_4(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.4::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x6b
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setPmkCache(Ljava/util/ArrayList;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Byte;",
+            ">;)",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantP2pIface$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x65
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setProactiveKeyCaching(Z)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Z)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x20
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setProto(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x9
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setProto_1_3(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x5d
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setPsk([B)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object v0
+
+    .line 7
+    new-instance v1, Landroid/os/HwBlob;
+
+    .line 8
+    .line 9
+    const/16 v2, 0x20
+
+    .line 10
+    .line 11
+    invoke-direct {v1, v2}, Landroid/os/HwBlob;-><init>(I)V
+
+    .line 12
+    .line 13
+    .line 14
+    if-eqz p1, :cond_0
+
+    .line 15
+    .line 16
+    array-length v3, p1
+
+    .line 17
+    if-ne v3, v2, :cond_0
+
+    .line 18
+    .line 19
+    const-wide/16 v2, 0x0
+
+    .line 20
+    .line 21
+    invoke-virtual {v1, v2, v3, p1}, Landroid/os/HwBlob;->putInt8Array(J[B)V
+
+    .line 22
+    .line 23
+    .line 24
+    invoke-static {v0, v1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiApIface$Proxy$$ExternalSyntheticOutline0;->m(Landroid/os/HwParcel;Landroid/os/HwBlob;)Landroid/os/HwParcel;
+
+    .line 25
+    .line 26
+    .line 27
+    move-result-object p1
+
+    .line 28
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 29
+    .line 30
+    const/16 v1, 0xe
+
+    .line 31
+    .line 32
+    const/4 v2, 0x0
+
+    .line 33
+    invoke-interface {p0, v1, v0, p1, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 34
+    .line 35
+    .line 36
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 37
+    .line 38
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 40
+    .line 41
+    .line 42
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 43
+    .line 44
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 45
+    .line 46
+    .line 47
+    invoke-virtual {p0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 48
+    .line 49
+    .line 50
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 51
+    .line 52
+    .line 53
+    return-object p0
+
+    .line 54
+    :catchall_0
+    move-exception p0
+
+    .line 55
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 56
+    .line 57
+    .line 58
+    throw p0
+
+    .line 59
+    :cond_0
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    .line 60
+    .line 61
+    const-string p1, "Array element is not of the expected length"
+
+    .line 62
+    .line 63
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    .line 64
+    .line 65
+    .line 66
+    throw p0
+.end method
+
+.method public setPskPassphrase(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0xd
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setRequirePmf(Z)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Z)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x11
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setSaeH2eMode(B)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.4::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiStaIface$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;B)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x70
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setSaePassword(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x57
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setSaePasswordId(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.2::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x58
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setScanSsid(Z)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Z)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/4 v1, 0x7
+
+    .line 15
+    const/4 v2, 0x0
+
+    .line 16
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 23
+    .line 24
+    .line 25
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 26
+    .line 27
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 34
+    .line 35
+    .line 36
+    return-object p0
+
+    .line 37
+    :catchall_0
+    move-exception p0
+
+    .line 38
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 39
+    .line 40
+    .line 41
+    throw p0
+.end method
+
+.method public setSsid(Ljava/util/ArrayList;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Byte;",
+            ">;)",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/ISupplicantP2pIface$Proxy$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/util/ArrayList;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/4 v1, 0x5
+
+    .line 15
+    const/4 v2, 0x0
+
+    .line 16
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 17
+    .line 18
+    .line 19
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 20
+    .line 21
+    .line 22
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 23
+    .line 24
+    .line 25
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 26
+    .line 27
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 34
+    .line 35
+    .line 36
+    return-object p0
+
+    .line 37
+    :catchall_0
+    move-exception p0
+
+    .line 38
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 39
+    .line 40
+    .line 41
+    throw p0
+.end method
+
+.method public setUpdateIdentifier(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x22
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setWapiCertSuite(Ljava/lang/String;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.3::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {v0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifiChip$Stub$$ExternalSyntheticOutline0;->m(Ljava/lang/String;Ljava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x63
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public setWepKey(ILjava/util/ArrayList;)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/ArrayList<",
+            "Ljava/lang/Byte;",
+            ">;)",
+            "Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;"
+        }
+    .end annotation
+
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    const-string v1, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 7
+    .line 8
+    invoke-virtual {v0, v1}, Landroid/os/HwParcel;->writeInterfaceToken(Ljava/lang/String;)V
+
+    .line 9
+    .line 10
+    .line 11
+    invoke-virtual {v0, p1}, Landroid/os/HwParcel;->writeInt32(I)V
+
+    .line 12
+    .line 13
+    .line 14
+    invoke-virtual {v0, p2}, Landroid/os/HwParcel;->writeInt8Vector(Ljava/util/ArrayList;)V
+
+    .line 15
+    .line 16
+    .line 17
+    new-instance p1, Landroid/os/HwParcel;
+
+    .line 18
+    .line 19
+    invoke-direct {p1}, Landroid/os/HwParcel;-><init>()V
+
+    .line 20
+    .line 21
+    .line 22
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 23
+    .line 24
+    const/16 p2, 0xf
+
+    .line 25
+    .line 26
+    const/4 v1, 0x0
+
+    .line 27
+    invoke-interface {p0, p2, v0, p1, v1}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 28
+    .line 29
+    .line 30
+    invoke-virtual {p1}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 31
+    .line 32
+    .line 33
+    invoke-virtual {v0}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 34
+    .line 35
+    .line 36
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 37
+    .line 38
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 39
+    .line 40
+    .line 41
+    invoke-virtual {p0, p1}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 42
+    .line 43
+    .line 44
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 45
+    .line 46
+    .line 47
+    return-object p0
+
+    .line 48
+    :catchall_0
+    move-exception p0
+
+    .line 49
+    invoke-virtual {p1}, Landroid/os/HwParcel;->release()V
+
+    .line 50
+    .line 51
+    .line 52
+    throw p0
+.end method
+
+.method public setWepTxKeyIdx(I)Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+    .locals 3
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    const-string v0, "android.hardware.wifi.supplicant@1.0::ISupplicantStaNetwork"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/V1_0/IWifi$Proxy$$ExternalSyntheticOutline0;->m(ILjava/lang/String;)Landroid/os/HwParcel;
+
+    .line 4
+    .line 5
+    .line 6
+    move-result-object p1
+
+    .line 7
+    new-instance v0, Landroid/os/HwParcel;
+
+    .line 8
+    .line 9
+    invoke-direct {v0}, Landroid/os/HwParcel;-><init>()V
+
+    .line 10
+    .line 11
+    .line 12
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 13
+    .line 14
+    const/16 v1, 0x10
+
+    .line 15
+    .line 16
+    const/4 v2, 0x0
+
+    .line 17
+    invoke-interface {p0, v1, p1, v0, v2}, Landroid/os/IHwBinder;->transact(ILandroid/os/HwParcel;Landroid/os/HwParcel;I)V
+
+    .line 18
+    .line 19
+    .line 20
+    invoke-virtual {v0}, Landroid/os/HwParcel;->verifySuccess()V
+
+    .line 21
+    .line 22
+    .line 23
+    invoke-virtual {p1}, Landroid/os/HwParcel;->releaseTemporaryStorage()V
+
+    .line 24
+    .line 25
+    .line 26
+    new-instance p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;
+
+    .line 27
+    .line 28
+    invoke-direct {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;-><init>()V
+
+    .line 29
+    .line 30
+    .line 31
+    invoke-virtual {p0, v0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_0/SupplicantStatus;->readFromParcel(Landroid/os/HwParcel;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 32
+    .line 33
+    .line 34
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 35
+    .line 36
+    .line 37
+    return-object p0
+
+    .line 38
+    :catchall_0
+    move-exception p0
+
+    .line 39
+    invoke-virtual {v0}, Landroid/os/HwParcel;->release()V
+
+    .line 40
+    .line 41
+    .line 42
+    throw p0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .locals 1
+
+    .line 1
+    :try_start_0
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-virtual {p0}, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->interfaceDescriptor()Ljava/lang/String;
+
+    .line 7
+    .line 8
+    .line 9
+    move-result-object p0
+
+    .line 10
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 11
+    .line 12
+    .line 13
+    const-string p0, "@Proxy"
+
+    .line 14
+    .line 15
+    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 16
+    .line 17
+    .line 18
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    .line 19
+    .line 20
+    .line 21
+    move-result-object p0
+    :try_end_0
+    .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 22
+    return-object p0
+
+    .line 23
+    :catch_0
+    const-string p0, "[class or subclass of android.hardware.wifi.supplicant@1.4::ISupplicantStaNetwork]@Proxy"
+
+    .line 24
+    .line 25
+    return-object p0
+.end method
+
+.method public unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
+    .locals 0
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Landroid/os/RemoteException;
+        }
+    .end annotation
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/wifi/x/android/hardware/wifi/supplicant/V1_4/ISupplicantStaNetwork$Proxy;->mRemote:Landroid/os/IHwBinder;
+
+    .line 2
+    .line 3
+    invoke-interface {p0, p1}, Landroid/os/IHwBinder;->unlinkToDeath(Landroid/os/IHwBinder$DeathRecipient;)Z
+
+    .line 4
+    .line 5
+    .line 6
+    move-result p0
+
+    .line 7
+    return p0
+.end method

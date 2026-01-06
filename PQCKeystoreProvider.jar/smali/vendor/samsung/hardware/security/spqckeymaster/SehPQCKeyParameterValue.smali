@@ -1,0 +1,1748 @@
+.class public final Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+.super Ljava/lang/Object;
+.source "SehPQCKeyParameterValue.java"
+
+# interfaces
+.implements Landroid/os/Parcelable;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue$Tag;
+    }
+.end annotation
+
+
+# static fields
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroid/os/Parcelable$Creator<",
+            "Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field public static final algorithm:I = 0x2
+
+.field public static final blob:I = 0xe
+
+.field public static final boolValue:I = 0xa
+
+.field public static final dateTime:I = 0xd
+
+.field public static final digest:I = 0x6
+
+.field public static final format:I = 0x9
+
+.field public static final integer:I = 0xb
+
+.field public static final invalid:I = 0x0
+
+.field public static final keyPurpose:I = 0x7
+
+.field public static final longInteger:I = 0xc
+
+.field public static final mldsaMode:I = 0x5
+
+.field public static final mldsaSet:I = 0x3
+
+.field public static final mlkemSet:I = 0x4
+
+.field public static final origin:I = 0x8
+
+.field public static final targetSecLevel:I = 0x1
+
+
+# instance fields
+.field private _tag:I
+
+.field private _value:Ljava/lang/Object;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .line 281
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue$1;
+
+    invoke-direct {v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue$1;-><init>()V
+
+    sput-object v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
+.method public constructor <init>()V
+    .locals 2
+
+    .line 32
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 33
+    const/4 v0, 0x0
+
+    .line 34
+    .local v0, "_value":I
+    const/4 v1, 0x0
+
+    iput v1, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_tag:I
+
+    .line 35
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    .line 36
+    return-void
+.end method
+
+.method private constructor <init>(ILjava/lang/Object;)V
+    .locals 0
+    .param p1, "_tag"    # I
+    .param p2, "_value"    # Ljava/lang/Object;
+
+    .line 42
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 43
+    iput p1, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_tag:I
+
+    .line 44
+    iput-object p2, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    .line 45
+    return-void
+.end method
+
+.method private constructor <init>(Landroid/os/Parcel;)V
+    .locals 0
+    .param p1, "_aidl_parcel"    # Landroid/os/Parcel;
+
+    .line 38
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 39
+    invoke-virtual {p0, p1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->readFromParcel(Landroid/os/Parcel;)V
+
+    .line 40
+    return-void
+.end method
+
+.method synthetic constructor <init>(Landroid/os/Parcel;Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue-IA;)V
+    .locals 0
+
+    invoke-direct {p0, p1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(Landroid/os/Parcel;)V
+
+    return-void
+.end method
+
+.method private _assertTag(I)V
+    .locals 3
+    .param p1, "tag"    # I
+
+    .line 436
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getTag()I
+
+    move-result v0
+
+    if-ne v0, p1, :cond_0
+
+    .line 439
+    return-void
+
+    .line 437
+    :cond_0
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "bad access: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-direct {p0, p1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_tagString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getTag()I
+
+    move-result v2
+
+    invoke-direct {p0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_tagString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string v2, " is available."
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
+.method private _set(ILjava/lang/Object;)V
+    .locals 0
+    .param p1, "_tag"    # I
+    .param p2, "_value"    # Ljava/lang/Object;
+
+    .line 463
+    iput p1, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_tag:I
+
+    .line 464
+    iput-object p2, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    .line 465
+    return-void
+.end method
+
+.method private _tagString(I)Ljava/lang/String;
+    .locals 3
+    .param p1, "_tag"    # I
+
+    .line 442
+    packed-switch p1, :pswitch_data_0
+
+    .line 459
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "unknown field: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 457
+    :pswitch_0
+    const-string v0, "blob"
+
+    return-object v0
+
+    .line 456
+    :pswitch_1
+    const-string v0, "dateTime"
+
+    return-object v0
+
+    .line 455
+    :pswitch_2
+    const-string v0, "longInteger"
+
+    return-object v0
+
+    .line 454
+    :pswitch_3
+    const-string v0, "integer"
+
+    return-object v0
+
+    .line 453
+    :pswitch_4
+    const-string v0, "boolValue"
+
+    return-object v0
+
+    .line 452
+    :pswitch_5
+    const-string v0, "format"
+
+    return-object v0
+
+    .line 451
+    :pswitch_6
+    const-string v0, "origin"
+
+    return-object v0
+
+    .line 450
+    :pswitch_7
+    const-string v0, "keyPurpose"
+
+    return-object v0
+
+    .line 449
+    :pswitch_8
+    const-string v0, "digest"
+
+    return-object v0
+
+    .line 448
+    :pswitch_9
+    const-string v0, "mldsaMode"
+
+    return-object v0
+
+    .line 447
+    :pswitch_a
+    const-string v0, "mlkemSet"
+
+    return-object v0
+
+    .line 446
+    :pswitch_b
+    const-string v0, "mldsaSet"
+
+    return-object v0
+
+    .line 445
+    :pswitch_c
+    const-string v0, "algorithm"
+
+    return-object v0
+
+    .line 444
+    :pswitch_d
+    const-string v0, "targetSecLevel"
+
+    return-object v0
+
+    .line 443
+    :pswitch_e
+    const-string v0, "invalid"
+
+    return-object v0
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public static algorithm(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 84
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/4 v1, 0x2
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static blob([B)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 2
+    .param p0, "_value"    # [B
+
+    .line 264
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/16 v1, 0xe
+
+    invoke-direct {v0, v1, p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static boolValue(Z)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # Z
+
+    .line 204
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/16 v1, 0xa
+
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static dateTime(J)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # J
+
+    .line 249
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/16 v1, 0xd
+
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static digest(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 144
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/4 v1, 0x6
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static format(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 189
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/16 v1, 0x9
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static integer(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 219
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/16 v1, 0xb
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static invalid(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 54
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/4 v1, 0x0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static keyPurpose(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 159
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/4 v1, 0x7
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static longInteger(J)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # J
+
+    .line 234
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/16 v1, 0xc
+
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static mldsaMode(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 129
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/4 v1, 0x5
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static mldsaSet(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 99
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/4 v1, 0x3
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static mlkemSet(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 114
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/4 v1, 0x4
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static origin(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 174
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/16 v1, 0x8
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+.method public static targetSecLevel(I)Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+    .locals 3
+    .param p0, "_value"    # I
+
+    .line 69
+    new-instance v0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;
+
+    const/4 v1, 0x1
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {v0, v1, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;-><init>(ILjava/lang/Object;)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public describeContents()I
+    .locals 1
+
+    .line 429
+    const/4 v0, 0x0
+
+    .line 430
+    .local v0, "_mask":I
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getTag()I
+
+    .line 432
+    return v0
+.end method
+
+.method public getAlgorithm()I
+    .locals 1
+
+    .line 88
+    const/4 v0, 0x2
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 89
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getBlob()[B
+    .locals 1
+
+    .line 268
+    const/16 v0, 0xe
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 269
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, [B
+
+    return-object v0
+.end method
+
+.method public getBoolValue()Z
+    .locals 1
+
+    .line 208
+    const/16 v0, 0xa
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 209
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getDateTime()J
+    .locals 2
+
+    .line 253
+    const/16 v0, 0xd
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 254
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public getDigest()I
+    .locals 1
+
+    .line 148
+    const/4 v0, 0x6
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 149
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getFormat()I
+    .locals 1
+
+    .line 193
+    const/16 v0, 0x9
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 194
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getInteger()I
+    .locals 1
+
+    .line 223
+    const/16 v0, 0xb
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 224
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getInvalid()I
+    .locals 1
+
+    .line 58
+    const/4 v0, 0x0
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 59
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getKeyPurpose()I
+    .locals 1
+
+    .line 163
+    const/4 v0, 0x7
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 164
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getLongInteger()J
+    .locals 2
+
+    .line 238
+    const/16 v0, 0xc
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 239
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public getMldsaMode()I
+    .locals 1
+
+    .line 133
+    const/4 v0, 0x5
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 134
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getMldsaSet()I
+    .locals 1
+
+    .line 103
+    const/4 v0, 0x3
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 104
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getMlkemSet()I
+    .locals 1
+
+    .line 118
+    const/4 v0, 0x4
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 119
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getOrigin()I
+    .locals 1
+
+    .line 178
+    const/16 v0, 0x8
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 179
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public final getStability()I
+    .locals 1
+
+    .line 278
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public getTag()I
+    .locals 1
+
+    .line 48
+    iget v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_tag:I
+
+    return v0
+.end method
+
+.method public getTargetSecLevel()I
+    .locals 1
+
+    .line 73
+    const/4 v0, 0x1
+
+    invoke-direct {p0, v0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_assertTag(I)V
+
+    .line 74
+    iget-object v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_value:Ljava/lang/Object;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public readFromParcel(Landroid/os/Parcel;)V
+    .locals 4
+    .param p1, "_aidl_parcel"    # Landroid/os/Parcel;
+
+    .line 346
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v0
+
+    .line 347
+    .local v0, "_aidl_tag":I
+    packed-switch v0, :pswitch_data_0
+
+    .line 424
+    new-instance v1, Ljava/lang/IllegalArgumentException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "union: unknown tag: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+
+    .line 420
+    :pswitch_0
+    invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
+
+    move-result-object v1
+
+    .line 421
+    .local v1, "_aidl_value":[B
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 422
+    return-void
+
+    .line 415
+    .end local v1    # "_aidl_value":[B
+    :pswitch_1
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v1
+
+    .line 416
+    .local v1, "_aidl_value":J
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-direct {p0, v0, v3}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 417
+    return-void
+
+    .line 410
+    .end local v1    # "_aidl_value":J
+    :pswitch_2
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v1
+
+    .line 411
+    .restart local v1    # "_aidl_value":J
+    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v3
+
+    invoke-direct {p0, v0, v3}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 412
+    return-void
+
+    .line 405
+    .end local v1    # "_aidl_value":J
+    :pswitch_3
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 406
+    .local v1, "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 407
+    return-void
+
+    .line 400
+    .end local v1    # "_aidl_value":I
+    :pswitch_4
+    invoke-virtual {p1}, Landroid/os/Parcel;->readBoolean()Z
+
+    move-result v1
+
+    .line 401
+    .local v1, "_aidl_value":Z
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 402
+    return-void
+
+    .line 395
+    .end local v1    # "_aidl_value":Z
+    :pswitch_5
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 396
+    .local v1, "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 397
+    return-void
+
+    .line 390
+    .end local v1    # "_aidl_value":I
+    :pswitch_6
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 391
+    .restart local v1    # "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 392
+    return-void
+
+    .line 385
+    .end local v1    # "_aidl_value":I
+    :pswitch_7
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 386
+    .restart local v1    # "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 387
+    return-void
+
+    .line 380
+    .end local v1    # "_aidl_value":I
+    :pswitch_8
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 381
+    .restart local v1    # "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 382
+    return-void
+
+    .line 375
+    .end local v1    # "_aidl_value":I
+    :pswitch_9
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 376
+    .restart local v1    # "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 377
+    return-void
+
+    .line 370
+    .end local v1    # "_aidl_value":I
+    :pswitch_a
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 371
+    .restart local v1    # "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 372
+    return-void
+
+    .line 365
+    .end local v1    # "_aidl_value":I
+    :pswitch_b
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 366
+    .restart local v1    # "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 367
+    return-void
+
+    .line 360
+    .end local v1    # "_aidl_value":I
+    :pswitch_c
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 361
+    .restart local v1    # "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 362
+    return-void
+
+    .line 355
+    .end local v1    # "_aidl_value":I
+    :pswitch_d
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 356
+    .restart local v1    # "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 357
+    return-void
+
+    .line 350
+    .end local v1    # "_aidl_value":I
+    :pswitch_e
+    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+
+    move-result v1
+
+    .line 351
+    .restart local v1    # "_aidl_value":I
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-direct {p0, v0, v2}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 352
+    return-void
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method
+
+.method public setAlgorithm(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 93
+    const/4 v0, 0x2
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 94
+    return-void
+.end method
+
+.method public setBlob([B)V
+    .locals 1
+    .param p1, "_value"    # [B
+
+    .line 273
+    const/16 v0, 0xe
+
+    invoke-direct {p0, v0, p1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 274
+    return-void
+.end method
+
+.method public setBoolValue(Z)V
+    .locals 2
+    .param p1, "_value"    # Z
+
+    .line 213
+    const/16 v0, 0xa
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 214
+    return-void
+.end method
+
+.method public setDateTime(J)V
+    .locals 2
+    .param p1, "_value"    # J
+
+    .line 258
+    const/16 v0, 0xd
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 259
+    return-void
+.end method
+
+.method public setDigest(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 153
+    const/4 v0, 0x6
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 154
+    return-void
+.end method
+
+.method public setFormat(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 198
+    const/16 v0, 0x9
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 199
+    return-void
+.end method
+
+.method public setInteger(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 228
+    const/16 v0, 0xb
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 229
+    return-void
+.end method
+
+.method public setInvalid(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 63
+    const/4 v0, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 64
+    return-void
+.end method
+
+.method public setKeyPurpose(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 168
+    const/4 v0, 0x7
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 169
+    return-void
+.end method
+
+.method public setLongInteger(J)V
+    .locals 2
+    .param p1, "_value"    # J
+
+    .line 243
+    const/16 v0, 0xc
+
+    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 244
+    return-void
+.end method
+
+.method public setMldsaMode(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 138
+    const/4 v0, 0x5
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 139
+    return-void
+.end method
+
+.method public setMldsaSet(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 108
+    const/4 v0, 0x3
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 109
+    return-void
+.end method
+
+.method public setMlkemSet(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 123
+    const/4 v0, 0x4
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 124
+    return-void
+.end method
+
+.method public setOrigin(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 183
+    const/16 v0, 0x8
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 184
+    return-void
+.end method
+
+.method public setTargetSecLevel(I)V
+    .locals 2
+    .param p1, "_value"    # I
+
+    .line 78
+    const/4 v0, 0x1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-direct {p0, v0, v1}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_set(ILjava/lang/Object;)V
+
+    .line 79
+    return-void
+.end method
+
+.method public final writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+    .param p1, "_aidl_parcel"    # Landroid/os/Parcel;
+    .param p2, "_aidl_flag"    # I
+
+    .line 294
+    iget v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_tag:I
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 295
+    iget v0, p0, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->_tag:I
+
+    packed-switch v0, :pswitch_data_0
+
+    goto/16 :goto_0
+
+    .line 339
+    :pswitch_0
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getBlob()[B
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
+
+    goto/16 :goto_0
+
+    .line 336
+    :pswitch_1
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getDateTime()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 337
+    goto/16 :goto_0
+
+    .line 333
+    :pswitch_2
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getLongInteger()J
+
+    move-result-wide v0
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 334
+    goto :goto_0
+
+    .line 330
+    :pswitch_3
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getInteger()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 331
+    goto :goto_0
+
+    .line 327
+    :pswitch_4
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getBoolValue()Z
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBoolean(Z)V
+
+    .line 328
+    goto :goto_0
+
+    .line 324
+    :pswitch_5
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getFormat()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 325
+    goto :goto_0
+
+    .line 321
+    :pswitch_6
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getOrigin()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 322
+    goto :goto_0
+
+    .line 318
+    :pswitch_7
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getKeyPurpose()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 319
+    goto :goto_0
+
+    .line 315
+    :pswitch_8
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getDigest()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 316
+    goto :goto_0
+
+    .line 312
+    :pswitch_9
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getMldsaMode()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 313
+    goto :goto_0
+
+    .line 309
+    :pswitch_a
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getMlkemSet()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 310
+    goto :goto_0
+
+    .line 306
+    :pswitch_b
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getMldsaSet()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 307
+    goto :goto_0
+
+    .line 303
+    :pswitch_c
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getAlgorithm()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 304
+    goto :goto_0
+
+    .line 300
+    :pswitch_d
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getTargetSecLevel()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 301
+    goto :goto_0
+
+    .line 297
+    :pswitch_e
+    invoke-virtual {p0}, Lvendor/samsung/hardware/security/spqckeymaster/SehPQCKeyParameterValue;->getInvalid()I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
+
+    .line 298
+    nop
+
+    .line 342
+    :goto_0
+    return-void
+
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x0
+        :pswitch_e
+        :pswitch_d
+        :pswitch_c
+        :pswitch_b
+        :pswitch_a
+        :pswitch_9
+        :pswitch_8
+        :pswitch_7
+        :pswitch_6
+        :pswitch_5
+        :pswitch_4
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_0
+    .end packed-switch
+.end method

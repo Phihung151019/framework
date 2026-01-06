@@ -1,0 +1,46 @@
+.class public final synthetic Lcom/samsung/android/server/wifi/SemConnectivityLogger$$ExternalSyntheticLambda1;
+.super Ljava/lang/Object;
+.source "qb/104190634 3f0c61d6e0e110a32c521efcc24f383ff81c48febc65f067ab9ac6b5ba8742fd"
+
+# interfaces
+.implements Lcom/samsung/android/server/wifi/SemWifiManagerProxy$WifiStateListener;
+
+
+# instance fields
+.field public final synthetic f$0:Lcom/samsung/android/server/wifi/SemConnectivityLogger;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/samsung/android/server/wifi/SemConnectivityLogger;)V
+    .locals 0
+
+    .line 1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 2
+    .line 3
+    .line 4
+    iput-object p1, p0, Lcom/samsung/android/server/wifi/SemConnectivityLogger$$ExternalSyntheticLambda1;->f$0:Lcom/samsung/android/server/wifi/SemConnectivityLogger;
+
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onWifiStateChanged(II)V
+    .locals 0
+
+    .line 1
+    iget-object p0, p0, Lcom/samsung/android/server/wifi/SemConnectivityLogger$$ExternalSyntheticLambda1;->f$0:Lcom/samsung/android/server/wifi/SemConnectivityLogger;
+
+    .line 2
+    .line 3
+    invoke-static {p0, p1, p2}, Lcom/samsung/android/server/wifi/SemConnectivityLogger;->$r8$lambda$MphRkj69TgbP_dGui0MlSMrXG_A(Lcom/samsung/android/server/wifi/SemConnectivityLogger;II)V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method

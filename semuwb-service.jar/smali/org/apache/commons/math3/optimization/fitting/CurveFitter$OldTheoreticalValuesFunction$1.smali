@@ -1,0 +1,125 @@
+.class Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction$1;
+.super Ljava/lang/Object;
+.source "CurveFitter.java"
+
+# interfaces
+.implements Lorg/apache/commons/math3/analysis/MultivariateMatrixFunction;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;->jacobian()Lorg/apache/commons/math3/analysis/MultivariateMatrixFunction;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic this$1:Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;
+
+
+# direct methods
+.method constructor <init>(Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;)V
+    .locals 0
+
+    .line 216
+    .local p0, "this":Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction$1;, "Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction.1;"
+    iput-object p1, p0, Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction$1;->this$1:Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public value([D)[[D
+    .locals 8
+    .param p1, "point"    # [D
+
+    .line 219
+    .local p0, "this":Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction$1;, "Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction.1;"
+    iget-object v0, p0, Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction$1;->this$1:Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;
+
+    iget-object v0, v0, Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;->this$0:Lorg/apache/commons/math3/optimization/fitting/CurveFitter;
+
+    invoke-static {v0}, Lorg/apache/commons/math3/optimization/fitting/CurveFitter;->access$000(Lorg/apache/commons/math3/optimization/fitting/CurveFitter;)Ljava/util/List;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    new-array v0, v0, [[D
+
+    .line 221
+    .local v0, "jacobian":[[D
+    const/4 v1, 0x0
+
+    .line 222
+    .local v1, "i":I
+    iget-object v2, p0, Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction$1;->this$1:Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;
+
+    iget-object v2, v2, Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;->this$0:Lorg/apache/commons/math3/optimization/fitting/CurveFitter;
+
+    invoke-static {v2}, Lorg/apache/commons/math3/optimization/fitting/CurveFitter;->access$000(Lorg/apache/commons/math3/optimization/fitting/CurveFitter;)Ljava/util/List;
+
+    move-result-object v2
+
+    invoke-interface {v2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    .local v2, "i$":Ljava/util/Iterator;
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lorg/apache/commons/math3/optimization/fitting/WeightedObservedPoint;
+
+    .line 223
+    .local v3, "observed":Lorg/apache/commons/math3/optimization/fitting/WeightedObservedPoint;
+    add-int/lit8 v4, v1, 0x1
+
+    .end local v1    # "i":I
+    .local v4, "i":I
+    iget-object v5, p0, Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction$1;->this$1:Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;
+
+    invoke-static {v5}, Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;->access$100(Lorg/apache/commons/math3/optimization/fitting/CurveFitter$OldTheoreticalValuesFunction;)Lorg/apache/commons/math3/analysis/ParametricUnivariateFunction;
+
+    move-result-object v5
+
+    invoke-virtual {v3}, Lorg/apache/commons/math3/optimization/fitting/WeightedObservedPoint;->getX()D
+
+    move-result-wide v6
+
+    invoke-interface {v5, v6, v7, p1}, Lorg/apache/commons/math3/analysis/ParametricUnivariateFunction;->gradient(D[D)[D
+
+    move-result-object v5
+
+    aput-object v5, v0, v1
+
+    .line 224
+    .end local v3    # "observed":Lorg/apache/commons/math3/optimization/fitting/WeightedObservedPoint;
+    move v1, v4
+
+    goto :goto_0
+
+    .line 226
+    .end local v2    # "i$":Ljava/util/Iterator;
+    .end local v4    # "i":I
+    .restart local v1    # "i":I
+    :cond_0
+    return-object v0
+.end method

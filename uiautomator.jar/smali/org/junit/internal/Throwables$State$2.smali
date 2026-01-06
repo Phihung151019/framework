@@ -1,0 +1,81 @@
+.class final enum Lorg/junit/internal/Throwables$State$2;
+.super Lorg/junit/internal/Throwables$State;
+.source "Throwables.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/junit/internal/Throwables$State;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x4010
+    name = null
+.end annotation
+
+
+# direct methods
+.method private constructor <init>(Ljava/lang/String;I)V
+    .locals 1
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1000,
+            0x1000
+        }
+        names = {
+            null,
+            null
+        }
+    .end annotation
+
+    .line 194
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Lorg/junit/internal/Throwables$State;-><init>(Ljava/lang/String;ILorg/junit/internal/Throwables-IA;)V
+
+    return-void
+.end method
+
+.method synthetic constructor <init>(Ljava/lang/String;ILorg/junit/internal/Throwables-IA;)V
+    .locals 0
+
+    invoke-direct {p0, p1, p2}, Lorg/junit/internal/Throwables$State$2;-><init>(Ljava/lang/String;I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public processLine(Ljava/lang/String;)Lorg/junit/internal/Throwables$State;
+    .locals 1
+    .param p1, "methodName"    # Ljava/lang/String;
+
+    .line 196
+    invoke-static {p1}, Lorg/junit/internal/Throwables;->-$$Nest$smisReflectionMethod(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 197
+    sget-object v0, Lorg/junit/internal/Throwables$State$2;->PROCESSING_REFLECTION_CODE:Lorg/junit/internal/Throwables$State;
+
+    return-object v0
+
+    .line 198
+    :cond_0
+    invoke-static {p1}, Lorg/junit/internal/Throwables;->-$$Nest$smisTestFrameworkMethod(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 199
+    return-object p0
+
+    .line 201
+    :cond_1
+    sget-object v0, Lorg/junit/internal/Throwables$State$2;->PROCESSING_OTHER_CODE:Lorg/junit/internal/Throwables$State;
+
+    return-object v0
+.end method

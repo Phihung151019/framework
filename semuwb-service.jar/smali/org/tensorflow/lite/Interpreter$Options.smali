@@ -1,0 +1,129 @@
+.class public Lorg/tensorflow/lite/Interpreter$Options;
+.super Ljava/lang/Object;
+.source "Interpreter.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lorg/tensorflow/lite/Interpreter;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x9
+    name = "Options"
+.end annotation
+
+
+# instance fields
+.field allowBufferHandleOutput:Ljava/lang/Boolean;
+
+.field allowFp16PrecisionForFp32:Ljava/lang/Boolean;
+
+.field final delegates:Ljava/util/List;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/util/List<",
+            "Lorg/tensorflow/lite/Delegate;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+.field numThreads:I
+
+.field useNNAPI:Ljava/lang/Boolean;
+
+
+# direct methods
+.method public constructor <init>()V
+    .locals 1
+
+    .line 83
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 137
+    const/4 v0, -0x1
+
+    iput v0, p0, Lorg/tensorflow/lite/Interpreter$Options;->numThreads:I
+
+    .line 141
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lorg/tensorflow/lite/Interpreter$Options;->delegates:Ljava/util/List;
+
+    .line 83
+    return-void
+.end method
+
+
+# virtual methods
+.method public addDelegate(Lorg/tensorflow/lite/Delegate;)Lorg/tensorflow/lite/Interpreter$Options;
+    .locals 1
+    .param p1, "delegate"    # Lorg/tensorflow/lite/Delegate;
+
+    .line 117
+    iget-object v0, p0, Lorg/tensorflow/lite/Interpreter$Options;->delegates:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 118
+    return-object p0
+.end method
+
+.method public setAllowBufferHandleOutput(Z)Lorg/tensorflow/lite/Interpreter$Options;
+    .locals 1
+    .param p1, "allow"    # Z
+
+    .line 133
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/tensorflow/lite/Interpreter$Options;->allowBufferHandleOutput:Ljava/lang/Boolean;
+
+    .line 134
+    return-object p0
+.end method
+
+.method public setAllowFp16PrecisionForFp32(Z)Lorg/tensorflow/lite/Interpreter$Options;
+    .locals 1
+    .param p1, "allow"    # Z
+
+    .line 107
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/tensorflow/lite/Interpreter$Options;->allowFp16PrecisionForFp32:Ljava/lang/Boolean;
+
+    .line 108
+    return-object p0
+.end method
+
+.method public setNumThreads(I)Lorg/tensorflow/lite/Interpreter$Options;
+    .locals 0
+    .param p1, "numThreads"    # I
+
+    .line 90
+    iput p1, p0, Lorg/tensorflow/lite/Interpreter$Options;->numThreads:I
+
+    .line 91
+    return-object p0
+.end method
+
+.method public setUseNNAPI(Z)Lorg/tensorflow/lite/Interpreter$Options;
+    .locals 1
+    .param p1, "useNNAPI"    # Z
+
+    .line 96
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lorg/tensorflow/lite/Interpreter$Options;->useNNAPI:Ljava/lang/Boolean;
+
+    .line 97
+    return-object p0
+.end method

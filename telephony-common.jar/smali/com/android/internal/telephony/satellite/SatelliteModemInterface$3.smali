@@ -1,0 +1,138 @@
+.class Lcom/android/internal/telephony/satellite/SatelliteModemInterface$3;
+.super Landroid/telephony/IIntegerConsumer$Stub;
+.source "SatelliteModemInterface.java"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/android/internal/telephony/satellite/SatelliteModemInterface;->requestSatelliteEnabled(Landroid/telephony/satellite/SatelliteModemEnableRequestAttributes;Landroid/os/Message;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic blacklist this$0:Lcom/android/internal/telephony/satellite/SatelliteModemInterface;
+
+.field final synthetic blacklist val$message:Landroid/os/Message;
+
+
+# direct methods
+.method public static synthetic blacklist $r8$lambda$t9sPK82xoQn7R6CjBgg9xH10yzc(Landroid/os/Message;I)V
+    .locals 1
+
+    const/4 v0, 0x0
+
+    .line 790
+    invoke-static {p0, v0, p1}, Lcom/android/internal/telephony/satellite/SatelliteModemInterface;->sendMessageWithResult(Landroid/os/Message;Ljava/lang/Object;I)V
+
+    return-void
+.end method
+
+.method constructor blacklist <init>(Lcom/android/internal/telephony/satellite/SatelliteModemInterface;Landroid/os/Message;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x8010,
+            0x1010
+        }
+        names = {
+            null,
+            null
+        }
+    .end annotation
+
+    .line 780
+    iput-object p1, p0, Lcom/android/internal/telephony/satellite/SatelliteModemInterface$3;->this$0:Lcom/android/internal/telephony/satellite/SatelliteModemInterface;
+
+    iput-object p2, p0, Lcom/android/internal/telephony/satellite/SatelliteModemInterface$3;->val$message:Landroid/os/Message;
+
+    invoke-direct {p0}, Landroid/telephony/IIntegerConsumer$Stub;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public blacklist accept(I)V
+    .locals 4
+
+    .line 783
+    invoke-static {p1}, Lcom/android/internal/telephony/satellite/SatelliteServiceUtils;->fromSatelliteError(I)I
+
+    move-result v0
+
+    .line 785
+    iget-object v1, p0, Lcom/android/internal/telephony/satellite/SatelliteModemInterface$3;->this$0:Lcom/android/internal/telephony/satellite/SatelliteModemInterface;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v3, "resultCallback: "
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string p1, "("
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 786
+    invoke-static {v0}, Lcom/android/internal/telephony/TelephonyLogUtils;->satelliteResultToString(I)Ljava/lang/String;
+
+    move-result-object p1
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, ")"
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p1
+
+    filled-new-array {p1}, [Ljava/lang/Object;
+
+    move-result-object p1
+
+    .line 785
+    const-string v2, "requestSatelliteEnabled"
+
+    invoke-static {v1, v2, p1}, Lcom/android/internal/telephony/satellite/SatelliteModemInterface;->-$$Nest$msLogFrom(Lcom/android/internal/telephony/satellite/SatelliteModemInterface;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 788
+    iget-object p1, p0, Lcom/android/internal/telephony/satellite/SatelliteModemInterface$3;->this$0:Lcom/android/internal/telephony/satellite/SatelliteModemInterface;
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string v2, "setSatelliteEnabled: "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {p1, v1}, Lcom/android/internal/telephony/satellite/SatelliteModemInterface;->-$$Nest$mplogd(Lcom/android/internal/telephony/satellite/SatelliteModemInterface;Ljava/lang/String;)V
+
+    .line 789
+    iget-object p0, p0, Lcom/android/internal/telephony/satellite/SatelliteModemInterface$3;->val$message:Landroid/os/Message;
+
+    new-instance p1, Lcom/android/internal/telephony/satellite/SatelliteModemInterface$3$$ExternalSyntheticLambda0;
+
+    invoke-direct {p1, p0, v0}, Lcom/android/internal/telephony/satellite/SatelliteModemInterface$3$$ExternalSyntheticLambda0;-><init>(Landroid/os/Message;I)V
+
+    invoke-static {p1}, Landroid/os/Binder;->withCleanCallingIdentity(Lcom/android/internal/util/FunctionalUtils$ThrowingRunnable;)V
+
+    return-void
+.end method

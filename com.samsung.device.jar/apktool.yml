@@ -1,0 +1,4 @@
+version: v2.12.1-41-07ae073b-SNAPSHOT
+apkFileName: com.samsung.device.jar
+sdkInfo:
+  minSdkVersion: 23

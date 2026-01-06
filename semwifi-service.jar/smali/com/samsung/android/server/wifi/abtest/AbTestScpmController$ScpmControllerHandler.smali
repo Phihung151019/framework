@@ -1,0 +1,163 @@
+.class Lcom/samsung/android/server/wifi/abtest/AbTestScpmController$ScpmControllerHandler;
+.super Landroid/os/Handler;
+.source "qb/104190634 3f0c61d6e0e110a32c521efcc24f383ff81c48febc65f067ab9ac6b5ba8742fd"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/samsung/android/server/wifi/abtest/AbTestScpmController;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x2
+    name = "ScpmControllerHandler"
+.end annotation
+
+
+# instance fields
+.field final synthetic this$0:Lcom/samsung/android/server/wifi/abtest/AbTestScpmController;
+
+
+# direct methods
+.method public constructor <init>(Lcom/samsung/android/server/wifi/abtest/AbTestScpmController;Landroid/os/Looper;)V
+    .locals 0
+    .annotation system Ldalvik/annotation/MethodParameters;
+        accessFlags = {
+            0x1010,
+            0x0
+        }
+        names = {
+            null,
+            null
+        }
+    .end annotation
+
+    .line 1
+    iput-object p1, p0, Lcom/samsung/android/server/wifi/abtest/AbTestScpmController$ScpmControllerHandler;->this$0:Lcom/samsung/android/server/wifi/abtest/AbTestScpmController;
+
+    .line 2
+    .line 3
+    invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
+
+    .line 4
+    .line 5
+    .line 6
+    return-void
+.end method
+
+
+# virtual methods
+.method public handleMessage(Landroid/os/Message;)V
+    .locals 3
+
+    .line 1
+    invoke-static {}, Lcom/samsung/android/server/wifi/abtest/AbTestScpmController;->-$$Nest$sfgetDBG()Z
+
+    .line 2
+    .line 3
+    .line 4
+    move-result v0
+
+    .line 5
+    const-string v1, "AbTestScpmController"
+
+    .line 6
+    .line 7
+    if-eqz v0, :cond_0
+
+    .line 8
+    .line 9
+    const-string v0, "handleMessage"
+
+    .line 10
+    .line 11
+    invoke-static {v1, v0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 12
+    .line 13
+    .line 14
+    :cond_0
+    iget v0, p1, Landroid/os/Message;->what:I
+
+    .line 15
+    .line 16
+    const/4 v2, 0x1
+
+    .line 17
+    if-eq v0, v2, :cond_1
+
+    .line 18
+    .line 19
+    new-instance p0, Ljava/lang/StringBuilder;
+
+    .line 20
+    .line 21
+    const-string v0, "Unexpected value: "
+
+    .line 22
+    .line 23
+    invoke-direct {p0, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    .line 24
+    .line 25
+    .line 26
+    iget p1, p1, Landroid/os/Message;->what:I
+
+    .line 27
+    .line 28
+    invoke-static {v1, p1, p0}, Lcom/samsung/android/server/wifi/SemWifiConnectivityMonitor$$ExternalSyntheticOutline0;->m(Ljava/lang/String;ILjava/lang/StringBuilder;)V
+
+    .line 29
+    .line 30
+    .line 31
+    return-void
+
+    .line 32
+    :cond_1
+    :try_start_0
+    iget-object p0, p0, Lcom/samsung/android/server/wifi/abtest/AbTestScpmController$ScpmControllerHandler;->this$0:Lcom/samsung/android/server/wifi/abtest/AbTestScpmController;
+
+    .line 33
+    .line 34
+    invoke-virtual {p0}, Lcom/samsung/android/server/wifi/abtest/AbTestScpmController;->readScpmConfiguration()V
+    :try_end_0
+    .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 35
+    .line 36
+    .line 37
+    return-void
+
+    .line 38
+    :catch_0
+    move-exception p0
+
+    .line 39
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    .line 40
+    .line 41
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 42
+    .line 43
+    .line 44
+    throw p1
+
+    .line 45
+    :catch_1
+    move-exception p0
+
+    .line 46
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    .line 47
+    .line 48
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    .line 49
+    .line 50
+    .line 51
+    throw p1
+.end method

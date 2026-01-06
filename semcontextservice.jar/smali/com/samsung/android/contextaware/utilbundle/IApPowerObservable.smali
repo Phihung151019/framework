@@ -1,0 +1,38 @@
+.class public interface abstract Lcom/samsung/android/contextaware/utilbundle/IApPowerObservable;
+.super Ljava/lang/Object;
+.source "IApPowerObservable.java"
+
+
+# static fields
+.field public static final AP_NONE:B = 0x0t
+
+.field public static final AP_SLEEP:B = -0x2et
+
+.field public static final AP_WAKEUP:B = -0x2ft
+
+.field public static final POWER_CONNECTED:B = -0x2at
+
+.field public static final POWER_DISCONNECTED:B = -0x29t
+
+.field public static final SCREEN_OFF:B = 0x0t
+
+.field public static final SCREEN_OFF_INTENT:B = -0xet
+
+.field public static final SCREEN_OFF_PROXIMITY_INTENT:B = -0xct
+
+.field public static final SCREEN_ON:B = 0x1t
+
+.field public static final SCREEN_ON_INTENT:B = -0xft
+
+.field public static final SCREEN_ON_PROXIMITY_INTENT:B = -0xdt
+
+
+# virtual methods
+.method public abstract notifyApPowerObserver(IJ)V
+.end method
+
+.method public abstract registerApPowerObserver(Lcom/samsung/android/contextaware/manager/IApPowerObserver;)V
+.end method
+
+.method public abstract unregisterApPowerObserver(Lcom/samsung/android/contextaware/manager/IApPowerObserver;)V
+.end method
